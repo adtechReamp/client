@@ -177,21 +177,17 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 ---
 
-### Especificação de Micro-conversões:
+### General
 
-
-**Item #1 - Tagbook:**<br />
-
-- **Onde:** Descrição 1;
-- **Quando:** Descrição 1;
-- **Título ou nome do botão/link:** "Exemplo Link".
+- **When:** On clicking the header itens.
+- **Where:** On all pages where it's available.
 
 ```html
-<!-- Use se os atributos no elemento a ser clicado -->
+
 <div
-     data-gtm-event-category="" 
-     data-gtm-event-action="" 
-     data-gtm-event-label=""
+     data-gtm-event-category="fem:general" 
+     data-gtm-event-action="click:header" 
+     data-gtm-event-label="[[header-item]]"
 >
 Botão
 </div>
@@ -199,13 +195,32 @@ Botão
 
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------------	| :-------------------- | :-------------------------------------------	|
-| [[Váriavel]]			| 'exemplo'				| Descrição										|
+| [[header-item]]	    | 'logo', 'idioma', 'perfil', 'menu'.			| It should return the name of the header item clicked.		|
 
 <br />
 
-**Cadastro Newsletter - Sucesso ou erro:**<br />
+- **When:** On clicking the footer itens.
+- **Where:** On all pages where it's available.
 
-- **Onde:** No Callback do envio do e-mail de cadastro para receber newsletter.
+```html
+
+<div
+     data-gtm-event-category="fem:general" 
+     data-gtm-event-action="click:footer" 
+     data-gtm-event-label="[[footer-item]]"
+>
+Botão
+</div>
+```
+
+| Variável 				| Exemplo 				| Descrição 									|
+| :--------------------	| :-------------------- | :-------------------------------------------	|
+| [[footer-item]]	    | 'logo', 'idioma', 'fale-com-a-gente', 'termos-e-condicoes' and etc. |  It should return the name of the footer item clicked.	|
+
+<br />
+
+
+**datalyer**
 
 ```html
 <script>
@@ -227,30 +242,6 @@ Botão
 
 ---
 
-### Especificação de Conversões:
-
-
-**Envio de comentários:**<br />
-
-- **Onde:** No Callback do envio de um comentário dentro de um post.
-
-```html
-<script>
-	dataLayer.push({
-		'event': 'conversion',
-		'eventCategory': '',
-		'eventAction': '',
-		'eventLabel': ''
-	});
-</script>
-```
-
-
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------------	| :-------------------- | :-------------------------------------------	|
-| [[Váriavel]]			| 'exemplo'				| Descrição										|
-
-<br />
 
 ## Considerações Finais:
 
