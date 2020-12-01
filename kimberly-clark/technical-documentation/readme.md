@@ -11,6 +11,19 @@ Em caso de dúvidas, entrar em contato com: [paulo.benachio@reamp.com.br](paulo.
 
 <br />
 
+## Sumário
+
+- [Objetivo](#objetivo)
+- [Implementação](#implementa%c3%a7%c3%a3o)
+- [Especificações Globais](#especifica%c3%a7%c3%b5es-globais)
+- [Dimensões Globais](#dimens&otilde;es-globais)
+- [General](#general)
+- [Login](#login)
+- [Register](#register)
+- [Home](#home)
+- [Product Page](#product-page)
+- [Enhanced E-commerce](#enhanced-e-commerce)
+
 ## Objetivo
 Este documento tem como objetivo instruir a implementação da camada de dados e de data attributes para utilização de recursos de monitoramento do Google Analytics referentes ao ambiente de [XXXXX](XXXXX).
 
@@ -86,7 +99,7 @@ ga('send', 'pageview');
 
 ---
 
-## Overview e Descrições Técnicas
+## Implementação
 
 ### Camada de dados (DataLayer)
 
