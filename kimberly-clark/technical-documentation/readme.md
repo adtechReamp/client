@@ -132,7 +132,6 @@ Todos os elementos do html que serão clicados, deverão ser mapeados recebendo 
  	data-gtm-event-action="[[exemplo:valor-acao]]"
  	data-gtm-event-label="[[exemplo:valor-rotulo]]"
  >
-	Texto do elemento
 </div>
 ```
 
@@ -179,78 +178,797 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 ### General
 
-- **When:** On clicking the header itens.
-- **Where:** On all pages where it's available.
+**When: On clicking the header itens.**<br />
 
+- **Onde:** Where: On all pages where it's available.
+    
 ```html
-
 <div
-     data-gtm-event-category="fem:general" 
-     data-gtm-event-action="click:header" 
-     data-gtm-event-label="[[header-item]]"
->
-Botão
-</div>
+   data-gtm-event-category='fem:general'
+   data-gtm-event-action='click:header'
+   data-gtm-event-label='[[header-item]]'
+>Botão</div>
 ```
 
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------------	| :-------------------- | :-------------------------------------------	|
-| [[header-item]]	    | 'logo', 'idioma', 'perfil', 'menu'.			| It should return the name of the header item clicked.		|
 
-<br />
-
-- **When:** On clicking the footer itens.
-- **Where:** On all pages where it's available.
-
-```html
-
-<div
-     data-gtm-event-category="fem:general" 
-     data-gtm-event-action="click:footer" 
-     data-gtm-event-label="[[footer-item]]"
->
-Botão
-</div>
-```
-
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------------	| :-------------------- | :-------------------------------------------	|
-| [[footer-item]]	    | 'logo', 'idioma', 'fale-com-a-gente', 'termos-e-condicoes' and etc. |  It should return the name of the footer item clicked.	|
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[header-item]] | 'logo', 'idioma', 'perfil', 'menu'. | It should return the name of the header item clicked. |
 
 <br />
 
 
-**datalyer**
+**When: On clicking the footer itens.**<br />
 
+- **Onde:** Where: On all pages where it's available.
+    
+```html
+<div
+   data-gtm-event-category='fem:general'
+   data-gtm-event-action='click:footer'
+   data-gtm-event-label='[[footer-item]]'
+>Botão</div>
+```
+
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[footer-item]] | 'logo', 'idioma', 'fale-com-a-gente', 'termos-e-condicoes' and etc. | It should return the name of the footer item clicked. |
+
+<br />
+
+
+**When: On selecting an item from the bars menu.**<br />
+
+- **Onde:** Where: On all pages where it's available.
+    
+```html
+<div
+   data-gtm-event-category='fem:general'
+   data-gtm-event-action='click:menu'
+   data-gtm-event-label='[[menu-item]]'
+>Botão</div>
+```
+
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[menu-item]] |  'cuidado-diario', 'produtos', 'destaques' and etc. | It should return the name of the menu item clicked. |
+
+<br />
+
+
+**When: On selecting a language from the language menu.**<br />
+
+- **Onde:** Where: On all pages where it's available.
+    
+```html
+<div
+   data-gtm-event-category='fem:general'
+   data-gtm-event-action='click:language'
+   data-gtm-event-label='[[language-name]]'
+>Botão</div>
+```
+
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[language-name]] | 'ingles', 'espanhol', 'portugues' and etc. | It should return the name of the selected language.  |
+
+<br />
+
+
+**When: On interaction with the filters.**<br />
+
+- **Onde:** Where: On all pages where it's available.
+    
 ```html
 <script>
-	dataLayer.push({
-		'event': 'event',
-		'eventCategory': '',
-		'eventAction': '',
-		'eventLabel': ''
-	});
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'event',
+    'eventCategory': 'fem:general',
+    'eventAction': 'interaction:filter',
+    'eventLabel': '[[filter-name]]'
+  });
 </script>
 ```
 
 
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------------	| :-------------------- | :-------------------------------------------	|
-| [[Váriavel]]			| 'exemplo'				| Descrição										|
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[filter-name]] | 'cuidados-diarios', 'fluxo-normal' and etc. | It should return the name of the selected filter tag.  |
 
 <br />
+
+
+**When: On clicking the backwards button.**<br />
+
+- **Onde:** Where: On all pages where it's available.
+    
+```html
+<div
+   data-gtm-event-category='fem:general'
+   data-gtm-event-action='click:button'
+   data-gtm-event-label='backwards'
+>Botão</div>
+```
+
+
+
+<br />
+
+
+**When: On clicking the links in the breadcrumb.**<br />
+
+- **Onde:** Where: On all pages where it's available.
+    
+```html
+<div
+   data-gtm-event-category='fem:general'
+   data-gtm-event-action='click:breadcrumb'
+   data-gtm-event-label='[[breadcrumb-item]]'
+>Botão</div>
+```
+
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[breadcrumb-item]] | 'dstaques', 'cuidados-diarios' and etc | It should return the name of the clicked link on the breadcrumb. |
+
+<br />
+
+
+### Login
+
+**When: On clicking any button or link.**<br />
+
+- **Onde:** Where: On the login page.
+    
+```html
+<div
+   data-gtm-event-category='fem:login'
+   data-gtm-event-action='click:[[button-or-link]]'
+   data-gtm-event-label='[[item-name]]'
+>Botão</div>
+```
+
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[button-or-link]] | 'botao' ou 'link' | It should return the type of element clicked. |
+| [[item-name]] | 'criar-uma-conta', 'esqueci-a-senha', 'entrar' and etc | It should return the name of the element clicked. |
+
+<br />
+
+
+**When: On filling the fields of the login form.**<br />
+
+- **Onde:** Where: On the login page.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'event',
+    'eventCategory': 'fem:login',
+    'eventAction': 'filled:field',
+    'eventLabel': '[[field-name]]'
+  });
+</script>
+```
+
+
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[field-name]] | 'email', 'senha'  |  It should return the name of the filled field. |
+
+<br />
+
+
+**When: On the callback of the login attempt.**<br />
+
+- **Onde:** Where: On the login page.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'login',
+    'eventCategory': 'fem:login',
+    'eventAction': 'send:callback',
+    'eventLabel': '[[sucess-or-fail:error-tpe]]'
+  });
+</script>
+```
+
+
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[sucess-or-fail:error-tpe]] |  'sucesso', 'erro:senha-invalida', 'erro:perdeu-conexao' and etc. | It should return the success message or the fail one with the tye of error. |
+
+<br />
+
+
+### Register
+
+**When: On clicking any button or link.**<br />
+
+- **Onde:** Where: On the register page.
+    
+```html
+<div
+   data-gtm-event-category='fem:register'
+   data-gtm-event-action='click:[[button-or-link]]'
+   data-gtm-event-label='[[item-name]]'
+>Botão</div>
+```
+
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[button-or-link]] | 'botao' ou 'link' | It should return the type of element clicked. |
+| [[item-name]] | 'ja-possuo-uma-conta', 'registrar' and etc. | It should return the name of the element clicked.  |
+
+<br />
+
+
+**When: On filling the fields of the login form.**<br />
+
+- **Onde:** Where: On the register page.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'event',
+    'eventCategory': 'fem:register',
+    'eventAction': 'filled:field',
+    'eventLabel': '[[field-name]]'
+  });
+</script>
+```
+
+
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[field-name]] | 'nome', 'email', 'senha' |  It should return the name of the filled field.  |
+
+<br />
+
+
+**On interaction with the checkbox.**<br />
+
+- **Onde:** On the register page.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'event',
+    'eventCategory': 'fem:register',
+    'eventAction': 'interaction:checkbox',
+    'eventLabel': '[[checkbox-name]]'
+  });
+</script>
+```
+
+
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[checkbox-name]] | 'li-e-aceito-os-termos' e etc | It should return the name of the interacted checkbox. |
+
+<br />
+
+
+**Na tentiva de callback para logar**<br />
+
+- **Onde:** On the register page.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'event',
+    'eventCategory': 'fem:register',
+    'eventAction': 'envio:callback',
+    'eventLabel': '[[sucess-or-fail:error-tpe]]'
+  });
+</script>
+```
+
+
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[sucess-or-fail:error-tpe]] | 'sucesso', 'erro:senha-invalida', 'erro:perdeu-conexao' and etc. | It should return the success message or the fail one with the tye of error.  |
+
+<br />
+
+
+### Home
+
+**When: On clicking any link or button of the page.**<br />
+
+- **Onde:** Where: On the homepage.
+    
+```html
+<div
+   data-gtm-event-category='fem:home'
+   data-gtm-event-action='click:[[button-or-link]]'
+   data-gtm-event-label='[[item-name]]'
+>Botão</div>
+```
+
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[button-or-link]] | 'botao' ou 'link'   | It should return the type of element clicked. |
+| [[item-name]] | 'clique-para-ver-mais', 'encontre-mais-produtos' and etc | It should return the name of the element clicked.  |
+
+<br />
+
+
+### Product Page
+
+**When: On interaction with the questions.**<br />
+
+- **Onde:** Where: On the product page.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'event',
+    'eventCategory': 'fem:pdp',
+    'eventAction': 'interaction:questions',
+    'eventLabel': '[[question-name]]:[[action]]'
+  });
+</script>
+```
+
+
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[question-name]] | 'qual-a-direnca-entre-o-intimus-com-abas-ou-sem-abas' and etc | It should return the name of the question clicked. |
+| [[action]] | 'abriu' or 'fechou'. | It should return the name of the action done. |
+
+<br />
+
+
+**When: On viewing the content section.**<br />
+
+- **Onde:** Where: On the product page.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'event',
+    'eventCategory': 'fem:pdp',
+    'eventAction': 'viewed:section',
+'noInteraction': '1',
+    'eventLabel': 'content'
+  });
+</script>
+```
+
+
+
+
+<br />
+
+
+**When: On clicking a content card.**<br />
+
+- **Onde:** Where: On the product page.
+    
+```html
+<div
+   data-gtm-event-category='fem:pdp'
+   data-gtm-event-action='click:card'
+   data-gtm-event-label='[[card-name]]'
+>Botão</div>
+```
+
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[card-name]] | 'some-content-card-title' | It should return the name of the card clicked.|
+
+<br />
+
+
+**When: On clicking the 'ver mais' button on a product.**<br />
+
+- **Onde:** Where: On the product page.
+    
+```html
+<div
+   data-gtm-event-category='fem:pdp'
+   data-gtm-event-action='click:button'
+   data-gtm-event-label='ver-mais:[[product-name]]'
+>Botão</div>
+```
+
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[product-name]] | 'intimus-tripla-acao' e etc | Deve retornar o nome do produto. |
+
+<br />
+
+
+### Enhanced E-commerce
+
+**Na visualização de uma vitrine de produtos**<br />
+
+- **Onde:** Em todas as páginas que estiver disponivel.
+    
+
+```html
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'productImpressions',
+  'eventCategory':'fem:enhanced-ecommerce',
+  'eventAction': 'productImpression',
+  'noInteraction': '1',
+  'ecommerce': {
+    'impressions': [{
+        'name': '[[nome-produto]]',
+        'id': '[[id-produto]]',
+        'list': '[[lista-produto]]',
+        'price': '[[preco-produto]]',
+        'brand': '[[marca-produto]]',
+        'category': '[[categoria-produto]]',
+        'position': '[[posicao-produto]]'
+    }]
+  }
+});
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-produto]] | 'intimus-tripla-acao'  | Nome do produto |
+| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
+| [[preco-produto]] | &quot;139,99&quot; | Preço do produto |
+| [[categoria-produto]] | 'absorvente' | Categoria do produto |
+| [[marca-produto]] | 'intimus' | Marca do produto |
+| [[lista-produto]] | 'tampoes' | Nome da lista que o produto aparece |
+| [[posicao-produto]] | '1' | Posição que o produto aparece em uma lista de produtos |
+
+<br />
+
+
+**No clique de algum produto**<br />
+
+- **Onde:** Em todas as páginas que estiver disponivel.
+    
+
+```html
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+    'event': 'productClick',
+    'eventCategory': 'fem:enhanced-ecommerce',
+    'eventAction': 'productClick',
+        'ecommerce': {
+        'click': {
+            'actionField': {'list': '[[lista-produto]]'},
+            'products': [{
+                'name': '[[nome-produto]]',
+                'id': '[[id-produto]]',
+                'price': '[[preco-produto]]',
+                'brand': '[[marca-produto]]',
+                'category': '[[categoria-produto]]',
+        'position': '[[posicao-produto]]'
+            }]
+        }
+    }
+});
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-produto]] | 'intimus-tripla-acao'  | Nome do produto |
+| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
+| [[preco-produto]] | &quot;139,99&quot; | Preço do produto |
+| [[categoria-produto]] | 'absorvente' | Categoria do produto |
+| [[marca-produto]] | 'intimus' | Marca do produto |
+| [[lista-produto]] | 'tampoes' | Nome da lista que o produto aparece |
+| [[posicao-produto]] | '1' | Posição que o produto aparece em uma lista de produtos |
+
+<br />
+
+
+**Na visualização da página de detalhes do produto**<br />
+
+- **Onde:** Na página de detalhe do produto
+    
+
+```html
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'productDetail',
+  'eventCategory': 'fem:enhanced-ecommerce',
+  'eventAction': 'productDetail',
+  'noInteraction': '1',
+  'ecommerce': {
+    'detail': {
+      'products': [{
+        'name': '[[nome-produto]]',
+        'id': '[[id-produto]]',
+        'price': '[[preco-produto]]',
+        'brand': '[[marca-produto]]',
+        'category': '[[categoria-produto]]',
+        'variant': '[[variacao-produto]]',
+      }]
+    }
+  }
+ });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-produto]] | 'intimus-tripla-acao'  | Nome do produto |
+| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
+| [[preco-produto]] | &quot;139,99&quot; | Preço do produto |
+| [[categoria-produto]] | 'absorvente' | Categoria do produto |
+| [[marca-produto]] | 'intimus' | Marca do produto |
+| [[variacao-produto]] | 'com-abas' | Tamanho do produto |
+
+<br />
+
+
+**Ao adicionar um produto ao carrinho**<br />
+
+- **Onde:** Em todas as páginas que estiver disponivel
+    
+
+```html
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'addToCart',
+  'eventCategory':'fem:enhanced-ecommerce',
+  'eventAction': 'addToCart',
+    'ecommerce': {
+    'add': {
+      'products': [{
+        'name': '[[nome-produto]]',
+        'id': '[[id-produto]]',
+        'price': '[[preco-produto]]',
+        'brand': '[[marca-produto]]',
+        'category': '[[categoria-produto]]',
+        'variant': '[[variacao-produto]]',
+        'quantity': '[[quantidade-produto]]'
+      }]
+    }
+  }
+});
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-produto]] | 'intimus-tripla-acao'  | Nome do produto |
+| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
+| [[preco-produto]] | &quot;139,99&quot; | Preço do produto |
+| [[categoria-produto]] | 'absorvente' | Categoria do produto |
+| [[variacao-produto]] | 'com-abas' | Tamanho do produto |
+| [[marca-produto]] | 'intimus' | Marca do produto |
+| [[quantidade-produto]] | '2' | Quantidade do produto |
+
+<br />
+
+
+**Ao remover um produto do carrinho**<br />
+
+- **Onde:** Na página da sacola
+    
+
+```html
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'removeFromCart',
+  'eventCategory': 'fem:enhanced-ecommerce',
+  'eventAction': 'removeFromCart',
+    'ecommerce': {
+    'remove': {
+      'products': [{
+        'name': '[[nome-produto]]',
+        'id': '[[id-produto]]',
+        'price': '[[preco-produto]]',
+        'brand': '[[marca-produto]]',
+        'category': '[[categoria-produto]]',
+        'variant': '[[variacao-produto]]',
+        'quantity': '[[quantidade-produto]]'
+      }]
+    }
+  }
+});
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-produto]] | 'intimus-tripla-acao'  | Nome do produto |
+| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
+| [[preco-produto]] | &quot;139,99&quot; | Preço do produto |
+| [[categoria-produto]] | 'absorvente' | Categoria do produto |
+| [[variacao-produto]] | 'com-abas' | Tamanho do produto |
+| [[marca-produto]] | 'intimus' | Marca do produto |
+| [[quantidade-produto]] | '2' | Quantidade do produto |
+
+<br />
+
+
+**No carregamento das etapas do checkout**<br />
+
+- **Onde:** Na página do checkout
+    
+
+```html
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'checkout',
+  'eventCategory': 'fem:enhanced-ecommerce',
+  'eventAction': 'checkout',
+  'noInteraction': '1',
+  'ecommerce': {
+    'checkout': {
+      'actionField': {'step': '[[passo-checkout]]'},
+      'products': [{
+        'name': '[[nome-produto]]',
+        'id': '[[id-produto]]',
+        'price': '[[preco-produto]]',
+        'brand': '[[marca-produto]]',
+        'category': '[[categoria-produto]]',
+        'variant': '[[variacao-produto]]',
+        'quantity': '[[quantidade-produto]]'
+      }]
+    }
+  }
+});
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[checkout-index]] |  | Retornar &quot;1&quot; ou &quot;2&quot; ou &quot;3&quot; de acordo com a página que o usuário está.  |
+| [[nome-produto]] | 'intimus-tripla-acao'  | Nome do produto |
+| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
+| [[preco-produto]] | &quot;139,99&quot; | Preço do produto |
+| [[categoria-produto]] | 'absorvente' | Categoria do produto |
+| [[variacao-produto]] | 'com-abas' | Tamanho do produto |
+| [[marca-produto]] | 'intimus' | Marca do produto |
+| [[quantidade-produto]] | '2' | Quantidade do produto |
+| [[passo-checkout]] | 1' | Página de carrinho de compras |
+| [[passo-checkout]] | 2' | Página de confirmação do endereço de entrega |
+| [[passo-checkout]] | 3' | Página de seleção do método de pagamento |
+
+<br />
+
+
+**Ao escolher uma forma de pagamento e entrega**<br />
+
+- **Onde:** Na página do checkout
+    
+
+```html
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'checkoutOption',
+  'eventCategory': 'fem:enhanced-ecommerce',
+  'eventAction': 'checkoutOption',
+  'eventLabel': '[[shipping ou payment]]-method',
+    'ecommerce': {
+    'checkout_option': {
+        'actionField':  {'step':'2','option':'shipping:[[opcao escolhida]]:[[previsao-entrega]]'},
+    }
+  }
+});
+</script>
+```
+
+```html
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'checkoutOption',
+  'eventCategory': 'fem:enhanced-ecommerce',
+  'eventAction': 'checkoutOption',
+  'eventLabel': '[[shipping ou payment]]-method',
+    'ecommerce': {
+    'checkout_option': {
+        'actionField':  {'step':'3','option':'payment:[[opcao escolhida]]'},
+    }
+  }
+});
+</script>
+```
+
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[opcao escolhida]] | 'receber', 'retirar', 'cartao-de-credito', 'boleto' etc | Deve retornar o nome da opção de pagamento ou entrega escolhida. |
+| [[previsao-entrega]] | 'em-ate-4-dias-uteis', 'pompeia-em-ate-2-dias' | Usar essa variável apenas para etapa de entrega. Retorna as informações de forma de entrega. |
+| [[shipping ou payment]] | 'shipping' ou 'payment' | Deve retornar o nome da etapa do checkout. |
+
+<br />
+
+
+**Na finalização da compra**<br />
+
+- **Onde:** Na página de resumo do pedido
+    
+
+```html
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'purchase',
+  'eventCategory': 'fem:enhanced-ecommerce',
+  'eventAction': 'purchase',
+  'noInteraction': '1',
+  'ecommerce': {
+    'purchase': {
+      'actionField': {
+        'id': '[[id-transacao]]',
+        'revenue': '[[valor-total-transacao]]',
+        'shipping': '[[frete-transacao]]'
+        'tax': '[[taxa-transacao]]'
+        'coupon': '[[coupon-transacao]]'
+      },
+      'products': [{
+        'name': '[[nome-produto]]',
+        'id': '[[id-produto]]',
+        'price': '[[preco-produto]]',
+        'brand': '[[marca-produto]]',
+        'category': '[[categoria-produto]]',
+        'variant': '[[variacao-produto]]',
+        'quantity': '[[quantidade-produto]]'
+      }]
+    }
+  }
+});
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[id-transacao]] | '000011652' | ID único da transação |
+| [[valor-total-transacao]] | '139,99' | Valor total da transação incluindo frete e taxas |
+| [[frete-transacao]] | '5.99' | Valor do frete da transação |
+| [[coupon-transacao]] | 'cupom-2020' | Cupom de desconto utilizado na transação - promoção nivel pedido |
+| [[taxa-transacao]] | '2.99' | Valor de taxas da transação |
+| [[nome-produto]] | 'intimus-tripla-acao'  | Nome do produto |
+| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
+| [[preco-produto]] | &quot;139,99&quot; | Preço do produto |
+| [[categoria-produto]] | 'absorvente' | Categoria do produto |
+| [[variacao-produto]] | 'com-abas' | Tamanho do produto |
+| [[marca-produto]] | 'intimus' | Marca do produto |
+| [[quantidade-produto]] | '2' | Quantidade do produto |
+
+<br />
+
 
 ---
 
-
-## Considerações Finais:
-
-> Link de referência: [Documentação Oficial Google Tag Manager](https://developers.google.com/tag-manager/quickstart)
-
 > Em caso de dúvidas, entrar em contato com: [paulo.benachio@reamp.com.br](paulo.benachio@reamp.com.br)
 
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    document.querySelectorAll("h1 a")[0].style.display = 'none';
-  });
-</script>
+<br />
