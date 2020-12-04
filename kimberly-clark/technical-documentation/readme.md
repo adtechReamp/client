@@ -985,3 +985,7 @@ window.dataLayer.push({
 > Em caso de dúvidas, entrar em contato com: [paulo.benachio@reamp.com.br](paulo.benachio@reamp.com.br)
 
 <br />
+
+<script>
+  document.querySelector('h1').style.display = 'none'
+</script>
