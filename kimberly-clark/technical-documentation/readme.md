@@ -6,7 +6,7 @@
 <br />
 
 ## Implementação da Camada de dados - Kimberly Clark
-Última atualização: 01/12/2020 <br />
+Última atualização: 04/12/2020 <br />
 Em caso de dúvidas, entrar em contato com: [paulo.benachio@reamp.com.br](paulo.beneachio@reamp.com.br)
 
 <br />
@@ -25,7 +25,7 @@ Em caso de dúvidas, entrar em contato com: [paulo.benachio@reamp.com.br](paulo.
 - [Enhanced E-commerce](#enhanced-e-commerce)
 
 ## Objetivo
-Este documento tem como objetivo instruir a implementação da camada de dados e de data attributes para utilização de recursos de monitoramento do Google Analytics referentes ao ambiente de [XXXXX](XXXXX).
+Este documento tem como objetivo instruir a implementação da camada de dados e de data attributes para utilização de recursos de monitoramento do Google Analytics referentes ao ambiente de [https://xd.adobe.com/view/08130346-1762-4140-82d9-e661feaa6798-5d40/screen/7d36a398-6a5b-4dba-96ff-50d4e58f0dbf/](https://xd.adobe.com/view/08130346-1762-4140-82d9-e661feaa6798-5d40/screen/7d36a398-6a5b-4dba-96ff-50d4e58f0dbf/).
 
 <br />
 
