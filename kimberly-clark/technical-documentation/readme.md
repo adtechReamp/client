@@ -5,18 +5,18 @@
 
 <br />
 
-## Implementação da Camada de dados - Kimberly Clark
-Última atualização: 04/12/2020 <br />
-Em caso de dúvidas, entrar em contato com: [paulo.benachio@reamp.com.br](paulo.beneachio@reamp.com.br)
+## Implementation of the Data Layer and Data Attributes - Kimberly Clark
+Last update: 04/12/2020 <br />
+In case of doubt, contact: [paulo.benachio@reamp.com.br](paulo.beneachio@reamp.com.br)
 
 <br />
 
-## Sumário
+## Summary
 
-- [Objetivo](#objetivo)
-- [Implementação](#implementa%c3%a7%c3%a3o)
-- [Especificações Globais](#especifica%c3%a7%c3%b5es-globais)
-- [Dimensões Globais](#dimens&otilde;es-globais)
+- [Objective](#objective)
+- [Implementation](#implementation)
+- [Global Specifications](#global-specifications)
+- [Global Dimensions](#global-dimensions)
 - [General](#general)
 - [Login](#login)
 - [Register](#register)
@@ -24,19 +24,20 @@ Em caso de dúvidas, entrar em contato com: [paulo.benachio@reamp.com.br](paulo.
 - [Product Page](#product-page)
 - [Enhanced E-commerce](#enhanced-e-commerce)
 
-## Objetivo
-Este documento tem como objetivo instruir a implementação da camada de dados e de data attributes para utilização de recursos de monitoramento do Google Analytics referentes ao ambiente de [https://xd.adobe.com/view/08130346-1762-4140-82d9-e661feaa6798-5d40/screen/7d36a398-6a5b-4dba-96ff-50d4e58f0dbf/](https://xd.adobe.com/view/08130346-1762-4140-82d9-e661feaa6798-5d40/screen/7d36a398-6a5b-4dba-96ff-50d4e58f0dbf/).
+## Objective
+
+This document aims to instruct the implementation of the data layer and data attributes to use Google Analytics monitoring resources for the [https://xd.adobe.com/view/08130346-1762-4140-82d9-e661feaa6798-5d40/screen/7d36a398-6a5b-4dba-96ff-50d4e58f0dbf/](https://xd.adobe.com/view/08130346-1762-4140-82d9-e661feaa6798-5d40/screen/7d36a398-6a5b-4dba-96ff-50d4e58f0dbf/).
 
 <br />
 
-### **Descrição Geral**
+### **General description**
 
-O `snippet` do Google Tag Manager é um pequeno trecho de código javascript ou non-javascript, através do uso de um iframe quando o javascript não está disponível, que é inserido nas páginas do site, tornando possível que a configuração das tags sejam realizadas via interface.
+The Google Tag Manager snippet is a small piece of javascript or non-javascript code, using an iframe when javascript is not available, which is inserted in the website pages, making it possible for the tags to be configured via interface.
 
 
-### **Posicionamento do Código - Google Tag Manager**
+### **Code Positioning - Google Tag Manager**
 
-#### 1. Copie o seguinte JavaScript e cole-o o mais próximo da tag `<head>` de abertura possível em todas as páginas do seu site.
+#### 1. Copy the following JavaScript and paste it as close to the opening `<head>` tag as possible on all pages of your site.
 
 ```html
 
@@ -49,7 +50,7 @@ O `snippet` do Google Tag Manager é um pequeno trecho de código javascript ou 
   </head>
 ```
 
-#### 2. Copie o seguinte trecho e cole-o imediatamente após a marcação `<body>` de abertura em cada página do seu site.
+#### 2. Copy the following excerpt and paste it immediately after the opening `<body>` tag on each page of your site.
 
 ```html
 <body>
@@ -61,15 +62,15 @@ O `snippet` do Google Tag Manager é um pequeno trecho de código javascript ou 
 </html>
 ```
 
-Link de referência: [Documentação Oficial Google Tag Manager](https://developers.google.com/tag-manager/quickstart)
+Reference Link: [Documentação Oficial Google Tag Manager](https://developers.google.com/tag-manager/quickstart)
 
 
-## Observações
-> Os valores especificados entre colchetes `[[ ]]` são variáveis dinâmicas e devem ser substituídas por seus respectivos valores.<br />
+## Comments
+> The values specified in brackets `[[]]` are dynamic variables and must be replaced by their respective values. <br />
 
-> Todos os valores enviados ao Google Analytics devem estar sanitizados, ou seja, sem espaços, acentuação ou caracteres especiais. <br />
+> All values sent to Google Analytics must be sanitized, that is, without spaces, accents or special characters. <br />
 
-> Caso o site já possua o Google Analytics instalado, será necessário a remoção do código de **todas as páginas do site**: <br />
+> If the site already has Google Analytics installed, it will be necessary to remove the code from ** all pages of the site **: <br />
 
 ```html
 
@@ -99,15 +100,15 @@ ga('send', 'pageview');
 
 ---
 
-## Implementação
+## Implementation
 
-### Camada de dados (DataLayer)
+### DataLayer
 
-> É um array de objetos javascript utilizado pelo Google Tag Manager para receber em seus atributos, dados importantes do site.
-Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas diferentes para preencher os dados. Essas formas são dependentes da ação estabelecida na documentação e também do nível da interação.
+> It is an array of javascript objects used by Google Tag Manager to receive in its attributes, important data from the site.
+To implement the dataLayer on the website, the developer can use different ways to fill in the data. These forms are dependent on the action established in the documentation and also on the level of interaction.
 
-**Instalação**<br />
-Inserir a camada de dados antes do snippet de instalação do Google Tag Manager. Exemplo:
+**Installation**<br />
+Insert the data layer before the Google Tag Manager installation snippet. Example:
 
 ```html
 <script>
@@ -131,13 +132,14 @@ OU
 </script>
 ```
 
-### Atributos HTML (Data Attributes)
+### HTML Attributes (Data Attributes)
 
-> São atributos customizados inseridos nos elementos HTML da página, permitindo a inclusão de dados adicionais.
+> They are custom attributes inserted in the HTML elements of the page, allowing the inclusion of additional data.
 
-**Instalação**
-1. Elementos: ```<div>Elemento</div>``` <br />
-Todos os elementos do html que serão clicados, deverão ser mapeados recebendo os atributos com sua estrutura no item.
+**Installation**
+1. Elements: ```<div>Elemento</div>``` <br />
+
+All elements of the html that will be clicked, must be mapped receiving the attributes with their structure in the item.
 
 ```html
 <div 	
@@ -148,26 +150,27 @@ Todos os elementos do html que serão clicados, deverão ser mapeados recebendo 
 </div>
 ```
 
-#### Importante:
-> Também devem ter os data-attributes `data-gtm-event-category`, `data-gtm-event-action` e `data-gtm-event-label`. Preenchidos conforme instruções específicas.
+#### Important:
+> They must also have the data-attributes `data-gtm-event-category`,` data-gtm-event-action` and `data-gtm-event-label`. Filled according to specific instructions.
 
 <br />
 
 
 
-### Especificações Globais:
+### Global Specifications:
 
-**Itens Gerais:**<br />
-Todas as informações entre colchetes `[[  ]]` são variáveis dinâmicas que devem ser preenchidas com seus respectivos valores; <br />
-Todos os valores enviados ao Google Analytics devem estar sanitizados, ou seja, sem espaços, acentuação ou caracteres especiais; <br />
-Caso a informação solicitada não estiver disponível retornar tipagem ´undefined´.
+**General Items:**<br />
+All information in brackets `[[]]` are dynamic variables that must be filled in with their respective values; <br />
+All values sent to Google Analytics must be sanitized, that is, without spaces, accents or special characters; <br />
+If the requested information is not available, return ´undefined´ typing.
 
 
 
-### Dimensões Globais:
+### Global Dimensions:
 
-**Dimensões Customizadas para todas as páginas:**<br />
-Deve ser disparado um push de dataLayer no momento de carregamento de todas as páginas do site (Considerar também todas as trocas de Path, quando o conteúdo da página é alterado mas a página não recarrega).<br />
+**Custom dimensions for all pages:**<br />
+
+A dataLayer push must be triggered when loading all pages on the site (Also consider all changes to Path, when the page content is changed but the page does not reload).<br />
 
 ```html
 <script>
@@ -620,9 +623,9 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 ### Enhanced E-commerce
 
-**Na visualização de uma vitrine de produtos**<br />
+**On viewing a showcase/list of products.**<br />
 
-- **Onde:** Em todas as páginas que estiver disponivel.
+- **Where:** On all pages where it's available.
     
 
 ```html
@@ -661,9 +664,9 @@ window.dataLayer.push({
 <br />
 
 
-**No clique de algum produto**<br />
+**On clicking any product**<br />
 
-- **Onde:** Em todas as páginas que estiver disponivel.
+- **Where:** On all pages where it's available.
     
 
 ```html
@@ -703,9 +706,9 @@ window.dataLayer.push({
 <br />
 
 
-**Na visualização da página de detalhes do produto**<br />
+**On viewing the product detail page of any product.**<br />
 
-- **Onde:** Na página de detalhe do produto
+- **Where:** On the product detail page.
     
 
 ```html
@@ -744,9 +747,9 @@ window.dataLayer.push({
 <br />
 
 
-**Ao adicionar um produto ao carrinho**<br />
+**On adding a product to the cart.**<br />
 
-- **Onde:** Em todas as páginas que estiver disponivel
+- **Where:** On all pages where it's available.
     
 
 ```html
@@ -786,9 +789,9 @@ window.dataLayer.push({
 <br />
 
 
-**Ao remover um produto do carrinho**<br />
+**On removing a product from the cart.**<br />
 
-- **Onde:** Na página da sacola
+- **Where:** On the cart page.
     
 
 ```html
@@ -828,9 +831,9 @@ window.dataLayer.push({
 <br />
 
 
-**No carregamento das etapas do checkout**<br />
+**On loading of each checkout step.**<br />
 
-- **Onde:** Na página do checkout
+- **Where:** Na página do checkout
     
 
 ```html
@@ -876,9 +879,9 @@ window.dataLayer.push({
 <br />
 
 
-**Ao escolher uma forma de pagamento e entrega**<br />
+**On choosing one of the payment and shipping options available.**<br />
 
-- **Onde:** Na página do checkout
+- **Where:** On pages of the checkout process.
     
 
 ```html
@@ -925,9 +928,9 @@ window.dataLayer.push({
 <br />
 
 
-**Na finalização da compra**<br />
+**On completing a purchase.**<br />
 
-- **Onde:** Na página de resumo do pedido
+- **Where:** On the thank you/order summary page.
     
 
 ```html
