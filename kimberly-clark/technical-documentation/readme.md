@@ -1,5 +1,5 @@
 ![Reamp](https://github.com/adtechReamp/client/blob/main/logo.png?raw=true)
-teste
+
 > Adtech<br />
 > Documento de Especificação Técnica
 
