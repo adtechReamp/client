@@ -196,7 +196,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 **When: On clicking the header itens.**<br />
 
-- **Onde:** Where: On all pages where it's available.
+- **Where:** Where: On all pages where it's available.
     
 ```html
 <div
@@ -216,7 +216,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 **When: On clicking the footer itens.**<br />
 
-- **Onde:** Where: On all pages where it's available.
+- **Where:** Where: On all pages where it's available.
     
 ```html
 <div
@@ -236,7 +236,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 **When: On selecting an item from the bars menu.**<br />
 
-- **Onde:** Where: On all pages where it's available.
+- **Where:** Where: On all pages where it's available.
     
 ```html
 <div
@@ -256,7 +256,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 **When: On selecting a language from the language menu.**<br />
 
-- **Onde:** Where: On all pages where it's available.
+- **Where:** Where: On all pages where it's available.
     
 ```html
 <div
@@ -276,7 +276,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 **When: On interaction with the filters.**<br />
 
-- **Onde:** Where: On all pages where it's available.
+- **Where:** Where: On all pages where it's available.
     
 ```html
 <script>
@@ -301,7 +301,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 **When: On clicking the backwards button.**<br />
 
-- **Onde:** Where: On all pages where it's available.
+- **Where:** Where: On all pages where it's available.
     
 ```html
 <div
@@ -318,7 +318,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 **When: On clicking the links in the breadcrumb.**<br />
 
-- **Onde:** Where: On all pages where it's available.
+- **Where:** Where: On all pages where it's available.
     
 ```html
 <div
@@ -340,7 +340,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 **When: On clicking any button or link.**<br />
 
-- **Onde:** Where: On the login page.
+- **Where:** Where: On the login page.
     
 ```html
 <div
@@ -361,7 +361,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 **When: On filling the fields of the login form.**<br />
 
-- **Onde:** Where: On the login page.
+- **Where:** Where: On the login page.
     
 ```html
 <script>
@@ -386,7 +386,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 **When: On the callback of the login attempt.**<br />
 
-- **Onde:** Where: On the login page.
+- **Where:** Where: On the login page.
     
 ```html
 <script>
@@ -413,7 +413,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 **When: On clicking any button or link.**<br />
 
-- **Onde:** Where: On the register page.
+- **Where:** Where: On the register page.
     
 ```html
 <div
@@ -434,7 +434,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 **When: On filling the fields of the login form.**<br />
 
-- **Onde:** Where: On the register page.
+- **Where:** Where: On the register page.
     
 ```html
 <script>
@@ -459,7 +459,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 **On interaction with the checkbox.**<br />
 
-- **Onde:** On the register page.
+- **Where:** On the register page.
     
 ```html
 <script>
@@ -484,7 +484,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 **Na tentiva de callback para logar**<br />
 
-- **Onde:** On the register page.
+- **Where:** On the register page.
     
 ```html
 <script>
@@ -511,7 +511,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 **When: On clicking any link or button of the page.**<br />
 
-- **Onde:** Where: On the homepage.
+- **Where:** Where: On the homepage.
     
 ```html
 <div
@@ -534,7 +534,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 **When: On interaction with the questions.**<br />
 
-- **Onde:** Where: On the product page.
+- **Where:** Where: On the product page.
     
 ```html
 <script>
@@ -560,7 +560,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 **When: On viewing the content section.**<br />
 
-- **Onde:** Where: On the product page.
+- **Where:** Where: On the product page.
     
 ```html
 <script>
@@ -583,7 +583,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 **When: On clicking a content card.**<br />
 
-- **Onde:** Where: On the product page.
+- **Where:** Where: On the product page.
     
 ```html
 <div
@@ -603,7 +603,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 **When: On clicking the 'ver mais' button on a product.**<br />
 
-- **Onde:** Where: On the product page.
+- **Where:** Where: On the product page.
     
 ```html
 <div
