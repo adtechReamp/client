@@ -1,12 +1,12 @@
 ![Reamp](https://github.com/adtechReamp/client/blob/main/logo.png?raw=true)
 
 > Adtech<br />
-> Documento de Especificação Técnica
+> Technical Specification Document
 
 <br />
 
-## Implementation of the Data Layer and Data Attributes - Kimberly Clark
-Last update: 04/12/2020 <br />
+## Data Layer and Data Attributes Implementation - Kimberly Clark
+Last update: 08/12/2020 <br />
 In case of any questions, contact: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
@@ -193,9 +193,9 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 ### General
 
-**When: On clicking the header itens.**<br />
+**On clicking the header itens.**<br />
 
-- **Where:** Where: On all pages where it's available.
+- **Where:** On all pages where it's available.
     
 ```html
 <div
@@ -213,9 +213,9 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 <br />
 
 
-**When: On clicking the footer itens.**<br />
+**On clicking the footer itens.**<br />
 
-- **Where:** Where: On all pages where it's available.
+- **Where:** On all pages where it's available.
     
 ```html
 <div
@@ -233,9 +233,9 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 <br />
 
 
-**When: On selecting an item from the bars menu.**<br />
+**On selecting an item from the bars menu.**<br />
 
-- **Where:** Where: On all pages where it's available.
+- **Where:** On all pages where it's available.
     
 ```html
 <div
@@ -253,9 +253,9 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 <br />
 
 
-**When: On selecting a language from the language menu.**<br />
+**On selecting a language from the language menu.**<br />
 
-- **Where:** Where: On all pages where it's available.
+- **Where:** On all pages where it's available.
     
 ```html
 <div
@@ -273,9 +273,9 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 <br />
 
 
-**When: On interaction with the filters.**<br />
+**On interaction with the filters.**<br />
 
-- **Where:** Where: On all pages where it's available.
+- **Where:** On all pages where it's available.
     
 ```html
 <script>
@@ -298,9 +298,9 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 <br />
 
 
-**When: On clicking the backwards button.**<br />
+**On clicking the backwards button.**<br />
 
-- **Where:** Where: On all pages where it's available.
+- **Where:** On all pages where it's available.
     
 ```html
 <div
@@ -315,9 +315,9 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 <br />
 
 
-**When: On clicking the links in the breadcrumb.**<br />
+**On clicking the links in the breadcrumb.**<br />
 
-- **Where:** Where: On all pages where it's available.
+- **Onde:** On all pages where it's available.
     
 ```html
 <div
@@ -328,18 +328,18 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 ```
 
 
-| Variável        | example                               | Descrição                         |
+| Variable        | Example                               | Description                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[breadcrumb-item]] | 'dstaques', 'cuidados-diarios' and etc | It should return the name of the clicked link on the breadcrumb. |
+| [[breadcrumb-item]] | 'detaques', 'cuidados-diarios' and etc | It should return the name of the clicked link on the breadcrumb. |
 
 <br />
 
 
 ### Login
 
-**When: On clicking any button or link.**<br />
+**On clicking any button or link.**<br />
 
-- **Where:** Where: On the login page.
+- **Where:** On the login page.
     
 ```html
 <div
@@ -350,17 +350,17 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 ```
 
 
-| Variável        | example                               | Descrição                         |
+| Variable        | Example                               | Description                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[button-or-link]] | 'botao' ou 'link' | It should return the type of element clicked. |
+| [[button-or-link]] | 'botao' or 'link' | It should return the type of element clicked. |
 | [[item-name]] | 'criar-uma-conta', 'esqueci-a-senha', 'entrar' and etc | It should return the name of the element clicked. |
 
 <br />
 
 
-**When: On filling the fields of the login form.**<br />
+**On filling the fields of the login form.**<br />
 
-- **Where:** Where: On the login page.
+- **Where:** On the login page.
     
 ```html
 <script>
@@ -376,16 +376,16 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 
 
-| Variável        | example                               | Descrição                         |
+| Variable        | Example                               | Description                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[field-name]] | 'email', 'senha'  |  It should return the name of the filled field. |
 
 <br />
 
 
-**When: On the callback of the login attempt.**<br />
+**On the callback of the login attempt.**<br />
 
-- **Where:** Where: On the login page.
+- **Where:** On the login page.
     
 ```html
 <script>
@@ -401,7 +401,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 
 
-| Variável        | example                               | Descrição                         |
+| Variable        | Example                               | Description                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[sucess-or-fail:error-tpe]] |  'sucesso', 'erro:senha-invalida', 'erro:perdeu-conexao' and etc. | It should return the success message or the fail one with the tye of error. |
 
@@ -410,9 +410,9 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 ### Register
 
-**When: On clicking any button or link.**<br />
+**On clicking any button or link.**<br />
 
-- **Where:** Where: On the register page.
+- **Where:** On the register page.
     
 ```html
 <div
@@ -423,17 +423,17 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 ```
 
 
-| Variável        | example                               | Descrição                         |
+| Variable        | Example                               | Description                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[button-or-link]] | 'botao' ou 'link' | It should return the type of element clicked. |
+| [[button-or-link]] | 'botao' or 'link' | It should return the type of element clicked. |
 | [[item-name]] | 'ja-possuo-uma-conta', 'registrar' and etc. | It should return the name of the element clicked.  |
 
 <br />
 
 
-**When: On filling the fields of the login form.**<br />
+**On filling the fields of the login form.**<br />
 
-- **Where:** Where: On the register page.
+- **Where:** On the register page.
     
 ```html
 <script>
@@ -449,7 +449,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 
 
-| Variável        | example                               | Descrição                         |
+| Variable        | Example                               | Description                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[field-name]] | 'nome', 'email', 'senha' |  It should return the name of the filled field.  |
 
@@ -474,7 +474,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 
 
-| Variável        | example                               | Descrição                         |
+| Variable        | Example                               | Description                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[checkbox-name]] | 'li-e-aceito-os-termos' e etc | It should return the name of the interacted checkbox. |
 
@@ -483,7 +483,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 **Na tentiva de callback para logar**<br />
 
-- **Where:** On the register page.
+- **where:** On the register page.
     
 ```html
 <script>
@@ -499,7 +499,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 
 
-| Variável        | example                               | Descrição                         |
+| Variable        | Example                               | Description                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[sucess-or-fail:error-tpe]] | 'sucesso', 'erro:senha-invalida', 'erro:perdeu-conexao' and etc. | It should return the success message or the fail one with the tye of error.  |
 
@@ -508,9 +508,9 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 ### Home
 
-**When: On clicking any link or button of the page.**<br />
+**On clicking any link or button of the page.**<br />
 
-- **Where:** Where: On the homepage.
+- **where:** On the homepage.
     
 ```html
 <div
@@ -521,7 +521,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 ```
 
 
-| Variável        | example                               | Descrição                         |
+| Variable        | Example                               | Description                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[button-or-link]] | 'botao' ou 'link'   | It should return the type of element clicked. |
 | [[item-name]] | 'clique-para-ver-mais', 'encontre-mais-produtos' and etc | It should return the name of the element clicked.  |
@@ -531,9 +531,9 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 ### Product Page
 
-**When: On interaction with the questions.**<br />
+**On interaction with the questions.**<br />
 
-- **Where:** Where: On the product page.
+- **Where:** On the product page.
     
 ```html
 <script>
@@ -549,7 +549,7 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 
 
 
-| Variável        | example                               | Descrição                         |
+| Variable        | Example                               | Description                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[question-name]] | 'qual-a-direnca-entre-o-intimus-com-abas-ou-sem-abas' and etc | It should return the name of the question clicked. |
 | [[action]] | 'abriu' or 'fechou'. | It should return the name of the action done. |
@@ -557,18 +557,18 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 <br />
 
 
-**When: On viewing the content section.**<br />
+**On viewing the content section.**<br />
 
-- **Where:** Where: On the product page.
+- **Where:** On the product page.
     
 ```html
 <script>
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'event',
+    'noInteraction': '1',
     'eventCategory': 'fem:pdp',
     'eventAction': 'viewed:section',
-'noInteraction': '1',
     'eventLabel': 'content'
   });
 </script>
@@ -580,9 +580,9 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 <br />
 
 
-**When: On clicking a content card.**<br />
+**On clicking a content card.**<br />
 
-- **Where:** Where: On the product page.
+- **Where:** On the product page.
     
 ```html
 <div
@@ -593,16 +593,16 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 ```
 
 
-| Variável        | example                               | Descrição                         |
+| Variable        | Example                               | Description                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[card-name]] | 'some-content-card-title' | It should return the name of the card clicked.|
 
 <br />
 
 
-**When: On clicking the 'ver mais' button on a product.**<br />
+**On clicking the 'ver mais' button on a product.**<br />
 
-- **Where:** Where: On the product page.
+- **Where:** On the product page.
     
 ```html
 <div
@@ -613,9 +613,9 @@ A dataLayer push must be triggered when loading all pages on the site (Also cons
 ```
 
 
-| Variável        | example                               | Descrição                         |
+| Variable        | Example                               | Description                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[product-name]] | 'intimus-tripla-acao' e etc | Deve retornar o nome do produto. |
+| [[product-name]] | 'intimus-tripla-acao' e etc | Deve retornar o Name of the product. |
 
 <br />
 
@@ -637,28 +637,28 @@ window.dataLayer.push({
   'noInteraction': '1',
   'ecommerce': {
     'impressions': [{
-        'name': '[[nome-produto]]',
-        'id': '[[id-produto]]',
-        'list': '[[lista-produto]]',
-        'price': '[[preco-produto]]',
-        'brand': '[[marca-produto]]',
-        'category': '[[categoria-produto]]',
-        'position': '[[posicao-produto]]'
+        'name': '[[product-name]]',
+        'id': '[[product-id]]',
+        'list': '[[product-list]]',
+        'price': '[[product-price]]',
+        'brand': '[[product-brand]]',
+        'category': '[[product-category]]',
+        'position': '[[product-position]]'
     }]
   }
 });
 </script>
 ```
 
-| Variável        | example                               | Descrição                         |
+| Variable        | Example                               | Description                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-produto]] | 'intimus-tripla-acao'  | Nome do produto |
-| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
-| [[preco-produto]] | &quot;139,99&quot; | Preço do produto |
-| [[categoria-produto]] | 'absorvente' | Categoria do produto |
-| [[marca-produto]] | 'intimus' | Marca do produto |
-| [[lista-produto]] | 'tampoes' | Nome da lista que o produto aparece |
-| [[posicao-produto]] | '1' | Posição que o produto aparece em uma lista de produtos |
+| [[product-name]] | 'intimus-tripla-acao'  | Name of the product |
+| [[product-id]] | 'i17mcjf106-771-2' | Product SKU |
+| [[product-price]] | &quot;139,99&quot; | Product Price |
+| [[product-category]] | 'absorvente' | Product Category |
+| [[product-brand]] | 'intimus' | Product Brand |
+| [[product-list]] | 'tampoes' | Name of the list in which the product is in |
+| [[product-position]] | '1' | Position in which the product is on the list. |
 
 <br />
 
@@ -677,14 +677,14 @@ window.dataLayer.push({
     'eventAction': 'productClick',
         'ecommerce': {
         'click': {
-            'actionField': {'list': '[[lista-produto]]'},
+            'actionField': {'list': '[[product-list]]'},
             'products': [{
-                'name': '[[nome-produto]]',
-                'id': '[[id-produto]]',
-                'price': '[[preco-produto]]',
-                'brand': '[[marca-produto]]',
-                'category': '[[categoria-produto]]',
-        'position': '[[posicao-produto]]'
+                'name': '[[product-name]]',
+                'id': '[[product-id]]',
+                'price': '[[product-price]]',
+                'brand': '[[product-brand]]',
+                'category': '[[product-category]]',
+        'position': '[[product-position]]'
             }]
         }
     }
@@ -692,15 +692,15 @@ window.dataLayer.push({
 </script>
 ```
 
-| Variável        | example                               | Descrição                         |
+| Variable        | Example                               | Description                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-produto]] | 'intimus-tripla-acao'  | Nome do produto |
-| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
-| [[preco-produto]] | &quot;139,99&quot; | Preço do produto |
-| [[categoria-produto]] | 'absorvente' | Categoria do produto |
-| [[marca-produto]] | 'intimus' | Marca do produto |
-| [[lista-produto]] | 'tampoes' | Nome da lista que o produto aparece |
-| [[posicao-produto]] | '1' | Posição que o produto aparece em uma lista de produtos |
+| [[product-name]] | 'intimus-tripla-acao'  | Name of the product |
+| [[product-id]] | 'i17mcjf106-771-2' | Product SKU |
+| [[product-price]] | &quot;139,99&quot; | Product Price |
+| [[product-category]] | 'absorvente' | Product Category |
+| [[product-brand]] | 'intimus' | Product Brand |
+| [[product-list]] | 'tampoes' | Name of the list in which the product is in |
+| [[product-position]] | '1' | Position in which the product is on the list. |
 
 <br />
 
@@ -721,12 +721,12 @@ window.dataLayer.push({
   'ecommerce': {
     'detail': {
       'products': [{
-        'name': '[[nome-produto]]',
-        'id': '[[id-produto]]',
-        'price': '[[preco-produto]]',
-        'brand': '[[marca-produto]]',
-        'category': '[[categoria-produto]]',
-        'variant': '[[variacao-produto]]',
+        'name': '[[product-name]]',
+        'id': '[[product-id]]',
+        'price': '[[product-price]]',
+        'brand': '[[product-brand]]',
+        'category': '[[product-category]]',
+        'variant': '[[product-variant]]',
       }]
     }
   }
@@ -734,14 +734,14 @@ window.dataLayer.push({
 </script>
 ```
 
-| Variável        | example                               | Descrição                         |
+| Variable        | Example                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-produto]] | 'intimus-tripla-acao'  | Nome do produto |
-| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
-| [[preco-produto]] | &quot;139,99&quot; | Preço do produto |
-| [[categoria-produto]] | 'absorvente' | Categoria do produto |
-| [[marca-produto]] | 'intimus' | Marca do produto |
-| [[variacao-produto]] | 'com-abas' | Tamanho do produto |
+| [[product-name]] | 'intimus-tripla-acao'  | Name of the product |
+| [[product-id]] | 'i17mcjf106-771-2' | Product SKU |
+| [[product-price]] | &quot;139,99&quot; | Product Price |
+| [[product-category]] | 'absorvente' | Product Category |
+| [[product-brand]] | 'intimus' | Product Brand |
+| [[product-variant]] | 'com-abas' | Product Variant |
 
 <br />
 
@@ -761,13 +761,13 @@ window.dataLayer.push({
     'ecommerce': {
     'add': {
       'products': [{
-        'name': '[[nome-produto]]',
-        'id': '[[id-produto]]',
-        'price': '[[preco-produto]]',
-        'brand': '[[marca-produto]]',
-        'category': '[[categoria-produto]]',
-        'variant': '[[variacao-produto]]',
-        'quantity': '[[quantidade-produto]]'
+        'name': '[[product-name]]',
+        'id': '[[product-id]]',
+        'price': '[[product-price]]',
+        'brand': '[[product-brand]]',
+        'category': '[[product-category]]',
+        'variant': '[[product-variant]]',
+        'quantity': '[[product-quantity]]'
       }]
     }
   }
@@ -775,15 +775,15 @@ window.dataLayer.push({
 </script>
 ```
 
-| Variável        | example                               | Descrição                         |
+| Variable        | Example                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-produto]] | 'intimus-tripla-acao'  | Nome do produto |
-| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
-| [[preco-produto]] | &quot;139,99&quot; | Preço do produto |
-| [[categoria-produto]] | 'absorvente' | Categoria do produto |
-| [[variacao-produto]] | 'com-abas' | Tamanho do produto |
-| [[marca-produto]] | 'intimus' | Marca do produto |
-| [[quantidade-produto]] | '2' | Quantidade do produto |
+| [[product-name]] | 'intimus-tripla-acao'  | Name of the product |
+| [[product-id]] | 'i17mcjf106-771-2' | Product SKU |
+| [[product-price]] | &quot;139,99&quot; | Product Price |
+| [[product-category]] | 'absorvente' | Product Category |
+| [[product-variant]] | 'com-abas' | Product Variant |
+| [[product-brand]] | 'intimus' | Product Brand |
+| [[product-quantity]] | '2' | Product Quantity |
 
 <br />
 
@@ -803,13 +803,13 @@ window.dataLayer.push({
     'ecommerce': {
     'remove': {
       'products': [{
-        'name': '[[nome-produto]]',
-        'id': '[[id-produto]]',
-        'price': '[[preco-produto]]',
-        'brand': '[[marca-produto]]',
-        'category': '[[categoria-produto]]',
-        'variant': '[[variacao-produto]]',
-        'quantity': '[[quantidade-produto]]'
+        'name': '[[product-name]]',
+        'id': '[[product-id]]',
+        'price': '[[product-price]]',
+        'brand': '[[product-brand]]',
+        'category': '[[product-category]]',
+        'variant': '[[product-variant]]',
+        'quantity': '[[product-quantity]]'
       }]
     }
   }
@@ -817,22 +817,22 @@ window.dataLayer.push({
 </script>
 ```
 
-| Variável        | example                               | Descrição                         |
+| Variable        | Example                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-produto]] | 'intimus-tripla-acao'  | Nome do produto |
-| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
-| [[preco-produto]] | &quot;139,99&quot; | Preço do produto |
-| [[categoria-produto]] | 'absorvente' | Categoria do produto |
-| [[variacao-produto]] | 'com-abas' | Tamanho do produto |
-| [[marca-produto]] | 'intimus' | Marca do produto |
-| [[quantidade-produto]] | '2' | Quantidade do produto |
+| [[product-name]] | 'intimus-tripla-acao'  | Name of the product |
+| [[product-id]] | 'i17mcjf106-771-2' | Product SKU |
+| [[product-price]] | &quot;139,99&quot; | Product Price |
+| [[product-category]] | 'absorvente' | Product Category |
+| [[product-variant]] | 'com-abas' | Product Variant |
+| [[product-brand]] | 'intimus' | Product Brand |
+| [[product-quantity]] | '2' | Product Quantity |
 
 <br />
 
 
 **On loading of each checkout step.**<br />
 
-- **Where:** Na página do checkout
+- **Where:** On pages of the checkout process.
     
 
 ```html
@@ -845,15 +845,15 @@ window.dataLayer.push({
   'noInteraction': '1',
   'ecommerce': {
     'checkout': {
-      'actionField': {'step': '[[passo-checkout]]'},
+      'actionField': {'step': '[[checkout-step]]'},
       'products': [{
-        'name': '[[nome-produto]]',
-        'id': '[[id-produto]]',
-        'price': '[[preco-produto]]',
-        'brand': '[[marca-produto]]',
-        'category': '[[categoria-produto]]',
-        'variant': '[[variacao-produto]]',
-        'quantity': '[[quantidade-produto]]'
+        'name': '[[product-name]]',
+        'id': '[[product-id]]',
+        'price': '[[product-price]]',
+        'brand': '[[product-brand]]',
+        'category': '[[product-category]]',
+        'variant': '[[product-variant]]',
+        'quantity': '[[product-quantity]]'
       }]
     }
   }
@@ -861,19 +861,19 @@ window.dataLayer.push({
 </script>
 ```
 
-| Variável        | example                               | Descrição                         |
+| Variable        | Example                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[checkout-index]] |  | Retornar &quot;1&quot; ou &quot;2&quot; ou &quot;3&quot; de acordo com a página que o usuário está.  |
-| [[nome-produto]] | 'intimus-tripla-acao'  | Nome do produto |
-| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
-| [[preco-produto]] | &quot;139,99&quot; | Preço do produto |
-| [[categoria-produto]] | 'absorvente' | Categoria do produto |
-| [[variacao-produto]] | 'com-abas' | Tamanho do produto |
-| [[marca-produto]] | 'intimus' | Marca do produto |
-| [[quantidade-produto]] | '2' | Quantidade do produto |
-| [[passo-checkout]] | 1' | Página de carrinho de compras |
-| [[passo-checkout]] | 2' | Página de confirmação do endereço de entrega |
-| [[passo-checkout]] | 3' | Página de seleção do método de pagamento |
+| [[checkout-index]] |  | Returns &quot;1&quot;, &quot;2&quot; or &quot;3&quot; according to the page the user is currently on.  |
+| [[product-name]] | 'intimus-tripla-acao'  | Name of the product |
+| [[product-id]] | 'i17mcjf106-771-2' | Product SKU |
+| [[product-price]] | &quot;139,99&quot; | Product Price |
+| [[product-category]] | 'absorvente' | Product Category |
+| [[product-variant]] | 'com-abas' | Product Variant |
+| [[product-brand]] | 'intimus' | Product Brand |
+| [[product-quantity]] | '2' | Product Quantity |
+| [[passo-checkout]] | 1' | Cart Page |
+| [[passo-checkout]] | 2' | Shipping Information Page |
+| [[passo-checkout]] | 3' | Payment Page |
 
 <br />
 
@@ -890,10 +890,10 @@ window.dataLayer.push({
   'event': 'checkoutOption',
   'eventCategory': 'fem:enhanced-ecommerce',
   'eventAction': 'checkoutOption',
-  'eventLabel': '[[shipping ou payment]]-method',
+  'eventLabel': '[[shipping-or-payment]]-method',
     'ecommerce': {
     'checkout_option': {
-        'actionField':  {'step':'2','option':'shipping:[[opcao escolhida]]:[[previsao-entrega]]'},
+        'actionField':  {'step':'2','option':'shipping:[[selected-option]]:[[delivery-time]]'},
     }
   }
 });
@@ -907,10 +907,10 @@ window.dataLayer.push({
   'event': 'checkoutOption',
   'eventCategory': 'fem:enhanced-ecommerce',
   'eventAction': 'checkoutOption',
-  'eventLabel': '[[shipping ou payment]]-method',
+  'eventLabel': '[[shipping-or-payment]]-method',
     'ecommerce': {
     'checkout_option': {
-        'actionField':  {'step':'3','option':'payment:[[opcao escolhida]]'},
+        'actionField':  {'step':'3','option':'payment:[[selected-option]]'},
     }
   }
 });
@@ -918,11 +918,11 @@ window.dataLayer.push({
 ```
 
 
-| Variável        | example                               | Descrição                         |
+| Variable        | Example                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[opcao escolhida]] | 'receber', 'retirar', 'cartao-de-credito', 'boleto' etc | Deve retornar o nome da opção de pagamento ou entrega escolhida. |
-| [[previsao-entrega]] | 'em-ate-4-dias-uteis', 'pompeia-em-ate-2-dias' | Usar essa variável apenas para etapa de entrega. Retorna as informações de forma de entrega. |
-| [[shipping ou payment]] | 'shipping' ou 'payment' | Deve retornar o nome da etapa do checkout. |
+| [[selected-option]] | 'receber', 'retirar', 'cartao-de-credito', 'boleto' etc | It should return the name of the payment or shipping option selected. |
+| [[delivery-time]] | 'em-ate-4-dias-uteis', 'pompeia-em-ate-2-dias' | Use this variable only for the shipping step. It should return the estimated delivery time for the selected shipping option. |
+| [[shipping ou payment]] | 'shipping' ou 'payment' | It should return the name of the current checkout option. Eg: 'shipping' or 'payment'. |
 
 <br />
 
@@ -943,20 +943,20 @@ window.dataLayer.push({
   'ecommerce': {
     'purchase': {
       'actionField': {
-        'id': '[[id-transacao]]',
-        'revenue': '[[valor-total-transacao]]',
-        'shipping': '[[frete-transacao]]'
-        'tax': '[[taxa-transacao]]'
-        'coupon': '[[coupon-transacao]]'
+        'id': '[[transaction-id]]',
+        'revenue': '[[Transaction Revenue]]',
+        'shipping': '[[Transaction Shipping]]'
+        'tax': '[[transaction-tax]]'
+        'coupon': '[[transaction-coupon]]'
       },
       'products': [{
-        'name': '[[nome-produto]]',
-        'id': '[[id-produto]]',
-        'price': '[[preco-produto]]',
-        'brand': '[[marca-produto]]',
-        'category': '[[categoria-produto]]',
-        'variant': '[[variacao-produto]]',
-        'quantity': '[[quantidade-produto]]'
+        'name': '[[product-name]]',
+        'id': '[[product-id]]',
+        'price': '[[product-price]]',
+        'brand': '[[product-brand]]',
+        'category': '[[product-category]]',
+        'variant': '[[product-variant]]',
+        'quantity': '[[product-quantity]]'
       }]
     }
   }
@@ -964,27 +964,27 @@ window.dataLayer.push({
 </script>
 ```
 
-| Variável        | example                               | Descrição                         |
+| Variable        | Example                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[id-transacao]] | '000011652' | ID único da transação |
-| [[valor-total-transacao]] | '139,99' | Valor total da transação incluindo frete e taxas |
-| [[frete-transacao]] | '5.99' | Valor do frete da transação |
-| [[coupon-transacao]] | 'cupom-2020' | Cupom de desconto utilizado na transação - promoção nivel pedido |
-| [[taxa-transacao]] | '2.99' | Valor de taxas da transação |
-| [[nome-produto]] | 'intimus-tripla-acao'  | Nome do produto |
-| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
-| [[preco-produto]] | &quot;139,99&quot; | Preço do produto |
-| [[categoria-produto]] | 'absorvente' | Categoria do produto |
-| [[variacao-produto]] | 'com-abas' | Tamanho do produto |
-| [[marca-produto]] | 'intimus' | Marca do produto |
-| [[quantidade-produto]] | '2' | Quantidade do produto |
+| [[transaction-id]] | '000011652' | Unique ID of the transaction |
+| [[Transaction Revenue]] | '139,99' | Total value of the transaction including taxes and shipping. |
+| [[Transaction Shipping]] | '5.99' | Transaction shipping value |
+| [[transaction-coupon]] | 'cupom-2020' | Name of coupon used in the transaction |
+| [[transaction-tax]] | '2.99' | Transaction taxes value |
+| [[product-name]] | 'intimus-tripla-acao'  | Name of the product |
+| [[product-id]] | 'i17mcjf106-771-2' | Product SKU |
+| [[product-price]] | &quot;139,99&quot; | Product Price |
+| [[product-category]] | 'absorvente' | Product Category |
+| [[product-variant]] | 'com-abas' | Product Variant |
+| [[product-brand]] | 'intimus' | Product Brand |
+| [[product-quantity]] | '2' | Product Quantity |
 
 <br />
 
 
 ---
 
-> Em caso de dúvidas, entrar em contato com: [paulo.benachio@reamp.com.br](paulo.benachio@reamp.com.br)
+> In case of any questions, please contact: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
 
