@@ -44,6 +44,8 @@ A documentação foi descrita para algumas áreas especificas dos sites:
 [www.shoppingmetropole.com.br/](www.shoppingmetropole.com.br/),
 [www.plazasulshopping.com.br/](www.plazasulshopping.com.br/),
 [www.uberlandiashopping.com.br/](www.uberlandiashopping.com.br/),<br />
+[www.pracanovashopping.com.br](www.pracanovashopping.com.br),<br />
+[boulevardfeira.com.br/](boulevardfeira.com.br/)<br />
 
 
 ### **Descrição Geral**
