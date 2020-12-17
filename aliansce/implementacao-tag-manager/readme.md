@@ -71,7 +71,7 @@ O `snippet` do Google Tag Manager é um pequeno trecho de código javascript ou 
 ```html
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8ZFN2S" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   //...
   </body>
@@ -85,7 +85,7 @@ Link de referência: [Documentação Oficial Google Tag Manager](https://develop
 
 ## Contato
 
-Em caso de dúvidas, por favor entrar em contato pelo e-mail [tag@reamp.com.br](tag@reamp.com.br)
+Em caso de dúvidas, por favor entrar em contato pelo e-mail [digitalanalytics@zoly.com.br](mailto:digitalanalytics@zoly.com.br)
 <br />
 
 <script>
