@@ -85,7 +85,7 @@ Link de referência: [Documentação Oficial Google Tag Manager](https://develop
 
 ## Contato
 
-Em caso de dúvidas, por favor entrar em contato pelo e-mail [digitalanalytics@zoly.com.br](mailto:digitalanalytics@zoly.com.br)
+Em caso de dúvidas, por favor entrar em contato pelo e-mail [tag@reamp.com.br](tag@reamp.com.br)
 <br />
 
 <script>
