@@ -10,7 +10,7 @@ Esse documento descreve os detalhes de como instalar o Google Tag Manager nos si
 
 
 ## Implementação
-A documentação foi descrita para algumas áreas especificas dos sites:
+A documentação foi descrita para algumas áreas especificas do site:
 
 [https://compras.parquedpedro.com.br/](https://compras.parquedpedro.com.br/)<br />
 
