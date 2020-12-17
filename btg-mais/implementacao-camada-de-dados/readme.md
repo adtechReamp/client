@@ -402,7 +402,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 <br />
 
 
-> Em caso de dúvidas, entrar em contato com: [paulo.benachio@reamp.com.br](paulo.benachio@reamp.com.br)
+> Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
 
