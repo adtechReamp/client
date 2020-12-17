@@ -406,8 +406,4 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 <br />
 
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    document.querySelectorAll("h1 a")[0].style.display = 'none';
-  });
-</script>
+<script> document.querySelector('h1').style.display = 'none' </script>
