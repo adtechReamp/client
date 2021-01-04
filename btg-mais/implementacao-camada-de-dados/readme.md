@@ -6,7 +6,7 @@
 <br />
 
 ## Implementação da Camada de dados - BTG Mais
-Última atualização: 17/12/2020 <br />
+Última atualização: 04/01/2020 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
@@ -309,6 +309,100 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-botao]] | 'saiba-como-funciona' e etc | Retornar o nome do botão clicado.  |
 | [[nome-banner]] | 'pix', 'chegou-o-btg-mais' e etc  |  Retornar o nome do banner. |
+
+<br />
+
+
+**Quando: No clique dos botões dos cards.**<br />
+
+- **Onde:** Em todas as páginas que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'btgmais',
+    'eventAction': 'clique:botao:cards-cartoes',
+    'eventLabel': '[[nome-botao]]:[[nome-card]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] | 'faca-sua-reserva' e etc | Retornar o nome do botão clicado.   |
+| [[nome-card]] | 'btg+-black', 'btg+platinum' e etc  |   Retornar o nome do cartão apresentado dentro do card que foi clicado. |
+
+<br />
+
+**Quando: No clique dos botões de cada seção de cartões.**<br />
+
+- **Onde:** Em todas as páginas que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'btgmais',
+    'eventAction': 'clique:botao:secao-cartoes',
+    'eventLabel': '[[nome-botao]]:[[nome-cartao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] | 'faca-sua-reserva' e etc | Retornar o nome do botão clicado.   |
+| [[nome-cartao]] | 'btg+-black', 'btg+platinum' e etc  |  Retornar o nome do cartão da seção. |
+
+<br />
+
+**Quando: Na interação com as tabs de descontos exclusivos.**<br />
+
+- **Onde:** Em todas as páginas que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'btgmais',
+    'eventAction': 'interacao:descontos-exclusivos',
+    'eventLabel': '[[nome-departamento]]:[[acao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-departamento]] | 'eletronicos', 'pets' e etc | Deve retornar o nome do departamento.   |
+| [[acao]] | 'abriu' ou 'fechou'   |  Deve retornar a ação do usuário. |
+
+<br />
+
+**Quando: No clique dos botões de acessar dentro das tabs de desconto dos parceiros.**<br />
+
+- **Onde:** Em todas as páginas que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'btgmais',
+    'eventAction': 'interacao:descontos-exclusivos',
+    'eventLabel': '[[nome-departamento]]:[[nome-parceiro]]:[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-departamento]] | 'eletronicos', 'pets' e etc | Deve retornar o nome do departamento.   |
+| [[nome-parceiro]] | 'pets', 'philips' e etc |  Deve retornar o nome do parceiro. |
+| [[nome-botao]] | 'acessar' e etc |  Deve retornar o nome do botão |
 
 <br />
 
