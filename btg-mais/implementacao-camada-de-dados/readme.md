@@ -120,29 +120,6 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 <br />
 
-**Quando: No clique do menu superior**<br />
-
-- **Onde:** Em  todas as páginas que estiver disponível
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'btgmais',
-    'eventAction': 'clique:menu',
-    'eventLabel': '[[nome-menu]]:[[submenu]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-menu]] | nossos-produtos' e etc |  Retornar o nome do menu clicado.  |
-| [[submenu]] | 'cartao-de-credito', 'conta-corrente' e etc | Retornar o nome do submenu clicado.   |
-
-
-<br />
 
 **Quando: No clique do itens do footer**<br />
 
@@ -261,7 +238,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-formulario]] | 'entre-na-lista-de-espera-btg+' e etc|  Deve retornar o nome do formulário.   |
-| [[status]] |   'sucesso', 'erro:email-invalido', 'pagina-indisponivel-no-momento' e etc |  Retornar a mensagem de sucesso ou tipo de erro. |
+| [[status]] |   'sucesso', 'erro:email-invalido', 'erro:pagina-indisponivel-no-momento' e etc |  Retornar a mensagem de sucesso ou tipo de erro. |
 | [[User ID]]			| '1234656'			    | ID definido após o envio com sucesso do formulário										|
 
 <br />
