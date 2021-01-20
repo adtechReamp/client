@@ -580,6 +580,76 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 ### Gastronomia
 
+**Quando: Na interação com os filtros**<br />
+
+- **Onde:** Na página de Gastronomia.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:gastronomia',
+    'eventAction': 'interacao:filtro',
+    'eventLabel': '[[nome-filtro]]:[[item-filtrado]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-filtro]] |  'segmento', 'a-z' e etc | Deve retornar o nome do filtro. |
+| [[item-filtrado]] |  'restaurante', fast-food' e etc  | Deve retornar o nome filtrado. |
+
+
+<br />
+
+**Quando: No clique dos cards**<br />
+
+- **Onde:** Na página de Gastronomia.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:gastronomia',
+    'eventAction': 'clique:card',
+    'eventLabel': '[[nome-card]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-card]] |  'abreu', 'abraccio' e etc | Deve retornar o nome do card clicado. |
+
+
+<br />
+
+**Quando: Ao clicar no link "Carregar Mais" .**<br />
+
+- **Onde:** Na página de Gastronomia.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:gastronomia',
+    'eventAction': 'clique:link',
+    'eventLabel': 'carregar-mais'
+  });
+</script>
+```
+
+
+<br />
+
+### Eventos
 
 
 
