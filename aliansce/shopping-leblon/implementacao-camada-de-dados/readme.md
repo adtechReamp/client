@@ -43,11 +43,6 @@ Este documento tem como objetivo instruir a implementação da camada de dados e
 
 <br />
 
-### **Descrição Geral**
-
-O `snippet` do Google Tag Manager é um pequeno trecho de código javascript ou non-javascript, através do uso de um iframe quando o javascript não está disponível, que é inserido nas páginas do site, tornando possível que a configuração das tags sejam realizadas via interface.
-
-
 ## Observações
 > Os valores especificados entre colchetes `[[ ]]` são variáveis dinâmicas e devem ser substituídas por seus respectivos valores.<br />
 
