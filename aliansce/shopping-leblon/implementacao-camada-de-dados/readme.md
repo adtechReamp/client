@@ -6,7 +6,7 @@
 <br />
 
 ## Implementação da Camada de dados - Shopping Leblon
-Última atualização: 20/01/2020 <br />
+Última atualização: 21/01/2020 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
@@ -93,10 +93,10 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 		'dimension1': '[[User ID]]',
 		'dimension2': '[[GA ClientID]]',
 		'dimension3': '[[GTM-ID]]',
-	  'dimension4': '[[Nome página]],
-    'dimension5': '[[Nome Loja]],
-    'dimension6': '[[Localização]],
-    'dimension7': '[[Device ID]]
+	        'dimension4': '[[Nome página]],
+                'dimension5': '[[Nome Loja]],
+                'dimension6': '[[Localização]],
+                'dimension7': '[[Device ID]]
 
 	
 	});
