@@ -90,6 +90,7 @@ Caso a informação solicitada não estiver disponível retornar tipagem ´undef
 **Dimensões Customizadas para todas as páginas:**<br />
 Deve ser disparado um push de dataLayer no momento de carregamento de todas as páginas do site (Considerar também todas as trocas de Path, quando o conteúdo da página é alterado mas a página não recarrega).<br />
 
+
 ```html
 <script>
 	window.dataLayer = window.dataLayer || [];
@@ -97,10 +98,10 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 		'dimension1': '[[User ID]]',
 		'dimension2': '[[GA ClientID]]',
 		'dimension3': '[[GTM-ID]]',
-	        'dimension4': '[[Nome página]],
-                'dimension5': '[[Nome Loja]],
-                'dimension6': '[[Localização]],
-                'dimension7': '[[Device ID]]
+	  'dimension4': '[[Nome página]],
+    'dimension5': '[[Nome Loja]],
+    'dimension6': '[[Localização]],
+    'dimension7': '[[Device ID]]
 
 	
 	});
@@ -650,6 +651,715 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 <br />
 
 ### Eventos
+
+**Quando: Ao clicar na caixa de seleção.**<br />
+
+- **Onde:** Na página de Evento.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:eventos',
+    'eventAction': 'interacao:filtro',
+    'eventLabel': '[[nome-filtro]]:[[item-filtrado]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-filtro]] |  'ano' e etc | Deve retornar o nome do filtro. |
+| [[item-filtrado]] | '2020' e etc | Deve retornar o nome filtrado.  |
+
+
+<br />
+
+### Teatro
+
+**Quando: Na clique do botão do banner.**<br />
+
+- **Onde:** Na página de Teatro.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:teatro',
+    'eventAction': 'clique:botao:banner',
+    'eventLabel': 'teatro:[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] | 'comprar-ingresso' e etc | Deve retornar o nome do botão clicado. |
+
+
+<br />
+
+### Planeje sua visita
+
+**Quando: No clique dos cards**<br />
+
+- **Onde:** Na página de visita.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:planeje-sua-visita',
+    'eventAction': 'clique:card',
+    'eventLabel': '[[nome-card]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-card]] | 'destinos-cariocas' e etc |  Deve retornar o nome do card. |
+
+
+<br />
+
+
+### Serviços
+
+**Quando: Ao clicar no link**<br />
+
+- **Onde:** Nas páginas de serviços.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:servicos',
+    'eventAction': 'clique:link',
+    'eventLabel': 'carregar-mais'
+  });
+</script>
+```
+
+<br />
+
+### Fale Conosco
+
+**Quando: Nos cliques dos botões**<br />
+
+- **Onde:** Na página fale conosco.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:fale-conosco',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] |  'ver-mapa', 'email' e etc | Deve retornar o nome do botão clicado.  |
+
+
+<br />
+
+**Quando: Na interação com os campos do formulário**<br />
+
+- **Onde:** Na página fale conosco.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:fale-conosco',
+    'eventAction': 'interacao:campo:formulario',
+    'eventLabel': 'preencheu:[[nome-campo]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-campo]] |  'nome', 'cpf' e etc | Deve retornar o nome do campo preenchido.  |
+
+
+<br />
+
+**Quando: Na tentativa de callback do envio do formulario**<br />
+
+- **Onde:** Na página fale conosco.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'conversion',
+    'eventCategory': 'shopping-leblon:fale-conosco',
+    'eventAction': 'callback',
+    'eventLabel': '[[status]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[status]] | 'sucesso', 'erro:cpd-invalido' e etc | Deve retornar a mensagem de sucesso ou o tipo de erro. |
+
+
+<br />
+
+### Solar
+
+**Quando: No clique dos botões**<br />
+
+- **Onde:** Na página Solar.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:solar',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] | 'regulamento', 'enviar' e etc | Deve retornar o nome do botão clicado. |
+
+
+<br />
+
+**Quando: Na interação com os campos do formulário**<br />
+
+- **Onde:** Na página Solar.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:solar',
+    'eventAction': 'interacao:campo:formulario',
+    'eventLabel': 'preencheu:[[nome-campo]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-campo]] | 'nome', 'cpf' e etc | Deve retornar o nome do campo preenchido.  |
+
+
+<br />
+
+**Quando: Na tentativa de callback do envio do formulario**<br />
+
+- **Onde:** Na página Solar.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'conversion',
+    'eventCategory': 'shopping-leblon:solar',
+    'eventAction': 'callback',
+    'eventLabel': '[[status]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[status]] | 'sucesso', 'erro:cpd-invalido' e etc | Deve retornar a mensagem de sucesso ou o tipo de erro.   |
+
+
+<br />
+
+### Cadastro
+
+**Quando: Na interação com os campos.**<br />
+
+- **Onde:** Na página de cadastro.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:cadastro',
+    'eventAction': 'interacao:campo',
+    'eventLabel': 'preencheu:[[nome-campo]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-campo]] |  'nome', 'email', 'bairro' e etc | Deve retornar o nome do campo preenchido.  |
+
+
+<br />
+
+**Quando: Na interação com o checkbox.**<br />
+
+- **Onde:** Na página de cadastro.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:cadastro',
+    'eventAction': 'interacao:checkbox',
+    'eventLabel': 'autorizo-o-uso-dos-meus-dados'
+  });
+</script>
+```
+
+
+<br />
+
+**Quando: No clique dos botões**<br />
+
+- **Onde:** Na página de cadastro.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:cadastro',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] |  'enviar-codigo-de-verificacao', 'criar', 'cancelar' | Deve retornar o nome do botão clicado.   |
+
+
+<br />
+
+**Quando: Na tentativa de callback para efetuar o cadastro**<br />
+
+- **Onde:** Na página de cadastro.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'conversion',
+    'eventCategory': 'shopping-leblon:cadastro',
+    'eventAction': 'callback',
+    'eventLabel': '[[status]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[status]] | 'sucesso', 'erro:usuario-ou-senha-invalidos', 'erro:pagina-fora-do-ar' e etc | Deve retornar a mensagem de sucesso ou o tipo de erro. |
+
+
+<br />
+
+
+### Login
+
+**Quando: Na interação com os campos**<br />
+
+- **Onde:** Na página de login.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:login',
+    'eventAction': 'interacao:campo',
+    'eventLabel': 'preencheu:[[nome-campo]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-campo]] |   'email', 'senha' | Deve retornar o nome do campo preenchido.   |
+
+
+<br />
+
+**Quando: No clique dos botões**<br />
+
+- **Onde:** Na página de login.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:login',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] |  'entrar', 'cancelar' | Deve retornar o nome do botão clicado.   |
+
+
+<br />
+
+**Quando: Na tentativa de callback para efetuar o login**<br />
+
+- **Onde:** Na página de login.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'login',
+    'eventCategory': 'shopping-leblon:login',
+    'eventAction': 'callback',
+    'eventLabel': '[[status]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[status]] | 'sucesso', 'erro:usuario-ou-senha-invalidos', 'erro:pagina-fora-do-ar' e etc | Deve retornar a mensagem de sucesso ou o tipo de erro. |
+
+
+<br />
+
+### Esqueci minha senha
+
+**Quando: Na interação com os campos**<br />
+
+- **Onde:** Na página "Esqueci minha senha"
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:lesqueci-minha-senha',
+    'eventAction': 'interacao:campo',
+    'eventLabel': 'preencheu:[[nome-campo]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-campo]] |   'email', 'codigo-de-verificacao' | Deve retornar o nome do campo preenchido.   |
+
+
+<br />
+
+**Quando: No clique dos botões**<br />
+
+- **Onde:** Na página "Esqueci minha senha"
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:lesqueci-minha-senha',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] |  'enviar-codigo-de-verificacao', 'continuar', 'cancelar' e etc | Deve retornar o nome do botão clicado.   |
+
+
+<br />
+
+**Quando: Na tentativa de callback para cadastrar a nova senha**<br />
+
+- **Onde:** Na página "Esqueci minha senha".
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'sshopping-leblon:lesqueci-minha-senha',
+    'eventAction': 'callback',
+    'eventLabel': '[[status]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[status]] | 'sucesso', 'erro:nao-encontramos-sua-conta' e etc | Deve retornar a mensagem de sucesso ou o tipo de erro. |
+
+
+<br />
+
+### Área Logada
+
+**Quando: No clique das opções do menu**<br />
+
+- **Onde:** Na área logada do site.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:area-logada',
+    'eventAction': 'clique:menu',
+    'eventLabel': '[[nome-menu]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-menu]] | 'editar-perfil', 'sair' e etc | Deve retornar o nome do menu clicado.  |
+
+
+<br />
+
+**Quando: No clique das opções do menu lateral**<br />
+
+- **Onde:** Na página "Editar Perfil" na área logada do site
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:area-logada:editar-perfil',
+    'eventAction': 'clique:menu-lateral',
+    'eventLabel': '[[nome-menu-lateral]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-menu-lateral]] | 'dados-de-cadastro', 'meus-cartoes' | Deve retornar o nome do  menu lateral. |
+
+
+<br />
+
+**Quando: Ao preencher um dos campos no formulário dados de cadastro**<br />
+
+- **Onde:** Na página "Editar Perfil" na área logada do site
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:area-logada:editar-perfil',
+    'eventAction': 'interacao:formulario-dados-de-cadastro:campo',
+    'eventLabel': '[[nome-campo]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-campo]] | 'nome', 'data-nascimento', 'telefone' e etc | Deve retornar o nome do campo preenchido no formulário.  |
+
+
+<br />
+
+
+**Quando: Na interação com os checkbox do formulário dados de cadastro**<br />
+
+- **Onde:** Na página "Editar Perfil" na área logada do site.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:area-logada:editar-perfil',
+    'eventAction': 'interacao:checkbox:formulario-dados-de-cadastro',
+    'eventLabel': '[[nome-checkbox]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-checkbox]] |  'por-telefone'', 'por-email' e etc | Deve retornar o nome do checkbox.  |
+
+
+<br />
+
+**Quando: No clique dos botões no formulário dados de cadastro**<br />
+
+- **Onde:** Na página "Editar Perfil" na área logada do site.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:area-logada:editar-perfil',
+    'eventAction': 'clique:botao:formulario-dados-de-cadastro',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] |  'alterar-email', 'salvar-alteracoes', 'cancelar' e etc | Deve retornar o nome do botão clicado.  |
+
+
+<br />
+
+**Quando: Na tentativa de callback para enviar o formulário dados de cadastro**<br />
+
+- **Onde:** Na página "Editar Perfil" na área logada do site.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:area-logada:editar-perfil',
+    'eventAction': 'callback:formulario-dados-de-cadastro',
+    'eventLabel': '[[status]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[status]] |  'sucesso', 'erro:cpf-invalido', 'erro:pagina-fora-do-ar' e etc | Deve retornar a mensagem de sucesso ou o tipo de erro. |
+
+
+<br />
+
+**Quando: No clique dos botões no menu meus cartões**<br />
+
+- **Onde:**  Na página "meus cartoes" na área logada do site
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:area-logada:editar-perfil',
+    'eventAction': 'clique:botao:meus-cartoes',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] |  'adicionar-novo-cartao', 'adicionar', 'cancelar' e etc |  Deve retornar o nome do botão clicado |
+
+
+<br />
+
+**Quando: Ao preencher um dos campos no formulário meus cartões**<br />
+
+- **Onde:**  Na página "meus cartoes" na área logada do site
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:area-logada:editar-perfil',
+    'eventAction': 'interacao:formulario-meus-cartoes:campo',
+    'eventLabel': '[[nome-campo]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-campo]] |   'numero', 'titular' e etc |  Deve retornar o nome do campo preenchido no formulário. |
+
+
+<br />
+
+**Quando: Na tentativa de callback para enviar o formulário meus cartões**<br />
+
+- **Onde:**  Na página "meus cartoes" na área logada do site
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:area-logada:editar-perfil',
+    'eventAction': 'callback:formulario-meus-cartoes',
+    'eventLabel': '[[status]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[status]] |  'sucesso', 'erro:numer-cartao-invalido', 'erro:pagina-fora-do-ar' e etc |  Deve retornar a mensagem de sucesso ou o tipo de erro.  |
+
+
+<br />
+
 
 
 
