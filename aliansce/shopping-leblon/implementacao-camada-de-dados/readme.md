@@ -527,30 +527,6 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 <br />
 
-**Quando: Na interação com os filtros**<br />
-
-- **Onde:** Nas página Lojas.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'shopping-leblon:lojas',
-    'eventAction': 'interacao:filtro',
-    'eventLabel': '[[nome-filtro]]:[[item-filtrado]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-filtro]] |  'segmento', 'a-z' e etc | Deve retornar o nome do filtro. |
-| [[item-filtrado]] |  'alimentacao', 'artigos-diversos' e etc  | Deve retornar o nome filtrado. |
-
-
-<br />
-
 **Quando: No clique dos cards**<br />
 
 - **Onde:** Nas página Lojas.
@@ -1074,7 +1050,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': 'shopping-leblon:lesqueci-minha-senha',
+    'eventCategory': 'shopping-leblon:esqueci-minha-senha',
     'eventAction': 'interacao:campo',
     'eventLabel': 'preencheu:[[nome-campo]]'
   });
@@ -1098,7 +1074,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': 'shopping-leblon:lesqueci-minha-senha',
+    'eventCategory': 'shopping-leblon:esqueci-minha-senha',
     'eventAction': 'clique:botao',
     'eventLabel': '[[nome-botao]]'
   });
@@ -1122,7 +1098,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': 'sshopping-leblon:lesqueci-minha-senha',
+    'eventCategory': 'shopping-leblon:esqueci-minha-senha',
     'eventAction': 'callback',
     'eventLabel': '[[status]]'
   });
