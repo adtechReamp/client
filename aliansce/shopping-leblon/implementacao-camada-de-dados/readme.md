@@ -1203,13 +1203,14 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'genericEvent',
     'eventCategory': 'shopping-leblon:area-logada:editar-perfil',
     'eventAction': 'interacao:checkbox:formulario-dados-de-cadastro',
-    'eventLabel': '[[nome-checkbox]]'
+    'eventLabel': '[[acao]]:[[nome-checkbox]]'
   });
 </script>
 ```
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
+| [[acao]] |  'check', 'uncheck' | Deve retornar a ação do usuário.  |
 | [[nome-checkbox]] |  'por-telefone'', 'por-email' e etc | Deve retornar o nome do checkbox.  |
 
 
