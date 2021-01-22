@@ -39,7 +39,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 
 ## Objetivo
-Este documento tem como objetivo instruir a implementação da camada de dados e de data attributes para utilização de recursos de monitoramento do Google Analytics referentes ao ambiente de [https://shoppingleblon.com.br/](https://shoppingleblon.com.br/).
+Este documento tem como objetivo instruir a implementação da camada de dados para utilização de recursos de monitoramento do Google Analytics referentes ao ambiente de [https://shoppingleblon.com.br/](https://shoppingleblon.com.br/).
 
 <br />
 
@@ -908,11 +908,13 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'genericEvent',
     'eventCategory': 'shopping-leblon:cadastro',
     'eventAction': 'interacao:checkbox',
-    'eventLabel': 'autorizo-o-uso-dos-meus-dados'
+    'eventLabel': '[[acao]]:autorizo-o-uso-dos-meus-dados'
   });
 </script>
 ```
-
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[acao]] |  'check', 'uncheck' | Deve retornar a ação do usuário.  |
 
 <br />
 
@@ -952,7 +954,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'conversion',
     'eventCategory': 'shopping-leblon:cadastro',
     'eventAction': 'callback',
-    'eventLabel': '[[status]]'
+    'eventLabel': '[[status]]',
+    'dimension1: '[[User ID]]
   });
 </script>
 ```
@@ -960,7 +963,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[status]] | 'sucesso', 'erro:usuario-ou-senha-invalidos', 'erro:pagina-fora-do-ar' e etc | Deve retornar a mensagem de sucesso ou o tipo de erro. |
-
+| [[[User ID]] | '1234656' e etc | ID definido após o cadastro e login |
 
 <br />
 
@@ -1027,7 +1030,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'login',
     'eventCategory': 'shopping-leblon:login',
     'eventAction': 'callback',
-    'eventLabel': '[[status]]'
+    'eventLabel': '[[status]]',
+    'dimension1: '[[User ID]]
   });
 </script>
 ```
@@ -1035,7 +1039,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[status]] | 'sucesso', 'erro:usuario-ou-senha-invalidos', 'erro:pagina-fora-do-ar' e etc | Deve retornar a mensagem de sucesso ou o tipo de erro. |
-
+| [[[User ID]] | '1234656' e etc | ID definido após o cadastro e login |
 
 <br />
 
