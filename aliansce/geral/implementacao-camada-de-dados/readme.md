@@ -6,7 +6,7 @@
 <br />
 
 ## Implementação da Camada de dados - Geral
-Última atualização: 21/01/2020 <br />
+Última atualização: 27/01/2020 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
@@ -68,6 +68,7 @@ Este documento tem como objetivo instruir a implementação da camada de dados p
 [www.uberlandiashopping.com.br/](www.uberlandiashopping.com.br/),<br />
 [www.pracanovashopping.com.br](www.pracanovashopping.com.br),<br />
 [boulevardfeira.com.br/](boulevardfeira.com.br/)<br />
+[www.montesclarosshopping.com.br/](https://www.montesclarosshopping.com.br/)<br />
 
 <br />
 
