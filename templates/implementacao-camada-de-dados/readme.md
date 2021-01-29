@@ -220,7 +220,7 @@ Botão
 <script>
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
-    'event': 'promoView',
+    'event': 'promotionImpression',
     'eventCategory': 'projeto:enhanced-ecommerce',
     'eventAction': 'promotionImpression',
 'noInteraction': '1',
@@ -259,7 +259,7 @@ Botão
 <script>
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
-  'event': 'promoClick',
+  'event': 'promotionClick',
   'eventCategory': 'projeto:enhanced-ecommerce',
   'eventAction': 'promotionClick',
     'ecommerce': {
@@ -297,7 +297,7 @@ window.dataLayer.push({
 <script>
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
-  'event': 'impressions',
+  'event': 'productImpression',
   'eventCategory':'projeto:enhanced-ecommerce',
   'eventAction': 'productImpression',
   'noInteraction': '1',
@@ -334,7 +334,7 @@ window.dataLayer.push({
 <script>
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
-    'event': 'click',
+    'event': 'productClick',
     'eventCategory': 'projeto:enhanced-ecommerce',
     'eventAction': 'productClick',
         'ecommerce': {
