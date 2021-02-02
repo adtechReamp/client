@@ -18,6 +18,11 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 - [Especificações Globais](#especifica%c3%a7%c3%b5es-globais)
 - [Dimensões Globais](#dimens&otilde;es-globais)
 - [Geral](#geral)
+- [Lista de Produtos](#lista-de-produtos)
+- [PDP](#pdp)
+- [Sacola Modal](#sacola-modal)
+- [Checkout](#checkout)
+- [Enhanced E-commerce](#enhanced-e-commerce)
 
 
 
@@ -343,6 +348,683 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 
 <br />
+
+**Quando: No clique para selecionar o tamanho do produto**<br />
+
+- **Onde:** Na página do produto
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-parque-d-pedro:pdp',
+    'eventAction': 'clique:tamanho',
+    'eventLabel': '[[tamanho-selecionado]]:[[nome-produto]]',
+    'dimension4': '[[Nome Loja]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[tamanho-selecionado]] | '35', '40', '41'  e etc | Deve retornar o tamanho selecionado. |
+| [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
+| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja |
+
+
+<br />
+
+**Quando: No clique para selecionar a quantidade do produto**<br />
+
+- **Onde:** Na página do produto
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-parque-d-pedro:pdp',
+    'eventAction': 'interacao:quantidade',
+    'eventLabel': '[[quantidade-escolhida]]:[[nome-produto]]',
+    'dimension4': '[[Nome Loja]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[quantidade-escolhida]] | '1', '3', '4' e etc | Deve retornar a quantidade escolhida. |
+| [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
+| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja |
+
+
+<br />
+
+**Quando: No clique dos botões ou links**<br />
+
+- **Onde:** Na página do produto
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-parque-d-pedro:pdp',
+    'eventAction': 'clique:[[botao ou link]]',
+    'eventLabel': '[[nome-item]]:[[nome-produto]]',
+    'dimension4': '[[Nome Loja]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[botao ou link]] | 'botao' ou 'link' | Deve retornar o tipo de elemento clicado. |
+| [[nome-item]] | 'adicionar-a-sacola', 'favorita' e etc | Deve retornar o nome do botao ou link clicado. |
+| [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
+| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja |
+
+
+<br />
+
+### Sacola Modal
+
+**Quando: No clique dos botões ou links**<br />
+
+- **Onde:** Na página do modal da sacola
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-parque-d-pedro:sacola-modal',
+    'eventAction': 'clique:[[botao ou link]]',
+    'eventLabel': '[[nome-item]]',
+    'dimension4': '[[Nome Loja]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[botao ou link]] | 'botao' ou 'link' | Deve retornar o tipo de elemento clicado. |
+| [[nome-item]] |  'continuar-comprando', 'finalizar-compra', 'fechar' e etc | Deve retornar o nome do botao ou link clicado. |
+| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja |
+
+
+<br />
+
+**Quando: No clique para selecionar a quantidade do produto**<br />
+
+- **Onde:** Na página do modal da sacola
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-parque-d-pedro:sacola-modal',
+    'eventAction': 'interacao:quantidade',
+    'eventLabel': '[[quantidade-escolhida]]:[[nome-produto]]',
+    'dimension4': '[[Nome Loja]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[quantidade-escolhida]] |  '1', '3', '4' e etc | Deve retornar a quantidade escolhida. |
+| [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
+| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja |
+
+
+<br />
+
+### Checkout
+
+**Quando: No clique dos botões das etapas do checkout**<br />
+
+- **Onde:** Em todas as etapas do checkout que estiver disponível
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-parque-d-pedro:checkout',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]:[[step]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] |  'fechar-pedido', 'escolher-mais-produtos' e etc | Deve retornar o nome do botão clicado. |
+| [[step]] |  'carrinho', 'entrega', 'pagamento' | Deve retornar o nome da etapa do checkout. |
+
+
+<br />
+
+**Quando: No clique para selecionar a quantidade do produto**<br />
+
+- **Onde:** Na etapa do carrinho
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-parque-d-pedro:checkout',
+    'eventAction': 'interacao:quantidade',
+    'eventLabel': '[[quantidade-escolhida]]:[[nome-produto]]:carrinho'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[quantidade-escolhida]] |   '1', '3', '4' e etc | Deve retornar a quantidade escolhida. |
+| [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
+
+
+<br />
+
+**Quando: Na interação com o campos de cada etapa do checkout**<br />
+
+- **Onde:** Em todas as etapas do checkout que estiver disponível
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'interacao:campo',
+    'eventAction': 'interacao:quantidade',
+    'eventLabel': 'preencheu:[[nome-campo]]:[[step]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-campo]] |  'cupom-de-desconto', 'cep, 'cartao-de-credito' | Deve retornar o nome do campo preenchido. |
+| [[step]] | 'carrinho', 'entrega', 'pagamento' | Deve retornar o nome da etapa do checkout. |
+
+
+<br />
+
+
+### Enhanced E-commerce
+
+**Na visualização de algum banner**<br />
+
+- **Onde:** Em todas as páginas que estiver disponivel. 
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'promotionImpression',
+    'eventCategory': 'compras-parque-d-pedro:enhanced-ecommerce',
+    'eventAction': 'promotionImpression',
+'noInteraction': '1',
+'ecommerce': {
+    'promoView': {
+      'promotions': [{
+        'dimension4': '[[Nome Loja]]',
+        'id': '[[promotion-id]]',
+        'name': '[[nome-promocao]]',
+        'position': '[[posicao-promocao]]'
+      }]
+    }
+  }
+  });
+</script>
+```
+
+
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
+| [[promotion-id]] |'banner123' e etc | ID único do Banner |
+| [[nome-promocao]] | 'polos-diferenciadas' | Deve retornar o nome amigável do banner |
+| [[posicao-promocao]] | '1' e etc | Deve retornar a posição que o banner é exibido  |
+
+<br />
+
+
+**No clique dos banners**<br />
+
+- **Onde:** Em todas as páginas que estiver disponivel.
+    
+
+```html
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'promotionClick',
+  'eventCategory': 'compras-parque-d-pedro:enhanced-ecommerce',
+  'eventAction': 'promotionClick',
+    'ecommerce': {
+    'promoClick': {
+      'promotions': [{
+        'dimension4': '[[Nome Loja]]',
+        'id': '[[promotion-id]]',
+        'name': '[[nome-promocao]]',
+        'position': '[[posicao-promocao]]',
+        'creative': '[[arte-banner]]'
+      }]
+    }
+  }
+});
+</script>
+```
+
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
+| [[promotion-id]] |'banner123' e etc | ID único do Banner |
+| [[nome-promocao]] | 'polos-diferenciadas' | Deve retornar o nome amigável do banner |
+| [[posicao-promocao]] | '1' e etc | Deve retornar a posição que o banner é exibido  |
+
+<br />
+
+
+**Na visualização de uma vitrine de produtos**<br />
+
+- **Onde:** Em todas as páginas que estiver disponivel.
+    
+
+```html
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'productImpression',
+  'eventCategory':'compras-parque-d-pedro:enhanced-ecommerce',
+  'eventAction': 'productImpression',
+  'noInteraction': '1',
+  'ecommerce': {
+    'impressions': [{
+        'dimension4': '[[Nome Loja]]',
+        'name': '[[nome-produto]]',
+        'id': '[[id-produto]]',
+        'price':' [[preco-produto]]',
+        'category': '[[categoria-produto]]',
+        'brand': '[[marca-produto]]',
+        'list': '[[lista-produto]]',
+        'position': '[[posicao-produto]]'
+    }]
+  }
+});
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
+| [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
+| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
+| [[preco-produto]] | '139.99' | Preço do produto |
+| [[categoria-produto]] | calcados', 'vestuario', 'alimentacao' e etc | Categoria do produto |
+| [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
+| [[lista-produto]] | 'moda-masculina' e etc' | Nome da lista que o produto aparece |
+| [[posicao-produto]] | '2' | Posição que o produto aparece em uma lista de produtos |
+
+<br />
+
+
+**No clique de algum produto**<br />
+
+- **Onde:** Em todas as páginas que estiver disponivel.
+    
+
+```html
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+    'event': 'productClick',
+    'eventCategory': 'compras-parque-d-pedro:enhanced-ecommerce',
+    'eventAction': 'productClick',
+        'ecommerce': {
+        'click': {
+            'actionField': {'list': '[[lista-produto]]'},
+             'products': [{
+               'dimension4': '[[Nome Loja]]',
+               'name': '[[nome-produto]]',
+               'id': '[[id-produto]]',
+               'price':' [[preco-produto]]',
+               'category': '[[categoria-produto]]',
+               'brand': '[[marca-produto]]',
+               'list': '[[lista-produto]]',
+               'position': '[[posicao-produto]]',
+               'coupon': '[[cupom-produto]]'
+    }]
+  }
+});
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
+| [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
+| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
+| [[preco-produto]] | '139.99' | Preço do produto |
+| [[categoria-produto]] | calcados', 'vestuario', 'alimentacao' e etc | Categoria do produto |
+| [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
+| [[lista-produto]] | 'moda-masculina' e etc' | Nome da lista que o produto aparece |
+| [[posicao-produto]] | '2' | Posição que o produto aparece em uma lista de produtos |
+| [[cupom-produto]] | '25%' e etc' | Desconto do produto |
+
+<br />
+
+**Na visualização da página de detalhes do produto**<br />
+
+- **Onde:** Na página de detalhe do produto
+    
+
+```html
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'productDetail',
+  'eventCategory': 'compras-parque-d-pedro:enhanced-ecommerce',
+  'eventAction': 'productDetail',
+  'noInteraction': '1',
+  'ecommerce': {
+    'detail': {
+      'products': [{
+        'dimension4': '[[Nome Loja]]',
+        'name': '[[nome-produto]]',
+        'id': '[[id-produto]]',
+        'price':' [[preco-produto]]',
+        'category': '[[categoria-produto]]',
+        'brand': '[[marca-produto]]',
+        'variant': '[[tamanho-produto]]',
+        'coupon': '[[cupom-produto]]'
+    }]
+  }
+});
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
+| [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
+| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
+| [[preco-produto]] | '139.99' | Preço do produto |
+| [[categoria-produto]] | calcados', 'vestuario', 'alimentacao' e etc | Categoria do produto |
+| [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
+| [[tamanho-produto]] | 'm' | Tamanho do produto |
+| [[cupom-produto]] | '25%' e etc' | Desconto do produto |
+
+<br />
+
+
+**Ao adicionar um produto ao carrinho**<br />
+
+- **Onde:** Em todas as páginas que estiver disponivel
+    
+
+```html
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'addToCart',
+  'eventCategory':'compras-parque-d-pedro:enhanced-ecommerce',
+  'eventAction': 'addToCart',
+    'ecommerce': {
+    'add': {
+      'products': [{
+        'dimension4': '[[Nome Loja]]',
+        'name': '[[nome-produto]]',
+        'id': '[[id-produto]]',
+        'price':' [[preco-produto]]',
+        'category': '[[categoria-produto]]',
+        'variant': '[[tamanho-produto]]',
+        'brand': '[[marca-produto]]',
+        'quantity': '[[quantidade-produto]]',
+        'coupon': '[[cupom-produto]]'
+    }]
+  }
+});
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
+| [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
+| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
+| [[preco-produto]] | '139.99' | Preço do produto |
+| [[categoria-produto]] | calcados', 'vestuario', 'alimentacao' e etc | Categoria do produto |
+| [[tamanho-produto]] | 'm' | Tamanho do produto |
+| [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
+| [[quantidade-produto]] | '1' | Quantidade do produto |
+| [[cupom-produto]] | '25%' e etc' | Desconto do produto |
+
+
+<br />
+
+
+**Ao remover um produto do carrinho**<br />
+
+- **Onde:** Na página da Sacola;
+    
+
+```html
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'removeFromCart',
+  'eventCategory': 'compras-parque-d-pedro:enhanced-ecommerce',
+  'eventAction': 'removeFromCart',
+    'ecommerce': {
+    'remove': {
+      'products': [{
+        'dimension4': '[[Nome Loja]]',
+        'name': '[[nome-produto]]',
+        'id': '[[id-produto]]',
+        'price':' [[preco-produto]]',
+        'category': '[[categoria-produto]]',
+        'variant': '[[tamanho-produto]]',
+        'brand': '[[marca-produto]]',
+        'quantity': '[[quantidade-produto]]'
+    }]
+  }
+});
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
+| [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
+| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
+| [[preco-produto]] | '139.99' | Preço do produto |
+| [[categoria-produto]] | calcados', 'vestuario', 'alimentacao' e etc | Categoria do produto |
+| [[tamanho-produto]] | 'm' | Tamanho do produto |
+| [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
+| [[quantidade-produto]] | '1' | Quantidade do produto |
+
+
+<br />
+
+**No carregamento das etapas do checkout**<br />
+
+- **Onde:** Na página do checkout
+    
+
+```html
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'checkout',
+  'eventCategory': 'compras-parque-d-pedro:enhanced-ecommerce',
+  'eventAction': 'checkout',
+  'noInteraction': '1',
+  'ecommerce': {
+    'checkout': {
+      'actionField': {'step': '[[checkout-index]]'},
+      'products': [{
+        'dimension4': '[[Nome Loja]]',
+        'name': '[[nome-produto]]',
+        'id': '[[id-produto]]',
+        'price':' [[preco-produto]]',
+        'category': '[[categoria-produto]]',
+        'variant': '[[tamanho-produto]]',
+        'brand': '[[marca-produto]]',
+        'quantity': '[[quantidade-produto]]',
+        'coupon': '[[cupom-produto]]'
+    }]
+  }
+});
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[checkout-index]] | '1-carrinho', '2-entrega', '3-pagamento'| Retornar de acordo com a página que o usuário está. |
+| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
+| [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
+| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
+| [[preco-produto]] | '139.99' | Preço do produto |
+| [[categoria-produto]] | calcados', 'vestuario', 'alimentacao' e etc | Categoria do produto |
+| [[tamanho-produto]] | 'm' | Tamanho do produto |
+| [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
+| [[quantidade-produto]] | '1' | Quantidade do produto |
+| [[cupom-produto]] | '25%' e etc' | Desconto do produto |
+
+
+<br />
+
+
+**Ao selecionar uma opção de entrega**<br />
+
+- **Onde:** Na página de checkout
+    
+
+```html
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'checkoutOption'',
+  'eventCategory': 'compras-parque-d-pedro:enhanced-ecommerce',
+  'eventAction': 'checkoutOption',
+  'ecommerce': {
+    'checkout_option': {
+      'actionField': {'option': shipping:[[opcao escolhida]]:[[previsao-entrega]]}
+{step:2},
+    }
+  }
+});
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[opcao escolhida]] | 'receber', 'retirar' | Deve retornar os nomes dos tipos de entrega. |
+| [[previsao-entrega]] |  'em-ate-4-dias-uteis', 'pompeia-em-ate-2-dias' | Usar essa variável apenas para etapa de entrega. Retorna as informações de forma de entrega. |
+
+
+<br />
+
+
+**Ao selecionar uma opção de pagamento**<br />
+
+- **Onde:** Na página de carrinho e de checkout
+    
+
+```html
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'checkoutOption'',
+  'eventCategory': 'compras-parque-d-pedro:enhanced-ecommerce',
+  'eventAction': 'checkoutOption',
+  'ecommerce': {
+    'checkout_option': {
+      'actionField': {'option': payment:[[opcao escolhida]]}
+{step:3},
+    }
+  }
+});
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[opcao escolhida]] | 'cartao-de-credito', 'boleto' etc | Deve retornar os nomes dos tipos de entrega. |
+
+
+<br />
+
+**Na finalização da compra**<br />
+
+- **Onde:** Na página de confirmação de compra
+    
+
+```html
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  'event': 'purchase',
+  'eventCategory': 'compras-parque-d-pedro:enhanced-ecommerce',
+  'eventAction': 'purchase',
+  'noInteraction': '1',
+  'ecommerce': {
+    'purchase': {
+      'actionField': {
+        'id': '[[id-transacao]]',
+        'revenue': '[[valor-total-transacao]]',
+        'shipping': '[[frete-transacao]]',
+        'coupon': '[[coupon-transacao]]', 
+        'tax': '[[taxa-transacao]]'
+      },
+      'products': [{
+        'dimension4': '[[Nome Loja]]',
+        'name': '[[nome-produto]]',
+        'id': '[[id-produto]]',
+        'price':' [[preco-produto]]',
+        'category': '[[categoria-produto]]',
+        'variant': '[[tamanho-produto]]',
+        'brand': '[[marca-produto]]',
+        'quantity': '[[quantidade-produto]]',
+        'coupon': '[[cupom-produto]]'
+      }]
+    }
+  }
+});
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[id-transacao]] |  '000011652' | ID único da transação |
+| [[valor-total-transacao]] |  '250.50' | Valor total da transação incluindo frete e taxas |
+| [[frete-transacao]] |  '15.98' | Valor do frete da transação |
+| [[taxa-transacao]] |  '2.39' | Valor de taxas da transação |
+| [[coupon-transacao]] | 'cupom-2020' | Cupom de desconto utilizado na transação - promoção nivel pedido |
+| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
+| [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
+| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
+| [[preco-produto]] | '139.99' | Preço do produto |
+| [[categoria-produto]] | calcados', 'vestuario', 'alimentacao' e etc | Categoria do produto |
+| [[tamanho-produto]] | 'm' | Tamanho do produto |
+| [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
+| [[quantidade-produto]] | '1' | Quantidade do produto |
+| [[cupom-produto]] | '25%' e etc' | Desconto do produto |
+
+
+<br />
+
+---
 
 
 > Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
