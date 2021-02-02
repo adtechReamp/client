@@ -6,7 +6,7 @@
 <br />
 
 ## Implementação da Camada de dados - Compras Parque D Pedro
-Última atualização: 21/01/2020 <br />
+Última atualização: 02/02/2020 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
