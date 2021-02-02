@@ -113,29 +113,6 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': 'shopping-leblon:geral',
-    'eventAction': 'clique:header',
-    'eventLabel': '[[nome-item]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-item]] | 'instagram', 'logo' e etc. | Retornar o nome do item clicado.   |
-
-
-<br />
-
-**Quando: Ao clicar em um dos elementos do header.**<br />
-
-- **Onde:** Em todas as páginas do site em que estiver disponível.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
     'eventCategory': 'compras-parque-d-pedro:geral',
     'eventAction': 'clique:header',
     'eventLabel': '[[nome-item]]'
