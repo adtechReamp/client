@@ -82,11 +82,9 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 		'dimension1': '[[User ID]]',
 		'dimension2': '[[GA ClientID]]',
 		'dimension3': '[[GTM-ID]]',
-	        'dimension4': '[[Nome página]]',
-                'dimension5': '[[Nome Loja]]',
-                'dimension6': '[[Localização]]',
-                'dimension7': '[[Device ID]]'
-
+	        'dimension4': '[[Nome Loja]]',
+                'dimension5': '[[Localização]]',
+                'dimension6': '[[[Device ID]]'
 	
 	});
 </script>
@@ -98,7 +96,6 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | [[User ID]]			| '1234656'			    | ID definido após o cadastro e login										|
 | [[GA ClientID]]	| 'XXXXXXXXXX:XXXX:XX'	| ID aleatório do Google Analytics										|
 | [[GTM-ID]]			| 'GTM-TK8RPDC'		| ID do container do GTM instalado no ambiente										|
-| [[Nome página]] | 'sobre-o-shopping', 'marcas' e etc | Deve retornar o nome da página  |
 | [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
 | [[Localização]] | 'capao-redondo', 'morumbi', 'santa-cruz' e etc. | Deve retornar a localização  |
 | [[Device ID]]   | 'XXXXXXX' | Deve retornar o ID do dispositivo utilizado   |
