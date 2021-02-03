@@ -308,8 +308,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'genericEvent',
     'eventCategory': 'compras-parque-d-pedro:pdp',
     'eventAction': 'clique:cor',
-    'eventLabel': '[[nome-cor]]:[[nome-produto]]',
-    'dimension4': '[[Nome Loja]]'
+    'eventLabel': '[[nome-cor]]:[[nome-produto]]'
   });
 </script>
 ```
@@ -318,7 +317,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-cor]] | 'branco', 'preto', 'azul' e etc | Deve retornar a cor selecionada. |
 | [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
-| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja |
+
 
 
 <br />
@@ -334,8 +333,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'genericEvent',
     'eventCategory': 'compras-parque-d-pedro:pdp',
     'eventAction': 'clique:tamanho',
-    'eventLabel': '[[tamanho-selecionado]]:[[nome-produto]]',
-    'dimension4': '[[Nome Loja]]'
+    'eventLabel': '[[tamanho-selecionado]]:[[nome-produto]]'
   });
 </script>
 ```
@@ -344,7 +342,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[tamanho-selecionado]] | '35', '40', '41'  e etc | Deve retornar o tamanho selecionado. |
 | [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
-| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja |
+
 
 
 <br />
@@ -360,8 +358,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'genericEvent',
     'eventCategory': 'compras-parque-d-pedro:pdp',
     'eventAction': 'interacao:quantidade',
-    'eventLabel': '[[quantidade-escolhida]]:[[nome-produto]]',
-    'dimension4': '[[Nome Loja]]'
+    'eventLabel': '[[quantidade-escolhida]]:[[nome-produto]]'
   });
 </script>
 ```
@@ -370,7 +367,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[quantidade-escolhida]] | '1', '3', '4' e etc | Deve retornar a quantidade escolhida. |
 | [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
-| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja |
+
 
 
 <br />
@@ -386,8 +383,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'genericEvent',
     'eventCategory': 'compras-parque-d-pedro:pdp',
     'eventAction': 'clique:[[botao ou link]]',
-    'eventLabel': '[[nome-item]]:[[nome-produto]]',
-    'dimension4': '[[Nome Loja]]'
+    'eventLabel': '[[nome-item]]:[[nome-produto]]'
   });
 </script>
 ```
@@ -397,7 +393,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | [[botao ou link]] | 'botao' ou 'link' | Deve retornar o tipo de elemento clicado. |
 | [[nome-item]] | 'adicionar-a-sacola', 'favorita' e etc | Deve retornar o nome do botao ou link clicado. |
 | [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
-| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja |
+
 
 
 <br />
@@ -415,8 +411,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'genericEvent',
     'eventCategory': 'compras-parque-d-pedro:sacola-modal',
     'eventAction': 'clique:[[botao ou link]]',
-    'eventLabel': '[[nome-item]]',
-    'dimension4': '[[Nome Loja]]'
+    'eventLabel': '[[nome-item]]'
   });
 </script>
 ```
@@ -425,7 +420,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[botao ou link]] | 'botao' ou 'link' | Deve retornar o tipo de elemento clicado. |
 | [[nome-item]] |  'continuar-comprando', 'finalizar-compra', 'fechar' e etc | Deve retornar o nome do botao ou link clicado. |
-| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja |
+
 
 
 <br />
@@ -441,8 +436,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'genericEvent',
     'eventCategory': 'compras-parque-d-pedro:sacola-modal',
     'eventAction': 'interacao:quantidade',
-    'eventLabel': '[[quantidade-escolhida]]:[[nome-produto]]',
-    'dimension4': '[[Nome Loja]]'
+    'eventLabel': '[[quantidade-escolhida]]:[[nome-produto]]'
   });
 </script>
 ```
@@ -451,7 +445,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[quantidade-escolhida]] |  '1', '3', '4' e etc | Deve retornar a quantidade escolhida. |
 | [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
-| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja |
+
 
 
 <br />
@@ -548,7 +542,6 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 'ecommerce': {
     'promoView': {
       'promotions': [{
-        'dimension4': '[[Nome Loja]]',
         'id': '[[promotion-id]]',
         'name': '[[nome-promocao]]',
         'position': '[[posicao-promocao]]'
@@ -563,7 +556,6 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
 | [[promotion-id]] |'banner123' e etc | ID único do Banner |
 | [[nome-promocao]] | 'polos-diferenciadas' | Deve retornar o nome amigável do banner |
 | [[posicao-promocao]] | '1' e etc | Deve retornar a posição que o banner é exibido  |
@@ -586,7 +578,6 @@ window.dataLayer.push({
     'ecommerce': {
     'promoClick': {
       'promotions': [{
-        'dimension4': '[[Nome Loja]]',
         'id': '[[promotion-id]]',
         'name': '[[nome-promocao]]',
         'position': '[[posicao-promocao]]',
@@ -601,7 +592,6 @@ window.dataLayer.push({
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
 | [[promotion-id]] |'banner123' e etc | ID único do Banner |
 | [[nome-promocao]] | 'polos-diferenciadas' | Deve retornar o nome amigável do banner |
 | [[posicao-promocao]] | '1' e etc | Deve retornar a posição que o banner é exibido  |
@@ -624,7 +614,6 @@ window.dataLayer.push({
   'noInteraction': '1',
   'ecommerce': {
     'impressions': [{
-        'dimension4': '[[Nome Loja]]',
         'name': '[[nome-produto]]',
         'id': '[[id-produto]]',
         'price':' [[preco-produto]]',
@@ -640,7 +629,6 @@ window.dataLayer.push({
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
 | [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
 | [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
 | [[preco-produto]] | '139.99' | Preço do produto |
@@ -668,7 +656,6 @@ window.dataLayer.push({
         'click': {
             'actionField': {'list': '[[lista-produto]]'},
              'products': [{
-               'dimension4': '[[Nome Loja]]',
                'name': '[[nome-produto]]',
                'id': '[[id-produto]]',
                'price':' [[preco-produto]]',
@@ -685,7 +672,6 @@ window.dataLayer.push({
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
 | [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
 | [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
 | [[preco-produto]] | '139.99' | Preço do produto |
@@ -713,7 +699,6 @@ window.dataLayer.push({
   'ecommerce': {
     'detail': {
       'products': [{
-        'dimension4': '[[Nome Loja]]',
         'name': '[[nome-produto]]',
         'id': '[[id-produto]]',
         'price':' [[preco-produto]]',
@@ -729,7 +714,6 @@ window.dataLayer.push({
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
 | [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
 | [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
 | [[preco-produto]] | '139.99' | Preço do produto |
@@ -756,7 +740,6 @@ window.dataLayer.push({
     'ecommerce': {
     'add': {
       'products': [{
-        'dimension4': '[[Nome Loja]]',
         'name': '[[nome-produto]]',
         'id': '[[id-produto]]',
         'price':' [[preco-produto]]',
@@ -773,7 +756,6 @@ window.dataLayer.push({
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
 | [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
 | [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
 | [[preco-produto]] | '139.99' | Preço do produto |
@@ -802,7 +784,6 @@ window.dataLayer.push({
     'ecommerce': {
     'remove': {
       'products': [{
-        'dimension4': '[[Nome Loja]]',
         'name': '[[nome-produto]]',
         'id': '[[id-produto]]',
         'price':' [[preco-produto]]',
@@ -818,7 +799,6 @@ window.dataLayer.push({
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
 | [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
 | [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
 | [[preco-produto]] | '139.99' | Preço do produto |
@@ -847,7 +827,6 @@ window.dataLayer.push({
     'checkout': {
       'actionField': {'step': '[[checkout-index]]'},
       'products': [{
-        'dimension4': '[[Nome Loja]]',
         'name': '[[nome-produto]]',
         'id': '[[id-produto]]',
         'price':' [[preco-produto]]',
@@ -865,7 +844,6 @@ window.dataLayer.push({
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[checkout-index]] | '1-carrinho', '2-entrega', '3-pagamento'| Retornar de acordo com a página que o usuário está. |
-| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
 | [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
 | [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
 | [[preco-produto]] | '139.99' | Preço do produto |
@@ -962,7 +940,6 @@ window.dataLayer.push({
         'tax': '[[taxa-transacao]]'
       },
       'products': [{
-        'dimension4': '[[Nome Loja]]',
         'name': '[[nome-produto]]',
         'id': '[[id-produto]]',
         'price':' [[preco-produto]]',
@@ -985,7 +962,6 @@ window.dataLayer.push({
 | [[frete-transacao]] |  '15.98' | Valor do frete da transação |
 | [[taxa-transacao]] |  '2.39' | Valor de taxas da transação |
 | [[coupon-transacao]] | 'cupom-2020' | Cupom de desconto utilizado na transação - promoção nivel pedido |
-| [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
 | [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
 | [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
 | [[preco-produto]] | '139.99' | Preço do produto |
