@@ -18,6 +18,9 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 - [Especificações Globais](#especifica%c3%a7%c3%b5es-globais)
 - [Dimensões Globais](#dimens&otilde;es-globais)
 - [Geral](#geral)
+- [Cadastro](#cadastro)
+- [Login](#login)
+- [Esqueci minha senha](#esqueci-minha-senha)
 - [Home](#home)
 - [Lista de Produtos](#lista-de-produtos)
 - [PDP](#pdp)
@@ -246,6 +249,289 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 
 <br />
+
+### Cadastro
+
+
+**Quando: Na interação com os campos.**<br />
+
+- **Onde:** Na página de cadastro.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-shopping-da-bahia:cadastro',
+    'eventAction': 'interacao:campo',
+    'eventLabel': 'preencheu:[[nome-campo]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-campo]] |  'nome', 'email', 'bairro' e etc | Deve retornar o nome do campo preenchido.  |
+
+
+<br />
+
+**Quando: Na interação com o checkbox.**<br />
+
+- **Onde:** Na página de cadastro.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-shopping-da-bahia:cadastro',
+    'eventAction': 'interacao:checkbox',
+    'eventLabel': '[[acao]]:[[nome-checkbox]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[acao]] |  'check', 'uncheck' | Deve retornar a ação do usuário.  |
+| [[nome-checkbox]] |  'pessoa-fisica', 'recebimento-de-newsletter' | Deve retornar o nome do checkbox. |
+
+
+
+<br />
+
+**Quando: No clique dos botões**<br />
+
+- **Onde:** Na página de cadastro.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-shopping-da-bahia:cadastro',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] |   'cadastrar' e etc | Deve retornar o nome do botão clicado.   |
+
+
+<br />
+
+**Quando: Na tentativa de callback para efetuar o cadastro**<br />
+
+- **Onde:** Na página de cadastro.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'conversion',
+    'eventCategory': 'compras-shopping-da-bahia:cadastro',
+    'eventAction': 'callback',
+    'eventLabel': '[[status]]',
+    'dimension1': '[[User ID]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[status]] | 'sucesso', 'erro:usuario-ou-senha-invalidos', 'erro:pagina-fora-do-ar' e etc | Deve retornar a mensagem de sucesso ou o tipo de erro. |
+| [[[User ID]] | '1234656' e etc | ID definido após o cadastro e login |
+
+
+<br />
+
+
+### Login
+
+**Quando: Na interação com os campos**<br />
+
+- **Onde:** Na página de login.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-shopping-da-bahia:login',
+    'eventAction': 'interacao:campo',
+    'eventLabel': 'preencheu:[[nome-campo]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-campo]] |   'email', 'senha' | Deve retornar o nome do campo preenchido.   |
+
+
+<br />
+
+**Quando: No clique dos botões**<br />
+
+- **Onde:** Na página de login.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-shopping-da-bahia:login',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] |  'entrar', 'facebook' e etc| Deve retornar o nome do botão clicado.   |
+
+
+<br />
+
+**Quando: Na tentativa de callback para efetuar o login**<br />
+
+- **Onde:** Na página de login.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'login',
+    'eventCategory': 'compras-shopping-da-bahia:login',
+    'eventAction': 'callback',
+    'eventLabel': '[[status]]',
+    'dimension1': '[[User ID]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[status]] | 'sucesso', 'erro:usuario-ou-senha-invalidos', 'erro:pagina-fora-do-ar' e etc | Deve retornar a mensagem de sucesso ou o tipo de erro. |
+| [[[User ID]] | '1234656' e etc | ID definido após o cadastro e login |
+
+<br />
+
+### Esqueci minha senha
+
+**Quando: Na interação com os campos**<br />
+
+- **Onde:** Na página "Esqueci minha senha"
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-shopping-da-bahia:esqueci-minha-senha',
+    'eventAction': 'interacao:campo',
+    'eventLabel': 'preencheu:[[nome-campo]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-campo]] |   'email' e etc | Deve retornar o nome do campo preenchido.   |
+
+
+<br />
+
+**Quando: No clique dos botões**<br />
+
+- **Onde:** Na página "Esqueci minha senha"
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-shopping-da-bahia:esqueci-minha-senha',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] |  'enviar' e etc | Deve retornar o nome do botão clicado.   |
+
+
+<br />
+
+**Quando: Na tentativa de callback para cadastrar a nova senha**<br />
+
+- **Onde:** Na página "Esqueci minha senha".
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-shopping-da-bahia:esqueci-minha-senha',
+    'eventAction': 'callback',
+    'eventLabel': '[[status]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[status]] | 'sucesso', 'erro:nao-encontramos-sua-conta' e etc | Deve retornar a mensagem de sucesso ou o tipo de erro. |
+
+
+<br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Home
 
