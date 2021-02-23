@@ -6,7 +6,7 @@
 <br />
 
 ## Implementação da Camada de dados - Compras Shopping da Bahia
-Última atualização: 02/02/2020 <br />
+Última atualização: 23/02/2020 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
@@ -503,36 +503,6 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 <br />
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Home
 
 **Quando: No clique dos icones na seção "Nossas lojas"**<br />
@@ -557,6 +527,30 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 
 <br />
+
+**Quando: No clique dos icones na seção "Navegue por categoria"**<br />
+
+- **Onde:** Na página Home.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-shopping-da-bahia:home',
+    'eventAction': 'clique:icone',
+    'eventLabel': 'categoria:[[nome-categoria]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-categoria]] | 'chocolates', 'oculos-e-acessorios' e etc | Deve retornar o nome da categoria clicada.|
+
+
+<br />
+
 
 ### Lista de Produtos
 
