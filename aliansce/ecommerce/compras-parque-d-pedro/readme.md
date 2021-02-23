@@ -6,7 +6,7 @@
 <br />
 
 ## Implementação da Camada de dados - Compras Parque D Pedro
-Última atualização: 02/02/2020 <br />
+Última atualização: 23/02/2020 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
@@ -22,6 +22,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 - [Cadastro](#cadastro)
 - [Login](#login)
 - [Esqueci minha senha](#esqueci-minha-senha)
+- [Home](#home)
 - [Lista de Produtos](#lista-de-produtos)
 - [PDP](#pdp)
 - [Sacola Modal](#sacola-modal)
@@ -522,6 +523,214 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[status]] | 'sucesso', 'erro:nao-encontramos-sua-conta' e etc | Deve retornar a mensagem de sucesso ou o tipo de erro. |
+
+
+<br />
+
+### Home
+
+**Quando: No clique dos cards da seção "Lojas em destaque"**<br />
+
+- **Onde:** Na página "Home"
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-parque-d-pedro:home',
+    'eventAction': 'clique:card:lojas-em-destaque',
+    'eventLabel': '[[nome-card]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-card]] |  'o-boticario', 'leitura' e etc | Deve retornar o nome do card clicado. |
+
+
+<br />
+
+**Quando: No clique do link "Ver outras lojas" na seção "Lojas em destaque"**<br />
+
+- **Onde:** Na página "Home"
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-parque-d-pedro:home',
+    'eventAction': 'clique:link:lojas-em-destaque',
+    'eventLabel': 'ver-outras-lojas'
+  });
+</script>
+```
+
+<br />
+
+**Quando: No clique dos ícones da seção "Explore categorias"**<br />
+
+- **Onde:** Na página "Home"
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-parque-d-pedro:home',
+    'eventAction': 'clique:icone:explore-categorias',
+    'eventLabel': '[[nome-item]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-item]] |  'bebidas', 'cuidados-pessoais' e etc | Deve retornar o nome do item clicado. |
+
+
+<br />
+
+**Quando: No clique do botão "escolher lojas favoritas" na seção "lojas favoritas"**<br />
+
+- **Onde:** Na página "Home"
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-parque-d-pedro:home',
+    'eventAction': 'clique:botao:lojas-favoritas',
+    'eventLabel': 'escolher-lojas-favoritas'
+  });
+</script>
+```
+
+<br />
+
+**Quando: Na interação para escolher as lojas**<br />
+
+- **Onde:** Na página "Home"
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-parque-d-pedro:home',
+    'eventAction': 'interacao:suas-lojas-favoritas',
+    'eventLabel': '[[loja-selecionada]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[loja-selecionada]] | 'capodarte', 'casa-bauduco' e etc | Deve retornar o nome da loja selecionada.  |
+
+
+<br />
+
+**Quando: Na interação com o campo de busca para escolher as lojas**<br />
+
+- **Onde:** Na página "Home"
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-parque-d-pedro:home',
+    'eventAction': 'interacao:suas-lojas-favoritas:busca',
+    'eventLabel': '[[termo-buscado]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[termo-buscado]] | 'crocs', 'marisa' e etc | Deve retornar o termo buscado. |
+
+
+<br />
+
+**Quando: No clique dos botões em "Você alterou suas lojas favoritas, gostaria de confirmar?"**<br />
+
+- **Onde:** Na página "Home"
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-parque-d-pedro:home',
+    'eventAction': 'clique:botao:alterou-lojas-favoritas',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] | 'nao-salvar', 'salvar-alteracoes', 'fechar' e etc | Deve retornar o nome do botão clicado.  |
+
+
+<br />
+
+**Quando: No clique dos icones da seção "lojas favoritas"**<br />
+
+- **Onde:** Na página "Home"
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-parque-d-pedro:home',
+    'eventAction': 'clique:icone:lojas-favoritas',
+    'eventLabel': '[[nome-icone]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-icone]] |  'melissa', 'copodarte', 'editar-favoritas' e etc | Deve retornar o nome do icone clicado. |
+
+
+<br />
+
+**Quando: No clique dos cards da seção "sobre p d pedro"**<br />
+
+- **Onde:** Na página "Home"
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-parque-d-pedro:home',
+    'eventAction': 'clique:card:sobre',
+    'eventLabel': '[[nome-card]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-card]] |  'restaurantes', 'estacionamento' e etc | Deve retornar o nome do card clicado.|
 
 
 <br />
