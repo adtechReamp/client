@@ -1590,6 +1590,29 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 <br />
 
+**Quando: No clique dos botões**<br />
+
+- **Onde:** Na página "Minhas Filas" na área logada do site.
+    
+```html
+"<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:area-logada:minhas-filas,
+    'eventAction': 'clique:botao,
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>"
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] | 'entrar-em-uma-fila' e etc | Deve retornar o nome do botão clicado |
+
+
+<br />
+
 
 ### Vitrine de produtos
 
