@@ -137,7 +137,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | :--------------------	| :-------------------- | :-------------------------------------------	|
 | [[User ID]]			| '1234656'			    | ID definido após o cadastro e login										|
 | [[GA ClientID]]	| 'XXXXXXXXXX:XXXX:XX'	| ID aleatório do Google Analytics										|
-| [[GTM-ID]]			| 'GTM-TK8RPDC'		| ID do container do GTM instalado no ambiente										|
+| [[GTM-ID]]			| 'GTM-P8ZFN2S'		| ID do container do GTM instalado no ambiente										|
 | [[Nome Ambiente]] | parque-d-pedro', 'shopping-taboao' e etc | Deve retornar o nome do shopping visitado.  |
 | [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
 | [[Localização]] | 'capao-redondo', 'morumbi', 'santa-cruz' e etc. | Deve retornar a localização  |
