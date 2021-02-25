@@ -85,7 +85,7 @@ Link de referência: [Documentação Oficial Google Tag Manager](https://develop
 
 ---
 
-> Caso o site já possua o Google Analytics instalado, será necessário a remoção do código de **todas as páginas do site**: <br />
+#### 3. Caso o site já possua o Google Analytics instalado, será necessário a remoção do código de **todas as páginas do site**: <br />
 
 ```html
 
