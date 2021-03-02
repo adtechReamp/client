@@ -910,7 +910,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
   window.dataLayer.push({
     'event': 'genericEvent',
     'eventCategory': '[[nome-ambiente]]:lojas',
-    'eventAction': 'interacao:menu-lateral',
+    'eventAction': 'interacao:filtro',
     'eventLabel': '[[nome-categoria]]:[[acao]]'
   });
 </script>
@@ -936,7 +936,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
   window.dataLayer.push({
     'event': 'genericEvent',
     'eventCategory': '[[nome-ambiente]]:lojas',
-    'eventAction': 'clique:menu-lateral',
+    'eventAction': 'interacao:filtro',
     'eventLabel': '[[nome-categoria]]:[[nome-link]]'
   });
 </script>
@@ -1141,7 +1141,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
   window.dataLayer.push({
     'event': 'genericEvent',
     'eventCategory': '[[nome-ambiente]]:alimentacao:[[area]]',
-    'eventAction': 'clique:menu-lateral',
+    'eventAction': 'interacao:filtro',
     'eventLabel': '[[nome-secao]]:[[nome-categoria]]'
   });
 </script>
@@ -1610,105 +1610,6 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-botao]] | 'entrar-em-uma-fila' e etc | Deve retornar o nome do botão clicado |
 
-
-<br />
-
-
-### Vitrine de produtos
-
-**Quando: Na interação com os filtros.**<br />
-
-- **Onde:** Na página de vitrine de produtos.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:vitrine-de-produtos',
-    'eventAction': 'interacao:filtro',
-    'eventLabel': '[[nome-filtro]]:[[item-filtrado]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
-| [[nome-filtro]] |  'categoria', 'lojas', 'todos-os-canais' e etc | Deve retornar o nome do filtro. |
-| [[item-filtrado]] | 'infantil', 'adcos' e etc | Deve retornar o nome filtrado.  |
-
-<br />
-
-
-**Quando: No clique nos cards dos produtos.**<br />
-
-- **Onde:** Na página de vitrine de produtos.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:vitrine-de-produtos',
-    'eventAction': 'clique:card',
-    'eventLabel': '[[nome-card]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
-| [[nome-card]] |  'biquini-infantil-babados', 'coelho-orelhao' e etc | Deve retornar o nome do card clicado.  |
-
-<br />
-
-
-**Quando: Ao clicar nos botões dentro dos cards**<br />
-
-- **Onde:** Na página de vitrine de produtos.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:vitrine-de-produtos',
-    'eventAction': 'clique:botao',
-    'eventLabel': '[[nome-botao]]:[[nome-card]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
-| [[nome-botao]] |  'whatsapp', 'site-da-loja' e etc. | Deve retornar o  nome do botão clicado.  |
-| [[nome-card]] |  'biquini-infantil-babados', 'coelho-orelhao' e etc | Deve retornar o nome do card clicado.  |
-
-<br />
-
-
-**Quando: Ao clicar no Link "ver mais produtos"**<br />
-
-- **Onde:** Na página de vitrine de produtos.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:vitrine-de-produtos',
-    'eventAction': 'clique:link',
-    'eventLabel': 'ver-mais-produtos'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
 
 <br />
 
