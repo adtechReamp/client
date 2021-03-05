@@ -6,7 +6,7 @@
 <br />
 
 ## Implementação da Camada de dados - Geral
-Última atualização: 27/01/2020 <br />
+Última atualização: 05/03/2020 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
@@ -125,7 +125,9 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 	  'dimension4': '[[Nome Ambiente]]',
     'dimension5': '[[Nome Loja]]',
     'dimension6': '[[Localização]]',
-    'dimension7': '[[Device ID]]'
+    'dimension7': '[[Device ID]]',
+    'dimension8': '[[[cpf]]',
+    'dimension9': '[[email]]
 
 	
 	});
@@ -142,6 +144,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
 | [[Localização]] | 'capao-redondo', 'morumbi', 'santa-cruz' e etc. | Deve retornar a localização  |
 | [[Device ID]]   | 'XXXXXXX' | Deve retornar o ID do dispositivo utilizado   |
+| [[cpf]]   | 'jsdjs46454sds5dsd' | Deve retornar o cpf hasheado do usuário, em todas as páginas apos ele logar ou se cadastrar   |
+| [[email]]   | 'jsdkjskdj' | Deve retornar o email hasheado do usuário, em todas as páginas apos ele logar ou se cadastrar    |
 
 ---
 
