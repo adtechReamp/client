@@ -1,4 +1,4 @@
-![Reamp](https://github.com/adtechReamp/client/blob/main/logo.png?raw=true)
+![Reamp](https://github.com/adtechReamp/client/blob/main/readme.md?raw=true)
 
 > Adtech<br />
 > Documento de Especificação Técnica
