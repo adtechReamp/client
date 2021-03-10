@@ -6,7 +6,7 @@
 <br />
 
 ## Implementação da Camada de dados - LP BTG+
-Última atualização: 11/02/2020 <br />
+Última atualização: 10/03/2020 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
@@ -237,6 +237,30 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[status]] | 'sucesso', 'erro:email-invalido', 'pagina-indisponivel-no-momento' e etc |  Retornar a mensagem de sucesso ou tipo de erro.  |
 | [[User ID]]			| '1234656'			    | 	ID definido após o envio com sucesso do formulário					|
+
+
+<br />
+
+**Quando: Na interação com os botões**<br />
+
+- **Onde:** Na página de sucesso de envio de formulário
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'conversion',
+    'eventCategory': 'lp-btgmais',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] | 'disponivel-no-google-play:cadastro-feito-com-sucesso', 'baixar-na-apple-store:cadastro-feito-com-sucesso' |  Deve retornar o nome do botão clicado.|
+
 
 
 <br />
