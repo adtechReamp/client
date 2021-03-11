@@ -25,8 +25,7 @@ Este documento tem como objetivo instruir a implementação do User Id no Projet
 Definimos como processo do User Id os seguintes passos abaixo;
 
 
-1 - Coleta dos protodados via dataLayer (cpf/email) através das dimensões globais solicitadas no tagbook e documentação técnica de cada site. Essas dimensões são globais, 
-ou seja, após o usuário se cadastrar ou logar deverá ser enviada via datalayer em todos os hits.<br />
+1 - Coleta dos protodados via dataLayer (cpf/email) hasheados sha256 através das dimensões globais solicitadas no tagbook e documentação técnica de cada site. Essas dimensões são globais, ou seja, após o usuário se cadastrar ou logar deverá ser enviada via datalayer em todos os hits.<br />
 2 - Envio desses dados ao Google Analytics como dimensões personalizadas.<br />
 3 - Extração dos dados do Google Analytics pelo Datahub.<br />
 4 - Armazenamento dos dados no nosso Big Query do Datahub e no da ALSO.<br />
