@@ -37,7 +37,7 @@ Definimos como processo do User Id os seguintes passos abaixo;
 <br />
 
 ## Fluxograma
-![Reamp](https://github.com/adtechReamp/client/blob/main/diagram.png?raw=true)
+![Reamp](https://github.com/adtechReamp/client/blob/main/diagramm.png?raw=true)
 
 > Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
