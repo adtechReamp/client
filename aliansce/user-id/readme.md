@@ -15,6 +15,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 - [Objetivo](#objetivo)
 - [Processo User Id](#processo-user-id)
+- [Fluxograma](#fluxograma)
 
 ## Objetivo
 Este documento tem como objetivo instruir a implementação do User Id no Projeto da Aliansce Sonae para todos os sites. Definimos o user ID como Cpf e Email hasheados.
