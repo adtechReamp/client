@@ -378,7 +378,7 @@ Botão
     'eventCategory': 'sanofi-conecta-consulta:simples-tratar',
     'eventAction': 'interacao:questionario:[[step]]',
     'eventLabel': 'checkbox:[[pergunta]]'
-    'dimension4': '[[resposta]]'
+    'dimension3': '[[resposta]]'
   });
 </script>
 ```
@@ -553,7 +553,7 @@ Botão
 
 <br />
 
-**Quando: Na interação com os filtros**<br />
+**Quando: Na tentativa de callback para efetuar o login.**<br />
 
 - **Onde:** Na página de login médico.
     
