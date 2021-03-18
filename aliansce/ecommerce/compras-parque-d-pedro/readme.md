@@ -1075,9 +1075,8 @@ window.dataLayer.push({
       'promotions': [{
         'id': '[[promotion-id]]',
         'name': '[[nome-promocao]]',
-        'position': '[[posicao-promocao]]',
-        'creative': '[[arte-banner]]'
-      }]
+        'position': '[[posicao-promocao]]'
+	}]
     }
   }
 });
