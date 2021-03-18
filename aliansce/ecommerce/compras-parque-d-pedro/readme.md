@@ -1004,8 +1004,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': 'interacao:campo',
-    'eventAction': 'interacao:quantidade',
+    'eventCategory': 'compras-parque-d-pedro:checkout',
+    'eventAction': 'interacao:campo',
     'eventLabel': 'preencheu:[[nome-campo]]:[[step]]'
   });
 </script>
