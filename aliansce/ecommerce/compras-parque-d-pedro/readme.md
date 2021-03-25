@@ -6,7 +6,7 @@
 <br />
 
 ## Implementação da Camada de dados - Compras Parque D Pedro
-Última atualização: 05/03/2020 <br />
+Última atualização: 25/03/2020 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
@@ -1015,6 +1015,29 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-campo]] |  'cupom-de-desconto', 'cep, 'cartao-de-credito' | Deve retornar o nome do campo preenchido. |
 | [[step]] | 'carrinho', 'entrega', 'pagamento' | Deve retornar o nome da etapa do checkout. |
+
+
+<br />
+
+**Quando: No callback de erro, caso haja erro para concluir a compra**<br />
+
+- **Onde:** Na ultima etapa do checkout
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'conversion',
+    'eventCategory': 'compras-parque-d-pedro:checkout',
+    'eventAction': 'callback',
+    'eventLabel': 'erro:[[tipo-erro]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[tipo-erro]] |  'o-pedido-nao-pode-ser-criado', 'pagina-fora-do-ar' e etc | Deve retornar o tipo do erro, pelo qual o usuário não conseguiu finalizar a compra.  |
 
 
 <br />
