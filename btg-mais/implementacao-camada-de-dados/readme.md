@@ -6,7 +6,7 @@
 <br />
 
 ## Implementação da Camada de dados - BTG Mais
-Última atualização: 04/01/2020 <br />
+Última atualização: 26/03/2020 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
@@ -18,6 +18,8 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 - [Especificações Globais](#especifica%c3%a7%c3%b5es-globais)
 - [Dimensões Globais](#dimens&otilde;es-globais)
 - [Geral](#geral)
+- [Ajuda](#ajuda)
+- [Mapa do site](#mapa-do-site)
 
 
 ## Objetivo
@@ -404,6 +406,55 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | [[botao ou link]] | 'botao' ou 'link' | Retornar o nome do botão ou link clicado.  |
 | [[nome-item]] | 'faca-sua-reserva', 'tabela-de-tarifas' e etc  |   Retornar o nome do item clicado. |
 | [[nome-secao]] | 'tabela-de-comparativos', 'cartao-btg+' e etc  |  Retornar o nome seção.  |
+
+<br />
+
+### Ajuda
+
+**Quando: No clique dos botões assistir.**<br />
+
+- **Onde:** Na página Ajuda.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'btgmais',
+    'eventAction': 'clique:botao-assistir-video',
+    'eventLabel': '[[nome-item]]:[[nome-secao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-item]] | 'conheca-tela-inicial-do-app', 'veja-como-usar-o-seu-cartao-virtual-no-app' e etc.  |  Retornar o titulo do card ao clicar no botão 'assistir'. |
+| [[nome-secao]] |  'saiba-tudo-sobre-app-btg' e etc.  |  Retornar o nome seção.  |
+
+<br />
+
+### Mapa do site
+
+**Quando: No clique dos  links da seção.**<br />
+
+- **Onde:** Na página Mapa do site.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'btgmais',
+    'eventAction': 'clique:secao-menu',
+    'eventLabel': '[[nome-menu]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-menu]] | 'cartao-de-credito', 'carteira-digital', 'conta-corrente' e etc.  | Deve retornar o nome do link clicado.  |
 
 <br />
 
