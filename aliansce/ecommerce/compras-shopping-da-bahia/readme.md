@@ -86,11 +86,11 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 		'dimension1': '[[User ID]]',
 		'dimension2': '[[GA ClientID]]',
 		'dimension3': '[[GTM-ID]]',
-	  'dimension4': '[[Nome Loja]]',
-    'dimension5': '[[Localização]]',
-    'dimension6': '[[[Device ID]]',
-    'dimension7': '[[CPF]]',
-    'dimension8': '[[Email]]'
+	  	'dimension4': '[[Nome Loja]]',
+    		'dimension5': '[[Localização]]',
+    		'dimension6': '[[[Device ID]]',
+    		'dimension7': '[[CPF]]',
+    		'dimension8': '[[Email]]'
 	
 	});
 </script>
