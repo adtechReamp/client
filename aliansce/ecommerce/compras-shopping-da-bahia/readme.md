@@ -105,8 +105,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | [[Nome Loja]] | 'concept', 'marisa' e etc | Deve retornar o nome da loja  |
 | [[Localização]] | 'capao-redondo', 'morumbi', 'santa-cruz' e etc. | Deve retornar a localização  |
 | [[Device ID]]   | 'XXXXXXX' | Deve retornar o ID do dispositivo utilizado   |
-| [[CPF]]   | 'XXXXXXX' | Deve retornar o CPF do usuário hasheado em SHA256   |
-| [[Email]]   | 'XXXXXXX' | Deve retornar o email do usuário hasheado em SHA256   |
+| [[CPF]]   | 'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad' | Deve retornar o CPF do usuário hasheado em SHA256   |
+| [[Email]]   | 'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad' | Deve retornar o email do usuário hasheado em SHA256   |
 
 ---
 
