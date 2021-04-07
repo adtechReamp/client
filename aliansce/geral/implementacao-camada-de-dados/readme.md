@@ -151,6 +151,30 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 ### Geral
 
+**Quando: Ao clicar no modal**<br />
+
+- **Onde:** Ao entrar no site.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:geral',
+    'eventAction': 'clique:modal',
+    'eventLabel': '[[nome-item]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' | Deve retornar o nome do ambiente. |
+| [[nome-item]] |  'renault-kmd', '10%-desconto-frete-gratis' e etc. | Deve retornar o nome do modal.   |
+
+
+<br />
+
 **Quando: No clique dos links do header**<br />
 
 - **Onde:** Em todas as páginas do site em que estiver disponível.
