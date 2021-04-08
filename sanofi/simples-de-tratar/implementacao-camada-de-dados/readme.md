@@ -483,7 +483,7 @@ Botão
 
 <br />
 
-**Quando: No clique dos botões do formulario e-mail.**<br />
+**Quando: Ao clicar em um dos icones de pesquisa ao concluir o formulario.**<br />
 
 - **Onde:** Na página Simples de tratar.
     
