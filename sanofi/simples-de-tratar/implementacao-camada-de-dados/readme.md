@@ -577,6 +577,28 @@ Botão
 <br />
 
 
+**Quando: No clique dos botões.**<br />
+
+- **Onde:** Na página de login médico.
+    
+
+```html
+<!-- Use se os atributos no elemento a ser clicado -->
+<div
+     data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
+     data-gtm-event-action="clique:pesquisa:[[pergunta]]"
+     data-gtm-event-label="[[nome-botao]]"
+>
+Botão
+</div>
+```
+
+| Variável 				| Exemplo 				| Descrição 									|
+| :--------------	| :-------------- | :--------------------------	|
+| [[nome-botao]] | 'satisfeito', 'insatisfeito' e etc | Deve retornar o nome do botão clicado.  |
+
+<br />
+
 
 > Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
