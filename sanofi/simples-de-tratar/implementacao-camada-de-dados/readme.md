@@ -500,11 +500,8 @@ Botão
 ```
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------	| :-------------- | :--------------------------	|
-| [[pergunta]]| 'quao-satisfeito-voce-esta-com-nosssos-servico?'  |Deve retornar o titulo da pergunta.
-
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------	| :-------------- | :--------------------------	|
-| [[nome-botao]] |  'satisfeito', 'insatisfeito', 'neutro' e etc  |Deve retornar o nome do icone clicado.
+| [[pergunta]] | 'quao-satisfeito-voce-esta-com-nosssos-servico? | Deve retornar o titulo da pergunta.  |
+| [[nome-botao]]  |  'satisfeito', 'insatisfeito', 'neutro' e etc  | Deve retornar o nome do icone clicado. |
 
 <br />
 
@@ -530,7 +527,7 @@ Botão
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[resposta]]   | 'compartilho-mais-tarde', 'nao-tenho-interesse-em-compartilhar'e etc  | Deve retornar a resposta do checkbox clicado.   |
+| [[resposta]]    | 'compartilho-mais-tarde', 'nao-tenho-interesse-em-compartilhar'e etc     | Deve retornar a resposta do checkbox clicado.   |
 
 <br />
 
@@ -550,7 +547,7 @@ Botão
 
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------	| :-------------- | :--------------------------	|
-| [[nome-botao]] |  'enviar' |  Deve retornar o nome do botao. |
+| [[nome-botao]]  |  'enviar'       |  Deve retornar o nome do botao. |
 
 <br />
 
