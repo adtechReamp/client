@@ -530,8 +530,7 @@ Botão
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[resposta]]   | 'compartilho-mais-tarde', 'nao-tenho-interesse-em-compartilhar' 
-e 'nao-tenho-contato-com-o-medico' | Deve retornar a resposta do checkbox clicado.   |
+| [[resposta]]   | 'compartilho-mais-tarde', 'nao-tenho-interesse-em-compartilhar'e etc  | Deve retornar a resposta do checkbox clicado.   |
 
 <br />
 
