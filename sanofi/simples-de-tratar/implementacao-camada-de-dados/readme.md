@@ -518,7 +518,7 @@ Botão
     'event': 'genericEvent',
     'eventCategory': 'sanofi-conecta-consulta:simples-tratar',
     'eventAction': 'interacao:questionario:[[pergunta]]',
-    'eventLabel': 'checkbox:[[pergunta]]'
+    'eventLabel': 'checkbox:[[resposta]]'
    
   });
 </script>
