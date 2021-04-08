@@ -498,6 +498,7 @@ Botão
 Botão
 </div>
 ```
+
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------	| :-------------- | :--------------------------	|
 | [[pergunta]]	  | 'quao-satisfeito-voce-esta-com-nosssos-servico' | Deve retornar o titulo da pergunta.  |
@@ -520,6 +521,7 @@ Botão
   });
 </script>
 ```
+
 | Variável 				| Exemplo 			                       | Descrição 									|
 | :--------------	| :----------------------------------- | :--------------------------	|
 | [[pergunta]] | gostaria-de-compartilhar-esse-teste?'| Deve retornar o titulo da pergunta.|
@@ -541,6 +543,7 @@ Botão
 </div>
 ```
 
+
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------	| :-------------- | :--------------------------	|
 | [[nome-botao]] | 'enviar' |  Deve retornar o nome do botao. |
@@ -560,6 +563,7 @@ Botão
   });
 </script>
 ```
+
 | Variável        | Exemplo                                              | Descrição                         |
 | :-------------- | :--------------------------------------------------- | :-------------------------------- |
 | [[status]] | 'sucesso' ou 'Erro-nao-houve-interacao-com-checkbox' |  Deve retornar a mensagem de sucesso ou o tipo de erro. |
