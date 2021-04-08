@@ -522,8 +522,8 @@ Botão
 ```
 | Variável 				| Exemplo 			                       | Descrição 									|
 | :--------------	| :----------------------------------- | :--------------------------	|
-| [[pergunta]]    | gostaria-de-compartilhar-esse-teste?'| Deve retornar o titulo da pergunta.|
-| [[resposta]]     | 'compartilho-mais-tarde', 'nao-tenho-interesse-em-compartilhar'e etc     | Deve retornar a resposta do checkbox clicado.|
+| [[pergunta]] | gostaria-de-compartilhar-esse-teste?'| Deve retornar o titulo da pergunta.|
+| [[resposta]] | 'compartilho-mais-tarde', 'nao-tenho-interesse-em-compartilhar'e etc  | Deve retornar a resposta do checkbox clicado.|
 
 <br />
 
@@ -543,12 +543,12 @@ Botão
 
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------	| :-------------- | :--------------------------	|
-| [[nome-botao]]  |  'enviar'       |  Deve retornar o nome do botao. |
+| [[nome-botao]] | 'enviar' |  Deve retornar o nome do botao. |
 
 <br />
 
  **Quando:Na tentativa de callback do envio da pesquisa satisfatoria**<br />
- **Onde:** Na página simples de tratar.
+-  **Onde:** Na página simples de tratar.
 ```html
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -562,7 +562,7 @@ Botão
 ```
 | Variável        | Exemplo                                              | Descrição                         |
 | :-------------- | :--------------------------------------------------- | :-------------------------------- |
-| [[status]]      | 'sucesso' ou 'Erro-nao-houve-interacao-com-checkbox' |  Deve retornar a mensagem de sucesso ou o tipo de erro. |
+| [[status]] | 'sucesso' ou 'Erro-nao-houve-interacao-com-checkbox' |  Deve retornar a mensagem de sucesso ou o tipo de erro. |
 
 <br />
 
