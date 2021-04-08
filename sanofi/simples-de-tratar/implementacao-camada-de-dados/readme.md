@@ -520,14 +520,10 @@ Botão
   });
 </script>
 ```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[pergunta]]  | 'gostaria-de-compartilhar-esse-teste?' | Deve retornar o titulo da pergunta.   |
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[resposta]]    | 'compartilho-mais-tarde', 'nao-tenho-interesse-em-compartilhar'e etc     | Deve retornar a resposta do checkbox clicado.   |
+| Variável 				| Exemplo 			                       | Descrição 									|
+| :--------------	| :----------------------------------- | :--------------------------	|
+| [[pergunta]]    | gostaria-de-compartilhar-esse-teste?'| Deve retornar o titulo da pergunta.|
+| [[resposta]]     | 'compartilho-mais-tarde', 'nao-tenho-interesse-em-compartilhar'e etc     | Deve retornar a resposta do checkbox clicado.|
 
 <br />
 
@@ -554,7 +550,7 @@ Botão
  **Quando:Na tentativa de callback do envio da pesquisa satisfatoria**<br />
  **Onde:** Na página simples de tratar.
 ```html
-"<script>
+<script>
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
    'event': 'conversion',
@@ -562,12 +558,11 @@ Botão
     'eventAction':'callback:pesquisa-satisfatoria',
     'eventLabel': '[[status]]'
   });
-</script>"
+</script>
 ```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[status]]  | 'sucesso' ou 'Erro-nao-houve-interacao-com-checkbox' |  Deve retornar a mensagem de sucesso ou o tipo de erro. |
+| Variável        | Exemplo                                              | Descrição                         |
+| :-------------- | :--------------------------------------------------- | :-------------------------------- |
+| [[status]]      | 'sucesso' ou 'Erro-nao-houve-interacao-com-checkbox' |  Deve retornar a mensagem de sucesso ou o tipo de erro. |
 
 <br />
 
