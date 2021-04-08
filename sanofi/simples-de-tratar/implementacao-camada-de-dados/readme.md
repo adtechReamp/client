@@ -519,7 +519,7 @@ Botão
     'eventCategory': 'sanofi-conecta-consulta:simples-tratar',
     'eventAction': 'interacao:questionario:[[pergunta]]',
     'eventLabel': 'checkbox:[[pergunta]]'
-    'dimension3': '[[resposta]]'
+    gi
   });
 </script>
 ```
@@ -667,6 +667,7 @@ Botão
 
 
 <br />
+
 > Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
