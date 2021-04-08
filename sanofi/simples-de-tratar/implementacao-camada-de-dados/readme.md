@@ -483,25 +483,25 @@ Botão
 
 <br />
 
-**Quando: Ao clicar em um dos icones de pesquisa satisfatoria.**<br />
+**Quando: No clique dos botões do formulario e-mail.**<br />
 
-- **Onde:** Na página simples de tratar.
+- **Onde:** Na página Simples de tratar.
     
 
 ```html
 <!-- Use se os atributos no elemento a ser clicado -->
 <div
-     data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
-     data-gtm-event-action="clique:pesquisa:[[pergunta]]"
-     data-gtm-event-label="[[nome-botao]]"
+     data-gtm-event-category= "sanofi-conecta-consulta:simples-tratar" 
+     data-gtm-event-action= "clique:pesquisa:[[pergunta]]"
+     data-gtm-event-label= "[[nome-botao]]"
 >
 Botão
 </div>
 ```
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------	| :-------------- | :--------------------------	|
-| [[pergunta]] | 'quao-satisfeito-voce-esta-com-nosssos-servico? | Deve retornar o titulo da pergunta.  |
-| [[nome-botao]]  |  'satisfeito', 'insatisfeito', 'neutro' e etc  | Deve retornar o nome do icone clicado. |
+| [[pergunta]]	  | 'quao-satisfeito-voce-esta-com-nosssos-servico' | Deve retornar o titulo da pergunta.  |
+| [[nome-botao]]	  | 'satisfeito', 'insatisfeito', 'neutro' e etc |Deve retornar o nome do icone clicado.   |
 
 <br />
 
