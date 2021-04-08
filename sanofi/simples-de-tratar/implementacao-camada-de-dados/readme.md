@@ -519,7 +519,7 @@ Botão
     'eventCategory': 'sanofi-conecta-consulta:simples-tratar',
     'eventAction': 'interacao:questionario:[[pergunta]]',
     'eventLabel': 'checkbox:[[pergunta]]'
-    gi
+   
   });
 </script>
 ```
@@ -545,7 +545,7 @@ e 'nao-tenho-contato-com-o-medico' | Deve retornar a resposta do checkbox clicad
      data-gtm-event-action="clique:botao:compartilhar-pesquisa-satisfatoria"
      data-gtm-event-label="[[nome-botao]]"
 >
-Botão
+
 </div>
 ```
 
