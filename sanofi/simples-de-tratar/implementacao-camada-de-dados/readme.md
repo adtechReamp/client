@@ -529,17 +529,17 @@ Botão
 
 <br />
 
-**Quando: Quando:Ao clicar no botão enviar compartilhamento de pesquisa satisfatoria**<br />
+**Ao clicar no botão enviar compartilhamento de pesquisa satisfatoria**<br />
 
-- **Onde:** Na página Simples de tratar.
+- **Onde:** Em todas as páginas que estiver disponível
     
 
 ```html
 <!-- Use se os atributos no elemento a ser clicado -->
 <div
-     data-gtm-event-category= "sanofi-conecta-consulta:simples-tratar" 
-     data-gtm-event-action= "clique:botao:compartilhar-pesquisa-satisfatoria"
-     data-gtm-event-label= "[[nome-botao]]"
+     data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
+     data-gtm-event-action="clique:botao:termos-de-servico" 
+     data-gtm-event-label="[[nome-botao]]"
 >
 Botão
 </div>
@@ -549,32 +549,7 @@ Botão
 
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------	| :-------------- | :--------------------------	|
-| [[pergunta]]	  | 'quao-satisfeito-voce-esta-com-nosssos-servico' | Deve retornar o titulo da pergunta.  |
-| [[nome-botao]]	  | 'enviar' |Deve retornar o nome do botao.   |
-
-<br />
-
-
- **Quando:Na tentativa de callback do envio da pesquisa satisfatoria**<br />
-
--  **Onde:** Na página simples de tratar.
-```html
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-   'event': 'conversion',
-    'eventCategory': 'sanofi-conecta-consulta:simples-tratar',
-    'eventAction':'callback:pesquisa-satisfatoria',
-    'eventLabel': '[[status]]'
-  });
-</script>
-```
-
-
-| Variável        | Exemplo                                              | Descrição                         |
-| :-------------- | :--------------------------------------------------- | :-------------------------------- |
-| [[status]] | 'sucesso' ou 'Erro-nao-houve-interacao-com-checkbox' |  Deve retornar a mensagem de sucesso ou o tipo de erro. |
+| [[nome-botao]] | 'enviar' | Deve retornar o nome do botão clicado. |
 
 <br />
 
