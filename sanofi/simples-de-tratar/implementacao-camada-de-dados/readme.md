@@ -500,7 +500,7 @@ Botão
 ```
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------	| :-------------- | :--------------------------	|
-| [[pergunta]]  | 'quao-satisfeito-voce-esta-com-nosssos-servico?' |Deve retornar o titulo da pergunta.
+| [[pergunta]]| 'quao-satisfeito-voce-esta-com-nosssos-servico?'  |Deve retornar o titulo da pergunta.
 
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------	| :-------------- | :--------------------------	|
