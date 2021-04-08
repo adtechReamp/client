@@ -544,6 +544,7 @@ Botão
 ```
 
 
+
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------	| :-------------- | :--------------------------	|
 | [[nome-botao]] | 'enviar' |  Deve retornar o nome do botao. |
@@ -551,6 +552,7 @@ Botão
 <br />
 
  **Quando:Na tentativa de callback do envio da pesquisa satisfatoria**<br />
+
 -  **Onde:** Na página simples de tratar.
 ```html
 <script>
@@ -563,6 +565,7 @@ Botão
   });
 </script>
 ```
+
 
 | Variável        | Exemplo                                              | Descrição                         |
 | :-------------- | :--------------------------------------------------- | :-------------------------------- |
