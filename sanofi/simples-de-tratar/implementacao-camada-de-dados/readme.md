@@ -529,17 +529,19 @@ Botão
 
 <br />
 
-**Quando:Ao clicar no botão enviar compartilhamento de pesquisa satisfatoria**<br />
+**Quando: Quando:Ao clicar no botão enviar compartilhamento de pesquisa satisfatoria**<br />
 
-- **Onde:** Na página simples de tratar.
+- **Onde:** Na página Simples de tratar.
+    
+
 ```html
 <!-- Use se os atributos no elemento a ser clicado -->
 <div
-     data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
-     data-gtm-event-action="clique:botao:compartilhar-pesquisa-satisfatoria"
-     data-gtm-event-label="[[nome-botao]]"
+     data-gtm-event-category= "sanofi-conecta-consulta:simples-tratar" 
+     data-gtm-event-action= "clique:botao:compartilhar-pesquisa-satisfatoria"
+     data-gtm-event-label= "[[nome-botao]]"
 >
-
+Botão
 </div>
 ```
 
@@ -547,14 +549,17 @@ Botão
 
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------	| :-------------- | :--------------------------	|
-| [[nome-botao]] | 'enviar' |  Deve retornar o nome do botao. |
+| [[pergunta]]	  | 'quao-satisfeito-voce-esta-com-nosssos-servico' | Deve retornar o titulo da pergunta.  |
+| [[nome-botao]]	  | 'enviar' |Deve retornar o nome do botao.   |
 
 <br />
+
 
  **Quando:Na tentativa de callback do envio da pesquisa satisfatoria**<br />
 
 -  **Onde:** Na página simples de tratar.
 ```html
+
 <script>
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
