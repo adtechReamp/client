@@ -483,6 +483,98 @@ Botão
 
 <br />
 
+**Quando: Ao clicar em um dos icones de pesquisa satisfatoria.**<br />
+
+- **Onde:** Na página simples de tratar.
+    
+
+```html
+<!-- Use se os atributos no elemento a ser clicado -->
+<div
+     data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
+     data-gtm-event-action="clique:pesquisa:[[pergunta]]"
+     data-gtm-event-label="[[nome-botao]]"
+>
+Botão
+</div>
+```
+| Variável 				| Exemplo 				| Descrição 									|
+| :--------------	| :-------------- | :--------------------------	|
+| [[pergunta]]  | 'quao-satisfeito-voce-esta-com-nosssos-servico?' |Deve retornar o titulo da pergunta.
+
+| Variável 				| Exemplo 				| Descrição 									|
+| :--------------	| :-------------- | :--------------------------	|
+| [[nome-botao]] |  'satisfeito', 'insatisfeito', 'neutro' e etc  |Deve retornar o nome do icone clicado.
+
+<br />
+
+**Quando: Ao interagir com o checkbox de compartilhar teste**<br />
+
+- **Onde:** Na página simples de tratar.
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'sanofi-conecta-consulta:simples-tratar',
+    'eventAction': 'interacao:questionario:[[pergunta]]',
+    'eventLabel': 'checkbox:[[pergunta]]'
+    'dimension3': '[[resposta]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[pergunta]]  | 'gostaria-de-compartilhar-esse-teste?' | Deve retornar o titulo da pergunta.   |
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[resposta]]   | 'compartilho-mais-tarde', 'nao-tenho-interesse-em-compartilhar' 
+e 'nao-tenho-contato-com-o-medico' | Deve retornar a resposta do checkbox clicado.   |
+
+<br />
+
+**Quando:Ao clicar no botão enviar compartilhamento de pesquisa satisfatoria**<br />
+
+- **Onde:** Na página simples de tratar.
+```html
+<!-- Use se os atributos no elemento a ser clicado -->
+<div
+     data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
+     data-gtm-event-action="clique:botao:compartilhar-pesquisa-satisfatoria"
+     data-gtm-event-label="[[nome-botao]]"
+>
+Botão
+</div>
+```
+
+| Variável 				| Exemplo 				| Descrição 									|
+| :--------------	| :-------------- | :--------------------------	|
+| [[nome-botao]] |  'enviar' |  Deve retornar o nome do botao. |
+
+<br />
+
+ **Quando:Na tentativa de callback do envio da pesquisa satisfatoria**<br />
+ **Onde:** Na página simples de tratar.
+```html
+"<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+   'event': 'conversion',
+    'eventCategory': 'sanofi-conecta-consulta:simples-tratar',
+    'eventAction':'callback:pesquisa-satisfatoria',
+    'eventLabel': '[[status]]'
+  });
+</script>"
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[status]]  | 'sucesso' ou 'Erro-nao-houve-interacao-com-checkbox' |  Deve retornar a mensagem de sucesso ou o tipo de erro. |
+
+<br />
+
 ### Login Médico
 
 **Quando: Na interação com os campos.**<br />
@@ -575,31 +667,6 @@ Botão
 
 
 <br />
-
-
-**Quando: No clique dos botões.**<br />
-
-- **Onde:** Na página de login médico.
-    
-
-```html
-<!-- Use se os atributos no elemento a ser clicado -->
-<div
-     data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
-     data-gtm-event-action="clique:pesquisa:[[pergunta]]"
-     data-gtm-event-label="[[nome-botao]]"
->
-Botão
-</div>
-```
-
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------	| :-------------- | :--------------------------	|
-| [[nome-botao]] | 'satisfeito', 'insatisfeito' e etc | Deve retornar o nome do botão clicado.  |
-
-<br />
-
-
 > Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
