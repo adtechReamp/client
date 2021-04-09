@@ -538,7 +538,7 @@ Botão
 <!-- Use se os atributos no elemento a ser clicado -->
 <div
      data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
-     data-gtm-event-action="clique:botao:compartilhar-pesquisa-satisfatoria"
+     data-gtm-event-action= "clique:botao:compartilhar-pesquisa-satisfatoria"
      data-gtm-event-label="[[nome-botao]]"
 >
 Botão
