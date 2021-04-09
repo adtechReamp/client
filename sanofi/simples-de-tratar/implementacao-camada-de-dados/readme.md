@@ -571,7 +571,7 @@ Botão
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[status]] | 'sucesso' ou 'Erro-nao-houve-interacao-com-checkbox. |Deve retornar a mensagem de sucesso ou o tipo de erro.  |
+| [[status]] | 'sucesso' ou 'Erro-nao-houve-interacao-com-checkbox.' |Deve retornar a mensagem de sucesso ou o tipo de erro.  |
 
 ---
 
