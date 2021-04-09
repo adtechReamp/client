@@ -551,7 +551,8 @@ Botão
 | :--------------	| :-------------- | :--------------------------	|
 | [[nome-botao]] | 'enviar' | Deve retornar o nome do botão clicado. |
 
-<br />
+
+---
 
 ### Login Médico
 
