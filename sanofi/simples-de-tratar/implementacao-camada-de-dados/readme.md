@@ -551,6 +551,27 @@ Botão
 | :--------------	| :-------------- | :--------------------------	|
 | [[nome-botao]] | 'enviar' | Deve retornar o nome do botão clicado. |
 
+<br />
+
+**Na tentativa de callback do envio da pesquisa satisfatoria.**<br />
+
+- **Onde:** Na página Simples de tratar.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'conversion',
+    'eventCategory': 'sanofi-conecta-consulta:simples-tratar',
+    'eventAction': 'callback:pesquisa-satisfatoria',
+    'eventLabel': '[[status]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[status]] | 'sucesso' ou 'Erro-nao-houve-interacao-com-checkbox. |Deve retornar a mensagem de sucesso ou o tipo de erro.  |
 
 ---
 
