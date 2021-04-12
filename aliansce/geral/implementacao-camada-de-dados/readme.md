@@ -127,7 +127,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'dimension6': '[[Localização]]',
     'dimension7': '[[Device ID]]',
     'dimension8': '[[[cpf]]',
-    'dimension9': '[[email]]
+    'dimension9': '[[email]]'
 
 	
 	});
