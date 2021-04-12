@@ -219,6 +219,30 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 <br />
 
+**Quando:  No clique dos botões de dowload app do formulario**<br />
+
+- **Onde:** Em  todas as páginas que estiver disponível
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'btgmais',
+    'eventAction': 'clique:botao-dowload-app:formulario:[[nome-formulario]]',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-formulario]] | 'entre-na-lista-de-espera-btg+',  'Inove-seu-jeito-de-usar-banco' e etc|  Deve retornar o nome do formulário.   |
+| [[nome-botao]] |  'app-store' ou 'google play'. |  Retornar o nome do botão clicado. |
+
+
+<br />
+
 
 **Quando: Na tentativa de callback de envio do formulário**<br />
 
