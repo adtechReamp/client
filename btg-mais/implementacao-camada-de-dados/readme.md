@@ -238,7 +238,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-formulario]] | 'entre-na-lista-de-espera-btg+',  'Inove-seu-jeito-de-usar-banco' e etc|  Deve retornar o nome do formulário.   |
-| [[nome-botao]] |  'app-store' ou 'google play'. |  Retornar o nome do botão clicado. |
+| [[nome-botao]] |  'app-store' ou 'google play' |  Retornar o nome do botão clicado. |
 
 
 <br />
