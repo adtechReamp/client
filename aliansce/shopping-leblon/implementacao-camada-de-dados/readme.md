@@ -312,6 +312,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 <br />
 
+---
 ### Shopping
 
 **Quando: Na interação dos card**<br />
