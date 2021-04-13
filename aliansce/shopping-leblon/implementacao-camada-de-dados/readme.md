@@ -26,6 +26,8 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 - [Lojas](#lojas)
 - [Gastronomia](#gastronomia)
 - [Eventos](#eventos)
+- [Casa do saber](#casa-do-saber)
+- [Estilo leblon](#estilo-leblon)
 - [Teatro](#teatro)
 - [Planeje sua visita](#planeje-sua-visita)
 - [Serviços](#servi&ccedil;os)
@@ -264,7 +266,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 <br />
 
-**Quando:  Ao clicar nos links ou na imagem do slider**<br />
+**Quando:  Ao clicar nos links, botoes ou na imagem do slider**<br />
 
 - **Onde:** Na página home.
     
@@ -282,7 +284,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-item]] | 'link', 'imagem', 'botao' e etc | Deve retornar qual elemento foi clicado.  |
+| [[nome-item]] | 'link', 'imagem', 'botao'  | Deve retornar qual elemento foi clicado.  |
 | [[nome-slider]]| 'Live-Shopping-Leblon-convida-Pedro-Salomão' e etc. | Deve retornar o titulo do evento ou live .   |
 
 
@@ -700,6 +702,36 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 
 <br />
+
+---
+
+### casa-do-saber
+
+**Quando:  No clique dos botões "comprar-ingresso"**<br />
+
+- **Onde:** Na página casa do saber.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:casa-do-saber',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-card]]:comprar-ingresso'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-card]] | 'as-mulheres-nobel', 'helena-de-troia' e etc| Deve retornar o nome do card clicado. |
+
+
+<br />
+
+---
 
 ### Teatro
 
