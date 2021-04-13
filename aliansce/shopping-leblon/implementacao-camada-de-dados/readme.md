@@ -733,6 +733,149 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 ---
 
+### Estilo leblon
+
+**Quando: No clique dos cards**<br />
+
+- **Onde:**  Na página de Estilo leblon.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:estilo-lebron',
+    'eventAction': 'clique:card',
+    'eventLabel': '[[nome-card]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-card]] | 'vogue-noivas', 'circuito-time-brasil' e etc| Deve retornar o nome do card clicado. |
+
+
+<br />
+
+**Quando: Ao clicar no link "leia mais" do card**<br />
+
+- **Onde:**  Na página de Estilo leblon.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:estilo-lebron',
+    'eventAction': 'clique:link',
+    'eventLabel': 'leia-mais'
+  });
+</script>
+```
+<br />
+
+**Quando: Ao interagir com o campo de busca**<br />
+
+- **Onde:**  Na página de Estilo leblon.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:estilo-lebron',
+    'eventAction': 'interacao:campo',
+    'eventLabel': '[[termo-buscado]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[termo-buscado]] | 'tendencias', 'tenis e etc| Deve retornar o nome do item buscado. |
+
+
+<br />
+
+
+**Quando:  Ao  clicar em algumas das #tags**<br />
+
+- **Onde:**  Na página de Estilo leblon.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:estilo-lebron',
+    'eventAction':'clique:botao ',
+    'eventLabel': 'tag:[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] | 'sapatos', 'moda' , 'fashion' e etc| Deve retornar o nome do botão clicado. |
+
+
+<br />
+
+**Quando:   Ao  clicar em algum link de "arquivos"**<br />
+
+- **Onde:**  Na página de Estilo leblon.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:estilo-lebron',
+    'eventAction':'clique:link ',
+    'eventLabel': 'arquivos:[[nome-link]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-link]]  |  'outubro-2018', 'maio-2018' , 'agosto-2018' e etc | Deve retornar o nome do link clicado. |
+
+
+<br />
+
+**Quando: Ao  clicar em nos icones de rede social da colaboradora**<br />
+
+- **Onde:**  Na página de Estilo leblon.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:estilo-lebron',
+    'eventAction':'clique:icone',
+    'eventLabel': 'rede-social: [[nome-item]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-item]] |  'facebook', 'instagram' e etc | Deve retornar o nome do icone de rede social que foi clicado. |
+
+
+<br />
+
+---
+
 ### Teatro
 
 **Quando: Na clique do botão do banner.**<br />
