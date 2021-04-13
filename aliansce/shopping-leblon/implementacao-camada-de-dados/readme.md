@@ -309,7 +309,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-card]] | 'inspiracao-festa', 'semana-de-moda' e etc |  Deve retornar o nome do card clicado.  |
 
-<br />
+
 
 ### Shopping
 
