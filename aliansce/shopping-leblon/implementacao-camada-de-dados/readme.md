@@ -703,6 +703,31 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 <br />
 
+**Quando:  No clique dos cards**<br />
+
+- **Onde:** Na página de Evento.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:eventos',
+    'eventAction': 'clique:card',
+    'eventLabel': '[[nome-card]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-card]] |  'vogue-noivas', 'circuito-time-brasil' e etc| Deve retornar o nome do card clicado. |
+
+
+
+<br />
+
 ---
 
 ### casa-do-saber
