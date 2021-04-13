@@ -258,9 +258,56 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-botao]] | 'clique-e-confira', 'clique-para-ver-todas-as-medidas-de-seguranca' | Deve retornar o nome do botão clicado.  |
+| [[nome-botao]] | 'loja', 'cinema', 'gastronomia' e etc | Deve retornar o nome do botão clicado no banner.  |
 | [[nome-banner]] | 'compre-online', 'aberto-para-novos-olhares' e etc | Deve retornar o nome do banner.   |
 
+
+<br />
+
+**Quando:  Ao clicar nos links ou na imagem do slider**<br />
+
+- **Onde:** Na página home.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:home',
+    'eventAction': 'clique:[[nome-item]]:slider',
+    'eventLabel': '[[nome-slider]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-item]] | 'link', 'imagem', 'botao' e etc | Deve retornar qual elemento foi clicado.  |
+| [[nome-slider]]| 'Live-Shopping-Leblon-convida-Pedro-Salomão' e etc. | Deve retornar o titulo do evento ou live .   |
+
+
+<br />
+
+**Quando: Ao clicar nos cards**<br />
+
+- **Onde:** Na página home.
+```html
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:home',
+    'eventAction': 'clique:card',
+    'eventLabel': '[[nome-card]]'
+  });
+
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-card]] | 'inspiracao-festa', 'semana-de-moda' e etc |  Deve retornar o nome do card clicado.  |
 
 <br />
 
