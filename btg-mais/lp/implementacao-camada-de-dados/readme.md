@@ -18,6 +18,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 - [Especificações Globais](#especifica%c3%a7%c3%b5es-globais)
 - [Dimensões Globais](#dimens&otilde;es-globais)
 - [Geral](#geral)
+- [LP simulador invest+](#LP;simulador;invest+)
 
 
 ## Objetivo
@@ -268,6 +269,102 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 ---
 
+### simulador invest+
+
+**Quando: Ao clicar em algum dos cards**<br />
+
+- **Onde:** Na lp de BTG+.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'conversion',
+    'eventCategory': 'lp-btgmais',
+    'eventAction': 'clique:card',
+    'eventLabel': 'selecionado-cartao:[[titulo-card]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[titulo-card]] |  'basico', 'avancado' ou 'black' |  Deve retornar o nome do card clicado.|
+
+
+
+<br />
+
+**Quando: Ao clicar em botoes de rendimento**<br />
+
+- **Onde:** Na lp de BTG+.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'conversion',
+    'eventCategory': 'lp-btgmais',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[pergunta]]:[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[pergunta]] | 'por-quanto-tempo-voce-deixa-seu-dinheiro-rendendo-em-btg?' |  Deve retornar a pergunta.|
+| [[nome-botao]] | '1-ano's, '2-anos', '3-anos' e etc. |  Deve retornar o nome do botao clicado.|
+
+<br />
+
+**Quando: Ao clicar no botão crescente ou descrecente de gasto mensal com cartão de crédito**<br />
+
+- **Onde:** Na lp de BTG+.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'conversion',
+    'eventCategory': 'lp-btgmais',
+    'eventAction': 'clique:botao:[[nome-botao]]',
+    'eventLabel': 'gasto-mensal-no-credito:[[gasto-credito]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] | 'crescente' ou 'descrecente'. |  Deve retornar o nome do botao clicado.|
+| [[gasto-credito]] | '1.500', '5.000', '10.000' e etc | Deve retornar com o valor do crédito gastado mensalmente.|
+
+<br />
+
+**Quando: Ao clicar no botao de solicitação de cartão**<br />
+
+- **Onde:** Na lp de BTG+.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'conversion',
+    'eventCategory': 'lp-btgmais',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] |  'quero-meu-cartao-btg-mais'. |  Deve retornar o nome do botao clicado.|
+
+
+<br />
+
+---
 
 > Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
