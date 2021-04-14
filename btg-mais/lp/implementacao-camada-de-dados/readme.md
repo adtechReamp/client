@@ -269,7 +269,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 ---
 
-### simulador invest+
+### LP simulador invest+
 
 **Quando: Ao clicar em algum dos cards**<br />
 
