@@ -18,7 +18,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 - [Especificações Globais](#especifica%c3%a7%c3%b5es-globais)
 - [Dimensões Globais](#dimens&otilde;es-globais)
 - [Geral](#geral)
-- [LP simulador invest+](#LP-simulador-invest+)
+- [LP simulador invest+](#LP-simulador-invest)
 
 
 ## Objetivo
@@ -269,7 +269,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 ---
 
-### LP simulador invest+
+### LP simulador invest
 
 **Quando: Ao clicar em algum dos cards**<br />
 
