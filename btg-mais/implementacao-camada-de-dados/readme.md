@@ -433,6 +433,30 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 <br />
 
+**Quando: Ao clicar em links de imprensa**<br />
+
+- **Onde:** Em  todas as páginas que estiver disponível
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'btgmais',
+    'eventAction': 'clique:link:imprensa',
+    'eventLabel': '[[nome-item]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-item]]| 'seu-dinheiro, 'exame' , 'money-times' e etc.| Retornar o nome do botão ou link clicado.  |
+
+
+<br />
+
+
 ### Ajuda
 
 **Quando: No clique dos botões assistir.**<br />
