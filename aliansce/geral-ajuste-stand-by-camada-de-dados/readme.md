@@ -221,7 +221,60 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente.  |
 | [[nome-item]]  | 'tel:(11)5512-5200'e 'e-mail:@aliansce.com.br'| Deve retonar o nome do link clicado. |
+
+
+<br />
+
+**Quando:  Ao interagir com o checkbox de autorização de notificação (implementar)**<br />
+
+- **Onde:**  Na página Home após fazer login.
+    
+```html
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:home',
+    'eventAction': 'interacao:check',
+    'eventLabel': [[ação]]
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente.  |
+| [[acao]]  | 'marcou-autorizar' ou 'desmarcou-autorizar'| Deve retornar com a ação no checkbox. |
+
+
+<br />
+
+**Quando:  Ao clicar no botão confirmar a autorização de notificação (implementar)**<br />
+
+- **Onde:**  Na página Home após fazer login.
+    
+```html
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:home',
+    'eventAction': 'clique:botao',
+    'eventLabel': 'autorizacao-de-notificacao'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente.  |
+
 
 
 <br />
@@ -254,6 +307,30 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 | [[acao]]  | 'check', 'uncheck'. | Deve retornar a ação do usuário.|
 | [[nome-checkbox]]   | 'por-telefone'', 'por-email' e etc| Deve retornar o nome do checkbox. |
 
+
+<br />
+
+**Quando: No clique dos botões no formulário dados de cadastro (Ajustar categoria e label)**<br />
+
+- **Onde:**  Na página "Editar Perfil" na área logada do site.
+    
+```html
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:area-logada:editar-perfil',
+    'eventAction': 'clique:botao:formulario-dados-de-cadastro',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]]  | 'salvar-alteracao', 'alterar-email', 'cancelar'| Deve retornar o nome do botao clicado. |
 
 <br />
 
@@ -339,7 +416,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 <br />
 
-**Quando: No clique dos botões de alguma loja (implementar)**<br />
+**Quando: Ao clicar no link "ver mais" (implementar)**<br />
 
 - **Onde:**   Na página Vitrine de produtos.
     
