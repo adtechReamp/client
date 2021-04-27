@@ -57,7 +57,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 ```
 
 ----
-<H3 align="center"> AJUSTES OU IMPLEMENTAÇÕES QUE DEVEM SER REALIZADAS </h3>
+<H3 align="center"> AJUSTES E IMPLEMENTAÇÕES QUE DEVEM SER REALIZADO </h3>
 
 ### Geral
 
