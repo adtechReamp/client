@@ -65,7 +65,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 - **Onde:** Em todas as páginas do site em que estiver disponível.
 
-<b>Deve ser ajustado o label, pois está com os valores invertidos! (Tagbook - linha 10)</b>
+<b>Deve ser ajustado o label, pois está retornando com os valores invertidos! (Tagbook - linha 10)</b>
     
 ```html
 <script>
