@@ -1,6 +1,6 @@
 ![Reamp](https://github.com/adtechReamp/client/blob/main/logo.png?raw=true)
 
-## Instalação do Google Tag Manager - Farma Direta!
+## Instalação do Google Tag Manager - Farma Direta
 
 Última atualização: 27/04/2021
 
