@@ -5,8 +5,8 @@
 
 <br />
 
-## Implementação da Camada de dados - Compras Parque D Pedro
-Última atualização: 25/03/2020 <br />
+## Implementação da Camada de dados - Farma Direta
+Última atualização: 28/04/2021 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
