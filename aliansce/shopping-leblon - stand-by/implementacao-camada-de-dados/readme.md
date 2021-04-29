@@ -512,14 +512,12 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 ### Área Logada
 
-<b> Não conseguimos validar os elementos da área logada, não está carregando a página <b>
+<b> ****Não conseguimos validar os elementos da área logada, não está carregando a página <b>
 
 
 ---
 
 > Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
-
-<br />
 
 
 <script> document.querySelector('h1').style.display = 'none' </script>
