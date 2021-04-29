@@ -6,7 +6,7 @@
 <br />
 
 ## Ajustes/implementações da Camada de dados - Geral
-Última atualização: 22/04/2021 <br />
+Última atualização: 29/04/2021 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
@@ -91,13 +91,15 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 ```
 ---
 
-<H3 align="center"> AJUSTES/STAND BY </h3>
+<H3 align="center"> Ajustes e implementações que devem ser realizadas </h3>
 
 ### Geral
 
-**Quando: Ao clicar no modal (implementar)**<br />
+**Quando: Ao clicar no modal**<br />
 
 - **Onde:**  Em todas as páginas que estiver disponível.
+
+<b> TagBook na aba de Tagging plan ( linha 5 ) </b>
     
 ```html
 
@@ -124,7 +126,9 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 **Quando:  No clique do botão "ver mais horários" no submenu do horário de funcionamento no header(implementar)**<br />
 
 - **Onde:**  Em todas as páginas que estiver disponível.
-    
+
+ <b> TagBook na aba de Tagging plan ( linha 8 ) </b>   
+
 ```html
 
 <script>
@@ -150,7 +154,9 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 **Quando:  No clique dos botões ou links de cada seção (ajustar categoria)**<br />
 
-- **Onde:**  Na página home.
+- **Onde:**  Em todas as página que estiver disponível.
+
+<b> TagBook na aba de Tagging plan ( linha 9 ) </b>
     
 ```html
 
@@ -183,6 +189,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 - **Onde:**  Na página home.
     
+ <b> TagBook na aba Tagging plan ( linha 9 ) </b>       
+
 ```html
 
 <script>
