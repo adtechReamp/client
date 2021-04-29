@@ -189,7 +189,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 - **Onde:**  Na página home.
     
- <b> TagBook na aba Tagging plan ( linha 9 ) </b>       
+ <b> TagBook na aba Tagging plan ( linha 27 ) </b>       
 
 ```html
 
@@ -206,6 +206,55 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 ```
 <br />
 
+**Quando: Ao interagir com o checkbox da autorização de notificação( implementar )**<br />
+
+- **Onde:**  Na página Home após fazer login.
+    
+ <b> TagBook na aba Tagging plan ( linha 33 ) </b>       
+
+```html
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:home',
+    'eventAction': 'interacao:check:autorizacao',
+    'eventLabel': '[[acao]]'
+  });
+</script>
+
+```
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente.  |
+| [[acao]]  | ' marcou-autorização' ou 'desmarcou-autorização'| Deve retonar a ação feita com o checkbox. |
+
+<br />
+
+
+**Quando: Ao interagir com o checkbox da autorização de notificação( implementar )**<br />
+
+- **Onde:**  Na página Home após fazer login.
+    
+ <b> TagBook na aba Tagging plan ( linha 34 ) </b>       
+
+```html
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:home',
+    'eventAction': 'clique:botao',
+    'eventLabel': 'autorizacao-de-notificacao'
+  });
+</script>
+
+```
+
+<br />
+
 ---
 
 ### Shopping
@@ -213,6 +262,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 **Quando: No clique dos link de telefone e e-mail (implementar)**<br />
 
 - **Onde:**  Na página comercialização.
+
+ <b> TagBook na aba Tagging plan ( linha 44 ) </b>  
     
 ```html
 
@@ -236,57 +287,6 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 <br />
 
-**Quando:  Ao interagir com o checkbox de autorização de notificação (implementar)**<br />
-
-- **Onde:**  Na página Home após fazer login.
-    
-```html
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:home',
-    'eventAction': 'interacao:check',
-    'eventLabel': [[ação]]
-  });
-</script>
-
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente.  |
-| [[acao]]  | 'marcou-autorizar' ou 'desmarcou-autorizar'| Deve retornar com a ação no checkbox. |
-
-
-<br />
-
-**Quando:  Ao clicar no botão confirmar a autorização de notificação (implementar)**<br />
-
-- **Onde:**  Na página Home após fazer login.
-    
-```html
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:home',
-    'eventAction': 'clique:botao',
-    'eventLabel': 'autorizacao-de-notificacao'
-  });
-</script>
-
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente.  |
-
-
-
-<br />
 
 ---
 
@@ -295,6 +295,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 **Quando: Na interação com os checkbox do formulário dados de cadastro (Ajustar categoria)**<br />
 
 - **Onde:**  Na página "Editar Perfil" na área logada do site.
+
+ <b> TagBook na aba Tagging plan ( linha 77 ) </b>  
     
 ```html
 
@@ -322,6 +324,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 **Quando: No clique dos botões no formulário dados de cadastro (Ajustar categoria e label)**<br />
 
 - **Onde:**  Na página "Editar Perfil" na área logada do site.
+
     
 ```html
 
@@ -350,6 +353,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 **Quando: Na interação com o campo de filtro (implementar)**<br />
 
 - **Onde:**   Na página Vitrine de produtos.
+
+ <b> TagBook na aba Tagging plan ( linha 46 ) </b>  
     
 ```html
 
@@ -377,6 +382,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 **Quando: No clique em alguma loja (implementar)**<br />
 
 - **Onde:**   Na página Vitrine de produtos.
+
+ <b> TagBook na aba Tagging plan ( linha 47 ) </b>  
     
 ```html
 
@@ -402,6 +409,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 **Quando: No clique dos botões de alguma loja (implementar)**<br />
 
 - **Onde:**   Na página Vitrine de produtos.
+
+ <b> TagBook na aba Tagging plan ( linha 48 ) </b>  
     
 ```html
 
@@ -428,6 +437,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 **Quando: Ao clicar no link "ver mais" (implementar)**<br />
 
 - **Onde:**   Na página Vitrine de produtos.
+
+ <b> TagBook na aba Tagging plan ( linha 49 ) </b>  
     
 ```html
 
