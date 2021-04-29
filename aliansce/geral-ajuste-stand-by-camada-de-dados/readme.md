@@ -225,6 +225,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 </script>
 
 ```
+
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente.  |
@@ -252,6 +253,9 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 </script>
 
 ```
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente. |
 
 <br />
 
@@ -455,6 +459,10 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 </script>
 
 ```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente. |
 
 <br />
 
