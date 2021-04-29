@@ -19,6 +19,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 - [Shopping](#shopping)
 - [Vitrine de produtos](#vitrine-de-produtos)
 - [Eventos](#eventos)
+- [Planeje sua visita](#planeje-sua-visita)
 - [Fale Conosco](#fale-conosco)
 - [Solar](#solar)
 - [Cadastro](#cadastro)
@@ -87,6 +88,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 <br />
 
 ---
+
 ### Shopping
 
 **Quando: Na interação dos card**<br />
@@ -113,6 +115,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 
 <br />
+
+---
 
 ### Vitrine de produtos
 
@@ -212,6 +216,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 ```
 <br />
 
+---
 
 ### Eventos
 
@@ -329,6 +334,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 <br />
 
+---
+
 ### Solar
 
 **Quando: No clique dos botões**<br />
@@ -409,6 +416,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 <br />
 
+---
+
 ### Cadastro
 
 **Quando: Na tentativa de callback para efetuar o cadastro**<br />
@@ -438,6 +447,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 <br />
 
+---
 
 ### Login
 
@@ -468,6 +478,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 <br />
 
+---
+
 ### Esqueci minha senha
 
 **Quando: Na tentativa de callback para cadastrar a nova senha**<br />
@@ -496,15 +508,18 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 <br />
 
+---
+
 ### Área Logada
 
 <b> Não conseguimos validar os elementos da área logada, não está carregando a página <b>
 
 
-
+---
 
 > Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
+
 
 <script> document.querySelector('h1').style.display = 'none' </script>
