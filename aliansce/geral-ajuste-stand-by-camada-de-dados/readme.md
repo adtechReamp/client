@@ -325,6 +325,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 - **Onde:**  Na página "Editar Perfil" na área logada do site.
 
+ <b> TagBook na aba Tagging plan ( linha 78 ) </b>  
+
     
 ```html
 
