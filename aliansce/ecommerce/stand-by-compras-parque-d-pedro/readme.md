@@ -5,7 +5,7 @@
 
 <br />
 
-## Manuntenção da Camada de dados - Compras Parque D Pedro
+## Manutenção da Camada de dados - Compras Parque D Pedro
 Última atualização: 27/04/2021 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
@@ -57,7 +57,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 ```
 
 ----
-<H3 align="center"> AJUSTES E IMPLEMENTAÇÕES QUE DEVEM SER REALIZADO </h3>
+<H3 align="center"> AJUSTES E IMPLEMENTAÇÕES QUE DEVEM SER REALIZADOS </h3>
 
 ### Geral
 
@@ -84,113 +84,6 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 | [[item-menu]] | 'moda-feminina', 'moda-masculina', 'joias-e-relogios' e etc. | Deve retornar o nome do item clicado no menu.   |
 | [[secao]] | 'calcados', 'joias' , 'roupas' e etc. | Deve retornar, se existente, a seção do menu clicada.    |
 | [[item-submenu]] | 'tenis', 'lingeries', 'aneis' e etc. | Deve retornar, se existente, o nome do item clicado no submenu.  |
-
-
-<br />
-
-**Quando: Ao realizar uma busca na barra de pesquisa.**<br />
-
-- **Onde:** Em todas as páginas do site em que estiver disponível.
-
-<b>Deve ser implementado o DataLayer (Tagbook - linha 11)</b>
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'compras-parque-d-pedro:geral',
-    'eventAction': 'interacao:campo:busca',
-    'eventLabel': '[[termo-buscado]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[termo-buscado]] | 'toalha-de-banho', 'camiseta-polo', 'cama-mesa-e-banho' e etc. | Deve retornar o termo buscado na barra de pesquisa.    |
-
-
-<br />
-
-**Quando: Ao clicar em um dos termos sugeridos na busca.**<br />
-
-- **Onde:** Em todas as páginas do site em que estiver disponível.
-
-<b>Deve ser implementado o DataLayer (Tagbook - linha 12)</b>
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'compras-parque-d-pedro:geral',
-    'eventAction': 'clique:termos:busca',
-    'eventLabel': '[[termo-sugerido]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[termo-sugerido]] |  'toalha-de-banho', 'camiseta-polo', 'cama-mesa-e-banho' e etc. | Deve retornar o termo sugerido clicado.   |
-
-
-<br />
-
-### Bem vindo
-
-**Quando: No clique dos botões ou links**<br />
-
-- **Onde:** Na página "Bem vindo"
-
-<b>Deve ser implementado o DataLayer (Tagbook - linha 15)</b>
-
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'compras-parque-d-pedro:bem-vindo',
-    'eventAction': 'clique:[[botao ou link]]',
-    'eventLabel': '[[nome-item]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[botao ou link]] | 'botao' ou 'link' |  Deve retornar o tipo de elemento clicado.  |
-| [[nome-item]] |  'entrar', 'novo-usuario', esqueci-minha-senha' e etc | Deve retornar o nome do botão ou link clicado.  |
-
-<br />
-
----
-
-### Lista de Produtos
-
-**Quando: Ao clicar em uma das sugestões de consulta.**<br />
-
-- **Onde:** Na página de lista de produtos.
-    
-<b>Deve ser implementado o DataLayer (Tagbook - linha 41)</b>
-
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'compras-parque-d-pedro:lista-de-produtos',
-    'eventAction': 'clique:sugestao',
-    'eventLabel': '[[consulta-sugerida]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[consulta-sugerida]] | 'camisa-feminina', 'toalha-de-banho' e etc. | Deve retornar o nome do termo de consulta clicado.  |
 
 
 <br />
