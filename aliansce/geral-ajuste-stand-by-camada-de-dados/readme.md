@@ -17,9 +17,6 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 - [Implementação](#implementa%c3%a7%c3%a3o)
 - [Geral](#geral)
 - [Home](#home)
-- [Shopping](#shopping)
-- [Area logada](#area-logada)
-- [Vitrine de produtos](#Vitrine-de-produtos)
 
 ## Objetivo
 Este documento tem como objetivo instruir a implementação da camada de dados para utilização de recursos de monitoramento do Google Analytics referentes aos ambientes:
@@ -123,36 +120,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 <br />
 
-**Quando:  No clique do botão "ver mais horários" no submenu do horário de funcionamento no header(implementar)**<br />
-
-- **Onde:**  Em todas as páginas que estiver disponível.
-
- <b> TagBook na aba de Tagging plan ( linha 8 ) </b>   
-
-```html
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:geral',
-    'eventAction': 'clique:menu',
-    'eventLabel': '[[item-menu]]:[[item-submenu]]'
-  });
-</script>
-
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente.  |
-| [[item-menu]]  | 'ver-horario'| Deve retornar o nome do menu clicado. |
-| [[item-submenu]]  | 'ver-mais-horarios'.| Deve retornar o nome do botao clicado no submenu. |
-
-
-<br />
-
-**Quando:  No clique dos botões ou links de cada seção (ajustar categoria)**<br />
+**Quando:  No clique dos links "ver-mais" da seção "acontece" (ajustar categoria)**<br />
 
 - **Onde:**  Em todas as página que estiver disponível.
 
@@ -206,6 +174,34 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 ```
 <br />
 
+**Quando:  Na interação com o campo de filtro na seção de lojas**<br />
+
+- **Onde:**  Na página home.
+    
+ <b> TagBook na aba Tagging plan ( linha 16 ) </b>       
+
+```html
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:home',
+    'eventAction': 'interacao:filtro:lojas',
+    'eventLabel': 'filtre-por-categoria:[[nome-item]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente.  |
+| [[nome-item]]  | ' Artigo-do-lar', 'calçados', 'lazer'  e etc | Deve retonar o nome do filtro de categoria escolhido. |
+
+<br />
+
+
 **Quando: Ao interagir com o checkbox da autorização de notificação( implementar )**<br />
 
 - **Onde:**  Na página Home após fazer login.
@@ -257,99 +253,6 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente. |
-
-<br />
-
----
-
-### Shopping
-
-**Quando: No clique dos link de telefone e e-mail (implementar)**<br />
-
-- **Onde:**  Na página comercialização.
-
- <b> TagBook na aba Tagging plan ( linha 44 ) </b>  
-    
-```html
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:comercializacao',
-    'eventAction': 'clique:link',
-    'eventLabel': '[[nome-item]]'
-  });
-</script>
-
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente.  |
-| [[nome-item]]  | 'tel:(11)5512-5200'e 'e-mail:@aliansce.com.br'| Deve retonar o nome do link clicado. |
-
-
-<br />
-
-
----
-
-### Area logada
-
-**Quando: Na interação com os checkbox do formulário dados de cadastro (Ajustar categoria)**<br />
-
-- **Onde:**  Na página "Editar Perfil" na área logada do site.
-
- <b> TagBook na aba Tagging plan ( linha 77 ) </b>  
-    
-```html
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:area-logada:editar-perfil',
-    'eventAction': 'interacao:checkbox:formulario-dados-de-cadastro',
-    'eventLabel': '[[acao]]:[[nome-checkbox]]'
-  });
-</script>
-
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente. |
-| [[acao]]  | 'check', 'uncheck'. | Deve retornar a ação do usuário.|
-| [[nome-checkbox]]   | 'por-telefone'', 'por-email' e etc| Deve retornar o nome do checkbox. |
-
-
-<br />
-
-**Quando: No clique dos botões no formulário dados de cadastro (Ajustar categoria e label)**<br />
-
-- **Onde:**  Na página "Editar Perfil" na área logada do site.
-
- <b> TagBook na aba Tagging plan ( linha 78 ) </b>  
-
-    
-```html
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:area-logada:editar-perfil',
-    'eventAction': 'clique:botao:formulario-dados-de-cadastro',
-    'eventLabel': '[[nome-botao]]'
-  });
-</script>
-
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-botao]]  | 'salvar-alteracao', 'alterar-email', 'cancelar'| Deve retornar o nome do botao clicado. |
 
 <br />
 
