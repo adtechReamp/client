@@ -15,7 +15,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 - [Objetivo](#objetivo)
 - [Implementação](#implementa%c3%a7%c3%a3o)
-- [vitrine-de-produtos](#vitrine de produtos)
+- [vitrine-de-produtos](#vitrine-de-produtos)
 
 
 ## Objetivo
@@ -88,9 +88,9 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 ```
 ---
 
-<H3 align="center"> Iframe </h3>
+<H3 align="center"> IFRAME </h3>
 
----
+
 
 ### Vitrine de produtos
 
@@ -98,7 +98,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 - **Onde:**   Na página Vitrine de produtos.
 
- <b> TagBook na aba Tagging plan ( linha 46 ) </b>  
+
     
 ```html
 
@@ -127,7 +127,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 - **Onde:**   Na página Vitrine de produtos.
 
- <b> TagBook na aba Tagging plan ( linha 47 ) </b>  
+ 
     
 ```html
 
@@ -154,7 +154,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 - **Onde:**   Na página Vitrine de produtos.
 
- <b> TagBook na aba Tagging plan ( linha 48 ) </b>  
+ 
     
 ```html
 
@@ -182,7 +182,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 - **Onde:**   Na página Vitrine de produtos.
 
- <b> TagBook na aba Tagging plan ( linha 49 ) </b>  
+ 
     
 ```html
 
