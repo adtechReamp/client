@@ -6,7 +6,7 @@
 <br />
 
 ## Ajustes/implementações da Camada de dados - Geral
-Última atualização: 29/04/2021 <br />
+Última atualização: 11/05/2021 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
@@ -17,6 +17,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 - [Implementação](#implementa%c3%a7%c3%a3o)
 - [Geral](#geral)
 - [Home](#home)
+- [Homologue](#homologue)
 
 ## Objetivo
 Este documento tem como objetivo instruir a implementação da camada de dados para utilização de recursos de monitoramento do Google Analytics referentes aos ambientes:
@@ -174,7 +175,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 ```
 <br />
 
-**Quando:  Na interação com o campo de filtro na seção de lojas**<br />
+**Quando:  Na interação com o campo de filtros na seção de lojas**<br />
 
 - **Onde:**  Na página home.
     
@@ -258,119 +259,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 ---
 
-### Vitrine de produtos
-
-**Quando: Na interação com o campo de filtro (implementar)**<br />
-
-- **Onde:**   Na página Vitrine de produtos.
-
- <b> TagBook na aba Tagging plan ( linha 46 ) </b>  
-    
-```html
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:vitrine-produtos',
-    'eventAction':'interacao:filtro',
-    'eventLabel': '[[tipo-filtro]]:[[nome-item]]'
-  });
-</script>
-
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente. |
-| [[nome-item]]   |  'artigos-diversos', 'conveniencia-servicos', 'alimentacao' e etc. | Deve retornar o nome do item escolhido no filtro|
-| [[tipo-filtro]]   | 'categoria', 'lojar' ou 'canais'.| Deve retornar o tipo do filtro onde o usuário está interagindo.|
-
-
-<br />
-
-**Quando: No clique em alguma loja (implementar)**<br />
-
-- **Onde:**   Na página Vitrine de produtos.
-
- <b> TagBook na aba Tagging plan ( linha 47 ) </b>  
-    
-```html
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:vitrine-produtos',
-    'eventAction':'clique:loja',
-    'eventLabel': '[[nome-loja]]'
-  });
-</script>
-
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente. |
-| [[nome-loja]]  |'a-especialista', 'academia-bodytech' e etc| Deve retornar o nome da loja clicada|
-
-<br />
-
-**Quando: No clique dos botões de alguma loja (implementar)**<br />
-
-- **Onde:**   Na página Vitrine de produtos.
-
- <b> TagBook na aba Tagging plan ( linha 48 ) </b>  
-    
-```html
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:vitrine-produtos',
-    'eventAction':'clique:botao:loja',
-    'eventLabel': '[[nome-loja]]:[[nome-botao]]'
-  });
-</script>
-
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente. |
-| [[nome-loja]]  |'a-especialista', 'academia-bodytech' e etc| Deve retornar o nome da loja clicada|
-| [[nome-botao]]   |'whatsapp', 'site-da-loja', 'drive-thru' e etc| Deve retornar o nome do botão clicado.|
-
-<br />
-
-**Quando: Ao clicar no link "ver mais" (implementar)**<br />
-
-- **Onde:**   Na página Vitrine de produtos.
-
- <b> TagBook na aba Tagging plan ( linha 49 ) </b>  
-    
-```html
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:vitrine-produtos',
-    'eventAction':'clique:link',
-    'eventLabel': 'ver-mais'
-  });
-</script>
-
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente. |
-
-<br />
-
-
+<br/>
 
 
 > Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
