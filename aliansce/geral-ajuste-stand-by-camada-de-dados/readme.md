@@ -97,7 +97,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 - **Onde:**  Em todas as páginas que estiver disponível.
 
-<b> TagBook na aba de Tagging plan ( linha 5 ) </b>
+<b> TagBook na aba de validação - homologue ( linha 8 ) </b>
     
 ```html
 
@@ -125,7 +125,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 - **Onde:**  Em todas as página que estiver disponível.
 
-<b> TagBook na aba de Tagging plan ( linha 9 ) </b>
+<b> TagBook na aba de validação - homologue ( linha 12 ) </b>
     
 ```html
 
@@ -158,7 +158,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 - **Onde:**  Na página home.
     
- <b> TagBook na aba Tagging plan ( linha 27 ) </b>       
+ <b> TagBook na aba de validação - homologue ( linha 17 ) </b>       
 
 ```html
 
@@ -179,7 +179,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 - **Onde:**  Na página home.
     
- <b> TagBook na aba Tagging plan ( linha 16 ) </b>       
+ <b> TagBook na aba validação - homologue ( linha 16 ) </b>       
 
 ```html
 
@@ -207,7 +207,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 - **Onde:**  Na página Home após fazer login.
     
- <b> TagBook na aba Tagging plan ( linha 33 ) </b>       
+ <b> TagBook na aba TagBook na aba de validação - homologue ( linha 23 ) </b>       
 
 ```html
 
@@ -235,7 +235,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 - **Onde:**  Na página Home após fazer login.
     
- <b> TagBook na aba Tagging plan ( linha 34 ) </b>       
+ <b> TagBook na aba de validação - homologue ( linha 24 ) </b>       
 
 ```html
 
