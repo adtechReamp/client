@@ -19,6 +19,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 - [Home](#home)
 - [Homologue](#homologue)
 
+
 ## Objetivo
 Este documento tem como objetivo instruir a implementação da camada de dados para utilização de recursos de monitoramento do Google Analytics referentes aos ambientes:
 
@@ -256,6 +257,139 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 | [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente. |
 
 <br />
+
+
+### homologue
+
+<h3> Agenda </h3>
+
+**Quando:Ao interagir com o checkbox (implementar)**<br />
+
+- **Onde:**  Na página Agenda.
+    
+ <b> TagBook na aba de validação - homologue ( linha 74 ) </b>       
+
+```html
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:agenda-eventos',
+    'eventAction': 'interação:check'
+    'eventLabel': '[[nome-item]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente. |
+| [[nome-item]]  | 'cultura', 'esporte', 'infantil' e etc| Deve retornar o nome do seletor(checkbox). |
+| [[acao]]  |  'marcou' ou 'desmarcou'.| Deve retornar a ação feita no checkbox. |
+
+
+
+
+<br />
+
+**Quando:Ao clicar nos botão de organização para exibir eventos**<br />
+
+- **Onde:**  Na página Agenda.
+    
+ <b> TagBook na aba de validação - homologue ( linha 75 ) </b>       
+
+```html
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:agenda-eventos',
+    'eventAction': 'clique:botao'
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente. |
+| [[nome-botao]]  |  'agenda', 'lista'| Deve retornar o nome do botao clicado. |
+
+
+<br />
+
+<h3> Agenda </h3>
+
+**Quando:Ao clicar em um botão ou link**<br />
+
+- **Onde:**  Na página promoção.
+    
+ <b> TagBook na aba de validação - homologue ( linha 77 ) </b>       
+
+```html
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:promocao',
+    'eventAction': 'clique:[[botao-ou-link]]',
+    'eventLabel': '[[nome-item]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente. |
+| [[nome-item]]  | 'regulamento', 'acessar-promocao'| Deve retornar o nome do botao. |
+| [[botao-ou-link]]  |  'botao' ou 'link'.| Deve retornar o tipo de elemento que foi clicado. |
+
+
+
+
+<br />
+
+<h3> Km de Vantagens Hall  </h3>
+
+**Quando:Ao clicar em um botão ou link**<br />
+
+- **Onde:** Na página de  Km de Vantagens Hall.
+    
+ <b> TagBook na aba de validação - homologue ( linha 79 ) </b>       
+
+```html
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:km-de-vantagens-hall',
+    'eventAction': 'clique:[[botao-ou-link]]',
+    'eventLabel': '[[nome-item]]:[[nome-titulo]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]]  | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao'| Deve retornar o nome do ambiente. |
+| [[nome-item]]  | 'comprar', 'ver-mais-detalhes'| Deve retornar o nome do botao. |
+| [[botao-ou-link]]  |  'botao' ou 'link'.| Deve retornar o tipo de elemento que foi clicado. |
+| [[nome-titulo]]  |   'minha-mãe-e-uma-peca', 'leonardo', 'tributo-ao-rei-do-pop' e etc.| Deve retornar com o nome o titulo do produto. |
+
+
+
+
+<br />
+
+
 
 ---
 
