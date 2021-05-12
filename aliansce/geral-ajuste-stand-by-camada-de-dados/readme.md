@@ -322,7 +322,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 <br />
 
-<h3> Agenda </h3>
+<h3> Promoção </h3>
 
 **Quando:Ao clicar em um botão ou link**<br />
 
