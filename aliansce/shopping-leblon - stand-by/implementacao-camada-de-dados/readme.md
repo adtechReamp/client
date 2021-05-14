@@ -6,7 +6,7 @@
 <br />
 
 ## Implementação da Camada de dados - Shopping Leblon
-Última atualização: 29/04/2021 <br />
+Última atualização: 14/05/2021 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
