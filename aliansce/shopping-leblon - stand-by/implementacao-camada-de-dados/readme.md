@@ -16,17 +16,16 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 - [Objetivo](#objetivo)
 - [Implementação](#implementa%c3%a7%c3%a3o)
 - [Home](#home)
-- [Shopping](#shopping)
-- [Vitrine de produtos](#vitrine-de-produtos)
+- [Cinema](#cinema)
+- [Gastronomia](#gastronomia)
 - [Eventos](#eventos)
-- [Planeje sua visita](#planeje-sua-visita)
+- [Casa do Saber](#casa-do-saber)
 - [Fale Conosco](#fale-conosco)
 - [Solar](#solar)
-- [Cadastro](#cadastro)
 - [Login](#login)
 - [Esqueci minha senha](#esqueci-minha-senha)
-- [Área Logada](#&aacute;rea-logada)
-
+- [Editar Perfil](#editar-perfil)
+- [Meus Cartões](#meus-cartoes)
 
 
 ## Objetivo
@@ -71,7 +70,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 - **Onde:** Ao clicar nos cards.
 
-<b> Deve ser implementado o DataLayer (Tagbook aba de validação site em homologação - linha 13) </b>
+<b> Deve ser implementado o DataLayer (Tagbook aba de validação site em homologação - linha 12) </b>
     
 ```html
 <script>
@@ -89,131 +88,59 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 ---
 
-### Shopping
 
-**Quando: Na interação dos card**<br />
+### Cinema
 
-- **Onde:** Na página shopping.
+**Quando: No clique dos botões do modal "horarios e detalhes"**<br />
 
-<b> Deve ser implementado o DataLayer (Tagbook aba de validação site em homologação - linha 15) </b>
-    
+- **Onde:** Na página Cinema.
+
+<b> Deve ser implementado o DataLayer (Tagbook aba de validação site em homologação - linha 28) </b>
+
+
 ```html
 <script>
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': 'shopping-leblon:shopping',
-    'eventAction': 'clique:card',
-    'eventLabel': '[[nome-card]]'
+    'eventCategory': 'shopping-leblon:cinema',
+    'eventAction': 'clique:botao:modal-horario-e-detalhes',
+    'eventLabel': '[[nome-botao]]:[[nome-filme]]'
   });
 </script>
 ```
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-card]] | 'torres-de-escritorio-chopping-leblon', 'responsabilidade-social' e etc | Deve retornar o nome do card clicado. |
+| ['eventAction'] | 'clique:botao:modal-horario-e-detalhes' | Deve retornar 'clique:botao:modal-horario-e-detalhes' |
 
 
 <br />
 
 ---
 
-### Vitrine de produtos
+### Gastronomia
 
-**Quando: Na interação com os filtros.**<br />
 
-- **Onde:** Na página de vitrine de produtos.
+**Quando:  Ao clicar no link "Carregar Mais"**<br />
 
-<b> Deve ser implementado o DataLayer (Tagbook aba de validação site em homologação - linha 17) </b>
+- **Onde:** Na página de Gastronomia.
+
+<b> Deve ser adicionado o botão na pagina e implementado o DataLayer (Tagbook aba de validação site em homologação - linha 35) </b>
+
     
 ```html
 <script>
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': 'shopping-leblon:vitrine-de-produtos',
-    'eventAction': 'interacao:filtro',
-    'eventLabel': '[[nome-filtro]]:[[item-filtrado]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-filtro]] |  'categoria', 'lojas', 'todos-os-canais' e etc | Deve retornar o nome do filtro. |
-| [[item-filtrado]] | 'infantil', 'adcos' e etc | Deve retornar o nome filtrado.  |
-
-
-<br />
-
-**Quando: No clique nos cards dos produtos.**<br />
-
-- **Onde:** Na página de vitrine de produtos.
-
-<b> Deve ser implementado o DataLayer (Tagbook aba de validação site em homologação - linha 18) </b>
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'shopping-leblon:vitrine-de-produtos',
-    'eventAction': 'clique:card',
-    'eventLabel': '[[nome-card]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-card]] |  'biquini-infantil-babados', 'coelho-orelhao' e etc | Deve retornar o nome do card clicado.  |
-
-
-<br />
-
-**Quando: Ao clicar nos botões dentro dos cards**<br />
-
-- **Onde:** Na página de vitrine de produtos.
-
-<b> Deve ser implementado o DataLayer (Tagbook aba de validação site em homologação - linha 19) </b>
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'shopping-leblon:vitrine-de-produtos',
-    'eventAction': 'clique:botao',
-    'eventLabel': '[[nome-botao]]:[[nome-card]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-botao]] |  'whatsapp', 'site-da-loja' e etc. | Deve retornar o  nome do botão clicado.  |
-| [[nome-card]] |  'biquini-infantil-babados', 'coelho-orelhao' e etc | Deve retornar o nome do card clicado.  |
-
-
-<br />
-
-**Quando: Ao clicar no Link "ver mais produtos"**<br />
-
-- **Onde:** Na página de vitrine de produtos.
-
-<b> Deve ser implementado o DataLayer (Tagbook aba de validação site em homologação - linha 20) </b>
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'shopping-leblon:vitrine-de-produtos',
+    'eventCategory': 'shopping-leblon:gastronomia',
     'eventAction': 'clique:link',
-    'eventLabel': 'ver-mais-produtos'
+    'eventLabel': 'carregar-mais'
   });
 </script>
 ```
+
 <br />
 
 ---
@@ -225,7 +152,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 - **Onde:** Na página de Evento.
 
-<b> Deve ser implementado o DataLayer (Tagbook aba de validação site em homologação - linha 37) </b>
+<b> Deve ser implementado o DataLayer (Tagbook aba de validação site em homologação - linha 35) </b>
 
     
 ```html
@@ -249,14 +176,14 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 <br />
 
 ---
+### Casa do Saber
 
-### Planeje sua visita
 
-**Quando: No clique dos cards**<br />
+**Quando:  No clique dos botões**<br />
 
-- **Onde:** Na página de visita.
+- **Onde:** Na página de "Casa do Saber".
 
-<b> Deve ser implementado o DataLayer (Tagbook aba de validação site em homologação - linha 41) </b>
+<b> Deve ser implementado o DataLayer (Tagbook aba de validação site em homologação - linha 35) </b>
 
     
 ```html
@@ -264,16 +191,17 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': 'shopping-leblon:planeje-sua-visita',
-    'eventAction': 'clique:card',
-    'eventLabel': '[[nome-card]]'
+     'eventCategory': 'shopping-leblon:casa-do-saber',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-card]]:comprar-ingresso'
   });
 </script>
 ```
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-card]] | 'destinos-cariocas' e etc |  Deve retornar o nome do card. |
+| [[nome-card]] |  'comprar-ingresso'  | Deve retornar o nome do card clicado. |
+
 
 
 <br />
@@ -286,7 +214,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 - **Onde:** Na página fale conosco.
 
-<b> Deve ser implementado o DataLayer (Tagbook aba de validação site em homologação - linha 45) </b>
+<b> Deve ser implementado o DataLayer (Tagbook aba de validação site em homologação - linha 55) </b>
     
 ```html
 <script>
@@ -307,68 +235,15 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 <br />
 
-
-**Quando: Na tentativa de callback do envio do formulario**<br />
-
-- **Onde:** Na página fale conosco.
-
-<b> Deve ser implementado o DataLayer, não está mais disparando esse evento (Tagbook aba de validação site em homologação - linha 47) </b>
-
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'conversion',
-    'eventCategory': 'shopping-leblon:fale-conosco',
-    'eventAction': 'callback',
-    'eventLabel': '[[status]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[status]] | 'sucesso', 'erro:cpd-invalido' e etc | Deve retornar a mensagem de sucesso ou o tipo de erro. |
-
-
-<br />
-
 ---
 
 ### Solar
-
-**Quando: No clique dos botões**<br />
-
-- **Onde:** Na página Solar.
-
-<b> Deve ser implementado o DataLayer (Tagbook aba de validação site em homologação - linha 49) </b>
-
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'shopping-leblon:solar',
-    'eventAction': 'clique:botao',
-    'eventLabel': '[[nome-botao]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-botao]] | 'regulamento', 'enviar' e etc | Deve retornar o nome do botão clicado. |
-
-
-<br />
 
 **Quando: Na interação com os campos do formulário**<br />
 
 - **Onde:** Na página Solar.
 
-<b> Deve ser ajustado a taxonomia dos campos (Tagbook aba de validação site em homologação - linha 50) </b>
+<b> Deve ser ajustado a taxonomia dos campos (Tagbook aba de validação site em homologação - linha 60) </b>
 
     
 ```html
@@ -387,63 +262,6 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-campo]] | 'nome', 'cpf' e etc | Deve retornar o nome do campo preenchido.  |
 
-
-<br />
-
-**Quando: Na tentativa de callback do envio do formulario**<br />
-
-- **Onde:** Na página Solar.
-
-<b> Deve ser ajustado o nome do event para "conversion" (Tagbook aba de validação site em homologação - linha 51) </b>
-
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'conversion',
-    'eventCategory': 'shopping-leblon:solar',
-    'eventAction': 'callback',
-    'eventLabel': '[[status]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[status]] | 'sucesso', 'erro:cpd-invalido' e etc | Deve retornar a mensagem de sucesso ou o tipo de erro.   |
-
-
-<br />
-
----
-
-### Cadastro
-
-**Quando: Na tentativa de callback para efetuar o cadastro**<br />
-
-- **Onde:** Na página de cadastro.
-
-<b> Deve ser implementado o DataLayer (Tagbook aba de validação site em homologação - linha 53) </b>
-
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'conversion',
-    'eventCategory': 'shopping-leblon:cadastro',
-    'eventAction': 'callback',
-    'eventLabel': '[[status]]',
-    'dimension1: '[[User ID]]
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[status]] | 'sucesso', 'erro:usuario-ou-senha-invalidos', 'erro:pagina-fora-do-ar' e etc | Deve retornar a mensagem de sucesso ou o tipo de erro. |
-| [[[User ID]] | '1234656' e etc | ID definido após o cadastro e login |
 
 <br />
 
@@ -509,11 +327,89 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 <br />
 
 ---
+### Editar Perfil
 
-### Área Logada
+**Quando: No clique dos botões no formulário dados de cadastro**<br />
 
-<b> ****Não conseguimos validar os elementos da área logada, não está carregando a página <b>
+- **Onde:** Na página "Editar Perfil" na área logada do site
 
+<b> Deve ser implementado o DataLayer (Tagbook aba de validação site em homologação - linha 73) </b>
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:area-logada:editar-perfil',
+    'eventAction': 'clique:botao:formulario-dados-de-cadastro',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] | 'salvar', 'cancelar' e etc | Deve conter o nome do botão. |
+
+
+<br />
+---
+
+### Meus cartões
+
+**Quando: No clique dos botões no menu meus cartões**<br />
+
+- **Onde:** Na página "meus cartoes" na área logada do site.
+
+<b> Deve ser implementado o DataLayer (Tagbook aba de validação site em homologação - linha 75) </b>
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:area-logada:editar-perfil',
+    'eventAction': 'clique:botao:meus-cartoes',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] | 'salvar', 'cancelar' e etc | Deve conter o nome do botão. |
+
+
+<br />
+---
+
+**Quando: Ao preencher um dos campos no formulário meus cartões**<br />
+
+- **Onde:** Na página "meus cartoes" na área logada do site.
+
+<b> Campo "numero do cartao" deve ser ajustado pois esta disparando o evento a cada numero inserido (Tagbook aba de validação site em homologação - linha 76) </b>
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'shopping-leblon:area-logada:editar-perfil',
+    'eventAction': 'interacao:formulario-meus-cartoes:campo',
+    'eventLabel': '[[nome-campo]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-campo]] | 'numero-do-cartao' | Deve conter o numero do botão. |
+
+
+<br />
 
 ---
 
