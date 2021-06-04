@@ -6,7 +6,7 @@
 <br />
 
 ## Implementação da Camada de dados - BTG+ - BoostLab
-Última atualização: 02/06/2021 <br />
+Última atualização: 04/06/2021 <br />
 Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](nathalia.paschotto@reamp.com.br)
 
 <br />
@@ -15,8 +15,8 @@ Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](na
 
 - [Geral](#geral)
 - [Perguntas-frequentes-geral](#perguntas-frequentes-geral)
-- [Entre-em-contato-com-a-gente](#Entre-em-contato-com-a-gente) 
-- [Sobre-nos](#Sobre-nos) 
+- [Entre em contato com a gente](#Entre-em-contato-com-a-gente) 
+- [Sobre nos](#Sobre-nos) 
 - [Business-Hub](#Business-Hub)
 - [Linha-de-credito](#linha-de-credito)
 - [Mentoria](#Mentoria)
