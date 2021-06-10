@@ -14,6 +14,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 ## Sumário
 
 - [Objetivo](#objetivo)
+- [implementacao](#implementacao)
 - [Geral](#geral)
 
 
@@ -25,7 +26,7 @@ Este documento tem como objetivo instruir a implementação da camada de dados p
 
 <br />
 
-<h3> INSTALAÇÃO DO GOOGLE TAG MANAGER</H3>
+<h3 align = 'center'> INSTALAÇÃO DO GOOGLE TAG MANAGER (snnipt)</H3>
 
 ### **Posicionamento do Código - Google Tag Manager**
 
@@ -58,56 +59,26 @@ Este documento tem como objetivo instruir a implementação da camada de dados p
 </html>
 ```
 
-Link de referência: [Documentação Oficial Google Tag Manager](https://developers.google.com/tag-manager/quickstart)
-
-
-## Observações
-> Os valores especificados entre colchetes `[[ ]]` são variáveis dinâmicas e devem ser substituídas por seus respectivos valores.<br />
-
-> Todos os valores enviados ao Google Analytics devem estar sanitizados, ou seja, sem espaços, acentuação ou caracteres especiais. <br />
-
-> Caso o site já possua o Google Analytics instalado, será necessário a remoção do código de **todas as páginas do site**: <br />
-
-```html
-
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-XXXXXXXX-X', 'auto');
-ga('send', 'pageview');
-</script>
-
-```
-
----
-
-```html
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXX-X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-XXXXXXX-X');
-</script>
-```
-
----
-
-## Overview e Descrições Técnicas
+## Implementação
 
 ### Camada de dados (DataLayer)
 
 > É um array de objetos javascript utilizado pelo Google Tag Manager para receber em seus atributos, dados importantes do site.
 Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas diferentes para preencher os dados. Essas formas são dependentes da ação estabelecida na documentação e também do nível da interação.
 
-## Observações
-> Os valores especificados entre colchetes `[[ ]]` são variáveis dinâmicas e devem ser substituídas por seus respectivos valores.<br />
+**Instalação**<br />
+Inserir a camada de dados antes do snippet de instalação do Google Tag Manager. Exemplo:
 
-> Todos os valores enviados ao Google Analytics devem estar sanitizados, ou seja, sem espaços, acentuação ou caracteres especiais. <br />
 
+```html
+<script>
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		'atributo1': '[[valor1]]',
+		'atributo2': '[[valor2]]'
+	});
+</script>
+```
 ---
 
 ### Geral
