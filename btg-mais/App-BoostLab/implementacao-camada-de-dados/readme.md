@@ -5,7 +5,7 @@
 
 <br />
 
-## Implementação da Camada de dados - Puran - Simples de tratar
+## Implementação da Camada de dados - BTG - App Service BoostLab
 Última atualização: 10/06/2021 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
