@@ -1641,6 +1641,34 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 <br />
 
+
+### Vagas
+
+**Quando: Ao clicar em um dos botões**<br />
+
+- **Onde:** Na página da seção Vagas.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:vagas',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
+| [[nome-botao]] |  'acesse-o-portal' e 'cadastrar-curriculo' | Deve retornar o nome do botão clicado.  |
+
+<br />
+
+
 > Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
