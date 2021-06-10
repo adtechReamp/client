@@ -14,7 +14,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 ## Sumário
 
 - [Objetivo](#objetivo)
-- [Camada-de-dados](#camada-de-dados)
+- [Camada de dados](#camada-de-dados)
 - [Geral](#geral)
 
 
