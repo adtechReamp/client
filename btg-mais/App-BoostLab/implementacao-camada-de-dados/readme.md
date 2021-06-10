@@ -14,7 +14,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 ## Sumário
 
 - [Objetivo](#objetivo)
-- [implementacao](#implementacao)
+- [DataLayer](#dataLayer)
 - [Geral](#geral)
 
 
@@ -30,7 +30,7 @@ Este documento tem como objetivo instruir a implementação da camada de dados p
 
 ### **Posicionamento do Código - Google Tag Manager**
 
-#### 1. Copie e cole o seguinte código abaixo o mais alto possível na tag '<head>' da página:.
+#### 1. Copie e cole o seguinte código abaixo o mais alto possível na tag <head> da página:.
 
 ```html
 
@@ -47,7 +47,7 @@ Este documento tem como objetivo instruir a implementação da camada de dados p
   </head>
 ```
 
-#### 2. Copie o seguinte trecho e cole-o imediatamente após a marcação '<body>' de abertura em cada página do seu site.
+#### 2. Copie o seguinte trecho e cole-o imediatamente após a marcação <body> de abertura em cada página do seu site.
 
 ```html
 <body>
@@ -59,9 +59,9 @@ Este documento tem como objetivo instruir a implementação da camada de dados p
 </html>
 ```
 
-## Implementação
+## DataLayer
 
-### Camada de dados (DataLayer)
+<h3 align = 'center'> DataLayer </H3>
 
 > É um array de objetos javascript utilizado pelo Google Tag Manager para receber em seus atributos, dados importantes do site.
 Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas diferentes para preencher os dados. Essas formas são dependentes da ação estabelecida na documentação e também do nível da interação.
@@ -81,6 +81,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 ```
 ---
 
+<h3 align = 'center'> Implementação </H3>	
+	
 ### Geral
 
 **Quando: Na interação com os campo do formúlario .**<br />
