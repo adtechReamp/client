@@ -14,7 +14,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 ## Sumário
 
 - [Objetivo](#objetivo)
-- [DataLayer](#dataLayer)
+- [Camada-de-dados](#camada-de-dados)
 - [Geral](#geral)
 
 
@@ -26,7 +26,19 @@ Este documento tem como objetivo instruir a implementação da camada de dados p
 
 <br />
 
-<h3 align = 'center'> INSTALAÇÃO DO GOOGLE TAG MANAGER (snnipt)</H3>
+### **Descrição Geral**
+
+O `snippet` do Google Tag Manager é um pequeno trecho de código javascript ou non-javascript, através do uso de um iframe quando o javascript não está disponível, que é inserido nas páginas do site, tornando possível que a configuração das tags sejam realizadas via interface.
+
+
+## Observações
+> Os valores especificados entre colchetes `[[ ]]` são variáveis dinâmicas e devem ser substituídas por seus respectivos valores.<br />
+
+> Todos os valores enviados ao Google Analytics devem estar sanitizados, ou seja, sem espaços, acentuação ou caracteres especiais. <br />
+
+---
+
+<h3 align = 'center'> INSTALAÇÃO DO GOOGLE TAG MANAGER (snippet)</H3>
 
 ### **Posicionamento do Código - Google Tag Manager**
 
