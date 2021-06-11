@@ -14,8 +14,8 @@ Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](na
 ## Sumário
 
 - [Geral](#geral)
-- [Perguntas Frequentes](#perguntas-frequentes-geral)
-- [Entre em contato com a gente](#entre-em-contato-com-a-gente-geral) 
+- [Perguntas Frequentes](#perguntas-frequentes)
+- [Entre em contato com a gente](#entre-em-contato-com-a-gente) 
 - [Sobre nos](#sobre-nos) 
 - [Business Hub](#business-Hub)
 - [Linha de credito](#linha-de-credito)
