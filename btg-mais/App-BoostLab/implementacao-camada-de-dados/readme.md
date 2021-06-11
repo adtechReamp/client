@@ -71,7 +71,7 @@ O `snippet` do Google Tag Manager é um pequeno trecho de código javascript ou 
 </html>
 ```
 
-## DataLayer
+## Camada de dados
 
 <h3 align = 'center'> DataLayer </H3>
 
