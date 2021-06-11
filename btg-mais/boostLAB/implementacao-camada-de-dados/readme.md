@@ -249,7 +249,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 <script>
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
-    'event': 'genericEvent',
+    'event': 'conversion',
     'eventCategory': 'boostlab:[[nome-pagina]]',
     'eventAction': 'callback:formulario:[[nome-formulario]]',
     'eventLabel': '[[status]]'
@@ -329,7 +329,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 <script>
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
-    'event': 'genericEvent',
+    'event': 'conversion',
     'eventCategory': 'boostlab:home',
     'eventAction': 'callback:formulario:[[nome-formulario]]',
     'eventLabel': '[[status]]'
