@@ -14,8 +14,8 @@ Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](na
 ## Sumário
 
 - [Geral](#geral)
-- [Perguntas Frequentes - Geral ](#perguntas-frequentes-geral)
-- [Entre em contato com a gente - Geral ](#entre-em-contato-com-a-gente-geral) 
+- [Perguntas Frequente](#perguntas-frequentes-geral)
+- [Entre em contato com a gente](#entre-em-contato-com-a-gente-geral) 
 - [Sobre nos](#sobre-nos) 
 - [Business Hub](#business-Hub)
 - [Linha de credito](#linha-de-credito)
@@ -153,7 +153,9 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 ---
 
-### Perguntas Frequentes - Geral 
+### Perguntas Frequentes
+
+<b>(GERAL) </b>
 
 **Quando: Na interação com as dúvidas**<br />
 
@@ -182,7 +184,9 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 ---
 
-### Entre em contato com a gente - Geral 
+### Entre em contato com a gente
+
+<b>(GERAL) </b>
 
 **Quando: Na interação com os campo do formúlario de contato.**<br />
 
