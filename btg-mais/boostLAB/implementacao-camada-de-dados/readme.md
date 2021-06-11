@@ -371,7 +371,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 ---
 
-### Sobre nós
+### Sobre nos
 
 **Quando: Ao clicar nos botões 'saiba-mais'.**<br />
 
@@ -431,7 +431,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 ---
 
-### Linha de crédito
+### Linha de credito
 
 **Quando: Ao clicar nos elementos de cada seção.**<br />
 
