@@ -14,6 +14,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 ## Sumário
 
 - [Objetivo](#objetivo)
+- [Configuracao de contas](#configuracao-de-contas)
 - [Camada de dados](#camada-de-dados)
 - [Geral](#geral)
 
@@ -37,6 +38,7 @@ O `snippet` do Google Tag Manager é um pequeno trecho de código javascript ou 
 > Todos os valores enviados ao Google Analytics devem estar sanitizados, ou seja, sem espaços, acentuação ou caracteres especiais. <br />
 
 ---
+### Configuracao de contas
 
 <h3 align = 'center'> INSTALAÇÃO DO GOOGLE TAG MANAGER (snippet)</H3>
 
@@ -70,7 +72,30 @@ O `snippet` do Google Tag Manager é um pequeno trecho de código javascript ou 
   </body>
 </html>
 ```
+	
+<h3 align = 'center'> INSTALAÇÃO DO GOOGLE UNIVERSAL ANALYTICS (gtag.js)</H3>
+	
+> Este é o código de acompanhamento da tag de site global (gtag.js) desta propriedade. Copie e cole esse código como o primeiro item da seção <HEAD> das páginas da Web que você quer acompanhar. Se você já tiver uma tag de site global na sua página, basta adicionar a linha config do snippet abaixo à tag existente.
+	
+#### 1. Copie e cole o seguinte código abaixo o mais alto possível na tag <head> da página:
+	
+```html
+<heaD>
+	
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-199291732-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-199291732-1');
+</script>
+	
+</head>
+```
+	
+	
 ## Camada de dados
 
 <h3 align = 'center'> DataLayer </H3>
