@@ -305,7 +305,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 <script>
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
-    'event': 'genericEvent',
+    'event': 'conversion',
     'eventCategory': 'app:boostlab',
     'eventAction': 'callback:envio-formulario',
     'eventLabel': '[[status]]'
