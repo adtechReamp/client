@@ -19,6 +19,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 - [Dimensões Globais](#dimens&otilde;es-globais)
 - [Geral](#geral)
 - [LP simulador invest+](#lp-simulador-invest)
+- [LP Calculadora de carbono](#lp-calculadora-de-carbono)
 
 
 ## Objetivo
@@ -361,6 +362,218 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-botao]] |  'quero-meu-cartao-btg-mais'. |  Deve retornar o nome do botao clicado.|
 
+
+<br />
+
+### LP Calculadora de carbono
+
+**Quando:Ao clicar em alguma aba do formulário de calculo de carbono.**<br />
+
+- **Onde:** Na lp de BTG+.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'lp-btgmais',
+    'eventAction': 'interacao:aba:formulario:calcule-a-sua-pegada-de-carbono',
+    'eventLabel': '[[acao]]:aba:[[nome-aba]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[acao]] |  'abriu' ou 'fechou'.|  Deve retornar com a ação realizada na aba.|
+| [[nome-aba]] |  'casa', 'transporte-do-dia-a-dia', 'tipo-de-viagem' , 'seu-relatorio-esta-quase-pronto' e etc.|Deve retornar o nome da aba clicada no formulário.|
+
+<br />
+
+
+**Quando:Ao interagir com qualquer campo do formulário de calculo de carbono.**<br />
+
+- **Onde:** Na lp de BTG+.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'lp-btgmais',
+    'eventAction': 'interacao:campo:formulario:calcule-a-sua-pegada-de-carbono',
+    'eventLabel': 'preecheu: [[nome-campo]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-campo]] |  'quantas-pessoas-vivem-na-sua-casa', 'consumo-eletrico', 'nome-completo', 'e-mail', 'telefone' , 'consumo-de-gas'e etc.|  Deve retornar o nome do campo preenchido.|
+
+
+<br />
+
+**Quando:Ao clicar em qualquer sub-aba do formulário de calculo de carbono.**<br />
+
+- **Onde:** Na lp de BTG+.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'lp-btgmais',
+    'eventAction': 'clique:sub-aba:formulario:calcule-a-sua-pegada-de-carbono',
+    'eventLabel': 'aba:[[nome-sub-aba]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-sub-aba]]|  'transporte-publico', 'individual', 'aerea', 'terrestre-carro-ou-moto' e etc.|  Deve retornar o nome da sub-aba clicada no formulário.|
+
+
+<br />
+
+
+**Quando:Ao interagir com qualquer checkbox do formulário de calculo de carbono.**<br />
+
+- **Onde:** Na lp de BTG+.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'lp-btgmais',
+    'eventAction': 'interacao:checkbox:formulario:calcule-a-sua-pegada-de-carbono',
+    'eventLabel': 'pp:[[pergunta]]--ac: [[acao]]:[[nome-check]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[pergunta]] | 'voce-sabe-seu-consumo-de-agua-no-mes' e etc;|Deve retornar com o nome da pergunta relacionada ao checkbox.|
+| [[acao]] | 'marcou' ou 'desmarcou'.|Deve retornar o nome da acao realizada.|
+| [[nome-check]] |'sim' ou 'nao'.|Deve retonar com o nome do checkbox interagido.|
+
+<br />
+
+
+**Quando:Ao interagir com qualquer filtro do formulário de calculo de carbono.**<br />
+
+- **Onde:** Na lp de BTG+.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'lp-btgmais',
+    'eventAction': 'interacao:filtro:formulario:calcule-a-sua-pegada-de-carbono',
+    'eventLabel': '[[tipo-filtro]]:selecionou:[[nome-filtro]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[tipo-filtro]] |  'cidade-de-origem', 'cidade-destino', 'quantidade','tipo-de-viagem', 'periocidade', 'meio-de-transporte'  e etc.|Deve retornar com o nome do tipo de filtro interagido.|
+| [[nome-filtro]]|  'abadia-de-goias-go-brasil' , ' abate-mg-brasil', 'carro', 'ida-e-volta' e etc.|Deve retonar com o nome do filtro interagido.|
+
+<br />
+
+**Quando:Ao clicar em qualquer botão de adicionar ou excluir opção de viagem no formulário de calculo de carbono.**<br />
+
+- **Onde:** Na lp de BTG+.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'lp-btgmais',
+    'eventAction': 'clique:botao:formulario:calcule-a-sua-pegada-de-carbono',
+    'eventLabel': '[[acao]]:[[nome-aba]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[acao]]| 'adicionou' ou 'exclui-o'.|Deve retornar com o nome da ação realizada.|
+| [[nome-aba]]|  'tipo-de-viajem' ou 'transporte-do-dia-a-dia'.| Deve retornar o nome da aba onde está havendo interação.|
+
+<br />
+
+**Quando: Ao clicar em qualquer botão 'anterior' ou 'proximo' do formulário de calculo de carbono.**<br />
+
+- **Onde:** Na lp de BTG+.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'lp-btgmais',
+    'eventAction': 'clique:botao:formulario:calcule-a-sua-pegada-de-carbono',
+    'eventLabel': 'aba:[[nome-aba]]:botao:[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-aba]]|  'tipo-de-viajem' ou 'transporte-do-dia-a-dia'.|Deve retornar o nome da aba onde está havendo interação.|
+| [[nome-botao]] | 'anterior' ou 'proximo'.| Deve retornar com o nome do botão clicado.|
+
+<br />
+
+**Quando: Ao interagir com o checkbox de 'concordo de politica de privacidade' no formulário de calculo de carbono.**<br />
+
+- **Onde:** Na lp de BTG+.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'lp-btgmais',
+    'eventAction': 'interacao:checkbox:formulario:calcule-a-sua-pegada-de-carbono',
+    'eventLabel': 'politica-de-privacidade:marcou:[[acao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[acao]]|  'aceito' ou 'nao-aceito'.|Deve retornar o nome da acao realizada.|
+
+<br />
+
+**Quando: Na tentativa de callback de envio do formulário de calculo de carbono.**<br />
+
+- **Onde:** Na lp de BTG+.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'conversion',
+    'eventCategory': 'lp-btgmais',
+    'eventAction': 'callback:formulario',
+    'eventLabel': '[[status]]',
+    'dimension1': '[[User ID]]
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[status]]|  'sucesso', 'erro:email-invalido', 'pagina-indisponivel-no-momento' e etc.|Retornar a mensagem de sucesso ou tipo de erro. |
 
 <br />
 
