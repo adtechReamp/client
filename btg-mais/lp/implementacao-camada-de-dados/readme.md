@@ -565,8 +565,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'conversion',
     'eventCategory': 'lp-btgmais',
     'eventAction': 'callback:formulario',
-    'eventLabel': '[[status]]',
-    'dimension1': '[[User ID]]
+    'eventLabel': '[[status]]'
+    
   });
 </script>
 ```
