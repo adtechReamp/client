@@ -564,7 +564,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
   window.dataLayer.push({
     'event': 'conversion',
     'eventCategory': 'lp-btgmais',
-    'eventAction': 'callback:formulario',
+    'eventAction': 'callback:formulario:calculo-de-carbono',
     'eventLabel': '[[status]]'
     
   });
