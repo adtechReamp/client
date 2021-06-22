@@ -1841,9 +1841,9 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 <br />
 
 
-**Quando: No clique dos botões das áreas da Fila de Espera.**<br />
+**Quando: No clique dos botões da área de Eventos.**<br />
 
-- **Onde:** Nas páginas de  "Fila de Espera" na área logada do site.
+- **Onde:** Nas páginas de  "Eventos" na área logada do site.
     
 ```html
 <script>
