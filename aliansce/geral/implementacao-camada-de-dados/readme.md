@@ -6,7 +6,7 @@
 <br />
 
 ## Implementação da Camada de dados - Geral
-Última atualização: 05/03/2020 <br />
+Última atualização: 22/06/2020 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
@@ -1627,8 +1627,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:area-logada:minhas-filas,
-    'eventAction': 'clique:botao,
+    'eventCategory': '[[nome-ambiente]]:area-logada:minhas-filas',
+    'eventAction': 'clique:botao',
     'eventLabel': '[[nome-botao]]'
   });
 </script>"
@@ -1637,6 +1637,232 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-botao]] | 'entrar-em-uma-fila' e etc | Deve retornar o nome do botão clicado |
+
+
+<br />
+
+**Quando: Ao clicar em um botão ou link.**<br />
+
+- **Onde:**Na página "Promoções" na área logada do site.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:area-logada:promocoes',
+    'eventAction': 'clique:[[botao-ou-link]]',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
+| [[nome-botao]] | acessar-promocao' e 'ver-regulamento'. | Deve retornar o nome do botão clicado |
+| [[botao-ou-link]] |  'botao' ou 'link'.|  Deve retornar se o clique ocorreu em um link ou um clique. |
+
+
+<br />
+
+**Quando: Ao preencher os campos do formulário de Cadastro.**<br />
+
+- **Onde:**Na página "Promoções" na área logada do site.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:area-logada:promocoes',
+    'eventAction': 'preencheu-campo:form-promocoes',
+    'eventLabel': '[[nome-campo]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
+| [[nome-campo]] | 'numero', 'titular' e etc| Deve retornar o nome do campo preenchido no formulário. |
+
+
+<br />
+
+
+**Quando: No clique dos botões do formulário de Cadastro.**<br />
+
+- **Onde:**Na página "Promoções" na área logada do site.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:area-logada:promocoes',
+    'eventAction': 'clique:botao:cadastro',
+    'eventLabel': '[[nome-campo]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
+| [[nome-campo]] |  'numero', 'titular' e etc| Deve retornar o nome do campo preenchido no formulário. |
+
+
+<br />
+
+**Quando:  No clique dos botões da promoção.**<br />
+
+- **Onde:**Na página "Promoções" na área logada do site.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:area-logada:promocoes',
+    'eventAction': 'clique:botao:promocao',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
+| [[nome-botao]] |'nova-nota' e 'ver notas'.| Deve retornar o nome do botão clicado na promoção. |
+
+
+<br />
+
+**Quando:  No clique dos botões das telas de Nota após clicar em "Nova Nota".**<br />
+
+- **Onde:**Na página "Promoções" na área logada do site.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:area-logada:promocoes',
+    'eventAction': 'clique:botao:notas',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
+| [[nome-botao]] | 'clique-aqui', 'ok-entendi', 'saldo' e etc.| Deve retornar o nome do botão clicado na promoção. |
+
+
+<br />
+
+
+**Quando:   No clique dos botões das telas de "Estacionamento".**<br />
+
+- **Onde:**Nas páginas de  "Estacionamento" na área logada do site.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:area-logada:estacionamento',
+    'eventAction': 'clique:botao:estacionamento',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
+| [[nome-botao]] |  'clique-aqui', 'pagar', 'salvar-resumo' e etc.| Deve retornar o nome do botão clicado na promoção. |
+
+
+<br />
+
+**Quando:  No clique dos botões ou links do Locker/Drive-Thru.**<br />
+
+- **Onde:** Nas páginas de  "Estacionamento" na área logada do site.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:area-logada:locker-drive',
+    'eventAction': 'clique:[[botao-ou-link]]:[[locker/drive]]',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
+| [[nome-botao]] |  'avisa-ao-lojista', 'detalhes' e etc.| Deve retornar o nome do botão ou link clicado. |
+| [[locker/drive]] |  'locker' ou 'drive'.|  Deve retornar se a interação ocorreu num menu do locker ou do drive. |
+| [[botao-ou-link]] |  'botao' ou 'link'.|  Deve retornar se o clique ocorreu em um link ou um clique. |
+
+
+<br />
+
+**Quando:  No clique dos botões das áreas da Fila de Espera.**<br />
+
+- **Onde:** Nas páginas de  "Fila de Espera" na área logada do site.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:area-logada:fila-espera',
+    'eventAction': 'clique:botao:fila-espera',
+    'eventLabel': '[[nome-botao]]:[[nome-restaurante]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
+| [[nome-botao]] | 'entrar na fila', 'atualizar', 'receber-aviso-pelo-whatsapp' e etc.| Deve retornar o nome do botão clicado. |
+| [[nome-restaurante]] |  'restaurante-teste-as'|  Deve retornar o nome do restaurante correspondente a interação. |
+
+
+
+<br />
+
+
+**Quando: No clique dos botões das áreas da Fila de Espera.**<br />
+
+- **Onde:** Nas páginas de  "Fila de Espera" na área logada do site.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:area-logada:inscricao-eventos',
+    'eventAction': 'clique:botao:evento',
+    'eventLabel': '[[nome-botao]]:[[nome-evento]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
+| [[nome-botao]] | 'entrar na fila', 'atualizar', 'receber-aviso-pelo-whatsapp' e etc.| Deve retornar o nome do botão clicado. |
+| [[nome-evento]] |   'falando-em-familia' e etc.|Deve retornar o nome do evento correspondente a interação.  |
+
 
 
 <br />
