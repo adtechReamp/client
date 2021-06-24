@@ -5,7 +5,7 @@
 
 <br />
 
-## Implementação da Camada de dados - ProMAtre 
+## Implementação da Camada de dados - ProMatre 
 Última atualização: 24/06/2021 <br />
 Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](nathalia.paschotto@reamp.com.br)
 
