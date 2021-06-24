@@ -110,8 +110,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
   window.dataLayer.push({
     'event': 'leituraCompleta',
     'eventCategory': 'pro-matre:geral',
-    'eventAction': 'leitura-artigo:[[titulo-artigo]]',
-    'eventLabel': 'leitura-completa'
+    'eventAction': 'leitura-artigo',
+    'eventLabel': 'leitura-completa:[[titulo-artigo]]'
   });
 </script>
 
