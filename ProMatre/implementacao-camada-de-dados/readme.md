@@ -14,6 +14,7 @@ Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](na
 ## Sumário
 
 - [Fale Conosco](#fale-conosco)
+- [Artigos](#artigos)
 
 
 
@@ -96,6 +97,32 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 <br />
 
+### Artigos
+
+
+**Quando:   Ao ser reconhecido o último "</p>" ou "</div>" do artigo dentro dos botões "continuar lendo".**<br />
+
+- **Onde:**  Em todas as páginas que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'leituraCompleta',
+    'eventCategory': 'pro-matre:geral',
+    'eventAction': 'leitura-artigo:[[titulo-artigo]]',
+    'eventLabel': 'leitura-completa'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[titulo-artigo]]| :  'plano-particular', 'o-que-e-o-plano-particular?', 'humanizacao' e etc.|  Retornar o titulo do artigo. |
+
+
+<br />
 
 
 ---
