@@ -13,6 +13,7 @@ Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](na
 
 ## Sumário
 
+- [Instalação GTM](#instalacao-gtm)
 - [Fale Conosco](#fale-conosco)
 - [Artigos](#artigos)
 
@@ -34,7 +35,35 @@ Link de referência: [Documentação Oficial Google Tag Manager](https://develop
 
 > Todos os valores enviados ao Google Analytics devem estar sanitizados, ou seja, sem espaços, acentuação ou caracteres especiais. <br />
 
+### Instalação GTM 
+<b> (Snippet) </b>
 
+<p> Copie o código abaixo e cole-o em todas as páginas do seu website.<br>
+Cole esse código o mais alto possível na tag <head> da página:</p>
+	
+```html
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NQ8P54J');</script>
+<!-- End Google Tag Manager -->
+</head>
+```
+	
+<br>
+<p> Além disso, cole esse código imediatamente após a tag de abertura <body>: </p>
+	
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQ8P54J"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+</body>
+```
+---
 
 ## Overview e Descrições Técnicas
 
