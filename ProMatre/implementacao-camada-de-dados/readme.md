@@ -13,7 +13,7 @@ Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](na
 
 ## Sumário
 
-- [Instalação GTM](#instalacao-gtm)
+- [Instalação GTM ](#instalacao-gtm)
 - [Fale Conosco](#fale-conosco)
 - [Artigos](#artigos)
 
@@ -55,7 +55,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	
 <br>
 <p> Além disso, cole esse código imediatamente após a tag de abertura <body>: </p>
-	
+
+```html
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQ8P54J"
