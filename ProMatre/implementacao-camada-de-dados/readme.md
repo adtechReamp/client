@@ -35,40 +35,6 @@ Link de referência: [Documentação Oficial Google Tag Manager](https://develop
 
 > Todos os valores enviados ao Google Analytics devem estar sanitizados, ou seja, sem espaços, acentuação ou caracteres especiais. <br />
 
-### Instalacao gtm 
-
-<b>Instalar o Gerenciador de tags do Google (Snippet) </b>
-
-<p> Copie o código abaixo e cole-o em todas as páginas do seu website.<br>
-Cole esse código o mais alto possível na tag <head> da página:</p>
-	
-```html
-<script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NQ8P54J');</script>
-<!-- End Google Tag Manager -->
-</script>
-```
-	
-<br>
-<p> Além disso, cole esse código imediatamente após a tag de abertura <body>: </p>
-
-```html
-<script>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQ8P54J"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-</script>
-```
-	
----
-	
-<br />
 
 ## Overview e Descrições Técnicas
 
@@ -104,6 +70,42 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 	});
 </script>
 ```
+</br>
+
+### Instalacao gtm 
+
+<b>Instalar o Gerenciador de tags do Google (Snippet) </b>
+
+<p> Copie o código abaixo e cole-o em todas as páginas do seu website.<br>
+Cole esse código o mais alto possível na tag <head> da página:</p>
+	
+```html
+<script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NQ8P54J');</script>
+<!-- End Google Tag Manager -->
+</script>
+```
+	
+<br>
+<p> Além disso, cole esse código imediatamente após a tag de abertura <body>: </p>
+
+```html
+<script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQ8P54J"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+</script>
+```
+	
+---
+	
+</br>
 
 ### Fale Conosco
 
