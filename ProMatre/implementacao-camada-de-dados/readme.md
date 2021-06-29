@@ -130,7 +130,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 ### Artigos
 
 
-**Quando:   Ao ser reconhecido o último "</p>" ou "</div>" do artigo dentro dos botões "continuar lendo".**<br />
+**Quando:   Ao ser reconhecido o último </p> ou </div> do artigo dentro dos botões "continuar lendo".**<br />
 
 - **Onde:**  Em todas as páginas que estiver disponível.
     
