@@ -13,7 +13,7 @@ Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](na
 
 ## Sumário
 
-- [Instalação GTM ](#instalacao-gtm)
+- [Instalacao gtm ](#instalacao-gtm)
 - [Fale Conosco](#fale-conosco)
 - [Artigos](#artigos)
 
@@ -35,8 +35,8 @@ Link de referência: [Documentação Oficial Google Tag Manager](https://develop
 
 > Todos os valores enviados ao Google Analytics devem estar sanitizados, ou seja, sem espaços, acentuação ou caracteres especiais. <br />
 
-### Instalação GTM 
-<b> (Snippet) </b>
+### Instalacao gtm 
+<b>Instalar o Gerenciador de tags do Google (Snippet) </b>
 
 <p> Copie o código abaixo e cole-o em todas as páginas do seu website.<br>
 Cole esse código o mais alto possível na tag <head> da página:</p>
