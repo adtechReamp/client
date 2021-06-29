@@ -13,7 +13,7 @@ Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](na
 
 ## Sumário
 
-- [Instalacao gtm ](#instalacao-gtm)
+
 - [Fale Conosco](#fale-conosco)
 - [Artigos](#artigos)
 
@@ -57,7 +57,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 > É um array de objetos javascript utilizado pelo Google Tag Manager para receber em seus atributos, dados importantes do site.
 Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas diferentes para preencher os dados. Essas formas são dependentes da ação estabelecida na documentação e também do nível da interação.
 
-**Instalação**<br />
+**Instalação**
 Inserir a camada de dados antes do snippet de instalação do Google Tag Manager. Exemplo:
 
 
@@ -70,41 +70,6 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 	});
 </script>
 ```
-</br>
-
-### Instalacao gtm 
-
-<b>Instalar o Gerenciador de tags do Google (Snippet) </b>
-
-<p> Copie o código abaixo e cole-o em todas as páginas do seu website.<br>
-Cole esse código o mais alto possível na tag <head> da página:</p>
-	
-```html
-<script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NQ8P54J');</script>
-<!-- End Google Tag Manager -->
-</script>
-```
-	
-<br>
-<p> Além disso, cole esse código imediatamente após a tag de abertura <body>: </p>
-
-```html
-<script>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQ8P54J"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-</script>
-```
-	
----
-	
 </br>
 
 ### Fale Conosco
