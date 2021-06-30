@@ -1322,7 +1322,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 <br />
 
 
-###Vitrine de Produtos
+### Vitrine de Produtos
 
 **Quando: Na interação com o campo de filtro.**<br />
 
