@@ -1975,7 +1975,28 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | [[nome-botao]] | 'entrar na fila', 'atualizar', 'receber-aviso-pelo-whatsapp' e etc.| Deve retornar o nome do botão clicado. |
 | [[nome-evento]] |   'falando-em-familia' e etc.|Deve retornar o nome do evento correspondente a interação.  |
 
+<br />
 
+
+**Quando: No clique do botão 'cancelar reserva' da área de Reservas.**<br />
+
+- **Onde:** Nas páginas de  "Minhas Reservas" na área logada do site.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:area-logada:reservas',
+    'eventAction': 'clique:botao:reserva',
+    'eventLabel': 'cancelar-reserva'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
 
 <br />
 
