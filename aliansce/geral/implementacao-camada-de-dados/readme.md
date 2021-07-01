@@ -1990,6 +1990,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'eventCategory': '[[nome-ambiente]]:area-logada:reservas',
     'eventAction': 'clique:botao:reserva',
     'eventLabel': 'cancelar-reserva'
+    'dimension5': '[[nome-loja]]'
   });
 </script>
 ```
@@ -1997,6 +1998,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 <br />
 
