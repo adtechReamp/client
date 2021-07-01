@@ -12,7 +12,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 <br />
 
 ## Objetivo
-Este documento tem como objetivo instruir a implementação da camada de dados e de data attributes para utilização de recursos de monitoramento do Google Analytics referentes ao ambiente de [XXXXX](XXXXX).
+Este documento tem como objetivo instruir a implementação da camada de dados e de data attributes para utilização de recursos de monitoramento do Google Analytics referentes ao ambiente de [Clube Movida](https://www.movida.com.br/clubemovida).
 
 <br />
 
@@ -185,20 +185,19 @@ Botão
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------------	| :-------------------- | :-------------------------------------------	|
 | [[Váriavel]]			| 'exemplo'				| Descrição										|
+---
 
-<br />
+**Página - Home:**<br />
 
-**Cadastro Newsletter - Sucesso ou erro:**<br />
-
-- **Onde:** No Callback do envio do e-mail de cadastro para receber newsletter.
+- **Onde:** Ao clicar no botão "Eu Quero".
 
 ```html
 <script>
 	dataLayer.push({
 		'event': 'event',
-		'eventCategory': '',
-		'eventAction': '',
-		'eventLabel': ''
+		'eventCategory': 'clube-movida:home',
+		'eventAction': 'clique:botao',
+		'eventLabel': '[[botao-assine]]'
 	});
 </script>
 ```
@@ -206,450 +205,105 @@ Botão
 
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------------	| :-------------------- | :-------------------------------------------	|
-| [[Váriavel]]			| 'exemplo'				| Descrição										|
+| [[botao-assine]]			| 'eu-quero'				| Deve retornar o nome do botão.										|
 
-<br />
+- **Onde:** Ao clicar nos links "Ver todos".
 
-### Enhanced Ecommerce
-
-**Na visualização de algum banner**<br />
-
-- **Onde:** Em todas as páginas que estiver disponivel. 
-    
 ```html
 <script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'promotionImpression',
-    'eventCategory': 'projeto:enhanced-ecommerce',
-    'eventAction': 'promotionImpression',
-'noInteraction': '1',
-'ecommerce': {
-    'promoView': {
-      'promotions': [{
-        'id': '[[promotion-id]]',
-        'name': '[[nome-promocao]]',
-        'position': '[[posicao-promocao]]',
-        'creative': '[[arte-banner]]'
-      }]
-    }
-  }
-  });
+	dataLayer.push({
+		'event': 'event',
+		'eventCategory': 'clube-movida:home',
+		'eventAction': 'clique:link',
+		'eventLabel': '[[ver-todos]]'
+	});
 </script>
 ```
 
 
+| Variável 				| Exemplo 				| Descrição 									|
+| :--------------------	| :-------------------- | :-------------------------------------------	|
+| [[ver-todos]]			| 'produtos'				| Deve retornar o nome do bloco em que esse link se encontra. 										|
 
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[promotion-id]] |'banner123' e etc | ID único do Banner |
-| [[nome-promocao]] | 'maravilhoso-natal' e etc | Deve retornar o nome amigável do banner |
-| [[arte-banner]] | 'www.exemplo.com' | URL do banner  |
-| [[posicao-promocao]] | '1' e etc | Deve retornar a posição que o banner é exibido  |
+---
 
-<br />
+**Página - Assine Já:**<br />
 
-
-**No clique dos banners**<br />
-
-- **Onde:** Em todas as páginas que estiver disponivel.
-    
+- **Onde:** Ao clicar no botão "Ver Mais".
 
 ```html
 <script>
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-  'event': 'promotionClick',
-  'eventCategory': 'projeto:enhanced-ecommerce',
-  'eventAction': 'promotionClick',
-    'ecommerce': {
-    'promoClick': {
-      'promotions': [{
-        'id': '[[promotion-id]]',
-        'name': '[[nome-promocao]]',
-        'position': '[[posicao-promocao]]',
-        'creative': '[[arte-banner]]'
-      }]
-    }
-  }
-});
+	dataLayer.push({
+		'event': 'event',
+		'eventCategory': 'clube-movida:assine-ja',
+		'eventAction': 'clique:botao',
+		'eventLabel': '[[botao-mais]]'
+	});
 </script>
 ```
 
 
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[promotion-id]] |'banner123' e etc | ID único do Banner |
-| [[nome-promocao]] | 'maravilhoso-natal' e etc | Deve retornar o nome amigável do banner |
-| [[arte-banner]] | 'www.exemplo.com' | URL do banner  |
-| [[posicao-promocao]] | '1' e etc | Deve retornar a posição que o banner é exibido  |
+| Variável 				| Exemplo 				| Descrição 									|
+| :--------------------	| :-------------------- | :-------------------------------------------	|
+| [[botao-mais]]			| 'ver-mais'				| Deve retornar o nome do botão.										|
 
-
-<br />
-
-
-**Na visualização de uma vitrine de produtos**<br />
-
-- **Onde:** Em todas as páginas que estiver disponivel.
-    
+- **Onde:** Ao clicar nos planos de assinatura.
 
 ```html
 <script>
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-  'event': 'productImpression',
-  'eventCategory':'projeto:enhanced-ecommerce',
-  'eventAction': 'productImpression',
-  'noInteraction': '1',
-  'ecommerce': {
-    'impressions': [{
-        'name': '[[nome-produto]]',
-        'id': '[[id-produto]]',
-        'list': '[[lista-produto]]',
-        'variant': '[[variacao-produto]]',
-        'position': '[[posicao-produto]]'
-    }]
-  }
-});
+	dataLayer.push({
+		'event': 'event',
+		'eventCategory': 'clube-movida:assine-ja',
+		'eventAction': 'clique:botao',
+		'eventLabel': '[[plano]]'
+	});
 </script>
 ```
 
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-produto]] | 'calca-masculina-super-skinny-em-jeans' | Nome do produto |
-| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
-| [[lista-produto]] | 'calcas-jeans' | Nome da lista que o produto aparece |
-| [[posicao-produto]] | '2' | Posição que o produto aparece em uma lista de produtos |
-| [[variacao-produto]] | 'm' | Tamanho do produto |
 
-<br />
+| Variável 				| Exemplo 				| Descrição 									|
+| :--------------------	| :-------------------- | :-------------------------------------------	|
+| [[plano]]			| 'basico'				| Deve retornar o nome do plano que o clinte escolheu. 										|
 
+---
 
-**No clique de algum produto**<br />
+**Página - Ver Mais:**<br />
 
-- **Onde:** Em todas as páginas que estiver disponivel.
-    
+- **Onde:**  Ao escolher uma categoria no select.
 
 ```html
 <script>
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-    'event': 'productClick',
-    'eventCategory': 'projeto:enhanced-ecommerce',
-    'eventAction': 'productClick',
-        'ecommerce': {
-        'click': {
-            'actionField': {'list': '[[lista-produto]]'},
-            'products': [{
-                'name': '[[nome-produto]]',
-                'id': '[[id-produto]]',
-                'price': '[[preco-produto]]',
-                'brand': '[[marca-produto]]',
-                'category': '[[categoria-produto]]',
-                'position': '[[posicao-produto]]'
-            }]
-        }
-    }
-});
+	dataLayer.push({
+		'event': 'event',
+		'eventCategory': 'clube-movida:ver-mais',
+		'eventAction': 'interacao:filtro',
+		'eventLabel': '[[filtro-categoria]]'
+	});
 </script>
 ```
 
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[lista-produto]] | 'calcas-jeans'| Nome da lista que o produto aparece|
-| [[nome-produto]] | 'calca-masculina-super-skinny-em-jeans' | Nome do produto |
-| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
-| [[preco-produto]] | '139.99' | Preço do produto |
-| [[marca-produto]] | 'samsumg' | Marca do produto |
-| [[categoria-produto]] | 'masculino' | Categoria do produto |
-| [[posicao-produto]] | '2' | Posição que o produto aparece em uma lista de produtos |
 
-<br />
+| Variável 				| Exemplo 				| Descrição 									|
+| :--------------------	| :-------------------- | :-------------------------------------------	|
+| [[filtro-categoria]]			| 'Locação'				| Deve retornar o nome da categoria escolhida.										|
 
-
-**Na visualização da página de detalhes do produto**<br />
-
-- **Onde:** Na página de detalhe do produto
-    
+- **Onde:**  Ao escolher uma categoria no select.
 
 ```html
 <script>
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-  'event': 'productDetail',
-  'eventCategory': 'projeto:enhanced-ecommerce',
-  'eventAction': 'productDetail',
-  'noInteraction': '1',
-  'ecommerce': {
-    'detail': {
-      'products': [{
-        'name': '[[nome-produto]]',
-        'id': '[[id-produto]]',
-        'price': '[[preco-produto]]',
-        'category': '[[categoria-produto]]',
-        'variant': '[[variacao-produto]]',
-      }]
-    }
-  }
- });
+	dataLayer.push({
+		'event': 'event',
+		'eventCategory': 'clube-movida:ver-mais',
+		'eventAction': 'interacao:filtro',
+		'eventLabel': '[[filtro-pontos]]'
+	});
 </script>
 ```
 
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-produto]] | 'calca-masculina-super-skinny-em-jeans' | Nome do produto |
-| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
-| [[preco-produto]] | '139.99' | Preço do produto |
-| [[categoria-produto]] | 'masculino' | Categoria do produto |
-| [[variacao-produto]] | 'm' | Tamanho do produto |
 
-<br />
-
-
-**Ao adicionar um produto ao carrinho**<br />
-
-- **Onde:** Em todas as páginas que estiver disponivel
-    
-
-```html
-<script>
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-  'event': 'addToCart',
-  'eventCategory':'projeto:enhanced-ecommerce',
-  'eventAction': 'addToCart',
-    'ecommerce': {
-    'add': {
-      'products': [{
-        'name': '[[nome-produto]]',
-        'id': '[[id-produto]]',
-        'price': '[[preco-produto]]',
-        'brand': '[[marca-produto]]',
-        'category': '[[categoria-produto]]',
-        'variant': '[[variacao-produto]]',
-        'quantity': '[[quantidade-produto]]'
-      }]
-    }
-  }
-});
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-produto]] | 'calca-masculina-super-skinny-em-jeans' | Nome do produto |
-| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
-| [[preco-produto]] | '139.99' | Preço do produto |
-| [[marca-produto]] | 'samsumg' | Marca do produto |
-| [[categoria-produto]] | 'masculino' | Categoria do produto |
-| [[variacao-produto]] | 'm' | Tamanho do produto |
-| [[quantidade-produto]] | '1' | Quantidade do produto |
-
-<br />
-
-
-**Ao remover um produto do carrinho**<br />
-
-- **Onde:** Na página da Sacola;
-    
-
-```html
-<script>
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-  'event': 'removeFromCart',
-  'eventCategory': 'projeto:enhanced-ecommerce',
-  'eventAction': 'removeFromCart',
-    'ecommerce': {
-    'remove': {
-      'products': [{
-        'name': '[[nome-produto]]',
-        'id': '[[id-produto]]',
-        'price': '[[preco-produto]]',
-        'brand': '[[marca-produto]]',
-        'category': '[[categoria-produto]]',
-        'variant': '[[variacao-produto]]',
-        'quantity': '[[quantidade-produto]]'
-      }]
-    }
-  }
-});
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-produto]] | 'calca-masculina-super-skinny-em-jeans' | Nome do produto |
-| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
-| [[preco-produto]] | '139.99' | Preço do produto |
-| [[marca-produto]] | 'samsumg' | Marca do produto |
-| [[categoria-produto]] | 'masculino' | Categoria do produto |
-| [[variacao-produto]] | 'm' | Tamanho do produto |
-| [[quantidade-produto]] | '1' | Quantidade do produto |
-
-<br />
-
-
-**No carregamento das etapas do checkout**<br />
-
-- **Onde:** Na página do checkout
-    
-
-```html
-<script>
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-  'event': 'checkout',
-  'eventCategory': 'projeto:enhanced-ecommerce',
-  'eventAction': 'checkout',
-  'noInteraction': '1',
-  'ecommerce': {
-    'checkout': {
-      'actionField': {'step': '[[checkout-index]]'},
-      'products': [{
-        'name': '[[nome-produto]]',
-        'id': '[[id-produto]]',
-        'price': '[[preco-produto]]',
-        'brand': '[[marca-produto]]',
-        'category': '[[categoria-produto]]',
-        'variant': '[[variacao-produto]]',
-        'quantity': '[[quantidade-produto]]'
-      }]
-    }
-  }
-});
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[checkout-index]] | '1-carrinho' | Página de carrinho de compras |
-| [[checkout-index]] | '2-entrega' | Página de confirmação do endereço de entrega |
-| [[checkout-index]] | '3-pagamento' | Página de seleção do método de pagamento |
-| [[nome-produto]] | 'calca-masculina-super-skinny-em-jeans' | Nome do produto |
-| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
-| [[preco-produto]] | '139.99' | Preço do produto |
-| [[marca-produto]] | 'samsumg' | Marca do produto |
-| [[categoria-produto]] | 'masculino' | Categoria do produto |
-| [[variacao-produto]] | 'm' | Tamanho do produto |
-| [[quantidade-produto]] | '1' | Quantidade do produto |
-
-<br />
-
-
-**Ao selecionar uma opção de frete**<br />
-
-- **Onde:** Na página de checkout
-    
-
-```html
-<script>
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-  'event': 'checkoutOption'',
-  'eventCategory': 'enhanced-ecommerce',
-  'eventAction': 'checkoutOption',
-  'ecommerce': {
-    'checkout_option': {
-      'actionField': {'option': shipping:[[opcao escolhida]]:[[previsao-entrega]]}
-{step:2},
-    }
-  }
-});
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[opcao escolhida]] | 'receber', 'retirar' | Deve retornar os nomes dos tipos de entrega. |
-| [[previsao-entrega]] |  'em-ate-4-dias-uteis', 'pompeia-em-ate-2-dias' | Usar essa variável apenas para etapa de entrega. Retorna as informações de forma de entrega. |
-
-
-<br />
-
-
-**Ao selecionar uma opção de pagamento**<br />
-
-- **Onde:** Na página de carrinho e de checkout
-    
-
-```html
-<script>
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-  'event': 'checkoutOption'',
-  'eventCategory': 'enhanced-ecommerce',
-  'eventAction': 'checkoutOption',
-  'ecommerce': {
-    'checkout_option': {
-      'actionField': {'option': payment:[[opcao escolhida]]}
-{step:3},
-    }
-  }
-});
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[opcao escolhida]] | 'cartao-de-credito', 'boleto' etc | Deve retornar os nomes dos tipos de entrega. |
-
-
-<br />
-
-**Na finalização da compra**<br />
-
-- **Onde:** Na página de confirmação de compra
-    
-
-```html
-<script>
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-  'event': 'purchase',
-  'eventCategory': 'projeto:enhanced-ecommerce',
-  'eventAction': 'purchase',
-  'noInteraction': '1',
-  'ecommerce': {
-    'purchase': {
-      'actionField': {
-        'id': '[[id-transacao]]',
-        'revenue': '[[valor-total-transacao]]',
-        'shipping': '[[frete-transacao]]'
-        'tax': '[[taxa-transacao]]'
-        'coupon': '[[coupon-transacao]]'
-      },
-      'products': [{
-        'name': '[[nome-produto]]',
-        'id': '[[id-produto]]',
-        'price': '[[preco-produto]]',
-        'brand': '[[marca-produto]]',
-        'category': '[[categoria-produto]]',
-        'variant': '[[variacao-produto]]',
-        'quantity': '[[quantidade-produto]]'
-      }]
-    }
-  }
-});
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[id-transacao]] |  '000011652' | ID único da transação |
-| [[valor-total-transacao]] |  '139,99' | Valor total da transação incluindo frete e taxas |
-| [[frete-transacao]] |  '0.00' | Valor do frete da transação |
-| [[taxa-transacao]] |  '0.00' | Valor de taxas da transação |
-| [[coupon-transacao]] | 'cupom-2018' | Cupom de desconto utilizado na transação - promoção nivel pedido |
-| [[nome-produto]] | 'calca-masculina-super-skinny-em-jeans' | Nome do produto |
-| [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
-| [[preco-produto]] | '139.99' | Preço do produto |
-| [[marca-produto]] | 'samsumg' | Marca do produto |
-| [[categoria-produto]] | 'masculino' | Categoria do produto |
-| [[variacao-produto]] | 'm' | Tamanho do produto |
-| [[quantidade-produto]] | '1' | Quantidade do produto |
-
-<br />
+| Variável 				| Exemplo 				| Descrição 									|
+| :--------------------	| :-------------------- | :-------------------------------------------	|
+| [[filtro-pontos]]			| 'Locação'				| Deve retornar a quantidade de pontos escolhida.									|
 
 ---
 
