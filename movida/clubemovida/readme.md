@@ -309,7 +309,3 @@ Botão
 
 > Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
-<br />
-
-<script> document.querySelector('h1').style.display = 'none' </script>
-
