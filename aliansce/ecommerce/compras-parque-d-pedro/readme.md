@@ -803,7 +803,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'genericEvent',
     'eventCategory': 'compras-parque-d-pedro:pdp',
     'eventAction': 'clique:cor',
-    'eventLabel': '[[nome-cor]]:[[nome-produto]]'
+    'eventLabel': '[[nome-cor]]:[[nome-produto]]',
+    'dimension4': '[[nome-loja]]'
   });
 </script>
 ```
@@ -812,6 +813,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-cor]] | 'branco', 'preto', 'azul' e etc | Deve retornar a cor selecionada. |
 | [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 
 
@@ -828,7 +830,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'genericEvent',
     'eventCategory': 'compras-parque-d-pedro:pdp',
     'eventAction': 'clique:tamanho',
-    'eventLabel': '[[tamanho-selecionado]]:[[nome-produto]]'
+    'eventLabel': '[[tamanho-selecionado]]:[[nome-produto]]',
+    'dimension4': '[[nome-loja]]'
   });
 </script>
 ```
@@ -837,7 +840,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[tamanho-selecionado]] | '35', '40', '41'  e etc | Deve retornar o tamanho selecionado. |
 | [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
-
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 
 <br />
@@ -853,7 +856,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'genericEvent',
     'eventCategory': 'compras-parque-d-pedro:pdp',
     'eventAction': 'interacao:quantidade',
-    'eventLabel': '[[quantidade-escolhida]]:[[nome-produto]]'
+    'eventLabel': '[[quantidade-escolhida]]:[[nome-produto]]',
+    'dimension4': '[[nome-loja]]'
   });
 </script>
 ```
@@ -862,7 +866,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[quantidade-escolhida]] | '1', '3', '4' e etc | Deve retornar a quantidade escolhida. |
 | [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
-
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 
 <br />
@@ -878,17 +882,18 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'genericEvent',
     'eventCategory': 'compras-parque-d-pedro:pdp',
     'eventAction': 'clique:[[botao ou link]]',
-    'eventLabel': '[[nome-item]]:[[nome-produto]]'
+    'eventLabel': '[[nome-item]]:[[nome-produto]]',
+    'dimension4': '[[nome-loja]]'
   });
 </script>
 ```
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[botao ou link]] | 'botao' ou 'link' | Deve retornar o tipo de elemento clicado. |
+| [[botao-ou-link]] | 'botao' ou 'link' | Deve retornar o tipo de elemento clicado. |
 | [[nome-item]] | 'adicionar-a-sacola', 'favorita' e etc | Deve retornar o nome do botao ou link clicado. |
 | [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
-
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 
 <br />
@@ -913,9 +918,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[botao ou link]] | 'botao' ou 'link' | Deve retornar o tipo de elemento clicado. |
-| [[nome-item]] |  'continuar-comprando', 'finalizar-compra', 'fechar' e etc | Deve retornar o nome do botao ou link clicado. |
-
+| [[botao-ou-link]] | 'botao' ou 'link' | Deve retornar o tipo de elemento clicado. |
+| [[nome-item]] |  'continuar-comprando', 'finalizar-compra', 'fechar' e etc | Deve retornar o nome do botao ou link clicado. | |
 
 
 <br />

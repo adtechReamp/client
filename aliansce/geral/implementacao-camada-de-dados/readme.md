@@ -26,7 +26,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 - [Cinema](#cinema)
 - [O Shopping](#o-shopping)
 - [Lojas](#lojas)
-- [Alimentação](#alimenta&ccedil;&atilde;o)
+- [Alimentação](#alimenta%c3%a7%c3%a3o)
 - [Contato](#contato)
 - [Área Logada](#&aacute;rea-logada)
 - [Vitrine de produtos](#vitrine-de-produtos)
@@ -1015,7 +1015,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'genericEvent',
     'eventCategory': '[[nome-ambiente]]:lojas',
     'eventAction': 'clique:loja',
-    'eventLabel': '[[nome-loja]]'
+    'eventLabel': '[[nome-loja-clicada]]',
+    'dimension5': '[[nome-loja]]'
   });
 </script>
 ```
@@ -1023,7 +1024,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
-| [[nome-loja]] | 'a-especialista', 'academia-bodytech' e etc. | Deve retornar o nome da loja clicada. |
+| [[nome-loja-clicada]] | 'a-especialista', 'academia-bodytech' e etc. | Deve retornar o nome da loja clicada. |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 <br />
 
@@ -1040,7 +1042,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'genericEvent',
     'eventCategory': '[[nome-ambiente]]:lojas',
     'eventAction': 'clique:botao:loja',
-    'eventLabel': '[[nome-loja]]:[[nome-botao]]'
+    'eventLabel': '[[nome-loja-clicada]]:[[nome-botao]]',
+    'dimension5': '[[nome-loja]]'
   });
 </script>
 ```
@@ -1048,7 +1051,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
-| [[nome-loja]] | 'a-especialista', 'academia-bodytech' e etc. | Deve retornar o nome da loja clicada.  |
+| [[nome-loja-clicada]] | 'a-especialista', 'academia-bodytech' e etc. | Deve retornar o nome da loja clicada.  |
 | [[nome-botao]] | 'whatsapp', 'drive-thru', 'site-da-loja'e etc | Deve retornar o nome do botão clicado. |
 
 <br />
@@ -1222,7 +1225,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'genericEvent',
     'eventCategory': '[[nome-ambiente]]:alimentacao:[[area]]',
     'eventAction': 'clique:loja',
-    'eventLabel': '[[nome-loja]]'
+    'eventLabel': '[[nome-loja-clicada]]',
+    'dimension5': '[[nome-loja]]'
   });
 </script>
 ```
@@ -1231,7 +1235,9 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
 | [[area]] | 'lista' ou 'delivery'. | Deve retornar o nome da area em alimentação.   |
-| [[nome-loja]] | 'acai-concept', 'mc-donalds' e etc. | Deve retornar o termo buscado. |
+| [[nome-loja-clicada]] | 'acai-concept', 'mc-donalds' e etc. | Deve retornar o termo buscado. |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
+
 
 <br />
 
@@ -1248,7 +1254,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'genericEvent',
     'eventCategory': '[[nome-ambiente]]:alimentacao:[[area]]',
     'eventAction': 'clique:botao:loja',
-    'eventLabel': '[[nome-loja]]:[[nome-botao]]'
+    'eventLabel': '[[nome-loja-clicada]]:[[nome-botao]]',
+    'dimension5': '[[nome-loja]]'
   });
 </script>
 ```
@@ -1257,8 +1264,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
 | [[area]] | 'lista' ou 'delivery'. | Deve retornar o nome da area em alimentação.   |
-| [[nome-loja]] | 'acai-concept', 'mc-donalds' e etc. | Deve retornar o termo buscado.  |
-| [[nome-botao]] | 'whatsapp', 'delivery' e etc | Deve retornar o nome do botão clicado. |
+| [[nome-loja-clicada]] | 'acai-concept', 'mc-donalds' e etc. | Deve retornar o termo buscado.  |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 <br />
 
@@ -1315,6 +1322,86 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 <br />
 
 
+### Vitrine de Produtos
+
+**Quando: Na interação com o campo de filtro.**<br />
+
+- **Onde:** Na página de Alimentação nas áreas lista de alimentação ou delivery.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:vitrine-produtos',
+    'eventAction': 'interacao:filtro:[[tipo-filtro]]',
+    'eventLabel': '[[nome-item]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
+| [[nome-item]] | 'delivery', 'site-da-loja', 'whatsapp' e etc. | Deve retornar o nome do item escolhido no filtro. |
+| [[tipo-filtro]] | 'alimentos-e-bebidas', 'lojas' ou 'todos-os-canais'. | Deve retornar o tipo do filtro com o qual o usuário está interagindo. |
+
+<br />
+
+
+**Quando: No clique dos botões de algum produto.**<br />
+
+- **Onde:** Na página Vitrine de Produtos.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:vitrine-produtos',
+    'eventAction': 'clique:produto:vitrine',
+    'eventLabel': '[[nome-botao]]',
+    'dimension5': '´[[nome-loja]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
+| [[nome-botao]] | 'delivery', 'whatsapp' e etc. | Deve retornar o nome do item escolhido no produto. |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
+
+
+<br />
+
+
+**Quando: No clique do link "ver mais produtos".**<br />
+
+- **Onde:** Na página Vitrine de Produtos.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:vitrine-produtos',
+    'eventAction': 'clique:link',
+    'eventLabel': 'ver-mais-produtos'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
+
+<br />
+
+
 ### Contato
 
 **Quando: Ao preencher um dos campos no formulário.**<br />
@@ -1362,6 +1449,31 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
+
+<br />
+
+
+**Quando: Ao clicar no botão Enviar.**<br />
+
+- **Onde:** Na página do formulário Fale Conosco.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:fale-conosco',
+    'eventAction': 'callback:formulario',
+    'eventLabel': '[[sucesso-ou-tipo-erro]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
+| [[sucesso-ou-tipo-erro]] | 'sucesso' ou 'erro:campo-nao-preenchido', 'erro:cpf-invalido' e etc. | Deve retornar o status do callback de envio do formulário. |
 
 <br />
 
@@ -1863,7 +1975,30 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | [[nome-botao]] | 'entrar na fila', 'atualizar', 'receber-aviso-pelo-whatsapp' e etc.| Deve retornar o nome do botão clicado. |
 | [[nome-evento]] |   'falando-em-familia' e etc.|Deve retornar o nome do evento correspondente a interação.  |
 
+<br />
 
+
+**Quando: No clique do botão 'cancelar reserva' da área de Reservas.**<br />
+
+- **Onde:** Nas páginas de  "Minhas Reservas" na área logada do site.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:area-logada:reservas',
+    'eventAction': 'clique:botao:reserva',
+    'eventLabel': 'cancelar-reserva'
+    'dimension5': '[[nome-loja]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 <br />
 
