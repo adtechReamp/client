@@ -1,6 +1,6 @@
 ![Reamp](https://github.com/adtechReamp/client/blob/main/logo.png?raw=true)
 
-> Área - Digital Analytics
+> Área - Digital Analytics </br>
 > Documento de Especificação Técnica
 
 
