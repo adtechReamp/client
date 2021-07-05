@@ -195,3 +195,8 @@ Caso a informação solicitada não estiver disponível retornar tipagem ´undef
 
 > Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    document.querySelectorAll("h1 a")[0].style.display = 'none';
+  });
+</script>
