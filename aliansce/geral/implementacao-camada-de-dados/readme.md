@@ -729,7 +729,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'genericEvent',
     'eventCategory': '[[nome-ambiente]]:cinema',
     'eventAction': 'clique:link',
-    'eventLabel': 'comprar:[[nome-filme]]:[[data-selecionada]]'
+    'eventLabel': 'comprar:[[nome-filme]]:[[data-selecionada]]',
+    'dimension10': '[[genero-filme]]'
   });
 </script>
 ```
@@ -739,7 +740,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' | Deve retornar o nome do ambiente. |
 | [[nome-filme]] |  'mulher-maravilha-1984' e etc |  Deve  retornar o nome do filme. |
 | [[data-selecionada]] | 'sexta-08/01' e etc | Deve retornar a data selecionada. |
-
+| [[genero-filme]] | 'acao', 'aventura' e etc | Deve retornar o gênero do filme. |
 
 <br />
 
