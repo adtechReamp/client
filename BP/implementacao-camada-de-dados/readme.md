@@ -67,7 +67,31 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-campo]]| 'nome','e-mail','telefone', 'crm', e 'especialidade'. |  Retornar o nome do campo preenchido.|
+| [[nome-campo]]| 'nome','e-mail','telefone', 'crm', e etc. |  Retornar o nome do campo preenchido.|
+
+
+<br />
+
+*Quando: Na interação com os filtros do formúlario .**<br />
+
+- **Onde:**  Na nova LP de médicos referenciadores.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'indique-seus-pacientes',
+    'eventAction': 'interacao:formulario:filtro-especialidade',
+    'eventLabel': 'selecionou:filtro:[[nome-filtro]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-filtro]]| 'cardiologia','geriatria','nefrologia' e etc. |  Retornar o nome do filtro preenchido.|
 
 
 <br />
