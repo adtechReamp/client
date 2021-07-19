@@ -120,6 +120,31 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 <br />
 
+**Quando: Ao clicar em qualquer botão dos formulários.**<br />
+
+- **Onde:**  Na nova LP de médicos referenciadores.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'indique-seus-pacientes',
+    'eventAction': 'clique:botao-formulario:[[step]]',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[step]] | 'passo1', 'passo2' e 'passo3' |  Deve retornar em qual etapa o usuário está interagindo.  |
+| [[[nome-botao]]|  'proximo' e 'voltar'.| Deve retornar o nome do botao interagido.|
+
+
+<br />
+
 
 **Quando:   Na tentativa de callback de envio do formulário.**<br />
 
