@@ -1141,7 +1141,8 @@ window.dataLayer.push({
         'category': '[[categoria-produto]]',
         'brand': '[[marca-produto]]',
         'list': '[[lista-produto]]',
-        'position': '[[posicao-produto]]'
+        'position': '[[posicao-produto]]',
+        'dimension4': '[[nome-loja]]'
     }]
   }
 });
@@ -1157,6 +1158,7 @@ window.dataLayer.push({
 | [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
 | [[lista-produto]] | 'moda-masculina' e etc' | Nome da lista que o produto aparece |
 | [[posicao-produto]] | '2' | Posição que o produto aparece em uma lista de produtos |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 <br />
 
@@ -1184,7 +1186,8 @@ window.dataLayer.push({
                'brand': '[[marca-produto]]',
                'list': '[[lista-produto]]',
                'position': '[[posicao-produto]]',
-               'coupon': '[[cupom-produto]]'
+               'coupon': '[[cupom-produto]]',
+               'dimension4': '[[nome-loja]]'
     }]
   }
 });
@@ -1201,6 +1204,7 @@ window.dataLayer.push({
 | [[lista-produto]] | 'moda-masculina' e etc' | Nome da lista que o produto aparece |
 | [[posicao-produto]] | '2' | Posição que o produto aparece em uma lista de produtos |
 | [[cupom-produto]] | '25%' e etc' | Desconto do produto |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 <br />
 
@@ -1226,7 +1230,8 @@ window.dataLayer.push({
         'category': '[[categoria-produto]]',
         'brand': '[[marca-produto]]',
         'variant': '[[tamanho-produto]]',
-        'coupon': '[[cupom-produto]]'
+        'coupon': '[[cupom-produto]]',
+        'dimension4': '[[nome-loja]]'
     }]
   }
 });
@@ -1242,6 +1247,7 @@ window.dataLayer.push({
 | [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
 | [[tamanho-produto]] | 'm' | Tamanho do produto |
 | [[cupom-produto]] | '25%' e etc' | Desconto do produto |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 <br />
 
@@ -1268,7 +1274,8 @@ window.dataLayer.push({
         'variant': '[[tamanho-produto]]',
         'brand': '[[marca-produto]]',
         'quantity': '[[quantidade-produto]]',
-        'coupon': '[[cupom-produto]]'
+        'coupon': '[[cupom-produto]]',
+        'dimension4': '[[nome-loja]]'
     }]
   }
 });
@@ -1285,6 +1292,7 @@ window.dataLayer.push({
 | [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
 | [[quantidade-produto]] | '1' | Quantidade do produto |
 | [[cupom-produto]] | '25%' e etc' | Desconto do produto |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 
 <br />
@@ -1311,7 +1319,8 @@ window.dataLayer.push({
         'category': '[[categoria-produto]]',
         'variant': '[[tamanho-produto]]',
         'brand': '[[marca-produto]]',
-        'quantity': '[[quantidade-produto]]'
+        'quantity': '[[quantidade-produto]]',
+        'dimension4': '[[nome-loja]]'
     }]
   }
 });
@@ -1327,6 +1336,7 @@ window.dataLayer.push({
 | [[tamanho-produto]] | 'm' | Tamanho do produto |
 | [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
 | [[quantidade-produto]] | '1' | Quantidade do produto |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 
 <br />
@@ -1468,7 +1478,9 @@ window.dataLayer.push({
         'variant': '[[tamanho-produto]]',
         'brand': '[[marca-produto]]',
         'quantity': '[[quantidade-produto]]',
-        'coupon': '[[cupom-produto]]'
+        'coupon': '[[cupom-produto]]',
+        'dimension4': '[[nome-loja]]'
+
       }]
     }
   }
@@ -1491,7 +1503,7 @@ window.dataLayer.push({
 | [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
 | [[quantidade-produto]] | '1' | Quantidade do produto |
 | [[cupom-produto]] | '25%' e etc' | Desconto do produto |
-
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 <br />
 
