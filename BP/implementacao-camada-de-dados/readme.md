@@ -5,9 +5,9 @@
 
 <br />
 
-## Implementação da Camada de dados - Puran - Simples de tratar
-Última atualização: 08/04/2021 <br />
-Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
+## Implementação da Camada de dados - BP - A Beneficiência Portuguesa de São Paulo
+Última atualização: 19/07/2021 <br />
+Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](nathalia.paschotto@reamp.com.br)
 
 <br />
 
