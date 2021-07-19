@@ -71,7 +71,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 <br />
 
-*Quando: Na interação com os filtros do formúlario .**<br />
+**Quando: Na interação com os filtros do formúlario.**<br />
 
 - **Onde:**  Na nova LP de médicos referenciadores.
     
