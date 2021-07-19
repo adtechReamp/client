@@ -27,7 +27,6 @@ Este documento tem como objetivo instruir a implementação da camada de dados p
 
 
 
-Link de referência: [Documentação Oficial Google Tag Manager](https://developers.google.com/tag-manager/quickstart)
 
 
 ---
