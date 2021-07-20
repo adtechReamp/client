@@ -467,7 +467,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 <br />
 
 ### Escolha o procedimento
-<b bgcolor="yellow"> Esses eventos deve ser considerado para as duas abas: consultas e exames de diagnostico de forma geral. (todos os filtros/checkbox e campo) </b>
+<b style="color: #4286f4"> Esses eventos deve ser considerado para as duas abas: consultas e exames de diagnostico de forma geral. (todos os filtros/checkbox e campo) </b>
 
 ---
 
