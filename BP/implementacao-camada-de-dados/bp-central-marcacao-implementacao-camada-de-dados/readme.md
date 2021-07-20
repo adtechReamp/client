@@ -194,7 +194,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 <br />
 
-**Quando: Na tentativa de callback para envio de formulario de contato  **<br />
+**Quando: Na tentativa de callback para envio de formulario de contato.**<br />
 
 - **Onde:**  Em todas as páginas que estiver disponível.
     
@@ -221,7 +221,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 ### Home
 
-**Quando: Na tentativa de callback para envio de formulario de contato  **<br />
+**Quando: Na tentativa de callback para envio de formulario de contato.**<br />
 
 - **Onde:**  Na página home.
     
@@ -242,7 +242,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 ### Cadastro
 
-**Quando: Na interação com os campos.   **<br />
+**Quando: Na interação com os campos.**<br />
 
 - **Onde:**  Na página de cadastro.
     
@@ -290,7 +290,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 <br />
 
-**Quando: No clique dos botões**<br />
+**Quando: No clique dos botões.**<br />
 
 - **Onde:**  Na página de cadastro.
     
@@ -315,7 +315,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 <br />
 
 
-**Quando: Na tentativa de callback para envio de formulario de contato  **<br />
+**Quando: Na tentativa de callback para envio de formulario de contato.**<br />
 
 - **Onde:**  Na página de cadastro.
     
