@@ -48,7 +48,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 ### Geral
 
-**Quando: No clique de algum elemento do header. .**<br />
+**Quando: No clique de algum elemento do header.**<br />
 
 - **Onde:**  Em todas as páginas que estiver disponível.
     
@@ -169,7 +169,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 <br />
 
-**Quando: Ao clicar nos botões inferior.  **<br />
+**Quando: Ao clicar nos botões inferior. **<br />
 
 - **Onde:**  Em todas as páginas que estiver disponível.
     
@@ -221,7 +221,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 ### Home
 
-**Quando: Na tentativa de callback para envio de formulario de contato.**<br />
+**Quando:No clique do botão de cadastro .**<br />
 
 - **Onde:**  Na página home.
     
@@ -323,18 +323,95 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 <script>
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
+    'event': 'conversion',
+    'eventCategory': 'bp-cm:cadastro',
+    'eventAction': 'callback',
+    'eventLabel': '[[status]]'
+  });
+</script>
+
+```
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[status]] |  'sucesso', 'erro-inesperado'.| Deve retornar a mensagem de sucesso ou o tipo de erro. |
+
+<br />
+
+### Login
+
+**Quando: Na interação com os campos.**<br />
+
+- **Onde:**  Na página de login.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': 'bp-cm:cadastro,
-    'eventAction': 'clique:botao',
-    'eventLabel': 'realizar-cadastro'
+    'eventCategory': 'bp-cm:login',
+    'eventAction': 'interacao:formulario:campo',
+    'eventLabel': 'preencheu:[[nome-campo]]'
   });
 </script>
 
 ```
 
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-campo]]| 'cpf' e 'senha'.| Deve retornar o nome do campo preenchido. |
+
+
 <br />
 
-### Login
+**Quando:No clique dos botões ou links.**<br />
+
+- **Onde:**  Na página de login.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:login',
+    'eventAction': 'clique:[[botao-ou-link]]',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[botao-ou-link]]|  'link' ou 'botao'.|  Deve Retornar com o nome do elemento clicado. |
+|[[nome-botao]]|  'acessar-perfil' e 'esqueci-minha-senha'.|  Deve retornar o nome do botão clicado.  |
+
+
+<br />
+
+**Quando: Na tentativa de callback para envio de formulario de contato.**<br />
+
+- **Onde:**  Na página de Login.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:login,
+    'eventAction': 'callback:formulario-login',
+    'eventLabel': '[[status]]'
+  });
+</script>
+
+```
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[status]] |  'sucesso', 'erro-inesperado'.| Deve retornar a mensagem de sucesso ou o tipo de erro. |
+
+
+<br />
+
+### Esqueceu sua senha
 
 ---
 
