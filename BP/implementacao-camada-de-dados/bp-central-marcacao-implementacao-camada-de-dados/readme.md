@@ -5,7 +5,7 @@
 
 <br />
 
-## Implementação da Camada de dados - Puran - Simples de tratar
+## Implementação da Camada de dados - BP - CENTRAL DE MARCAÇÃO ONLINE
 Última atualização: 20/07/2021 <br />
 Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](nathalia.paschotto@reamp.com.br)
 
@@ -19,6 +19,7 @@ Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](na
 - [Cadastro](#cadastro)
 - [Login](#login)
 - [Esqueceu-sua-senha](#esqueceu-sua-senha)
+- [Escolha o procedimento](#escolha-o-procedimento)
 
 
 
@@ -396,7 +397,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 <script>
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
-    'event': 'genericEvent',
+    'event': 'conversion',
     'eventCategory': 'bp-cm:login,
     'eventAction': 'callback:formulario-login',
     'eventLabel': '[[status]]'
@@ -412,6 +413,61 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 <br />
 
 ### Esqueceu sua senha
+
+**Quando:Na interação com os campos.**<br />
+
+- **Onde:**  Na página de "esqueceu sua senha".
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:esqueceu-sua-senha',
+    'eventAction': 'interacao:formulario:campo',
+    'eventLabel': 'preencheu:[[nome-campo]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-campo]]|  'cpf'.|Deve retornar o nome do campo preenchido. |
+
+
+
+<br />
+
+**Quando:Ao clicar me botões ou link. **<br />
+
+- **Onde:**  Na página de "esqueceu sua senha".
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:esqueceu-sua-senha',
+    'eventAction': 'clique:[[botao-ou-link]]',
+    'eventLabel': '[[nome-elemento]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[botao-ou-link]]| 'botao' e 'link'.| Deve retornar com o tipo do elemento.|
+|[[botao-ou-link]]| 'recuperar-senha, 'voltar-e-fazer-login'.| Deve retornar com o nome do botao ou link clicado.|
+
+
+
+
+<br />
+
+### Escolha o procedimento
+<b> Esses eventos deve ser considerado para as abas: consultas e exames de diagnostico de forma geral. (todos os filtros/checkbox e campo) </b>
 
 ---
 
