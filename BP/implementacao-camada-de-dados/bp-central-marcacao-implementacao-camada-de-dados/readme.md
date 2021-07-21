@@ -7,7 +7,7 @@
 
 ## Implementação da Camada de dados - BP - CENTRAL DE MARCAÇÃO ONLINE
 Última atualização: 20/07/2021 <br />
-Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](nathalia.paschotto@reamp.com.br)
+Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](nathalia.paschotto@reamp.com.br)[rodolfo.nogueira@reamp.com.br](rodolfo.nogueira@reamp.com.br)
 
 <br />
 
