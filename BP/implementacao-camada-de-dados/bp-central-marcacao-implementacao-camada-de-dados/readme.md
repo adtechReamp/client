@@ -515,8 +515,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 | :-------------- | :------------------------------------ | :-------------------------------- |
 |[[nome-aba]]|'consultas' ou 'exames-de-diagnostico'.| Deve retornar com o nome da aba que o usuario está interagindo.|
 |[[secao]]|'digite-o-nome-da-especialidade-que-deseja-realizar' , 'deseja-escolher-algum-medico?'.|Deve retornar com o nome da seção.|
-|[[nome-filtro]]|'cirurgia-geral', 'dermatologia', 'rodrigo-oliveira', 'antonio-moriz' e etc.|Deve retornar com o nome da opção selecionada do filtro.
-|
+|[[nome-filtro]]|'cirurgia-geral', 'dermatologia', 'rodrigo-oliveira', 'antonio-moriz' e etc.|Deve retornar com o nome da opção selecionada do filtro.|
 
 
 <br />
