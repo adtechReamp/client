@@ -19,7 +19,7 @@ Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](na
 - [Cadastro](#cadastro)
 - [Login](#login)
 - [Esqueceu-sua-senha](#esqueceu-sua-senha)
-- [Escolha o procedimento-consultas](#escolha-o-procedimento-consultas)
+- [Escolha o procedimento-Consultas](#escolha-o-procedimento-consultas)
 
 
 
@@ -466,7 +466,112 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 <br />
 
-### Escolha o procedimento-consultas
+### Escolha o procedimento-Consultas
+
+**Quando:Na interação com qualquer checkbox. **<br />
+
+- **Onde:**  Na página de "escolha o procedimentos" na aba de Consultas.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:procedimento-[[nome-aba]]',
+    'eventAction': 'interacao:checkbox:[[secao]]',
+    'eventLabel': '[[acao]]:[[nome-check]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-aba]]|'consultas' ou 'exames-de-diagnostico'.| Deve retornar com o nome da aba que o usuario está interagindo.|
+|[[secao]]|selecione-tipo-agendamento', 'voce-nao-cadastrou-seu-convenio', 'digite-o-nome-da-especialidade' , 'deseja-escolher-algum-medico'.|Deve retornar com o nome da seção.|
+|[[acao]]|'marcou', 'desmarcou'.|  Deve retornar com o tipo de ação realizada.|
+|[[nome-check]]|'agendamento-convencional' , 'agendamento-para-teleconsulta', 'particular', 'sim', 'nao' e etc.| Deve retornar com o nome do checkbox interagido.|
+
+</br>
+
+**Quando:Na interação com qualquer filtro. **<br />
+
+- **Onde:**  Na página de "escolha o procedimentos" na aba de Consultas.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:procedimento-[[nome-aba]]',
+    'eventAction': 'interacao:filtro:[[secao]]',
+    'eventLabel': '[[nome-filtro]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-aba]]|'consultas' ou 'exames-de-diagnostico'.| Deve retornar com o nome da aba que o usuario está interagindo.|
+|[[secao]]|'digite-o-nome-da-especialidade-que-deseja-realizar' , 'deseja-escolher-algum-medico?'.|Deve retornar com o nome da seção.|
+|[[nome-filtro]]|'cirurgia-geral', 'dermatologia', 'rodrigo-oliveira', 'antonio-moriz' e etc.|Deve retornar com o nome da opção selecionada do filtro.
+|
+
+
+</br>
+
+**Quando: Ao interagir com o checkbox de termos de serviços . **<br />
+
+- **Onde:**  Na página de "escolha o procedimentos" na aba de Consultas.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:procedimento-[[nome-aba]]',
+    'eventAction': 'interacao:checkbox:termo-de-servico',
+    'eventLabel': '[[acao]]:autorizo-o-uso-dos-meus-dados'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-aba]]|'consultas' ou 'exames-de-diagnostico'.| Deve retornar com o nome da aba que o usuario está interagindo.|
+|[[acao]]| 'check', 'uncheck'.|Deve retornar a ação do usuário.|
+
+
+
+</br>
+
+**Quando:  No clique de qualquer elemento (botão ou link). **<br />
+
+- **Onde:**  Na página de "escolha o procedimentos" na aba de Consultas.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:procedimento-[[nome-aba]]',
+    'eventAction': 'clique:[[botao-ou-link]]',
+    'eventLabel': '[[nome-elemento]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-aba]]|'consultas' ou 'exames-de-diagnostico'.| Deve retornar com o nome da aba que o usuario está interagindo.|
+|[[botao-ou-link]]|  'botao' e 'link'.| Deve retornar com o tipo do elemento.|
+|[[nome-elemento]]| 'selecionar', 'gerenciar-meus-convenios-e-plano' e 'voltar'.|Deve retornar com o nome do botao ou link clicado.|
+
+
+</br>
 
 ---
 
