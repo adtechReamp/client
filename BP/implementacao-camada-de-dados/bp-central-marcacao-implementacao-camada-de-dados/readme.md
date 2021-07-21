@@ -22,7 +22,10 @@ Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](na
 - [Escolha o procedimento-Consultas](#escolha-o-procedimento-consultas)
 - [Escolha o procedimento-Exames de diagnostico](#escolha-o-procedimento-exames-de-diagnostico)
 - [Setor de exames](#setor-de-exames)
-
+- [Meus convenios](#meus-convenios])
+- [Data e horario](#data-e-horário)
+- [Verifique os dados](#verifique-os-dados)
+- [marcacao confirmada](#marcacao-confirmada)
 
 
 ## Objetivo
@@ -656,6 +659,263 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 <br />
 
 ### Setor de exames
+
+**Quando: Na interação com qualquer filtro interno de cada box.**<br />
+
+- **Onde:**Na aba de "exames de diagnostico" nos filtros interno dos boxes.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:setor-exames-[[nome-aba]]',
+    'eventAction': 'interacao:filtro:[[secao]]',
+    'eventLabel': '[[nome-filtro]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-aba]]|'consultas' ou 'exames-de-diagnostico'.| Deve retornar com o nome da aba que o usuario está interagindo.|
+|[[secao]]|'escolha-o-procedimento-que-deseja-realizar-o-agendamento'.| Deve retornar com o nome da seção.|
+|[[nome-filtro]]|'unidade-paulista', 'mirante' e etc.| Deve retornar com o nome da opção selecionada do filtro.|
+
+
+
+<br />
+
+### Meus convenios
+
+**Quando: Na interação com algum campo de filtro do formulário.**<br />
+
+- **Onde:**Na página/aba de "meus convênios".
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:meus-convenios',
+    'eventAction': 'interacao:filtro:[[titulo-filtro]]',
+    'eventLabel': 'preencheu:[[nome-elemento]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[titulo-filtro]]| 'qual-seu-convenio' e 'qual-seu-plano'.| Deve retornar com o titulo do filtro.|
+|[[nome-elemento]]|'porto-seguro', 'gama-saude', 'fusex', 'bronze1', 'ouro' e etc .|Deve retornar com o nome do filtro selecionado.|
+
+
+<br />
+
+**Quando:  Na interação com campo do formulário .**<br />
+
+- **Onde:**Na página/aba de "meus convênios".
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:meus-convenios',
+    'eventAction': 'interacao:formulario:campo',
+    'eventLabel': 'preencheu:[[nome-campo]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-campo]]|'numero-carteirinha' e etc.| Deve retornar o nome do campo interagido.|
+
+<br />
+
+**Quando:No clique de qualquer botão ou link do formulário.**<br />
+
+- **Onde:**Na página/aba de "meus convênios".
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:meus-convenios',
+    'eventAction': 'clique:[[botao-ou-link]]',
+    'eventLabel': '[[nome-elemento]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[botao-ou-link]]|  'botao' e 'link'.| Deve retornar com o tipo do elemento.|
+|[[nome-elemento]]|'adicionar-convenio, 'cancelar' e 'fechar'.|Deve retornar com o nome do botao ou link clicado.|
+
+
+<br />
+
+**Quando:No clique de qualquer botão ou link do formulário.**<br />
+
+- **Onde:**Na página/aba de "meus convênios".
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:meus-convenios',
+    'eventAction': 'callback:formulario-convenio',
+    'eventLabel': '[[status]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[status]]| 'sucesso', 'erro:inesperado', 'erro:pagina-fora-do-ar' e etc.|Deve retornar a mensagem de sucesso ou o tipo de erro. |
+
+<br />
+
+### Data e horario
+
+**Quando: Na interação com o campo de filtro do formulário.**<br />
+
+- **Onde:**Na página de "Data e Horário".
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:data-e-horario',
+    'eventAction': 'interacao:filtro:[[titulo-filtro]]',
+    'eventLabel': 'preencheu:[[nome-filtro]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[titulo-filtro]]| 'medico' e 'unidade'.| Deve retornar com o titulo do filtro.|
+|[[nome-filtro]]| 'rodrigo-olivia', 'vincenzo-pugliese', 'unidade-bp-mirante','paulista'  e etc .| Deve retornar com o nome do filtro selecionado.|
+
+
+<br />
+
+**Quando: No clique de qualquer link de horário para consulta.**<br />
+
+- **Onde:**Na página de "Data e Horário".
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:data-e-horario',
+    'eventAction': 'clique:link',
+    'eventLabel': 'data:[[data]]--horario:[[nome-link]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[data]]| '22/07/21', '23/07/21' e etc.|Deve retornar com o nome da data selecionada.|
+|[[nome-link]]|'8:00', '10:00', '11:00'  e etc.| Deve retornar com o nome do link clicado.|
+
+
+<br />
+
+**Quando:No clique de qualquer botão ou link do formulário.**<br />
+
+- **Onde:**Na página de "Data e Horário".
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:data-e-horario',
+    'eventAction': 'clique:[[botao-ou-link]]',
+    'eventLabel': '[[nome-elemento]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[botao-ou-link]]|'botao' ou 'link'.|Deve retornar com o tipo do elemento.|
+|[[nome-elemento]]|'proximo-passo'e 'voltar'.| Deve retornar com o nome do botao ou link clicado.|
+
+
+<br />
+
+### Verifique seus dados
+
+**Quando:No clique de qualquer botão ou link.**<br />
+
+- **Onde:**Na página de "verifique os dados".
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:verifique-os-dados',
+    'eventAction': 'clique:[[botao-ou-link]]',
+    'eventLabel': '[[nome-elemento]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[botao-ou-link]]|'botao' ou 'link'.|Deve retornar com o tipo do elemento.|
+|[[nome-elemento]]|'confirmacao-marcacao'e 'voltar'.| Deve retornar com o nome do botao ou link clicado.|
+
+
+<br />
+
+### marcacao confirmada
+
+**Quando:No clique de qualquer botão ou link.**<br />
+
+- **Onde:**Na página de "marcação confirmada".
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:marcacao-confirmada',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-elemento]]|'marcar-novo-procedimento', 'ir-para-area' e 'imprimir'.| Deve retornar com o nome do botao clicado.|
+
+
+<br />
+
+### minhas marcacoes
 
 ---
 
