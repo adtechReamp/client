@@ -146,7 +146,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 <br />
 
 
-**Quando: Ao clicar nos botões do formulario de contato. **<br />
+**Quando: Ao clicar nos botões do formulario de contato.**<br />
 
 - **Onde:**  Em todas as páginas que estiver disponível.
     
@@ -170,7 +170,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 <br />
 
-**Quando: Ao clicar nos botões inferior. **<br />
+**Quando: Ao clicar nos botões inferior.**<br />
 
 - **Onde:**  Em todas as páginas que estiver disponível.
     
@@ -291,7 +291,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 <br />
 
-**Quando: No clique dos botões.**<br />
+**Quando:No clique dos botões.**<br />
 
 - **Onde:**  Na página de cadastro.
     
@@ -492,7 +492,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 |[[acao]]|'marcou', 'desmarcou'.|  Deve retornar com o tipo de ação realizada.|
 |[[nome-check]]|'agendamento-convencional' , 'agendamento-para-teleconsulta', 'particular', 'sim', 'nao' e etc.| Deve retornar com o nome do checkbox interagido.|
 
-</br>
+<br />
 
 **Quando:Na interação com qualquer filtro.**<br />
 
@@ -519,7 +519,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 |
 
 
-</br>
+<br />
 
 **Quando: Ao interagir com o checkbox de termos de serviços.**<br />
 
@@ -545,7 +545,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 
 
-</br>
+<br />
 
 **Quando:  No clique de qualquer elemento (botão ou link).**<br />
 
@@ -571,7 +571,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 |[[nome-elemento]]| 'selecionar', 'gerenciar-meus-convenios-e-plano' e 'voltar'.|Deve retornar com o nome do botao ou link clicado.|
 
 
-</br>
+<br />
 
 ---
 
