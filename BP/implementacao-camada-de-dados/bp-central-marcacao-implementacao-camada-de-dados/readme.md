@@ -439,7 +439,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 <br />
 
-**Quando:Ao clicar me botões ou link. **<br />
+**Quando:Ao clicar me botões ou link.**<br />
 
 - **Onde:**  Na página de "esqueceu sua senha".
     
@@ -468,7 +468,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 ### Escolha o procedimento-Consultas
 
-**Quando:Na interação com qualquer checkbox. **<br />
+**Quando:Na interação com qualquer checkbox.**<br />
 
 - **Onde:**  Na página de "escolha o procedimentos" na aba de Consultas.
     
@@ -494,7 +494,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 </br>
 
-**Quando:Na interação com qualquer filtro. **<br />
+**Quando:Na interação com qualquer filtro.**<br />
 
 - **Onde:**  Na página de "escolha o procedimentos" na aba de Consultas.
     
@@ -521,7 +521,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 </br>
 
-**Quando: Ao interagir com o checkbox de termos de serviços . **<br />
+**Quando: Ao interagir com o checkbox de termos de serviços.**<br />
 
 - **Onde:**  Na página de "escolha o procedimentos" na aba de Consultas.
     
@@ -547,7 +547,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 </br>
 
-**Quando:  No clique de qualquer elemento (botão ou link). **<br />
+**Quando:  No clique de qualquer elemento (botão ou link).**<br />
 
 - **Onde:**  Na página de "escolha o procedimentos" na aba de Consultas.
     
