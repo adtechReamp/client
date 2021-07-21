@@ -20,7 +20,7 @@ Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](na
 - [Login](#login)
 - [Esqueceu-sua-senha](#esqueceu-sua-senha)
 - [Escolha o procedimento-Consultas](#escolha-o-procedimento-consultas)
-- [Escolha o procedimento-Exames de diagnóstico](#escolha-o-procedimento-exames-de-diagnostico)
+- [Escolha o procedimento-Exames de diagnostico](#escolha-o-procedimento-exames-de-diagnostico)
 
 
 
@@ -573,7 +573,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 <br />
 
-### Escolha o procedimento-Exames de diagnóstico
+### Escolha o procedimento-Exames de diagnostico
 
 ---
 
