@@ -26,6 +26,9 @@ Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](na
 - [Data e horario](#data-e-horario)
 - [Verifique os dados](#verifique-os-dados)
 - [marcacao confirmada](#marcacao-confirmada)
+- [Painel](#painel)
+- [Meus dados](#meus-dados)
+- [Duvidas frequentes](duvidas-frequentes)
 
 
 ## Objetivo
@@ -916,6 +919,144 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 <br />
 
 ### minhas marcacoes
+
+**Quando:No clique de qualquer botão ou link .**<br />
+
+- **Onde:** Na página de "minhas marcações".
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:minhas-marcacoes',
+    'eventAction': 'clique:[[botao-ou-link]]',
+    'eventLabel': '[[nome-elemento]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[botao-ou-link]]|'botao' ou 'link'.| Deve retornar com o tipo do elemento.|
+|[[nome-elemento]]|'imprimir', 'excluir' e 'anterior' e etc.| Deve retornar com o nome do botao ou link clicado.|
+
+
+
+<br />
+
+### Painel
+
+**Quando:No clique de qualquer botão.**<br />
+
+- **Onde:** Na página do painel.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:painel',
+    'eventAction': 'clique:botao-[[secao]]',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[secao]]| 'servicos', 'minha-area', 'outros'.|  Deve retornar com o nome da seção interagida.|
+|[[nome-botao]]|'nova-marcacao', 'meus-convenios', 'duvidas-frequentes' e etc.|  Deve retornar com o nome do botao ou link clicado.|
+
+<br />
+
+### Meus dados
+
+**Quando:Na interação com os campos.**<br />
+
+- **Onde:** Na página de "meus dados".
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:meus-dados',
+    'eventAction': 'interacao:formulario:campo',
+    'eventLabel': 'preencheu:[[nome-campo]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-campo]]| 'nome', 'email', 'altura', 'peso', 'telefone', 'senha', 'confirmar-senha' e etc.| Deve retornar o nome do campo preenchido. |
+
+
+<br />
+
+**Quando:No clique de qualquer botão ou link .**<br />
+
+- **Onde:** Na página de "meus dados".
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:meus-dados',
+    'eventAction': 'clique:[[botao-ou-link]]',
+    'eventLabel': '[[nome-elemento]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[botao-ou-link]]|'botao' ou 'link'.| Deve retornar com o tipo do elemento.|
+|[[nome-elemento]]|'salvar' e 'cancelar' .| Deve retornar com o nome do botao ou link clicado.|
+
+
+
+<br />
+
+### Duvidas frequentes
+
+
+**Quando:Na interação com as dúvidas.**<br />
+
+- **Onde:** Na página de "dúvidas frequentes".
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'bp-cm:duvidas-frequentes',
+    'eventAction': 'interacao:duvidas',
+    'eventLabel':'[[nome-pergunta]]:[[acao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-pergunta]]| 'ao-agendar-online-tenho-algum-custo?, 'tem-como-o-paciente-pagar-online?', 'eu-posso-agendar-do-meu-smart-phone?' e etc|Deve retornar o nome da pergunta.|
+|[[acao]]| 'abriu' ou 'fechou' |Deve retornar a ação do usuário.|
+
+
+
+<br />
 
 ---
 
