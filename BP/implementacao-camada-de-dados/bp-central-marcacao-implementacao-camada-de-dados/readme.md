@@ -19,7 +19,7 @@ Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](na
 - [Cadastro](#cadastro)
 - [Login](#login)
 - [Esqueceu-sua-senha](#esqueceu-sua-senha)
-- [Escolha o procedimento - consultas](#escolha-o-procedimento-consultas)
+- [Escolha o procedimento-consultas](#escolha-o-procedimento-consultas)
 
 
 
@@ -466,7 +466,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 <br />
 
-### Escolha o procedimento - consultas
+### Escolha o procedimento-consultas
 
 ---
 
