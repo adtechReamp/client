@@ -650,7 +650,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 | :-------------- | :------------------------------------ | :-------------------------------- |
 |[[nome-aba]]|'consultas' ou 'exames-de-diagnostico'.| Deve retornar com o nome da aba que o usuario está interagindo.|
 |[[botao-ou-link]]|  'botao' e 'link'.| Deve retornar com o tipo do elemento.|
-|[[nome-elemento]]|'ultrassonografia-doppler-bp-paulista', 'ressonancia-magnetica-bp-paulista', 'selecionar', 'gerenciar-meus-convenios-e-plano' e etc.|Deve retornar com o nome do botao ou link clicado.|
+|[[nome-elemento]]|'ultrassonografia-doppler-bp-paulista', 'ressonancia-magnetica-bp-paulista', 'selecionar', 'gerenciar-meus-convenios-e-plano' e etc.|Deve retornar com o nome do botao, box ou link clicado.|
 
 
 <br />
