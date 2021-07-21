@@ -23,7 +23,7 @@ Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](na
 - [Escolha o procedimento-Exames de diagnostico](#escolha-o-procedimento-exames-de-diagnostico)
 - [Setor de exames](#setor-de-exames)
 - [Meus convenios](#meus-convenios])
-- [Data e horario](#data-e-horário)
+- [Data e horario](#data-e-horario)
 - [Verifique os dados](#verifique-os-dados)
 - [marcacao confirmada](#marcacao-confirmada)
 
@@ -662,7 +662,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 **Quando: Na interação com qualquer filtro interno de cada box.**<br />
 
-- **Onde:**Na aba de "exames de diagnostico" nos filtros interno dos boxes.
+- **Onde:** Na aba de "exames de diagnostico" nos filtros interno dos boxes.
     
 ```html
 <script>
@@ -691,7 +691,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 **Quando: Na interação com algum campo de filtro do formulário.**<br />
 
-- **Onde:**Na página/aba de "meus convênios".
+- **Onde:** Na página/aba de "meus convênios".
     
 ```html
 <script>
@@ -716,7 +716,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 **Quando:  Na interação com campo do formulário .**<br />
 
-- **Onde:**Na página/aba de "meus convênios".
+- **Onde:** Na página/aba de "meus convênios".
     
 ```html
 <script>
@@ -739,7 +739,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 **Quando:No clique de qualquer botão ou link do formulário.**<br />
 
-- **Onde:**Na página/aba de "meus convênios".
+- **Onde:** Na página/aba de "meus convênios".
     
 ```html
 <script>
@@ -764,7 +764,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 **Quando:No clique de qualquer botão ou link do formulário.**<br />
 
-- **Onde:**Na página/aba de "meus convênios".
+- **Onde:** Na página/aba de "meus convênios".
     
 ```html
 <script>
@@ -789,7 +789,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 **Quando: Na interação com o campo de filtro do formulário.**<br />
 
-- **Onde:**Na página de "Data e Horário".
+- **Onde:** Na página de "Data e Horário".
     
 ```html
 <script>
@@ -814,7 +814,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 **Quando: No clique de qualquer link de horário para consulta.**<br />
 
-- **Onde:**Na página de "Data e Horário".
+- **Onde:** Na página de "Data e Horário".
     
 ```html
 <script>
@@ -839,7 +839,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 **Quando:No clique de qualquer botão ou link do formulário.**<br />
 
-- **Onde:**Na página de "Data e Horário".
+- **Onde:** Na página de "Data e Horário".
     
 ```html
 <script>
@@ -862,11 +862,11 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 <br />
 
-### Verifique seus dados
+### Verifique os dados
 
 **Quando:No clique de qualquer botão ou link.**<br />
 
-- **Onde:**Na página de "verifique os dados".
+- **Onde:** Na página de "verifique os dados".
     
 ```html
 <script>
@@ -893,7 +893,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 **Quando:No clique de qualquer botão ou link.**<br />
 
-- **Onde:**Na página de "marcação confirmada".
+- **Onde:** Na página de "marcação confirmada".
     
 ```html
 <script>
