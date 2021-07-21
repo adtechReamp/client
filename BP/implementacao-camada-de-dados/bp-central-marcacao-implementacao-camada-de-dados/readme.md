@@ -28,7 +28,7 @@ Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](na
 - [marcacao confirmada](#marcacao-confirmada)
 - [Painel](#painel)
 - [Meus dados](#meus-dados)
-- [Duvidas frequentes](duvidas-frequentes)
+- [Duvidas frequentes](#duvidas frequentes)
 
 
 ## Objetivo
