@@ -19,7 +19,7 @@ Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](na
 - [Cadastro](#cadastro)
 - [Login](#login)
 - [Esqueceu-sua-senha](#esqueceu-sua-senha)
-- [Escolha o procedimento](#escolha-o-procedimento)
+- [Escolha o procedimento - consultas](#escolha-o-procedimento-consultas)
 
 
 
@@ -466,8 +466,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 <br />
 
-### Escolha o procedimento
-<h3 > Esses eventos deve ser considerado para as duas abas:<b> consultas e exames de diagnostico de forma geral. </b> (todos os filtros/checkbox e campo) </h4>
+### Escolha o procedimento - consultas
 
 ---
 
