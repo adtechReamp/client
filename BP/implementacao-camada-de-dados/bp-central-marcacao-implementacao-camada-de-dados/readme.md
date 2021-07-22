@@ -339,9 +339,10 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 </script>
 
 ```
+
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-|[[status]] |  'sucesso', 'erro-inesperado'.| Deve retornar a mensagem de sucesso ou o tipo de erro. |
+|[[status]] |'sucesso', 'erro-inesperado'.| Deve retornar a mensagem de sucesso ou o tipo de erro.|
 
 <br />
 
@@ -412,9 +413,10 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 </script>
 
 ```
+
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-|[[status]] |  'sucesso', 'erro-inesperado'.| Deve retornar a mensagem de sucesso ou o tipo de erro. |
+|[[status]] |'sucesso', 'erro-inesperado'.| Deve retornar a mensagem de sucesso ou o tipo de erro. |
 
 
 <br />
@@ -765,7 +767,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 <br />
 
-**Quando:No clique de qualquer botão ou link do formulário.**<br />
+**Quando:Na tentativa de callback para envio de formulario de convênio.**<br />
 
 - **Onde:** Na página/aba de "meus convênios".
     
