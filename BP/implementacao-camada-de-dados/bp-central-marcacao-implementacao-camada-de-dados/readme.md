@@ -22,7 +22,7 @@ Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@reamp.com.br](na
 - [Escolha o procedimento-Consultas](#escolha-o-procedimento-consultas)
 - [Escolha o procedimento-Exames de diagnostico](#escolha-o-procedimento-exames-de-diagnostico)
 - [Setor de exames](#setor-de-exames)
-- [Meus convenios](#meus-convenios])
+- [Meus convenios](#meus-convenios)
 - [Data e horario](#data-e-horario)
 - [Verifique os dados](#verifique-os-dados)
 - [marcacao confirmada](#marcacao-confirmada)
