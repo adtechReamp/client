@@ -1323,6 +1323,31 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 <br />
 
 
+**Quando: No clique do botão para confirmar a reserva.**<br />
+
+- **Onde:** Na página de Alimentação no formulário de reserva.
+
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': '[[nome-ambiente]]:alimentacao:[[area]]',
+    'eventAction': 'clique:botao',
+    'eventLabel': 'confirmar-reserva'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'shopping-leblon', 'parque-d-pedro', 'shopping-taboao' e etc. | Deve retornar o nome do ambiente. |
+| [[area]] | 'lista' ou 'delivery'. | Deve retornar o nome da area em alimentação.   |
+
+<br />
+
+
 ### Vitrine de Produtos
 
 **Quando: Na interação com o campo de filtro.**<br />
