@@ -203,6 +203,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 Botão
 </div>
 ```
+| Variável 				| Exemplo 				| Descrição 									|
+| :--------------	| :-------------- | :--------------------------	|
 | [[nome-lp]]	| 'lp1-hipotireoidismo' e 'lp2-hipotireoidismo'.  | Deve retornar o nome da lp. |
 
 <br />
