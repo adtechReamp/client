@@ -38,6 +38,21 @@ Este documento tem como objetivo instruir a implementação da camada de dados p
 > É um array de objetos javascript utilizado pelo Google Tag Manager para receber em seus atributos, dados importantes do site.
 Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas diferentes para preencher os dados. Essas formas são dependentes da ação estabelecida na documentação e também do nível da interação.
 
+
+**Instalação**<br />
+Inserir a camada de dados antes do snippet de instalação do Google Tag Manager. Exemplo:
+
+
+```html
+<script>
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		'atributo1': '[[valor1]]',
+		'atributo2': '[[valor2]]'
+	});
+</script>
+```
+
 ## Observações
 > Os valores especificados entre colchetes `[[ ]]` são variáveis dinâmicas e devem ser substituídas por seus respectivos valores.<br />
 
