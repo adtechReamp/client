@@ -1,6 +1,6 @@
 ![Reamp](https://github.com/adtechReamp/client/blob/main/logo.png?raw=true)
 
-> Adtech<br />
+> Analytics & Optimization <br />
 > Documento de Especificação Técnica
 
 <br />
