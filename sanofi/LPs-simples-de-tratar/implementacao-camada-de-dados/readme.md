@@ -198,7 +198,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 <div
      data-gtm-event-category="[[nome-lp]]:simples-de-tratar" 
      data-gtm-event-action="clique:header" 
-     data-gtm-event-label="logo"
+     data-gtm-event-label="[[nome-item]]"
 >
 Botão
 </div>
@@ -207,6 +207,8 @@ Botão
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------	| :-------------- | :--------------------------	|
 | [[nome-lp]]	  | 'lp1-hipotireoidismo' e 'lp2-hipotireoidismo'.  | Deve retornar o nome da lp. |
+| [[nome-item]]	  | 'logo','instagram' e 'facebook'.  | Deve retornar o nome da item clicado no header. |
+
 
 
 <br />
