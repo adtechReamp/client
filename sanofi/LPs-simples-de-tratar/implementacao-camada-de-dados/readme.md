@@ -5,7 +5,7 @@
 
 <br />
 
-## Implementação da Camada de dados - Puran - Simples de tratar
+## Implementação da Camada de dados - LPs - Simples de tratar - Conecta Consulta
 Última atualização: 08/04/2021 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
@@ -17,14 +17,14 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 - [Implementação](#implementa%c3%a7%c3%a3o)
 - [Especificações Globais](#especifica%c3%a7%c3%b5es-globais)
 - [Dimensões Globais](#dimens&otilde;es-globais)
-- [Geral](#geral)
-- [Login Médico](#login-medico)
+- [Geral-LPs](#geral-lps)
+
 
 
 ## Objetivo
-Este documento tem como objetivo instruir a implementação da camada de dados para utilização de recursos de monitoramento do Google Analytics referente ao ambiente:
+Este documento tem como objetivo instruir a implementação da camada de dados para utilização de recursos de monitoramento do Google Analytics referente a <b> LPs de hipotireoidismo - simples de tratar <b>
 
-[https://conectaconsulta.com.br/simples-de-tratar](https://conectaconsulta.com.br/simples-de-tratar)
+
 
 <br />
 
@@ -181,45 +181,42 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------------	| :-------------------- | :-------------------------------------------	|
 | [[GA ClientID]]	| 'XXXXXXXXXX:XXXX:XX'	| ID aleatório do Google Analytics										|
-| [[GTM-ID]]			| 'GTM-xxxxxxx'		| ID do container do GTM instalado no ambiente										|
-| [[resposta]] | 'sim' ou 'nao' | Deve retornar a resposta da questão.  |
+| [[GTM-ID]]		| 'GTM-xxxxxxx'		| ID do container do GTM instalado no ambiente										|
+
 
 ---
 
-### Geral
+### Geral LPs
 
-**Quando: Ao clicar em um dos elementos do header.**<br />
+**Quando: Ao clicar no logo do header.**<br />
 
-- **Onde:** Na página Simples de tratar.
+- **Onde:** Nas Lps de hipotireoidismo simples de tratar.
     
 
 ```html
 <!-- Use se os atributos no elemento a ser clicado -->
 <div
-     data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
+     data-gtm-event-category="[[nome-lp]]:simples-de-tratar" 
      data-gtm-event-action="clique:header" 
-     data-gtm-event-label="[[nome-item]]"
+     data-gtm-event-label="logo"
 >
 Botão
 </div>
 ```
-
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------	| :-------------- | :--------------------------	|
-| [[nome-item]]	  | 'o-que-e', 'sintomas', 'logo' e etc | Deve retornar o nome do item clicado no header. |
+| [[nome-lp]]	| 'lp1-hipotireoidismo' e 'lp2-hipotireoidismo'.  | Deve retornar o nome da lp. |
 
 <br />
 
 
 **Quando: Ao clicar em um dos elementos do footer.**<br />
 
-- **Onde:** Na página Simples de tratar.
+- **Onde:** Nas Lps de hipotireoidismo simples de tratar.
     
 
 ```html
 <!-- Use se os atributos no elemento a ser clicado -->
 <div
-     data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
+     data-gtm-event-category="[[nome-lp]]:simples-de-tratar" 
      data-gtm-event-action="clique:footer" 
      data-gtm-event-label="[[nome-item]]"
 >
@@ -229,19 +226,20 @@ Botão
 
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------	| :-------------- | :--------------------------	|
-| [[nome-item]]	  | 'entre', 'cadastre-se', 'medicos', 'logo' e etc | Deve retornar o nome do item clicado no footer. |
+| [[nome-lp]]	  | 'lp1-hipotireoidismo' e 'lp2-hipotireoidismo'.  | Deve retornar o nome da lp. |
+| [[nome-item]]	  | 'logo', 'cadastre-se', 'entre' e etc | Deve retornar o nome do item clicado no footer. |
 
 <br />
 
 **Quando: No clique dos botões de cada seção**<br />
 
-- **Onde:** Na página Simples de tratar.
+- **Onde:** Nas Lps de hipotireoidismo simples de tratar.
     
 
 ```html
 <!-- Use se os atributos no elemento a ser clicado -->
 <div
-     data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
+     data-gtm-event-category="[[nome-lp]]:simples-de-tratar" 
      data-gtm-event-action="clique:botao" 
      data-gtm-event-label="[[nome-botao]]:[[nome-secao]]"
 >
@@ -251,422 +249,12 @@ Botão
 
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------	| :-------------- | :--------------------------	|
-| [[nome-botao]]	  | 'faca-sua-pre-avaliacao-agora', 'ver-mais' e etc | Deve retornar o nome do botão clicado. |
-| [[nome-secao]]	  | 'dificil-de-entender-simples-de-tratar', 'a-tiroidde-e-uma-glandula-que-fica-no-pescoco' e etc | Deve retornar o nome da seção do botão clicado.  |
+| [[nome-lp]]	  	| 'lp1-hipotireoidismo'e 'lp2-hipotireoidismo'.  | Deve retornar o nome da lp. |
+| [[nome-botao]]	| 'faca-sua-pre-avaliacao-agora', 'quero-responder-ao-questionario-agora!', 'tenho-sintomas-e-quero-fazer-a-pre-avaliacao!' e etc | Deve retornar o nome do botão clicado. |
+| [[nome-secao]]	| 'entenda-como-e-simples-de-tratar', 'tem-duvidas-do-que-esta-sentindo-tem-relacai-a-tireoide','qual-especialidade-medica-devo-procurar', 'sintomas-comun' e etc | Deve retornar o nome da seção do botão clicado.  |
 
 <br />
 
-
-**Quando: Ao clicar em algum botão de termo de politica.**<br />
-
-- **Onde:** Na página Simples de tratar.
-    
-
-```html
-<!-- Use se os atributos no elemento a ser clicado -->
-<div
-     data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
-     data-gtm-event-action="clique:botao" 
-     data-gtm-event-label="[[nome-botao]]:termo-de-politica"
->
-Botão
-</div>
-```
-
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------	| :-------------- | :--------------------------	|
-| [[nome-botao]]	  | 'nao-aceito' ou 'aceito'. | Deve retornar o nome do botão clicado. |
-
-<br />
-
-
-**Quando: Na interação com os campos do chat**<br />
-
-- **Onde:** Na página Simples de tratar.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'sanofi-conecta-consulta:simples-tratar',
-    'eventAction': 'interacao:campo:chat',
-    'eventLabel': 'preencheu:[[nome-campo]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-campo]] | 'nome', 'seu-numero-de-telefone' e etc | Deve retornar o nome do campo preenchido.  |
-
-
-<br />
-
-**Quando: No clique do botão do chat**<br />
-
-- **Onde:** Na página Simples de tratar.
-    
-
-```html
-<!-- Use se os atributos no elemento a ser clicado -->
-<div
-     data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
-     data-gtm-event-action="clique:botao:chat" 
-     data-gtm-event-label="comecar-conversa"
->
-Botão
-</div>
-```
-
-<br />
-
-**Quando: Na interação com o checkbox em "Termos de serviço"**<br />
-
-- **Onde:** Na página Simples de tratar.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'sanofi-conecta-consulta:simples-tratar',
-    'eventAction': 'interacao:termos-de-servico',
-    'eventLabel': 'checkbox:concordo-com-os-termos:[[acao]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[acao]] | 'check' ou 'uncheck'| Deve retornar a ação do usuário com o checkbox.  |
-
-
-<br />
-
-**Quando:  No clique dos botões  em "Termos de serviço"**<br />
-
-- **Onde:** Em todas as páginas que estiver disponível
-    
-
-```html
-<!-- Use se os atributos no elemento a ser clicado -->
-<div
-     data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
-     data-gtm-event-action="clique:botao:termos-de-servico" 
-     data-gtm-event-label="[[nome-botao]]"
->
-Botão
-</div>
-```
-
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------	| :-------------- | :--------------------------	|
-| [[nome-botao]] | 'nao-aceito', 'aceito' | Deve retornar o nome do botão clicado. |
-
-<br />
-
-**Quando: Ao interagir com os checkboxs do questionário de cada step**<br />
-
-- **Onde:** Na página Simples de tratar.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'sanofi-conecta-consulta:simples-tratar',
-    'eventAction': 'interacao:questionario:[[step]]',
-    'eventLabel': 'checkbox:[[pergunta]]'
-    'dimension3': '[[resposta]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[step]] | 'step-1', 'step-2' e etc | Deve retornar o step.  |
-| [[pergunta]] | 'voce-sente-sua-pele-seca' e etc | Deve retornar o nome da pergunta.  |
-| [[resposta]] | 'sim' ou 'nao' | Deve retornar a resposta da questão.  |
-
-<br />
-
-**Quando: Ao clicar nos botões do questionário de cada step**<br />
-
-- **Onde:** Na página Simples de tratar.
-    
-
-```html
-<!-- Use se os atributos no elemento a ser clicado -->
-<div
-     data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
-     data-gtm-event-action="clique:[[botao ou link]]:questionario:[[step]]" 
-     data-gtm-event-label="[[nome-botao]]"
->
-Botão
-</div>
-```
-
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------	| :-------------- | :--------------------------	|
-| [[botao ou link]]	  | botao' ou 'link' | Deve retornar o tipo de elemento clicado. |
-| [[step]] | 'step-1', 'step-2' e etc | Deve retornar o step.  |
-| [[nome-botao]] | 'proximo', 'compartilhar', 'voltar' e etc | Deve retornar o nome do botão clicado .  |
-
-<br />
-
-**Quando: Na tentativa de callback de envio de formulário**<br />
-
-- **Onde:** Na página Simples de tratar.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'conversion',
-    'eventCategory': 'sanofi-conecta-consulta:simples-tratar',
-    'eventAction': 'callback:questionario',
-    'eventLabel': '[[status]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[status]] | 'sucesso', 'erro:cpf-invalido', 'erro:pagina-fora-do-ar' e etc | Deve retornar a mensagem de sucesso ou o tipo de erro.  |
-
-
-<br />
-
-**Quando: Ao clicar nos links para compartilhar**<br />
-
-- **Onde:** Na página Simples de tratar.
-    
-
-```html
-<!-- Use se os atributos no elemento a ser clicado -->
-<div
-     data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
-     data-gtm-event-action="clique:link:compartilhar" 
-     data-gtm-event-label="[[nome-link]]:[[secao]]"
->
-Botão
-</div>
-```
-
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------	| :-------------- | :--------------------------	|
-| [[nome-link]] | 'compartihar-via-whatsapp', 'compartilhar-por-email' | Deve retornar o nome do link clicado.  |
-| [[secao]] |  'compartilhe-o-resultado-com-seu-medico' e etc | Deve retornar o nome da seção.  |
-
-<br />
-
-**Quando: No clique dos botões do formulario e-mail.**<br />
-
-- **Onde:** Na página Simples de tratar.
-    
-
-```html
-<!-- Use se os atributos no elemento a ser clicado -->
-<div
-     data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
-     data-gtm-event-action="clique:botao:compartilhar-e-mail" 
-     data-gtm-event-label="[[nome-botao]]"
->
-Botão
-</div>
-```
-
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------	| :-------------- | :--------------------------	|
-| [[nome-botao]] | 'abrir-app', 'enviar-e-mail'. | Deve retornar o nome do botão clicado. |
-
-<br />
-
-**Quando: Ao clicar em um dos icones de pesquisa ao concluir o formulario.**<br />
-
-- **Onde:** Na página Simples de tratar.
-    
-
-```html
-<!-- Use se os atributos no elemento a ser clicado -->
-<div
-     data-gtm-event-category= "sanofi-conecta-consulta:simples-tratar" 
-     data-gtm-event-action= "clique:pesquisa:[[pergunta]]"
-     data-gtm-event-label= "[[nome-botao]]"
->
-Botão
-</div>
-```
-
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------	| :-------------- | :--------------------------	|
-| [[pergunta]]	  | 'quao-satisfeito-voce-esta-com-nosssos-servico' | Deve retornar o titulo da pergunta.  |
-| [[nome-botao]]	  | 'satisfeito', 'insatisfeito', 'neutro' e etc |Deve retornar o nome do icone clicado.   |
-
-<br />
-
-**Quando: Ao interagir com o checkbox de compartilhar teste**<br />
-
-- **Onde:** Na página simples de tratar.
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'sanofi-conecta-consulta:simples-tratar',
-    'eventAction': 'interacao:questionario:[[pergunta]]',
-    'eventLabel': 'checkbox:[[resposta]]'
-   
-  });
-</script>
-```
-
-| Variável 				| Exemplo 			                       | Descrição 									|
-| :--------------	| :----------------------------------- | :--------------------------	|
-| [[pergunta]] | gostaria-de-compartilhar-esse-teste?'| Deve retornar o titulo da pergunta.|
-| [[resposta]] | 'compartilho-mais-tarde', 'nao-tenho-interesse-em-compartilhar'e etc  | Deve retornar a resposta do checkbox clicado.|
-
-<br />
-
-**Ao clicar no botão enviar compartilhamento de pesquisa satisfatoria**<br />
-
-- **Onde:** Em todas as páginas que estiver disponível
-    
-
-```html
-<!-- Use se os atributos no elemento a ser clicado -->
-<div
-     data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
-     data-gtm-event-action= "clique:botao:compartilhar-pesquisa-satisfatoria"
-     data-gtm-event-label="[[nome-botao]]"
->
-Botão
-</div>
-```
-
-
-
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------	| :-------------- | :--------------------------	|
-| [[nome-botao]] | 'enviar' | Deve retornar o nome do botão clicado. |
-
-<br />
-
-**Na tentativa de callback do envio da pesquisa satisfatoria.**<br />
-
-- **Onde:** Na página Simples de tratar.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'conversion',
-    'eventCategory': 'sanofi-conecta-consulta:simples-tratar',
-    'eventAction': 'callback:pesquisa-satisfatoria',
-    'eventLabel': '[[status]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[status]] | 'sucesso' ou 'Erro-nao-houve-interacao-com-checkbox.' |Deve retornar a mensagem de sucesso ou o tipo de erro.  |
-
----
-
-### Login Médico
-
-**Quando: Na interação com os campos.**<br />
-
-- **Onde:** Na página de login médico.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'sanofi-conecta-consulta:login-medico',
-    'eventAction': 'interacao:campo:login-medico',
-    'eventLabel': 'preencheu:[[nome-campo]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-campo]] | 'crm', 'nome', 'e-mail' e etc. | Deve retornar o nome do campo preenchido.  |
-
-
-<br />
-
-**Quando: No clique dos botões.**<br />
-
-- **Onde:** Na página de login médico.
-    
-
-```html
-<!-- Use se os atributos no elemento a ser clicado -->
-<div
-     data-gtm-event-category="sanofi-conecta-consulta:login-medico" 
-     data-gtm-event-action="clique:botao" 
-     data-gtm-event-label="[[nome-botao]]"
->
-Botão
-</div>
-```
-
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------	| :-------------- | :--------------------------	|
-| [[nome-botao]] | 'acessar' | Deve retornar o nome do botão clicado.  |
-
-<br />
-
-**Quando: Na interação com os filtros**<br />
-
-- **Onde:** Na página de login médico.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'sanofi-conecta-consulta:login-medico',
-    'eventAction': 'interacao:filtro',
-    'eventLabel': '[[nome-filtro]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-filtro]] | 'cardiologia', 'oncologia' e etc.. | Deve retornar o nome do campo preenchido.  |
-
-
-<br />
-
-**Quando: Na tentativa de callback para efetuar o login.**<br />
-
-- **Onde:** Na página de login médico.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'conversion',
-    'eventCategory': 'sanofi-conecta-consulta:login-medico',
-    'eventAction': 'callback',
-    'eventLabel': '[[status]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[status]] | 'sucesso', 'erro:usuario-ou-senha-invalidos', 'erro:pagina-fora-do-ar' e etc | Deve retornar a mensagem de sucesso ou o tipo de erro.   |
-
-
-<br />
 
 > Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
