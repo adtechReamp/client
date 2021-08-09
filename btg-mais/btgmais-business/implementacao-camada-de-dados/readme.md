@@ -206,8 +206,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-pergunta]] | :  'o-que-e-o-btg-business', 'para-que-e' , 'como-faco-para-contratar-solucoes-btg+-business'e etc| Deve retornar o nome da pergunta.  |
-| [[acao]] | : 'abriu' ou 'fechou' | Deve retornar a ação do usuário.|
+| [[nome-pergunta]] |  'o-que-e-o-btg-business', 'para-que-e' , 'como-faco-para-contratar-solucoes-btg+-business'e etc| Deve retornar o nome da pergunta.  |
+| [[acao]] | 'abriu' ou 'fechou' | Deve retornar a ação do usuário.|
 
 
 
@@ -234,8 +234,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-|[[nome-botao]]| :  'antecipe-agora', 'abra-sua-conta' e etc| Retornar o nome do botão clicado.|
-|[[nome-banner]]| :  'para-fazer-seu-negocio, 'Conta digital PJ', 'Antecipação de cartões', 'Mercado livre de energia '  e etc| Retornar o nome do banner clicado. |
+|[[nome-botao]]|  'antecipe-agora', 'abra-sua-conta' e etc| Retornar o nome do botão clicado.|
+|[[nome-banner]]|   'para-fazer-seu-negocio, 'Conta digital PJ', 'Antecipação de cartões', 'Mercado livre de energia '  e etc| Retornar o nome do banner clicado. |
 
 
 
@@ -261,7 +261,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-|[[nome-aba]]| :  'pix', 'solucoes-de-pagamento', 'gestao-financeira' e etc| Retornar o nome do aba clicado.  |
+|[[nome-aba]]|   'pix', 'solucoes-de-pagamento', 'gestao-financeira' e etc| Retornar o nome do aba clicado.  |
 
 
 
@@ -287,8 +287,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-|[[nome-aba]]| :  'pix', 'solucoes-de-pagamento', 'gestao-financeira' e etc| Retornar o nome do aba clicado.  |
-|[[nome-botao]]| :  'abra-sua-conta' e etc.|  Retornar com o nome do botão clicado |
+|[[nome-aba]]|  'pix', 'solucoes-de-pagamento', 'gestao-financeira' e etc| Retornar o nome do aba clicado.  |
+|[[nome-botao]]|  'abra-sua-conta' e etc.|  Retornar com o nome do botão clicado |
 
 
 
