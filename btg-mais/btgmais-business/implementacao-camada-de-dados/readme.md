@@ -1,12 +1,12 @@
 ![Reamp](https://github.com/adtechReamp/client/blob/main/logo.png?raw=true)
 
-> Adtech<br />
+> Analytics & Optimization <br />
 > Documento de Especificação Técnica
 
 <br />
 
-## Implementação da Camada de dados - BTG - App Service BoostLab
-Última atualização: 10/06/2021 <br />
+## Implementação da Camada de dados - BTG - BTG+ Business
+Última atualização: 09/08/2021 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
@@ -22,7 +22,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 ## Objetivo
 Este documento tem como objetivo instruir a implementação da camada de dados para utilização de recursos de monitoramento do Google Analytics referente ao ambiente:
 
-[https://app.service.boostlab.com.br/](https://app.service.boostlab.com.br/)
+[https://d22halzc75qm2m.cloudfront.net/](https://d22halzc75qm2m.cloudfront.net/)
 
 <br />
 
@@ -65,7 +65,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 	
 ### Geral
 
-**Quando: Na interação com os campo do formúlario .**<br />
+**Quando: No clique dos itens do header.**<br />
 
 - **Onde:**  Em todas as páginas que estiver disponível.
     
@@ -74,9 +74,9 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': 'app:boostlab',
-    'eventAction': 'interacao:formulario:[[titulo-formulario]]',
-    'eventLabel': 'preencheu:campo:[[nome-campo]]'
+    'eventCategory': 'btgmais-business:geral',
+    'eventAction': 'clique:header',
+    'eventLabel': '[[nome-item]]'
   });
 </script>
 
@@ -84,13 +84,13 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[titulo-formulario]] | 'informacoes-para-contato', 'faca-simulacao', 'informacoes-iniciais' e etc. |  Deve retornar o titulo da etapa.  |
-| [[nome-campo]]| 'cpnj', 'razao-social', 'e-mail', 'nome', 'telefone' e etc. |  Retornar o nome do campo preenchido.|
+| [[nome-item]] | 'nossos-produtos', 'logo', 'entrar', 'seja-btg-business' e etc | Retornar o nome do item clicado. |
+
 
 
 <br />
 
-**Quando: Ao selecionar filtros do formulario.**<br />
+**Quando: No clique do menu superior**<br />
 
 - **Onde:**  Em todas as páginas que estiver disponível.
     
@@ -99,9 +99,9 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': 'app:boostlab',
-    'eventAction': 'interacao:formulario:[[titulo-formulario]]',
-    'eventLabel': 'selecionou:filtro:[[nome-filtro]]'
+    'eventCategory': 'btgmais-business:geral',
+    'eventAction': 'clique:menu',
+    'eventLabel': '[[nome-menu]]:[[submenu]]'
   });
 </script>
 
@@ -109,13 +109,13 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[titulo-formulario]] | 'informacoes-para-contato', 'faca-simulacao', 'informacoes-iniciais' e etc. |  Deve retornar o titulo da etapa.  |
-| [[[nome-filtro]]|  'smu-investimentos', 'kptl', 'astella', 'distrito' e etc. | Deve retornar o nome da opção selecionada no filtro do formulario.|
+| [[nome-menu]]  |  'solucoes', 'parceiros', 'pme-insights' e etc |  Retornar o nome do menu clicado. |
+| [[submenu]]| 'abra-sua-conta', 'energia-solar', 'seguro'e etc |Retornar o nome do submenu clicado. |
 
 
 <br />
 
-**Quando: Ao interagir com mat slider(feat) de quantia de crédito desejado.**<br />
+**Quando: No clique do botão no sub-menu do header na aba de 'soluções'.**<br />
 
 - **Onde:**  Em todas as páginas que estiver disponível.
     
@@ -124,109 +124,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': 'app:boostlab',
-    'eventAction': 'interacao:smat-slider:valor-credito-desejado',
-    'eventLabel': 'R$:[[valor-credito]]'
-  });
-</script>
-
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[valor-credito]] | '1.500.00', '3.300.00', '5.000.00' e etc. | Deve retornar com o valor desejado de crédito.  |
-
-
-<br />
-
-**Quando: Ao interagir com o checkbox de "Termos de serviço.**<br />
-
-- **Onde:**  Em todas as páginas que estiver disponível.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'app:boostlab',
-    'eventAction': 'interacao:checkbox:termos-de-servico',
-    'eventLabel': '[[acao]]'
-  });
-</script>
-
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[acao]] |  'nao-aceito' ou  'aceito'. |Deve retornar o tipo da ação realizada no checkbox.  |
-
-
-<br />
-
-**Quando: Ao interagir com qualquer checkbox no formulario.**<br />
-
-- **Onde:**  Em todas as páginas que estiver disponível.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'app:boostlab',
-    'eventAction': 'interacao:checkbox:[[pergunta]]',
-    'eventLabel': 'selecionado:[[nome-check]]'
-  });
-</script>
-
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[pergunta]] | : 'como-sua-empresa-recebe-o-pagamento-desses-contratos', 'quais-credenciais-que-sua-empresa-utiliza', 'cash-runway-estimado-da-sua-empresa' e etc.| Deve retornar a pergunta para do checkbox. |
-| [[nome-check]] | : 'boleto', 'credito', 'rede', 'cielo', '4-meses', '5-meses' e etc.| Deve retornar com o nome do checkbox selecionado.|
-
-
-
-<br />
-
-
-**Quando: Ao interagir com qualquer checkbox no formulario.**<br />
-
-- **Onde:**  Em todas as páginas que estiver disponível.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'app:boostlab',
-    'eventAction': 'interacao:checkbox:[[pergunta]]',
-    'eventLabel': 'selecionado:[[nome-check]]'
-  });
-</script>
-
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[pergunta]] | : 'como-sua-empresa-recebe-o-pagamento-desses-contratos', 'quais-credenciais-que-sua-empresa-utiliza', 'cash-runway-estimado-da-sua-empresa' e etc.| Deve retornar a pergunta para do checkbox. |
-| [[nome-check]] | : 'boleto', 'credito', 'rede', 'cielo', '4-meses', '5-meses' e etc.| Deve retornar com o nome do checkbox selecionado.|
-
-
-
-<br />
-
-**Quando:  Ao clicar nos botões de 'upload' ou 'baixar' documento.**<br />
-
-- **Onde:**  Em todas as páginas que estiver disponível.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'app:boostlab',
-    'eventAction': 'clique:botao:formulario:[[titulo-formulario]]',
+    'eventCategory': 'btgmais-business:geral',
+    'eventAction': 'clique:menu-botao',
     'eventLabel': '[[nome-botao]]'
   });
 </script>
@@ -235,14 +134,12 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-|[[titulo-formulario]]| : 'informacoes-para-contato', 'faca-simulacao', 'informacoes-iniciais', 'informacoes-financeiras' e etc.| Deve retornar o titulo da etapa. |
-| [[nome-botao]] | : 'enviar' ou 'baixar'.| Deve retornar o nome do botao clicado.|
-
+| [[nome-botao]] | 'antecipe-agora'. |Deve retonar o nome do botão clicado. |
 
 
 <br />
 
-**Quando:   Ao interagir com o checkbox de "autorização Btg Pactual...**<br />
+**Quando: Na interação do botao de expansão "ver mais informações" e "ver menos informações"  no footer.**<br />
 
 - **Onde:**  Em todas as páginas que estiver disponível.
     
@@ -251,34 +148,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': 'app:boostlab',
-    'eventAction': 'interacao:checkbox:autorizacao-dados',
-    'eventLabel': '[[acao]]'
-  });
-</script>
-
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-|[[acao]]| : 'nao-autorizo' ou  'autorizo'.| Deve retornar o tipo da ação realizada no checkbox. |
-
-
-
-
-<br />
-
-**Quando:   Ao clicar nos botões do formulario de cada step.**<br />
-
-- **Onde:**  Em todas as páginas que estiver disponível.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'app:boostlab',
-    'eventAction': 'clique:[[botao-ou-link]]:formulario:[[titulo-formulario]]:[[etapa]]',
+    'eventCategory': 'btgmais-business:geral',
+    'eventAction': 'interacao:footer-botao',
     'eventLabel': '[[nome-botao]]'
   });
 </script>
@@ -287,17 +158,144 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-|[[botao-ou-link]]| : 'botao' ou 'link'|  Deve retornar o tipo de elemento clicado. |
-|[[titulo-formulario]]| : 'informacoes-para-contato', 'faca-simulacao', 'informacoes-iniciais' e etc.| Deve retornar o titulo da etapa. |
-|[[etapa]]| : 'etapa-1', 'etapa-2',  'etapa-3' e etc.| Deve retornar o step.  |
-|[[nome-botao]]| :'proximo', 'começar', 'voltar' e etc.| Deve retornar o nome do botão clicado .  |
+| [[nome-botao]]|'ver-mais-informacoes' e 'ver-menos-informacoes'. |Deve retonar o nome do botão clicado.  |
+
+
+<br />
+
+**Quando: No clique do itens do footer**<br />
+
+- **Onde:**  Em todas as páginas que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'btgmais-business:geral',
+    'eventAction': 'clique:footer',
+    'eventLabel': '[[secao]]:[[nome-item]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[secao]] |  'explore', 'veja-tambem', 'baixe-nosso-app', 'fale-conosco' e etc| Retornar o nome da seção.  |
+|[[nome-item]]  | 'parceiros', 'google-play', '1138-3336', 'desenvolvedores' , 'facebook' e etc.| Retornar o nome do item clicado dentro da seção.|
+
+
+
+<br />
+
+
+**Quando: Na interação com as dúvidas**<br />
+
+- **Onde:**  Em todas as páginas que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'btgmais-business:geral',
+    'eventAction': 'interacao:duvidas',
+    'eventLabel': '[[nome-pergunta]]:[[acao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-pergunta]] | :  'o-que-e-o-btg-business', 'para-que-e' , 'como-faco-para-contratar-solucoes-btg+-business'e etc| Deve retornar o nome da pergunta.  |
+| [[acao]] | : 'abriu' ou 'fechou' | Deve retornar a ação do usuário.|
+
+
+
+<br />
+
+**Quando:   Na interação com os vídeos.**<br />
+
+- **Onde:**  Em todas as páginas que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'btgmais-business:geral',
+    'eventAction': 'interacao:video:[[nome-video]]',
+    'eventLabel': '[[acao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-video]] | 'solucoes-para-empreender-em-um-so-lugar' e etc| Deve retornar o nome do vídeo. |
+| [[acao]]| : 'play' ou 'pause'. Deve retornar a ação do usuário.|
+
+
+
+<br />
+
+**Quando:No clique dos botões dos banners.**<br />
+
+- **Onde:**  Em todas as páginas que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'btgmais-business:geral',
+    'eventAction': 'clique:botao:banner',
+    'eventLabel': '[[nome-botao]]:[[nome-banner]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-botao]]| :  'antecipe-agora', 'abra-sua-conta' e etc| Retornar o nome do botão clicado.|
+|[[nome-banner]]| :  'para-fazer-seu-negocio, 'Conta digital PJ', 'Antecipação de cartões', 'Mercado livre de energia '  e etc| Retornar o nome do banner clicado. |
 
 
 
 
 <br />
 
-**Quando:   Na tentativa de callback de envio do formulário.**<br />
+**Quando:   Ao clicar na seção de abas.**<br />
+
+- **Onde:**  Em todas as páginas que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'btgmais-business:geral',
+    'eventAction': 'clique:aba',
+    'eventLabel': '[[nome-aba]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-aba]]| :  'pix', 'solucoes-de-pagamento', 'gestao-financeira' e etc| Retornar o nome do aba clicado.  |
+
+
+
+
+<br />
+
+**Quando:  Ao clicar nos botões dentro das abas.**<br />
 
 - **Onde:**  Em todas as páginas que estiver disponível.
     
@@ -306,8 +304,167 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'conversion',
-    'eventCategory': 'app:boostlab',
-    'eventAction': 'callback:envio-formulario',
+    'eventCategory': 'btgmais-business:geral',
+    'eventAction': 'clique:botao:[[nome-aba]]',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-aba]]| :  'pix', 'solucoes-de-pagamento', 'gestao-financeira' e etc| Retornar o nome do aba clicado.  |
+|[[nome-botao]]| :  'abra-sua-conta' e etc.|  Retornar com o nome do botão clicado |
+
+
+
+
+
+
+<br />
+
+**Quando:  No clique dos botões ou links de cada seção.**<br />
+
+- **Onde:**  Em todas as páginas que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'conversion',
+    'eventCategory': 'btgmais-business:geral',
+    'eventAction': 'clique:[[botao-ou-link]]',
+    'eventLabel': '[[nome-item]]:[[nome-secao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[botao-ou-link]]| 'botao' ou 'link'| Deve retornar o tipo de elemento clicado.   |
+|[[nome-item]] | 'faca-sua-reserva', 'tabela-de-tarifas', 'ver-todas', 'conta-digital', 'setas' e etc| Retornar o nome do item clicado.|
+|[[nome-secao]] | 'vantagens-de-abrir-a-conta digital-pj- do-btgmais-business', ' duvidas' 'nossas-solucoes'  e etc| Retornar o nome seção. |
+
+<br />
+
+---
+
+<br />
+
+**Quando: No clique dos links de cada card.**<br />
+
+- **Onde:**  Em todas as páginas que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'conversion',
+    'eventCategory': 'btgmais-business:geral',
+    'eventAction': 'clique:[[botao ou link]]-card',
+    'eventLabel': '[[nome-item]]:[[nome-secao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[botao-ou-link]]| 'botao' ou 'link'| Deve retornar o tipo de elemento clicado.   |
+|[[nome-item]] |  'o-que-e-fluxo-de-caixa-e-como-ele-ajuda-sua empresa?', 'como-lidar-com-a-pressao-de-empreender?', 'saiba-mais' e etc| Retornar o nome do item clicado.|
+|[[nome-secao]] |'parceiros-em-destaque', ' nossos-parceiros' 'pmes-insights'  e etc| Retornar o nome seção. |
+
+<br />
+
+**Quando: Na interação com os campos do formulário**<br />
+
+- **Onde:**  Em todas as páginas que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'conversion',
+    'eventCategory': 'btgmais-business:geral',
+    'eventAction': 'interacao:formulario:[[nome-formulario]]',
+    'eventLabel': 'preencheu:campo:[[nome-campo]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-formulario]]| 'o-btg-business-tambem-e-para-desenvolvedores', 'mercado-livre-de-energia ', 'faca-a-sua-reserva' e etc| Deve retornar o nome do formulário.  |
+|[[nome-campo]]| 'nome-completo', 'email', 'telefone', 'empresa', 'valor-de-gasto-energia-da-empresa', 'cnpj' e etc| Retornar o nome do campo preenchido. |
+
+<br />
+
+**Quando: Na interação com os checkbox do formulário**<br />
+
+- **Onde:**  Em todas as páginas que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'conversion',
+    'eventCategory': 'btgmais-business:geral',
+    'eventAction': 'interacao:checkbox:formulario:[[nome-formulario]]',
+    'eventLabel': 'selecionou:[[nome-checkbox]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-formulario]]| 'o-btg-business-tambem-e-para-desenvolvedores', 'mercado-livre-de-energia ', 'faca-a-sua-reserva' e etc| Deve retornar o nome do formulário.|
+|[[nome-checkbox]]|'por-e-mail', 'por-telefone' e etc | Retornar o nome do checkbox que teve interação.|
+
+<br />
+
+---
+
+<br />
+
+**Quando: No clique dos botões do formulário**<br />
+
+- **Onde:**  Em todas as páginas que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'conversion',
+    'eventCategory': 'btgmais-business:geral',
+    'eventAction': 'clique:botao:formulario:[[nome-formulario]]',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-formulario]]| 'o-btg-business-tambem-e-para-desenvolvedores', 'mercado-livre-de-energia ', 'faca-a-sua-reserva' e etc| Deve retornar o nome do formulário. |
+|[[nome-botao]]|'continuar', 'quero-saber-mais' e etc| Retornar o nome do botão clicado. |
+
+<br />
+
+**Quando: Na tentativa de callback de envio do formulário**<br />
+
+- **Onde:**  Em todas as páginas que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'conversion',
+    'eventCategory': 'btgmais-business:geral',
+    'eventAction': 'callback:formulario:[[nome-formulario]]',
     'eventLabel': '[[status]]'
   });
 </script>
@@ -316,11 +473,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-|[[status]]| :  'sucesso', 'erro:email-invalido', 'pagina-indisponivel-no-momento' e etc.|  Retornar a mensagem de sucesso ou tipo de erro. |
-
-
-
-
+|[[nome-formulario]]| 'o-btg-business-tambem-e-para-desenvolvedores', 'mercado-livre-de-energia ', 'faca-a-sua-reserva' e etc| Deve retornar o nome do formulário. |
+|[[status]]|'sucesso', 'erro:email-invalido', 'pagina-indisponivel-no-momento' e etc|Retornar a mensagem de sucesso ou tipo de erro.|
 
 <br />
 
