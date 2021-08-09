@@ -213,31 +213,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 <br />
 
-**Quando:   Na interação com os vídeos.**<br />
 
-- **Onde:**  Em todas as páginas que estiver disponível.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'btgmais-business:geral',
-    'eventAction': 'interacao:video:[[nome-video]]',
-    'eventLabel': '[[acao]]'
-  });
-</script>
-
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-|[[nome-video]] | 'solucoes-para-empreender-em-um-so-lugar' e etc| Deve retornar o nome do vídeo. |
-| [[acao]]| : 'play' ou 'pause'. Deve retornar a ação do usuário.|
-
-
-
-<br />
 
 **Quando:No clique dos botões dos banners.**<br />
 
