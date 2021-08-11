@@ -5,7 +5,7 @@
 
 <br />
 
-## Implementação da Camada de dados - BP - Portal Médico
+## Instalação GTM - BP - Portal Médico
 Última atualização: 11/08/2021 <br />
 Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@jellyfish.com](nathalia.paschotto@jellyfish.com)
 
