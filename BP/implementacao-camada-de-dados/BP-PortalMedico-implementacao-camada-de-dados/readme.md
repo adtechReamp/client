@@ -127,8 +127,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-item]] | Retornar o nome do item clicado dentro da seção. |  'plataformas-para-medico', 'educacao-e-pesquisa', 'eventos', 'instagram' , 'facebook' e etc. |
-
+| [[nome-item]] |'plataformas-para-medico', 'educacao-e-pesquisa', 'eventos', 'instagram' , 'facebook' e etc. |  Retornar o nome do item clicado dentro da seção. |
+ Retornar o nome do item clicado dentro da seção. 
 
 <br />
 
