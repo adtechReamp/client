@@ -26,6 +26,7 @@ Este documento tem como objetivo instruir a implementação da camada de dados p
 [http://bp.homolog.enken.cloud/](http://bp.homolog.enken.cloud/)
 
 <br />
+
 ---
 
 ## Overview e Descrições Técnicas
@@ -63,7 +64,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-item]]  |  'logo' e 'abriu-menu' | Retornar o nome do item clicado.  |
+| [[nome-item]]  |  'logo' e 'abriu-menu'. | Retornar o nome do item clicado.  |
 
 
 <br />
@@ -87,8 +88,8 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-menu]] | 'plataformar-para-medico, 'referenciadores', 'eventos-cientificos' e etc |  Retornar o nome do menu clicado.  |
-| [[submenu]] |  'institucional', 'oncologia', 'pediatria' e etc |Retornar o nome do submenu clicado. |
+| [[nome-menu]] | 'plataformar-para-medico, 'referenciadores', 'eventos-cientificos' e etc. |  Retornar o nome do menu clicado.  |
+| [[submenu]] |  'institucional', 'oncologia', 'pediatria' e etc. |Retornar o nome do submenu clicado. |
 
 
 <br />
@@ -112,7 +113,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-item]] | Retornar o nome do item clicado dentro da seção. |  'plataformas-para-medico', 'educacao-e-pesquisa', 'eventos', 'instagram' , 'facebook' e etc |
+| [[nome-item]] | Retornar o nome do item clicado dentro da seção. |  'plataformas-para-medico', 'educacao-e-pesquisa', 'eventos', 'instagram' , 'facebook' e etc. |
 
 
 <br />
@@ -137,8 +138,8 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-pagina]]  |  'eventos-cientificos', 'referenciadores', 'conheca-bp' e etc.|Deve retornar o nome da página. |
-| [[nome-botao]] | 'comece-agora' e etc| Retornar o nome do botão clicado. |
-| [[nome-banner]] |  'bem-vindo(a)-ao-portal-do-medico' e etc| Retornar o nome do banner clicado. |
+| [[nome-botao]] | 'comece-agora' e etc.| Retornar o nome do botão clicado. |
+| [[nome-banner]] |  'bem-vindo(a)-ao-portal-do-medico' e etc.| Retornar o nome do banner clicado. |
 <br />
 
 **Quando: No clique dos links de plataformas para os médicos.**<br />
@@ -161,7 +162,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-pagina]]  |  'eventos-cientificos', 'referenciadores', 'conheca-bp' e etc.|Deve retornar o nome da página. |
-| [[nome-botao]] | 'comece-agora', 'abrir-tasy', 'abrir-2im' e etc|  Retornar o nome do botão clicado.|
+| [[nome-botao]] | 'comece-agora', 'abrir-tasy', 'abrir-2im' e etc.|  Retornar o nome do botão clicado.|
 |[[nome-banner]]  | 'agendamento-cirurgico-online', 'indicador-de-performance' e 'tasy' .|  Retornar o nome do botão clicado.|
 
 
@@ -248,7 +249,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-pagina]]  |  'eventos-cientificos', 'referenciadores', 'conheca-bp' e etc.|Deve retornar o nome da página. |
-| [titulo-texto]]|'cuidados', 'emergencia' ,'uti-neurologica' 'programa-segunda-opniao'e etc| Deve retornar o titulo do texto.|
+| [titulo-texto]]|'cuidados', 'emergencia' ,'uti-neurologica' 'programa-segunda-opniao'e etc.| Deve retornar o titulo do texto.|
 | [[acao]]| 'abriu' ou 'fechou' |  Deve retornar a ação do usuário. |
 
 ---
@@ -369,7 +370,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[status]]| 'sucesso', 'erro-pagina-indisponivel' e etc|Deve retornar com o valor de sucesso ou tipo de erro.|
+| [[status]]| 'sucesso', 'erro-pagina-indisponivel' e etc.|Deve retornar com o valor de sucesso ou tipo de erro.|
 
 
 
