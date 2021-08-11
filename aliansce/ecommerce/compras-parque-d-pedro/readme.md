@@ -1184,7 +1184,6 @@ window.dataLayer.push({
                'price':' [[preco-produto]]',
                'category': '[[categoria-produto]]',
                'brand': '[[marca-produto]]',
-               'list': '[[lista-produto]]',
                'position': '[[posicao-produto]]',
                'coupon': '[[cupom-produto]]',
                'dimension4': '[[nome-loja]]'
