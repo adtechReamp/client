@@ -5,7 +5,7 @@
 
 <br />
 
-## Implementação da Camada de dados - Puran - Simples de tratar
+## Implementação da Camada de dados - BP - Portal Médico
 Última atualização: 08/04/2021 <br />
 Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@jellyfish.com](nathalia.paschotto@jellyfish.com)
 
@@ -69,7 +69,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
   window.dataLayer.push({
     'event': 'genericEvent',
     'eventCategory': 'portal-dos-medicos:geral',
-    'eventAction': 'clique:header'',
+    'eventAction': 'clique:header',
     'eventLabel': '[[nome-item]]'
   });
 </script>
@@ -154,6 +154,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 | [[nome-pagina]]  |  'eventos-cientificos', 'referenciadores', 'conheca-bp' e etc.|Deve retornar o nome da página. |
 | [[nome-botao]] | 'comece-agora' e etc.| Retornar o nome do botão clicado. |
 | [[nome-banner]] |  'bem-vindo(a)-ao-portal-do-medico' e etc.| Retornar o nome do banner clicado. |
+
 <br />
 
 **Quando: No clique dos links de plataformas para os médicos.**<br />
@@ -205,6 +206,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-pagina]]  |  'eventos-cientificos', 'referenciadores', 'conheca-bp' e etc.|Deve retornar o nome da página. |
 | [[botao ou link]]| 'botao' ou 'link'|Retornar o nome do botão ou link clicado. |
+| [[[nome-item]] |  'saiba-mais', 'acessar-plataformas, 'acessar-ferramentas', '(11) 3505-5265', 'setas' e etc |Retornar o nome do item clicado.|
 | [[nome-secao]]|'um-hub-de-saude-para-voce-e-seus-pacientes', ' teleducacao' 'plataforma-de-agendamento-cirurgico-on-line', 'contato'  e etc.|Retornar o nome seção. |
 
 
@@ -396,7 +398,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 <br />
 
-> Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
+> Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@jellyfish.com](nathalia.paschotto@jellyfish.com)
 
 <br />
 
