@@ -54,7 +54,7 @@ Link de referência: [Documentação Oficial Google Tag Manager](https://develop
 
 <br />
 
-> Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
+> [nathalia.paschotto@jellyfish.com](nathalia.paschotto@jellyfish.com)
 
 <br />
 
