@@ -11,19 +11,6 @@ Em caso de dúvidas, entrar em contato com: nathalia.paschotto@jellyfish.com(nat
 
 <br />
 
-## Sumário
-
-- [Objetivo](#objetivo)
-- [Instalação snippet GTM](#instalacao-snippet-gtm)
-
-
-
-## Objetivo
-Este documento tem como objetivo instruir a implementação da camada de dados para utilização de recursos de monitoramento do Google Analytics referente ao ambiente:
-
-[https://app.service.boostlab.com.br/](https://app.service.boostlab.com.br/)
-
-<br />
 
 ## Instalação snippet GTM
 
