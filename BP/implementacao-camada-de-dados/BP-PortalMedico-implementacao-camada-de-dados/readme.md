@@ -178,7 +178,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-pagina]]  |  'eventos-cientificos', 'referenciadores', 'conheca-bp' e etc.|Deve retornar o nome da página. |
 | [[nome-botao]] | 'comece-agora', 'abrir-tasy', 'abrir-2im' e etc.|  Retornar o nome do botão clicado.|
-|[[nome-banner]]  | 'agendamento-cirurgico-online', 'indicador-de-performance' e 'tasy' .|  Retornar o nome do botão clicado.|
+|[[nome-banner]]  | 'agendamento-cirurgico-online', 'indicador-de-performance' e 'tasy' .|  Retornar o nome do banner interagido.|
 
 
 
