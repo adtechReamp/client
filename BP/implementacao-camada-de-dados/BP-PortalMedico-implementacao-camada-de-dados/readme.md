@@ -6,7 +6,7 @@
 <br />
 
 ## Implementação da Camada de dados - BP - Portal Médico
-Última atualização: 08/04/2021 <br />
+Última atualização: 11/08/2021 <br />
 Em caso de dúvidas, entrar em contato com: [nathalia.paschotto@jellyfish.com](nathalia.paschotto@jellyfish.com)
 
 <br />
@@ -128,7 +128,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-item]] |'plataformas-para-medico', 'educacao-e-pesquisa', 'eventos', 'instagram' , 'facebook' e etc. |  Retornar o nome do item clicado dentro da seção. |
- Retornar o nome do item clicado dentro da seção. 
+
 
 <br />
 
