@@ -196,7 +196,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': 'btgmais-business:geral',
+    'eventCategory': 'btgmais-business:[[nome-pagina]]',
     'eventAction': 'interacao:duvidas',
     'eventLabel': '[[nome-pergunta]]:[[acao]]'
   });
@@ -206,6 +206,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-pagina]] |   'abra-sua-conta', 'pix', 'antecipacao-de-cartoes' e etc.| Deve retornar o nome da página. |
 | [[nome-pergunta]] |  'o-que-e-o-btg-business', 'para-que-e' , 'como-faco-para-contratar-solucoes-btg+-business'e etc| Deve retornar o nome da pergunta.  |
 | [[acao]] | 'abriu' ou 'fechou' | Deve retornar a ação do usuário.|
 
@@ -234,6 +235,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-pagina]] |   'abra-sua-conta', 'pix', 'antecipacao-de-cartoes' e etc.| Deve retornar o nome da página. |
 |[[nome-botao]]|  'antecipe-agora', 'abra-sua-conta' e etc| Retornar o nome do botão clicado.|
 |[[nome-banner]]|   'para-fazer-seu-negocio, 'Conta digital PJ', 'Antecipação de cartões', 'Mercado livre de energia '  e etc| Retornar o nome do banner clicado. |
 
@@ -251,7 +253,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': 'btgmais-business:geral',
+    'eventCategory': 'btgmais-business:[[nome-pagina]] ',
     'eventAction': 'clique:aba',
     'eventLabel': '[[nome-aba]]'
   });
@@ -261,6 +263,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-pagina]] |   'abra-sua-conta', 'pix', 'antecipacao-de-cartoes' e etc.| Deve retornar o nome da página. |
 |[[nome-aba]]|   'pix', 'solucoes-de-pagamento', 'gestao-financeira' e etc| Retornar o nome do aba clicado.  |
 
 
@@ -277,7 +280,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'conversion',
-    'eventCategory': 'btgmais-business:geral',
+    'eventCategory': 'btgmais-business:[[nome-pagina]] ',
     'eventAction': 'clique:botao:[[nome-aba]]',
     'eventLabel': '[[nome-botao]]'
   });
@@ -287,6 +290,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-pagina]] |   'abra-sua-conta', 'pix', 'antecipacao-de-cartoes' e etc.| Deve retornar o nome da página. |
 |[[nome-aba]]|  'pix', 'solucoes-de-pagamento', 'gestao-financeira' e etc| Retornar o nome do aba clicado.  |
 |[[nome-botao]]|  'abra-sua-conta' e etc.|  Retornar com o nome do botão clicado |
 
@@ -306,7 +310,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'conversion',
-    'eventCategory': 'btgmais-business:geral',
+    'eventCategory': 'btgmais-business:[[nome-pagina]] ',
     'eventAction': 'clique:[[botao-ou-link]]',
     'eventLabel': '[[nome-item]]:[[nome-secao]]'
   });
@@ -316,6 +320,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-pagina]] |   'abra-sua-conta', 'pix', 'antecipacao-de-cartoes' e etc.| Deve retornar o nome da página. |
 |[[botao-ou-link]]| 'botao' ou 'link'| Deve retornar o tipo de elemento clicado.   |
 |[[nome-item]] | 'faca-sua-reserva', 'tabela-de-tarifas', 'ver-todas', 'conta-digital', 'setas' e etc| Retornar o nome do item clicado.|
 |[[nome-secao]] | 'vantagens-de-abrir-a-conta digital-pj- do-btgmais-business', ' duvidas' 'nossas-solucoes'  e etc| Retornar o nome seção. |
@@ -335,7 +340,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'conversion',
-    'eventCategory': 'btgmais-business:geral',
+    'eventCategory': 'btgmais-business:[[nome-pagina]] ',
     'eventAction': 'clique:[[botao ou link]]-card',
     'eventLabel': '[[nome-item]]:[[nome-secao]]'
   });
@@ -345,6 +350,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-pagina]] |   'abra-sua-conta', 'pix', 'antecipacao-de-cartoes' e etc.| Deve retornar o nome da página. |
 |[[botao-ou-link]]| 'botao' ou 'link'| Deve retornar o tipo de elemento clicado.   |
 |[[nome-item]] |  'o-que-e-fluxo-de-caixa-e-como-ele-ajuda-sua empresa?', 'como-lidar-com-a-pressao-de-empreender?', 'saiba-mais' e etc| Retornar o nome do item clicado.|
 |[[nome-secao]] |'parceiros-em-destaque', ' nossos-parceiros' 'pmes-insights'  e etc| Retornar o nome seção. |
@@ -360,7 +366,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'conversion',
-    'eventCategory': 'btgmais-business:geral',
+    'eventCategory': 'btgmais-business:[[nome-pagina]] ',
     'eventAction': 'interacao:formulario:[[nome-formulario]]',
     'eventLabel': 'preencheu:campo:[[nome-campo]]'
   });
@@ -370,6 +376,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-pagina]] |   'abra-sua-conta', 'pix', 'antecipacao-de-cartoes' e etc.| Deve retornar o nome da página. |
 |[[nome-formulario]]| 'o-btg-business-tambem-e-para-desenvolvedores', 'mercado-livre-de-energia ', 'faca-a-sua-reserva' e etc| Deve retornar o nome do formulário.  |
 |[[nome-campo]]| 'nome-completo', 'email', 'telefone', 'empresa', 'valor-de-gasto-energia-da-empresa', 'cnpj' e etc| Retornar o nome do campo preenchido. |
 
@@ -384,7 +391,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'conversion',
-    'eventCategory': 'btgmais-business:geral',
+    'eventCategory': 'btgmais-business:[[nome-pagina]] ',
     'eventAction': 'interacao:checkbox:formulario:[[nome-formulario]]',
     'eventLabel': 'selecionou:[[nome-checkbox]]'
   });
@@ -394,6 +401,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-pagina]] |   'abra-sua-conta', 'pix', 'antecipacao-de-cartoes' e etc.| Deve retornar o nome da página. |
 |[[nome-formulario]]| 'o-btg-business-tambem-e-para-desenvolvedores', 'mercado-livre-de-energia ', 'faca-a-sua-reserva' e etc| Deve retornar o nome do formulário.|
 |[[nome-checkbox]]|'por-e-mail', 'por-telefone' e etc | Retornar o nome do checkbox que teve interação.|
 
@@ -412,7 +420,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'conversion',
-    'eventCategory': 'btgmais-business:geral',
+    'eventCategory': 'btgmais-business:[[nome-pagina]] ',
     'eventAction': 'clique:botao:formulario:[[nome-formulario]]',
     'eventLabel': '[[nome-botao]]'
   });
@@ -422,6 +430,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-pagina]] |   'abra-sua-conta', 'pix', 'antecipacao-de-cartoes' e etc.| Deve retornar o nome da página. |
 |[[nome-formulario]]| 'o-btg-business-tambem-e-para-desenvolvedores', 'mercado-livre-de-energia ', 'faca-a-sua-reserva' e etc| Deve retornar o nome do formulário. |
 |[[nome-botao]]|'continuar', 'quero-saber-mais' e etc| Retornar o nome do botão clicado. |
 
@@ -436,7 +445,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'conversion',
-    'eventCategory': 'btgmais-business:geral',
+    'eventCategory': 'btgmais-business:[[nome-pagina]] ',
     'eventAction': 'callback:formulario:[[nome-formulario]]',
     'eventLabel': '[[status]]'
   });
@@ -446,6 +455,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-pagina]] |   'abra-sua-conta', 'pix', 'antecipacao-de-cartoes' e etc.| Deve retornar o nome da página. |
 |[[nome-formulario]]| 'o-btg-business-tambem-e-para-desenvolvedores', 'mercado-livre-de-energia ', 'faca-a-sua-reserva' e etc| Deve retornar o nome do formulário. |
 |[[status]]|'sucesso', 'erro:email-invalido', 'pagina-indisponivel-no-momento' e etc|Retornar a mensagem de sucesso ou tipo de erro.|
 
