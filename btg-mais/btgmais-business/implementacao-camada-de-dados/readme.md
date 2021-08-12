@@ -225,7 +225,7 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': 'btgmais-business:geral',
+    'eventCategory': 'btgmais-business:[[nome-pagina]]',
     'eventAction': 'clique:botao:banner',
     'eventLabel': '[[nome-botao]]:[[nome-banner]]'
   });
