@@ -5,7 +5,7 @@
 
 <br />
 
-## Implementação do snnipet GTM - BTG - App Service BoostLab
+## Implementação do snnipet GTM - BTG - Business
 Última atualização: 08/04/2021 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
@@ -19,7 +19,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 ## Objetivo
 Este documento tem como objetivo instruir a implementação da camada de dados para utilização de recursos de monitoramento do Google Analytics referente ao ambiente:
 
-[https://app.service.boostlab.com.br/](https://app.service.boostlab.com.br/)
+[https://d22halzc75qm2m.cloudfront.net/](https://d22halzc75qm2m.cloudfront.net/)
 
 <br />
 
@@ -40,14 +40,13 @@ O `snippet` do Google Tag Manager é um pequeno trecho de código javascript ou 
 
 <html>
   <head>
-  <!-- Google Tag Manager -->
-      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-KV3NV4K');</script>
-  <!-- End Google Tag Manager -->
-
+ <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-58QFBS2');</script>
+<!-- End Google Tag Manager -->
   </head>
 ```
 
@@ -55,10 +54,10 @@ O `snippet` do Google Tag Manager é um pequeno trecho de código javascript ou 
 
 ```html
 <body>
-  <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KV3NV4K"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+ <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58QFBS2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   </body>
 </html>
 ```
