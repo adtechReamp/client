@@ -73,9 +73,8 @@ Caso a informação solicitada não estiver disponível retornar tipagem ´undef
 
 ### Especificação de Micro-conversões:
 
-**Página - Home:**<br />
-
-- **Onde:** Ao clicar no botão "Quero Esse".
+**Onde:** - Na página Home ou Modelos Veículos. <br />
+**Quando:** - Ao clicar no botão "Quero Esse".
 
 ```html
 <script>
@@ -98,77 +97,147 @@ Caso a informação solicitada não estiver disponível retornar tipagem ´undef
 | [[valor_total_geral]]			| '200,00'				| Deve retornar o valor da reserva.										|
 | [[grupo_de_carros]]			| 'Grupo H - C4, 2008, Duster ou similar'				| Deve retornar o grupo do carro.										|
 
-- **Onde:** Ao clicar nos links "Ver todos".
+---
+
+**Onde:** - Na página de Detalhes do Veículo. <br />
+**Quando:** - Ao clicar no botão "continuar".
 
 ```html
 <script>
-	dataLayer.push({
-		'event': 'genericEvent',
-		'eventCategory': 'clube-movida:home',
-		'eventAction': 'clique:link',
-		'eventLabel': '[[ver-todos]]'
-	});
+dataLayer.push({
+        'event': 'genericEvent',
+        'eventCategory': 'cargo:detalhes',
+        'eventAction': 'clique:botao',
+        'eventLabel': 'continuar',
+        'user_id': [[user_id]],
+        'valor_total_geral': [[valor_total_diarias]],
+        'grupo_de_carros': [[grupo_de_carros]],
+        'data_devolucao': [[data_devolucao]],
+        'data_retirada': [[data_retirada]],
+        'hora_devolucao': [[hora_devolucao]],
+        'hora_retirada': [[hora_retirada]],
+        'local_devolucao': [[local_devolucao]],
+        'local_retirada': [[local_retirada]],
+        'franquia': [[franquia]]
+});
 </script>
 ```
 
 
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------------	| :-------------------- | :-------------------------------------------	|
-| [[ver-todos]]			| 'produtos'				| Deve retornar o nome do bloco em que esse link se encontra. 										|
+| [[user_id]] 			| '1234'				| Deve retornar o id do usuário.					|
+| [[valor_total_geral]]			| '200,00'				| Deve retornar o valor da reserva.					|
+| [[grupo_de_carros]]		| 'Grupo H - C4, 2008, Duster ou similar'	| Deve retornar o grupo do carro.	|
+| [[data_devolucao]]			| '20/10/2021'				| Deve retornar a data de devolução.	|
+| [[data_retirada]]			| '19/10/2021'				| Deve retornar a data de retirada.	|
+| [[hora_devolucao]]			| '14:00'				| Deve retornar a hora de devolução.	|
+| [[hora_retirada]]			| '14:00'				| Deve retornar a hora de retirada.	|
+| [[local_devolucao]]		| 'SAO PAULO - GUARULHOS AEROPORTO'			| Deve retornar o local de devolução. |
+| [[local_retirada]]		| 'SAO PAULO - GUARULHOS AEROPORTO'			| Deve retornar o local de retirada. |
+| [[franquia]]			| '1 mês - 1000 km'				| Deve retornar a franquia selecionada.	|
 
 ---
 
-**Página - Assine Já:**<br />
-
-- **Onde:** Ao clicar no botão "Ver Mais".
+**Onde:** - Na página de Proteções e Itens. <br />
+**Quando:** - Ao clicar no botão "continuar".
 
 ```html
 <script>
-	dataLayer.push({
-		'event': 'genericEvent',
-		'eventCategory': 'clube-movida:assine-ja',
-		'eventAction': 'clique:botao',
-		'eventLabel': '[[botao-mais]]'
-	});
+dataLayer.push({
+        'event': 'genericEvent',
+        'eventCategory': 'cargo:protecoes',
+        'eventAction': 'clique:botao',
+        'eventLabel': 'continuar',
+        'user_id': [[user_id]],
+        'valor_total_geral': [[valor_total_diarias]],
+        'grupo_de_carros': [[grupo_de_carros]],
+        'data_devolucao': [[data_devolucao]],
+        'data_retirada': [[data_retirada]],
+        'hora_devolucao': [[hora_devolucao]],
+        'hora_retirada': [[hora_retirada]],
+        'local_devolucao': [[local_devolucao]],
+        'local_retirada': [[local_retirada]],
+        'franquia': [[franquia]],
+		'protecoes': [[protecoes]]
+});
 </script>
 ```
 
 
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------------	| :-------------------- | :-------------------------------------------	|
-| [[botao-mais]]			| 'ver-mais'				| Deve retornar o nome do botão.										|
-
-- **Onde:** Ao clicar nos planos de assinatura.
-
-```html
-<script>
-	dataLayer.push({
-		'event': 'genericEvent',
-		'eventCategory': 'clube-movida:assine-ja',
-		'eventAction': 'clique:botao',
-		'eventLabel': '[[plano]]'
-	});
-</script>
-```
-
-
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------------	| :-------------------- | :-------------------------------------------	|
-| [[plano]]			| 'basico'				| Deve retornar o nome do plano que o clinte escolheu. 										|
+| [[user_id]] 			| '1234'				| Deve retornar o id do usuário.					|
+| [[valor_total_geral]]			| '200,00'				| Deve retornar o valor da reserva.					|
+| [[grupo_de_carros]]		| 'Grupo H - C4, 2008, Duster ou similar'	| Deve retornar o grupo do carro.	|
+| [[data_devolucao]]			| '20/10/2021'				| Deve retornar a data de devolução.	|
+| [[data_retirada]]			| '19/10/2021'				| Deve retornar a data de retirada.	|
+| [[hora_devolucao]]			| '14:00'				| Deve retornar a hora de devolução.	|
+| [[hora_retirada]]			| '14:00'				| Deve retornar a hora de retirada.	|
+| [[local_devolucao]]		| 'SAO PAULO - GUARULHOS AEROPORTO'			| Deve retornar o local de devolução. |
+| [[local_retirada]]		| 'SAO PAULO - GUARULHOS AEROPORTO'			| Deve retornar o local de retirada. |
+| [[franquia]]			| '1 mês - 1000 km'				| Deve retornar a franquia selecionada.	|
+| [[protecoes]]			| 'Super Mensal'				|  Deve retornar as proteções da reserva.	|
 
 ---
 
-**Página - Ver Mais:**<br />
+**Onde:** - Na página de Finalizar Reserva. <br />
+**Quando:** - Ao clicar no botão "Finalizar Reserva".
 
-- **Onde:**  Ao escolher uma categoria no select.
+```html
+<script>
+dataLayer.push({
+        'event': 'genericEvent',
+        'eventCategory': 'cargo:protecoes',
+        'eventAction': 'clique:botao',
+        'eventLabel': 'continuar',
+        'user_id': [[user_id]],
+        'valor_total_geral': [[valor_total_diarias]],
+        'grupo_de_carros': [[grupo_de_carros]],
+        'data_devolucao': [[data_devolucao]],
+        'data_retirada': [[data_retirada]],
+        'hora_devolucao': [[hora_devolucao]],
+        'hora_retirada': [[hora_retirada]],
+        'local_devolucao': [[local_devolucao]],
+        'local_retirada': [[local_retirada]],
+        'franquia': [[franquia]],
+		'protecoes': [[protecoes]],
+		'id_confirmacao': [[id_confirmacao]],
+        'transaction_id': [[transaction_id]]
+});
+</script>
+```
+
+
+| Variável 				| Exemplo 				| Descrição 									|
+| :--------------------	| :-------------------- | :-------------------------------------------	|
+| [[user_id]] 			| '1234'				| Deve retornar o id do usuário.					|
+| [[valor_total_geral]]			| '200,00'				| Deve retornar o valor da reserva.					|
+| [[grupo_de_carros]]		| 'Grupo H - C4, 2008, Duster ou similar'	| Deve retornar o grupo do carro.	|
+| [[data_devolucao]]			| '20/10/2021'				| Deve retornar a data de devolução.	|
+| [[data_retirada]]			| '19/10/2021'				| Deve retornar a data de retirada.	|
+| [[hora_devolucao]]			| '14:00'				| Deve retornar a hora de devolução.	|
+| [[hora_retirada]]			| '14:00'				| Deve retornar a hora de retirada.	|
+| [[local_devolucao]]		| 'SAO PAULO - GUARULHOS AEROPORTO'			| Deve retornar o local de devolução. |
+| [[local_retirada]]		| 'SAO PAULO - GUARULHOS AEROPORTO'			| Deve retornar o local de retirada. |
+| [[franquia]]			| '1 mês - 1000 km'				| Deve retornar a franquia selecionada.	|
+| [[protecoes]]			| 'Super Mensal'				|  Deve retornar as proteções da reserva.	|
+| [[id_confirmacao]]			| 'MIX864H4'				|  Deve retornar o código da reserva.	|
+| [[transaction_id]]			| '123456'				|  Deve retornar o Id da transação da reserva.	|
+
+---
+
+**Onde:** - Na página Home ou Modelos Veículos. <br />
+**Quando:** - Ao clicar no botão "Quero Contratar".
 
 ```html
 <script>
 	dataLayer.push({
 		'event': 'genericEvent',
-		'eventCategory': 'clube-movida:ver-mais',
-		'eventAction': 'interacao:filtro',
-		'eventLabel': '[[filtro-categoria]]'
+		'eventCategory': 'cargo:home',
+		'eventAction': 'clique:botao',
+		'eventLabel': 'quero-contratar',
+		'user_id': [[user_id]]
 	});
 </script>
 ```
@@ -176,25 +245,7 @@ Caso a informação solicitada não estiver disponível retornar tipagem ´undef
 
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------------	| :-------------------- | :-------------------------------------------	|
-| [[filtro-categoria]]			| 'Locação'				| Deve retornar o nome da categoria escolhida.										|
-
-- **Onde:**  Ao escolher uma categoria no select.
-
-```html
-<script>
-	dataLayer.push({
-		'event': 'genericEvent',
-		'eventCategory': 'clube-movida:ver-mais',
-		'eventAction': 'interacao:filtro',
-		'eventLabel': '[[filtro-pontos]]'
-	});
-</script>
-```
-
-
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------------	| :-------------------- | :-------------------------------------------	|
-| [[filtro-pontos]]			| 'Locação'				| Deve retornar a quantidade de pontos escolhida.									|
+| [[user_id]] 			| '1234'				| Deve retornar o id do usuário.		  		|
 
 ---
 
