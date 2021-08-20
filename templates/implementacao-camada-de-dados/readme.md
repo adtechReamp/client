@@ -1,92 +1,50 @@
 ![Reamp](https://github.com/adtechReamp/client/blob/main/logo.png?raw=true)
 
-> Área - Digital Analytics<br />
+> Analytics & Optimization
 > Documento de Especificação Técnica
 
 <br />
 
-## Implementação da Camada de dados - XXXXXX XXXXXXX
-Última atualização: XX/XX/XXXX <br />
-Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
+## Implementação da Camada de dados - Jellyfish Modelo
+Última atualização: 20/08/2020 <br />
+Em caso de dúvidas, entrar em contato com: [suporte@jellyfish.com](suporte@jellyfish.com)
 
 <br />
+
+## Sumário
+
+- [Objetivo](#objetivo)
+- [Implementação](#implementa%c3%a7%c3%a3o)
+- [Especificações Globais](#especifica%c3%a7%c3%b5es-globais)
+- [Dimensões Globais](#dimens&otilde;es-globais)
+- [Geral](#geral)
+- [Bem vindo](#bem-vindo)
+- [Cadastro](#cadastro)
+- [Login](#login)
+- [Esqueci minha senha](#esqueci-minha-senha)
+- [Home](#home)
+- [Lista de Produtos](#lista-de-produtos)
+- [PDP](#pdp)
+- [Sacola Modal](#sacola-modal)
+- [Checkout](#checkout)
+- [Enhanced E-commerce](#enhanced-e-commerce)
+
+
+
 
 ## Objetivo
-Este documento tem como objetivo instruir a implementação da camada de dados e de data attributes para utilização de recursos de monitoramento do Google Analytics referentes ao ambiente de [XXXXX](XXXXX).
+Este documento tem como objetivo instruir a implementação da camada de dados para utilização de recursos de monitoramento do Google Analytics referentes ao ambiente de [https://compras.parquedpedro.com.br/](https://compras.parquedpedro.com.br/).
 
 <br />
-
-### **Descrição Geral**
-
-O `snippet` do Google Tag Manager é um pequeno trecho de código javascript ou non-javascript, através do uso de um iframe quando o javascript não está disponível, que é inserido nas páginas do site, tornando possível que a configuração das tags sejam realizadas via interface.
-
-
-### **Posicionamento do Código - Google Tag Manager**
-
-#### 1. Copie o seguinte JavaScript e cole-o o mais próximo da tag `<head>` de abertura possível em todas as páginas do seu site.
-
-```html
-
-<html>
-  <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
-    <!-- End Google Tag Manager -->
-    //...
-  </head>
-```
-
-#### 2. Copie o seguinte trecho e cole-o imediatamente após a marcação `<body>` de abertura em cada página do seu site.
-
-```html
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  //...
-  </body>
-</html>
-```
-
-Link de referência: [Documentação Oficial Google Tag Manager](https://developers.google.com/tag-manager/quickstart)
-
 
 ## Observações
 > Os valores especificados entre colchetes `[[ ]]` são variáveis dinâmicas e devem ser substituídas por seus respectivos valores.<br />
 
 > Todos os valores enviados ao Google Analytics devem estar sanitizados, ou seja, sem espaços, acentuação ou caracteres especiais. <br />
 
-> Caso o site já possua o Google Analytics instalado, será necessário a remoção do código de **todas as páginas do site**: <br />
-
-```html
-
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-XXXXXXXX-X', 'auto');
-ga('send', 'pageview');
-</script>
-
-```
-
 ---
 
-```html
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXX-X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-XXXXXXX-X');
-</script>
-```
-
----
-
-## Overview e Descrições Técnicas
+## Implementação
 
 ### Camada de dados (DataLayer)
 
@@ -107,31 +65,6 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 </script>
 ```
 
-### Atributos HTML (Data Attributes)
-
-> São atributos customizados inseridos nos elementos HTML da página, permitindo a inclusão de dados adicionais.
-
-**Instalação**
-1. Elementos: ```<div>Elemento</div>``` <br />
-Todos os elementos do html que serão clicados, deverão ser mapeados recebendo os atributos com sua estrutura no item.
-
-```html
-<div 	
-    data-gtm-event-category="[[exemplo:valor-categoria]]"
- 	data-gtm-event-action="[[exemplo:valor-acao]]"
- 	data-gtm-event-label="[[exemplo:valor-rotulo]]"
- >
-</div>
-```
-
-#### Importante:
-> Também devem ter os data-attributes `data-gtm-event-category`, `data-gtm-event-action` e `data-gtm-event-label`. Preenchidos conforme instruções específicas.
-
-<br />
-
-## Implementação
-
-
 ### Especificações Globais:
 
 **Itens Gerais:**<br />
@@ -146,11 +79,14 @@ Caso a informação solicitada não estiver disponível retornar tipagem ´undef
 **Dimensões Customizadas para todas as páginas:**<br />
 Deve ser disparado um push de dataLayer no momento de carregamento de todas as páginas do site (Considerar também todas as trocas de Path, quando o conteúdo da página é alterado mas a página não recarrega).<br />
 
+
 ```html
 <script>
 	window.dataLayer = window.dataLayer || [];
 	dataLayer.push({
-		'dimension1': '[[User ID]]'
+		'dimension1': '[[User ID]]',
+		'dimension2': '[[GA ClientID]]',
+		'dimension3': '[[GTM-ID]]',
 	});
 </script>
 ```
@@ -158,59 +94,86 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------------	| :-------------------- | :-------------------------------------------	|
-| [[User ID]]			| 'exemplo'				| Descrição										|
+| [[User ID]]			| '1234656'			    | ID definido após o cadastro e login										|
+| [[GA ClientID]]	| 'XXXXXXXXXX:XXXX:XX'	| ID aleatório do Google Analytics										|
+| [[GTM-ID]]			| 'GTM-NC2W6B6'		| ID do container do GTM instalado no ambiente										|
 
 ---
 
-### Especificação de Micro-conversões:
+### Geral
 
+**Quando: Ao clicar em um dos elementos do header.**<br />
 
-**Item #1 - Tagbook:**<br />
-
-- **Onde:** Descrição 1;
-- **Quando:** Descrição 1;
-- **Título ou nome do botão/link:** "Exemplo Link".
-
-```html
-<!-- Use se os atributos no elemento a ser clicado -->
-<div
-     data-gtm-event-category="" 
-     data-gtm-event-action="" 
-     data-gtm-event-label=""
->
-Botão
-</div>
-```
-
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------------	| :-------------------- | :-------------------------------------------	|
-| [[Váriavel]]			| 'exemplo'				| Descrição										|
-
-<br />
-
-**Cadastro Newsletter - Sucesso ou erro:**<br />
-
-- **Onde:** No Callback do envio do e-mail de cadastro para receber newsletter.
-
+- **Onde:** Em todas as páginas do site em que estiver disponível.
+    
 ```html
 <script>
-	dataLayer.push({
-		'event': 'event',
-		'eventCategory': '',
-		'eventAction': '',
-		'eventLabel': ''
-	});
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'jellyfish-modelo:geral',
+    'eventAction': 'clique:header',
+    'eventLabel': '[[nome-item]]'
+  });
 </script>
 ```
 
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-item]] | 'logo', 'favoritos', 'login' ou 'sacola' | Retornar o nome do item clicado.   |
 
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------------	| :-------------------- | :-------------------------------------------	|
-| [[Váriavel]]			| 'exemplo'				| Descrição										|
 
 <br />
 
-### Enhanced Ecommerce
+**Quando: No clique dos links do footer**<br />
+
+- **Onde:** Em todas as páginas do site em que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'jellyfish-modelo:geral',
+    'eventAction': 'clique:footer',
+    'eventLabel': '[[nome-item]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-item]] | 'sobre-o-shopping', 'filmes' e etc | Retornar o nome do item clicado.   |
+
+
+<br />
+
+**Quando: No clique dos itens do menu superior.**<br />
+
+- **Onde:** Em todas as páginas do site em que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'jellyfish-modelo:geral',
+    'eventAction': 'clique:menu',
+    'eventLabel': '[[item-menu]]:[[item-submenu]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[item-menu]] | 'moda-feminina', 'moda-masculina', 'joias-e-relogios' e etc. | Deve retornar o nome do item clicado no menu.   |
+| [[item-submenu]] | 'tenis', 'lingeries', 'aneis' e etc. | Deve retornar, se existente, o nome do item clicado no submenu.  |
+
+
+<br />
+
+
+### Enhanced E-commerce
 
 **Na visualização de algum banner**<br />
 
@@ -221,7 +184,7 @@ Botão
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'promotionImpression',
-    'eventCategory': 'projeto:enhanced-ecommerce',
+    'eventCategory': 'jellyfish-modelo:enhanced-ecommerce',
     'eventAction': 'promotionImpression',
 'noInteraction': '1',
 'ecommerce': {
@@ -229,8 +192,7 @@ Botão
       'promotions': [{
         'id': '[[promotion-id]]',
         'name': '[[nome-promocao]]',
-        'position': '[[posicao-promocao]]',
-        'creative': '[[arte-banner]]'
+        'position': '[[posicao-promocao]]'
       }]
     }
   }
@@ -243,8 +205,7 @@ Botão
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[promotion-id]] |'banner123' e etc | ID único do Banner |
-| [[nome-promocao]] | 'maravilhoso-natal' e etc | Deve retornar o nome amigável do banner |
-| [[arte-banner]] | 'www.exemplo.com' | URL do banner  |
+| [[nome-promocao]] | 'polos-diferenciadas' | Deve retornar o nome amigável do banner |
 | [[posicao-promocao]] | '1' e etc | Deve retornar a posição que o banner é exibido  |
 
 <br />
@@ -260,16 +221,15 @@ Botão
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   'event': 'promotionClick',
-  'eventCategory': 'projeto:enhanced-ecommerce',
+  'eventCategory': 'jellyfish-modelo:enhanced-ecommerce',
   'eventAction': 'promotionClick',
     'ecommerce': {
     'promoClick': {
       'promotions': [{
         'id': '[[promotion-id]]',
         'name': '[[nome-promocao]]',
-        'position': '[[posicao-promocao]]',
-        'creative': '[[arte-banner]]'
-      }]
+        'position': '[[posicao-promocao]]'
+	}]
     }
   }
 });
@@ -280,10 +240,8 @@ window.dataLayer.push({
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[promotion-id]] |'banner123' e etc | ID único do Banner |
-| [[nome-promocao]] | 'maravilhoso-natal' e etc | Deve retornar o nome amigável do banner |
-| [[arte-banner]] | 'www.exemplo.com' | URL do banner  |
+| [[nome-promocao]] | 'polos-diferenciadas' | Deve retornar o nome amigável do banner |
 | [[posicao-promocao]] | '1' e etc | Deve retornar a posição que o banner é exibido  |
-
 
 <br />
 
@@ -298,16 +256,19 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   'event': 'productImpression',
-  'eventCategory':'projeto:enhanced-ecommerce',
+  'eventCategory':'jellyfish-modelo:enhanced-ecommerce',
   'eventAction': 'productImpression',
   'noInteraction': '1',
   'ecommerce': {
     'impressions': [{
         'name': '[[nome-produto]]',
         'id': '[[id-produto]]',
+        'price':' [[preco-produto]]',
+        'category': '[[categoria-produto]]',
+        'brand': '[[marca-produto]]',
         'list': '[[lista-produto]]',
-        'variant': '[[variacao-produto]]',
-        'position': '[[posicao-produto]]'
+        'position': '[[posicao-produto]]',
+        'dimension4': '[[nome-loja]]'
     }]
   }
 });
@@ -316,11 +277,14 @@ window.dataLayer.push({
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-produto]] | 'calca-masculina-super-skinny-em-jeans' | Nome do produto |
+| [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
 | [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
-| [[lista-produto]] | 'calcas-jeans' | Nome da lista que o produto aparece |
+| [[preco-produto]] | '139.99' | Preço do produto |
+| [[categoria-produto]] | calcados', 'vestuario', 'alimentacao' e etc | Categoria do produto |
+| [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
+| [[lista-produto]] | 'moda-masculina' e etc' | Nome da lista que o produto aparece |
 | [[posicao-produto]] | '2' | Posição que o produto aparece em uma lista de produtos |
-| [[variacao-produto]] | 'm' | Tamanho do produto |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 <br />
 
@@ -335,37 +299,39 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
     'event': 'productClick',
-    'eventCategory': 'projeto:enhanced-ecommerce',
+    'eventCategory': 'jellyfish-modelo:enhanced-ecommerce',
     'eventAction': 'productClick',
         'ecommerce': {
         'click': {
             'actionField': {'list': '[[lista-produto]]'},
-            'products': [{
-                'name': '[[nome-produto]]',
-                'id': '[[id-produto]]',
-                'price': '[[preco-produto]]',
-                'brand': '[[marca-produto]]',
-                'category': '[[categoria-produto]]',
-                'position': '[[posicao-produto]]'
-            }]
-        }
-    }
+             'products': [{
+               'name': '[[nome-produto]]',
+               'id': '[[id-produto]]',
+               'price':' [[preco-produto]]',
+               'category': '[[categoria-produto]]',
+               'brand': '[[marca-produto]]',
+               'position': '[[posicao-produto]]',
+               'coupon': '[[cupom-produto]]',
+               'dimension4': '[[nome-loja]]'
+    }]
+  }
 });
 </script>
 ```
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[lista-produto]] | 'calcas-jeans'| Nome da lista que o produto aparece|
-| [[nome-produto]] | 'calca-masculina-super-skinny-em-jeans' | Nome do produto |
+| [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
 | [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
 | [[preco-produto]] | '139.99' | Preço do produto |
-| [[marca-produto]] | 'samsumg' | Marca do produto |
-| [[categoria-produto]] | 'masculino' | Categoria do produto |
+| [[categoria-produto]] | calcados', 'vestuario', 'alimentacao' e etc | Categoria do produto |
+| [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
+| [[lista-produto]] | 'moda-masculina' e etc' | Nome da lista que o produto aparece |
 | [[posicao-produto]] | '2' | Posição que o produto aparece em uma lista de produtos |
+| [[cupom-produto]] | '25%' e etc' | Desconto do produto |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 <br />
-
 
 **Na visualização da página de detalhes do produto**<br />
 
@@ -377,7 +343,7 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   'event': 'productDetail',
-  'eventCategory': 'projeto:enhanced-ecommerce',
+  'eventCategory': 'jellyfish-modelo:enhanced-ecommerce',
   'eventAction': 'productDetail',
   'noInteraction': '1',
   'ecommerce': {
@@ -385,23 +351,28 @@ window.dataLayer.push({
       'products': [{
         'name': '[[nome-produto]]',
         'id': '[[id-produto]]',
-        'price': '[[preco-produto]]',
+        'price':' [[preco-produto]]',
         'category': '[[categoria-produto]]',
-        'variant': '[[variacao-produto]]',
-      }]
-    }
+        'brand': '[[marca-produto]]',
+        'variant': '[[tamanho-produto]]',
+        'coupon': '[[cupom-produto]]',
+        'dimension4': '[[nome-loja]]'
+    }]
   }
- });
+});
 </script>
 ```
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-produto]] | 'calca-masculina-super-skinny-em-jeans' | Nome do produto |
+| [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
 | [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
 | [[preco-produto]] | '139.99' | Preço do produto |
-| [[categoria-produto]] | 'masculino' | Categoria do produto |
-| [[variacao-produto]] | 'm' | Tamanho do produto |
+| [[categoria-produto]] | calcados', 'vestuario', 'alimentacao' e etc | Categoria do produto |
+| [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
+| [[tamanho-produto]] | 'm' | Tamanho do produto |
+| [[cupom-produto]] | '25%' e etc' | Desconto do produto |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 <br />
 
@@ -416,20 +387,21 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   'event': 'addToCart',
-  'eventCategory':'projeto:enhanced-ecommerce',
+  'eventCategory':'jellyfish-modelo:enhanced-ecommerce',
   'eventAction': 'addToCart',
     'ecommerce': {
     'add': {
       'products': [{
         'name': '[[nome-produto]]',
         'id': '[[id-produto]]',
-        'price': '[[preco-produto]]',
-        'brand': '[[marca-produto]]',
+        'price':' [[preco-produto]]',
         'category': '[[categoria-produto]]',
-        'variant': '[[variacao-produto]]',
-        'quantity': '[[quantidade-produto]]'
-      }]
-    }
+        'variant': '[[tamanho-produto]]',
+        'brand': '[[marca-produto]]',
+        'quantity': '[[quantidade-produto]]',
+        'coupon': '[[cupom-produto]]',
+        'dimension4': '[[nome-loja]]'
+    }]
   }
 });
 </script>
@@ -437,13 +409,16 @@ window.dataLayer.push({
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-produto]] | 'calca-masculina-super-skinny-em-jeans' | Nome do produto |
+| [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
 | [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
 | [[preco-produto]] | '139.99' | Preço do produto |
-| [[marca-produto]] | 'samsumg' | Marca do produto |
-| [[categoria-produto]] | 'masculino' | Categoria do produto |
-| [[variacao-produto]] | 'm' | Tamanho do produto |
+| [[categoria-produto]] | calcados', 'vestuario', 'alimentacao' e etc | Categoria do produto |
+| [[tamanho-produto]] | 'm' | Tamanho do produto |
+| [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
 | [[quantidade-produto]] | '1' | Quantidade do produto |
+| [[cupom-produto]] | '25%' e etc' | Desconto do produto |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
+
 
 <br />
 
@@ -458,20 +433,20 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   'event': 'removeFromCart',
-  'eventCategory': 'projeto:enhanced-ecommerce',
+  'eventCategory': 'jellyfish-modelo:enhanced-ecommerce',
   'eventAction': 'removeFromCart',
     'ecommerce': {
     'remove': {
       'products': [{
         'name': '[[nome-produto]]',
         'id': '[[id-produto]]',
-        'price': '[[preco-produto]]',
-        'brand': '[[marca-produto]]',
+        'price':' [[preco-produto]]',
         'category': '[[categoria-produto]]',
-        'variant': '[[variacao-produto]]',
-        'quantity': '[[quantidade-produto]]'
-      }]
-    }
+        'variant': '[[tamanho-produto]]',
+        'brand': '[[marca-produto]]',
+        'quantity': '[[quantidade-produto]]',
+        'dimension4': '[[nome-loja]]'
+    }]
   }
 });
 </script>
@@ -479,16 +454,17 @@ window.dataLayer.push({
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-produto]] | 'calca-masculina-super-skinny-em-jeans' | Nome do produto |
+| [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
 | [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
 | [[preco-produto]] | '139.99' | Preço do produto |
-| [[marca-produto]] | 'samsumg' | Marca do produto |
-| [[categoria-produto]] | 'masculino' | Categoria do produto |
-| [[variacao-produto]] | 'm' | Tamanho do produto |
+| [[categoria-produto]] | calcados', 'vestuario', 'alimentacao' e etc | Categoria do produto |
+| [[tamanho-produto]] | 'm' | Tamanho do produto |
+| [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
 | [[quantidade-produto]] | '1' | Quantidade do produto |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
+
 
 <br />
-
 
 **No carregamento das etapas do checkout**<br />
 
@@ -500,7 +476,7 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   'event': 'checkout',
-  'eventCategory': 'projeto:enhanced-ecommerce',
+  'eventCategory': 'jellyfish-modelo:enhanced-ecommerce',
   'eventAction': 'checkout',
   'noInteraction': '1',
   'ecommerce': {
@@ -509,13 +485,13 @@ window.dataLayer.push({
       'products': [{
         'name': '[[nome-produto]]',
         'id': '[[id-produto]]',
-        'price': '[[preco-produto]]',
-        'brand': '[[marca-produto]]',
+        'price':' [[preco-produto]]',
         'category': '[[categoria-produto]]',
-        'variant': '[[variacao-produto]]',
-        'quantity': '[[quantidade-produto]]'
-      }]
-    }
+        'variant': '[[tamanho-produto]]',
+        'brand': '[[marca-produto]]',
+        'quantity': '[[quantidade-produto]]',
+        'coupon': '[[cupom-produto]]'
+    }]
   }
 });
 </script>
@@ -523,21 +499,21 @@ window.dataLayer.push({
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[checkout-index]] | '1-carrinho' | Página de carrinho de compras |
-| [[checkout-index]] | '2-entrega' | Página de confirmação do endereço de entrega |
-| [[checkout-index]] | '3-pagamento' | Página de seleção do método de pagamento |
-| [[nome-produto]] | 'calca-masculina-super-skinny-em-jeans' | Nome do produto |
+| [[checkout-index]] | '1-carrinho', '2-entrega', '3-pagamento'| Retornar de acordo com a página que o usuário está. |
+| [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
 | [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
 | [[preco-produto]] | '139.99' | Preço do produto |
-| [[marca-produto]] | 'samsumg' | Marca do produto |
-| [[categoria-produto]] | 'masculino' | Categoria do produto |
-| [[variacao-produto]] | 'm' | Tamanho do produto |
+| [[categoria-produto]] | calcados', 'vestuario', 'alimentacao' e etc | Categoria do produto |
+| [[tamanho-produto]] | 'm' | Tamanho do produto |
+| [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
 | [[quantidade-produto]] | '1' | Quantidade do produto |
+| [[cupom-produto]] | '25%' e etc' | Desconto do produto |
+
 
 <br />
 
 
-**Ao selecionar uma opção de frete**<br />
+**Ao selecionar uma opção de entrega**<br />
 
 - **Onde:** Na página de checkout
     
@@ -546,8 +522,8 @@ window.dataLayer.push({
 <script>
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
-  'event': 'checkoutOption'',
-  'eventCategory': 'enhanced-ecommerce',
+  'event': 'checkoutOption',
+  'eventCategory': 'jellyfish-modelo:enhanced-ecommerce',
   'eventAction': 'checkoutOption',
   'ecommerce': {
     'checkout_option': {
@@ -578,7 +554,7 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   'event': 'checkoutOption'',
-  'eventCategory': 'enhanced-ecommerce',
+  'eventCategory': 'jellyfish-modelo:enhanced-ecommerce',
   'eventAction': 'checkoutOption',
   'ecommerce': {
     'checkout_option': {
@@ -607,7 +583,7 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   'event': 'purchase',
-  'eventCategory': 'projeto:enhanced-ecommerce',
+  'eventCategory': 'jellyfish-modelo:enhanced-ecommerce',
   'eventAction': 'purchase',
   'noInteraction': '1',
   'ecommerce': {
@@ -615,18 +591,21 @@ window.dataLayer.push({
       'actionField': {
         'id': '[[id-transacao]]',
         'revenue': '[[valor-total-transacao]]',
-        'shipping': '[[frete-transacao]]'
+        'shipping': '[[frete-transacao]]',
+        'coupon': '[[coupon-transacao]]', 
         'tax': '[[taxa-transacao]]'
-        'coupon': '[[coupon-transacao]]'
       },
       'products': [{
         'name': '[[nome-produto]]',
         'id': '[[id-produto]]',
-        'price': '[[preco-produto]]',
-        'brand': '[[marca-produto]]',
+        'price':' [[preco-produto]]',
         'category': '[[categoria-produto]]',
-        'variant': '[[variacao-produto]]',
-        'quantity': '[[quantidade-produto]]'
+        'variant': '[[tamanho-produto]]',
+        'brand': '[[marca-produto]]',
+        'quantity': '[[quantidade-produto]]',
+        'coupon': '[[cupom-produto]]',
+        'dimension4': '[[nome-loja]]'
+
       }]
     }
   }
@@ -637,25 +616,27 @@ window.dataLayer.push({
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[id-transacao]] |  '000011652' | ID único da transação |
-| [[valor-total-transacao]] |  '139,99' | Valor total da transação incluindo frete e taxas |
-| [[frete-transacao]] |  '0.00' | Valor do frete da transação |
-| [[taxa-transacao]] |  '0.00' | Valor de taxas da transação |
-| [[coupon-transacao]] | 'cupom-2018' | Cupom de desconto utilizado na transação - promoção nivel pedido |
-| [[nome-produto]] | 'calca-masculina-super-skinny-em-jeans' | Nome do produto |
+| [[valor-total-transacao]] |  '250.50' | Valor total da transação incluindo frete e taxas |
+| [[frete-transacao]] |  '15.98' | Valor do frete da transação |
+| [[taxa-transacao]] |  '2.39' | Valor de taxas da transação |
+| [[coupon-transacao]] | 'cupom-2020' | Cupom de desconto utilizado na transação - promoção nivel pedido |
+| [[nome-produto]] | 'chinelo-metalizado-ouro' e etc' | Nome do produto |
 | [[id-produto]] | 'i17mcjf106-771-2' | SKU do produto |
 | [[preco-produto]] | '139.99' | Preço do produto |
-| [[marca-produto]] | 'samsumg' | Marca do produto |
-| [[categoria-produto]] | 'masculino' | Categoria do produto |
-| [[variacao-produto]] | 'm' | Tamanho do produto |
+| [[categoria-produto]] | calcados', 'vestuario', 'alimentacao' e etc | Categoria do produto |
+| [[tamanho-produto]] | 'm' | Tamanho do produto |
+| [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
 | [[quantidade-produto]] | '1' | Quantidade do produto |
+| [[cupom-produto]] | '25%' e etc' | Desconto do produto |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 <br />
 
 ---
+
 
 > Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
 
 <script> document.querySelector('h1').style.display = 'none' </script>
-
