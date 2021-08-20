@@ -18,15 +18,6 @@ Em caso de dúvidas, entrar em contato com: [suporte@jellyfish.com](suporte@jell
 - [Especificações Globais](#especifica%c3%a7%c3%b5es-globais)
 - [Dimensões Globais](#dimens&otilde;es-globais)
 - [Geral](#geral)
-- [Bem vindo](#bem-vindo)
-- [Cadastro](#cadastro)
-- [Login](#login)
-- [Esqueci minha senha](#esqueci-minha-senha)
-- [Home](#home)
-- [Lista de Produtos](#lista-de-produtos)
-- [PDP](#pdp)
-- [Sacola Modal](#sacola-modal)
-- [Checkout](#checkout)
 - [Enhanced E-commerce](#enhanced-e-commerce)
 
 
