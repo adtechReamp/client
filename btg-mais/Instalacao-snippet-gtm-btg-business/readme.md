@@ -6,7 +6,7 @@
 <br />
 
 ## Implementação do snnipet GTM - BTG - Business
-Última atualização: 08/04/2021 <br />
+Última atualização: 30/08/2021 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
@@ -19,7 +19,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 ## Objetivo
 Este documento tem como objetivo instruir a implementação da camada de dados para utilização de recursos de monitoramento do Google Analytics referente ao ambiente:
 
-[https://d22halzc75qm2m.cloudfront.net/](https://d22halzc75qm2m.cloudfront.net/)
+[https://www.btgmaisbusiness.com/](https://www.btgmaisbusiness.com/)
 
 <br />
 
