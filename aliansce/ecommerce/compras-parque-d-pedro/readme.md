@@ -172,15 +172,16 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'event': 'genericEvent',
     'eventCategory': 'compras-parque-d-pedro:geral',
     'eventAction': 'clique:menu',
-    'eventLabel': '[[item-menu]]:[[secao]]:[[item-submenu]]'
+    'eventLabel': '[[item-menu]]:[[secao]]:[[sub-secao]]:[[item-submenu]]'
   });
 </script>
 ```
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[item-menu]] | 'moda-feminina', 'moda-masculina', 'joias-e-relogios' e etc. | Deve retornar o nome do item clicado no menu.   |
-| [[secao]] | 'calcados', 'joias' , 'roupas' e etc. | Deve retornar, se existente, a seção do menu clicada.    |
+| [[item-menu]] | 'compre-por-categoria', 'lojas', 'vinhos' e etc. | Deve retornar o nome do item clicado no menu.   |
+| [[secao]] | 'moda-feminina', 'moda-masculina', 'joias-e-relogios' e etc. | Deve retornar o nome da seção clicada no menu.   |
+| [[sub-secao]] | 'calcados', 'roupas' , 'acessorios' e etc. | Deve retornar, se existente, a sub-seção clicada do menu.    |
 | [[item-submenu]] | 'tenis', 'lingeries', 'aneis' e etc. | Deve retornar, se existente, o nome do item clicado no submenu.  |
 
 
