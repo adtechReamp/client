@@ -2124,7 +2124,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 <script>
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
-    'event': 'conversionEvent',
+    'event': 'genericEvent',
     'eventCategory': 'area-logada:envie-uma-informacao:formulario',
     'eventAction': 'callback',
     'eventLabel': '[[nome-status]]'
