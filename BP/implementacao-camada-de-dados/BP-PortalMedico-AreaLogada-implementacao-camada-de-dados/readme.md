@@ -5,8 +5,8 @@
 
 <br />
 
-## Implementação da Camada de dados - Puran - Simples de tratar
-Última atualização: 08/04/2021 <br />
+## Implementação da Camada de dados - BP - Portal Médico - Area Logada
+Última atualização: 02/09/2021 <br />
 Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 <br />
@@ -15,7 +15,33 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 
 - [Objetivo](#objetivo)
 - [Geral](#geral)
-
+- [Login](#login)
+- [Cadastro](#cadastro)
+- [Home](#home)
+- [Perfil](#perfil)
+- [ServiceDesk](#servicedesk)
+- [Contato](#contato)
+- [Cadastro Médico](#cadastro-médico)
+- [Resultado de Exames](#resultado-de-exames)
+- [Plataformas para o médico](#plataformas-para-o-médico)
+- [Conveniências](#conveniências)
+- [Agendamento de cirurgias](#agendamento-de-cirurgias)
+- [Como agendar uma cirurgia](#como-agendar-uma-cirurgia)
+- [Agendamento cirúrgico online](#agendamento-cirúrgico-online)
+- [Status autorizações](#status-autorizações)
+- [Admissões de pacientes](#admissões-de-pacientes)
+- [Transferência de pacientes](#transferência-de-pacientes)
+- [Programa de relacionamento médico](#programa-de-relacionamento-médico)
+- [Educação](#educação)
+- [Cursos de residência fellowship e especialização](#cursos-de-residência-fellowship-e-especialização)
+- [Cursos de pós-graduação](#cursos-de-pós-graduação)
+- [Escola de enfermagem São Joaquim](#escola-de-enfermagem-são-joaquim)
+- [Cursos de BLS e ACLS](#cursos-de-bls-e-acls)
+- [Envio de certificados](#envio-de-certificados)
+- [Eventos científicos presenciais e virtuais](#eventos-científicos-presenciais-e-virtuais)
+- [Teleducação EAD Programa de desenvolvimento médico](#teleducacao-ead-programa-de-desenvolvimento-médico)
+- [Pesquisa](#pesquisa)
+- [Ferramentas de pesquisa](#ferramentas-de-pesquisa)
 
 
 ## Objetivo
@@ -455,6 +481,8 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 <br />
 
 ### Perfil
+
+<br />
 
 ### ServiceDesk
 **Quando: Ao clicar nos botões.**<br />
@@ -971,6 +999,289 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 | [[nome-botao]] | 'faca-sua-inscricao' | Deve retornar o nome do botão clicado.   |
 
 <br />
+
+### Escola de enfermagem São Joaquim
+**Quando: Ao clicar nos botões.**<br />
+
+- **Onde:**  Na Página Escola de enfermagem São Joaquim
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:escola-de-enfermagem-sao-joaquim',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-guia]]:[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-guia]] | 'conheca-a-escola-de-enfermagem-sao-joaquim-e-acompanhe-a-abertura-de-inscricoes' | Deve retornar o nome da guia clicada.   |
+| [[nome-botao]] | 'saber-mais' | Deve retornar o nome do botão clicado.   |
+
+<br />
+
+**Quando: Ao clicar no telefone da página.**<br />
+
+- **Onde:**  Na Página Escola de enfermagem São Joaquim
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:escola-de-enfermagem-sao-joaquim',
+    'eventAction': 'clique:link`,
+    'eventLabel': '[[nome-guia]]:[[telefone]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-guia]] | 'contato' | Deve retornar o nome da guia clicada.   |
+| [[telefone]] | '1135055265' | Deve retornar o telefone clicado.   |
+
+<br />
+
+### Cursos de BLS e ACLS
+**Quando: Ao clicar no telefone da página.**<br />
+
+- **Onde:**  Na Página Cursos de BLS e ACLS
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:cursos-de-bls-e-acls',
+    'eventAction': 'clique:link',
+    'eventLabel': '[[nome-guia]]:[[telefone]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-guia]] | 'cursos-em-parceria' | Deve retornar o nome da guia clicada.   |
+| [[telefone]] | '1135052015' | Deve retornar o telefone clicado.   |
+
+<br />
+
+### Envio de certificados
+**Quando: Ao clicar nos botões.**<br />
+
+- **Onde:**  Na Página Envio de certificados
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:envio-de-certificados',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-guia]]:[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-guia]] | 'formulario-de-envio-de-certificados' | Deve retornar o nome da guia clicada.   |
+| [[nome-botao]] | 'abrir-formulario' | Deve retornar o nome do botão clicado.   |
+
+<br />
+
+**Quando: Ao preencher um dos campos do formulário.**<br />
+
+- **Onde:**  Na Página Envio de certificados
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:envio-de-certificados',
+    'eventAction': 'preencheu-campo',
+    'eventLabel': '[[nome-campo]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-campo]] | 'nome', 'uf', 'crm', 'telefone' e etc. | Deve retornar o nome do campo preenchido.   |
+
+<br />
+
+**Quando: Ao preencher o checkbox do formulário.**<br />
+
+- **Onde:**  Na Página Envio de certificados
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:envio-de-certificados',
+    'eventAction': 'checkbox:[[check/uncheck]]',
+    'eventLabel': '[[nome-checkbox]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[check/uncheck]] | 'check' ou 'uncheck' | Deve retornar se o checkbox foi preenchido (check) ou não preenchido (uncheck).   |
+| [[nome-checkbox]] | 'li-e-aceito-os-termos-de-uso-e-politicas-de-privacidade' | Deve retornar o texto do checkbox.   |
+
+<br />
+
+**Quando: Ao clicar nos botões para enviar o formulário.**<br />
+
+- **Onde:**  Na Página Envio de certificados
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:envio-de-certificados',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] | 'enviar' | Deve retornar o nome do botão clicado.   |
+
+<br />
+
+**Quando: No callback do envio do formulário.**<br />
+
+- **Onde:**  Na Página Envio de certificados
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:envio-de-certificados',
+    'eventAction': 'callback:[[status]]',
+    'eventLabel': '[[descricao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[status]] | 'concluido' ou 'erro' | Deve retornar se o formulário foi enviado com sucesso ou se houve falhas.   |
+| [[descricao]] | 'formulario-enviado-com-sucesso', 'campo-crm-nao-preenchido', 'campo-nome-nao-preenchido' e etc. | Deve retornar se foi enviado com sucesso ou qual erro houve.   |
+
+<br />
+
+### Eventos científicos presenciais e virtuais
+**Quando: Ao clicar no botão da página.**<br />
+
+- **Onde:**  Na Página Eventos científicos presenciais e virtuais
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:eventos-cientificos-presenciais-e-online',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-guia]]:[[nome-botao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-guia]] | 'eventos-cientificos' | Deve retornar o nome da guia clicada.   |
+| [[nome-botao]] | 'saber-mais' | Deve retornar o nome do botão clicado.   |
+
+<br />
+
+### Teleducacao EAD Programa de desenvolvimento médico
+
+<br />
+
+### Pesquisa
+**Quando: Ao clicar nos boxes de pesquisa.**<br />
+
+- **Onde:**  Na Página Pesquisa
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:pesquisa',
+    'eventAction': 'clique:box',
+    'eventLabel': '[[nome-box]]:[[nome-secao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-box]] | 'naipe', 'ferramenta-de-pesquisa', 'projetos-de-inovacao', 'biblioteca' e etc | Deve retornar o nome do box clicado.   |
+| [[nome-secao]] | 'pesquisa' | Deve retornar o nome da seção interagida.   |
+
+<br />
+
+**Quando: Ao clicar nos botões.**<br />
+
+- **Onde:**  Na Página Pesquisa
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:pesquisa',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]:[[nome-secao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-secao]] | 'coordenacao-geral-de-educacao-e-pesquisa' e etc. | Deve retornar o nome da seção interagida.   |
+| [[nome-botao]] | 'saiba-mais' e etc | Deve retornar o nome do botão clicado.   |
+
+<br />
+
+### Ferramentas de pesquisa
+**Quando: Ao clicar no botão ou link dentro das abas.**<br />
+
+- **Onde:**  Na Página Ferramentas de pesquisa
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:ferramentas-de-pesquisa',
+    'eventAction': 'clique:botao:aba-[[nome-aba]]',
+    'eventLabel': '[[nome-item]]:[[nome-secao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-aba]] | 'up-to-date', 'ovid', 'lexicomp' e etc. | Deve retornar o nome da aba que o usuário está.   |
+| [[nome-item]] | 'abrir-red-cap', 'abrir-ovid', 'abrir-up-to-date', 'fazer-cadastro' e etc | Deve retornar o nome do botão clicado.   |
+| [[nome-secao]] | 'conheca-a-plataforma-up-to-date', 'conheca-a-plataforma-ovid', 'red-cap', 'primeiro-acesso' e etc. | Deve retornar o nome da seção interagida.   |
 
 
 <br />
