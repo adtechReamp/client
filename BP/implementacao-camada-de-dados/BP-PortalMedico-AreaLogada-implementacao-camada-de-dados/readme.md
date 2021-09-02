@@ -14,6 +14,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 ## Sumário
 
 - [Objetivo](#objetivo)
+- [Dimensão Global](#dimensão-global)
 - [Geral](#geral)
 - [Login](#login)
 - [Cadastro](#cadastro)
@@ -170,6 +171,29 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 ---
 
+### Dimensão Global
+  
+ **Dimensões Customizadas para todas as páginas:**<br />
+Deve ser disparado um push de dataLayer no momento de carregamento de todas as páginas do site (após fazer login apenas.) antes do carregamento do GTM, deve estar implementado esse DataLayer antes do snippet!<br />
+
+
+```html
+<script>
+	window.dataLayer = window.dataLayer || [];
+	dataLayer.push({
+	  'dimension1': '[[UserId]]',
+	});
+</script>
+```
+
+
+| Variável 				| Exemplo 				| Descrição 									|
+| :--------------------	| :-------------------- | :-------------------------------------------	|
+|[[UserId]]		| '1234656' | Deve retornar o id do médico com hash ao fazer o Login| 
+  
+  
+---
+  
 ### Geral
 
 **Quando: No clique dos itens do header.**<br />
