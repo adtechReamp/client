@@ -315,6 +315,7 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 
 <br />
 ---
+
 ### Cadastro
 **Quando: Na interação com os campos.**<br />
 
@@ -361,29 +362,6 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[acao]] | 'aceito' e 'nao-aceito' | Deve retornar o tipo de ação realizada.   |
 
-<br />
-
-**Quando: Ao clicar em botões do formulário de cadastro.**<br />
-
-- **Onde:**  Na página de cadastro
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'portal-medico:cadastro,
-    'eventAction': 'clique:botao:step:[[nome-step]]',
-    'eventLabel': '[[nome-botao]]'
-  });
-</script>
-
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-botao]] | 'voltar', 'proximo', 'acessar-portal-medico' e 'visualizar-politica-de-privacidade' | Deve retornar o nome do botão selecionado.   |
-| [[nome-step]] | 'insira-seus-dados', 'defina-sua-senha', 'politica-de-privacidade' e etc. | Deve retornar o nome do step.   |
 
 <br />
 
@@ -1137,28 +1115,6 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[check/uncheck]] | 'check' ou 'uncheck' | Deve retornar se o checkbox foi preenchido (check) ou não preenchido (uncheck).   |
 | [[nome-checkbox]] | 'li-e-aceito-os-termos-de-uso-e-politicas-de-privacidade' | Deve retornar o texto do checkbox.   |
-
-<br />
-
-**Quando: Ao clicar nos botões para enviar o formulário.**<br />
-
-- **Onde:**  Na Página Envio de certificados
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'area-logada:envio-de-certificados',
-    'eventAction': 'clique:botao',
-    'eventLabel': '[[nome-botao]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-botao]] | 'enviar' | Deve retornar o nome do botão clicado.   |
 
 <br />
 
