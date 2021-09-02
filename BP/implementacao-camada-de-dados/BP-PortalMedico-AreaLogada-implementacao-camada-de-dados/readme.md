@@ -42,7 +42,41 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 - [Teleducação EAD Programa de desenvolvimento médico](#teleducacao-ead-programa-de-desenvolvimento-médico)
 - [Pesquisa](#pesquisa)
 - [Ferramentas de pesquisa](#ferramentas-de-pesquisa)
-
+- [Objetivo](#objetivo)
+- [Biblioteca](#biblioteca)
+- [Comitê de ética em Pesquisa](#comitê-de-ética-em-pesquisa)
+- [Pesquisas Clínicas](#pesquisas-clínicas)
+- [Projetos de Inovação](#projetos-de-inovação)
+- [Observatório de Boas Práticas](#observatório-de-boas-práticas)
+- [Consultoria em Projetos de Pesquisa](#consultoria-em-projetos-de-pesquisa)
+- [Dados Epidemiológicos](#dados-epidemiológicos)
+- [Oportunidades Internas para Médicos](#oportunidades-internas-para-médicos)
+- [Comitê de ética em Pesquisa](#comitê-de-ética-em-pesquisa)
+- [Principais protocolos](#principais-protocolos)
+- [Protocolos Assistenciais](#protocolos-assistenciais)
+- [Guias](#guias)
+- [Conte com a BP](#conte-com-a-bp)
+- [Agende sua consulta – Telemedicina](#agende-sua-consulta-telemedicina)
+- [Programa de Apoio Pessoal da BP](#programa-de-apoio-pessoal-da-bp)
+- [Salas de Reunião e Auditórios](#salas-de-reunião-e-auditórios)
+- [Entenda como funciona](#entenda-como-funciona)
+- [lista de convênios](#lista-de-convênios)
+- [Procedimentos particulares](#procedimentos-particulares)
+- [Pagamento de honorários médicos](#pagamento-de-honorarios-medicos)
+- [Procedimentos particulares](#procedimentos-particulares)
+- [Telemedicina](#telemedicina)
+- [Projetos em andamento](#projetos-em-andamento)
+- [Médicos envolvidos](#médicos-envolvidos)
+- [Hospitais parceiros](#hospitais-parceiros)
+- [Contato](#contato)
+- [comunicação e Eventos](#comunicação-e-eventos)
+- [Últimas Newsletters Médicos BP](#últimas-newsletters-médicos-bp)
+- [Envie uma Informação](#envie-uma-informação)
+- [Mídias Digitais](#mídias-digitais)
+- [Assessoria de Imprensa](#assessoria-de-imprensa)
+- [Uso da marca BP](#uso-da-marca-bp)
+- [Eventos](#eventos)
+- [SAM](#sam)
 
 ## Objetivo
 Este documento tem como objetivo instruir a implementação da camada de dados para utilização de recursos de monitoramento do Google Analytics referente ao ambiente:
@@ -1239,7 +1273,1109 @@ Para implementar o dataLayer no site, o desenvolvedor pode utilizar formas difer
 | [[nome-item]] | 'abrir-red-cap', 'abrir-ovid', 'abrir-up-to-date', 'fazer-cadastro' e etc | Deve retornar o nome do botão clicado.   |
 | [[nome-secao]] | 'conheca-a-plataforma-up-to-date', 'conheca-a-plataforma-ovid', 'red-cap', 'primeiro-acesso' e etc. | Deve retornar o nome da seção interagida.   |
 
+### Biblioteca
 
+**Quando:  Ao clicar nos links de contato.**<br />
+
+- **Onde:** Na página de biblioteca.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:biblioteca',
+    'eventAction': 'clique:link',
+    'eventLabel': 'contato:[[link]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[link]] | '(11)3505-4026' e 'maria.souza@bp.org.br' |  Deve retornar com o nome do link. |
+
+
+
+<br />
+
+### Comitê de ética em Pesquisa
+
+
+**Quando:  Ao clicar em qualquer elemento da página (botao ou link).**<br />
+
+- **Onde:** Na página de Comitê de Ética em Pesquisa (CEP).
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:comite-de-etica-em-pesquisa',
+    'eventAction': 'clique:[[botao-ou-link]]',
+    'eventLabel': '[[nome-item]]:[[nome-secao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[botao-ou-link]] | 'botao' e 'link'. |  Deve retornar com o tipo de elemento. |
+| [[nome-item]] |  'abrir-cep', 'pesquisa.bp@bp.org.br' e etc.|Deve retornar com o nome do item clicado.|
+| [[nome-secao]]|  'conheca-o-cep', 'ficou-com-duvida?'| Deve retornar com o nome da seção interagida. |
+
+---
+
+### Pesquisas Clínicas
+
+<b>AGUARDANDO CONTEÚDO</b>
+
+<br />
+
+---
+
+### Projetos de Inovação
+
+<b>AGUARDANDO CONTEÚDO</b>
+
+<br />
+
+---
+
+### Observatório de Boas Práticas
+
+<b>AGUARDANDO CONTEÚDO</b>
+
+<br />
+
+---
+
+### Consultoria em Projetos de Pesquisa
+
+<b>AGUARDANDO CONTEÚDO</b>
+
+<br />
+
+---
+
+### Dados Epidemiológicos
+
+<b>AGUARDANDO CONTEÚDO</b>
+
+<br />
+
+---
+
+### Oportunidades Internas para Médicos
+
+
+**Quando:  Ao clicar em qualquer elemento da página (botao ou link).**<br />
+
+- **Onde:** Na página de oportunidades internas para médicos.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:oportunidades-internas-para-medicos',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]:[[nome-secao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-botao]] |  'detalhes-da-vaga', 'saber-mais' e etc. | Deve retornar o nome do botão. |
+| [[[nome-secao]] | 'vagas-abertas', 'minha-trila-de-aprendizegem'|Deve retornar o titulo da secao.|
+
+<br>
+
+
+**Quando:  Na interação com os campos.**<br />
+
+- **Onde:** Na página de oportunidades internas para médicos.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:oportunidades-internas-para-medicos',
+    'eventAction': 'interacao:campo:formulario',
+    'eventLabel': 'preencheu:[[nome-campo]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-campo]]|  'crm', 'e-mail', 'telefone' e etc. (todos os campos) | Deve retornar o nome do campo preenchido. |
+
+
+<br>
+
+**Quando:Na interação com checkbox de politica de privacidade.**<br />
+
+- **Onde:** Na página de oportunidades internas para médicos.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:oportunidades-internas-para-medicos',
+    'eventAction': 'interacao:step:politica-de-privacidade-checkbox',
+    'eventLabel': 'marcou:[[acao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[acao]]|  'aceito', 'não-aceito'. |  Deve retonar com o tipo de ação realizada. |
+
+
+<br>
+
+**Quando:Na tentativa de callback para efetuar o cadastro**<br />
+
+- **Onde:** Na página de cadastro.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'conversion',
+    'eventCategory': 'area-logada:oportunidades-internas-para-medicos',
+    'eventAction': 'callback',
+    'eventLabel': '[[status]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[status]]|  'sucesso', 'erro:usuario-ou-senha-invalidos', 'erro:pagina-fora-do-ar' e etc| Deve retornar a mensagem de sucesso ou o tipo de erro. |
+
+
+<br>
+
+---
+
+### Protocolos Assistenciais
+
+
+
+**Quando:Ao clicar em qualquer elemento da página (botao ou link).**<br />
+
+- **Onde:** Na página Protocolos Assistenciais.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:protocolos-assistenciais',
+    'eventAction': 'clique:[[botao-ou-link]]',
+    'eventLabel': '[[nome-guia]]:[[nome-botao-ou-link]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[botao-ou-link]]|   'botao' e 'link'.| Deve retornar com o tipo de elemento. |
+|[[nome-guia]]| 'nota-tecnica-bp-covid-19| Deve retornar o nome da guia.|
+|[[nome-botao-ou-link]]|  'principais-protocolos', 'guias' e 'abrir-pdf'| Deve retornar com o nome do botão ou link clicado. |
+
+
+
+<br />
+
+---
+
+### Principais protocolos
+
+**Quando:Ao clicar nos botões da página.**<br />
+
+- **Onde:** Na página Principais protocolos.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:principais-rotocolos',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-guia]]:[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-guia]]| 'manual-de-antibioticoprofilaxia', 'protocolo-de-tev', 'protocolo-de-sepse', e etc|  Deve retornar o nome da guia.|
+|[[[nome-botao]]|  'abrir-pdf', 'codigo:607', 'codigo:2638', 'codigo:2951' e etc| Deve retornar com o nome do botão clicado. |
+
+
+
+<br />
+
+---
+
+### Guias
+
+**Quando:Ao clicar nos botões da página**<br />
+
+- **Onde:** Na página Guias
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:guias',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-guia]]:[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-guia]]| 'manual-de-controle-de-infeccoes', 'guia-de-indicacoes-transfusionais' e 'orinetacioes-sobre-imunizacoes'|  Deve retornar o nome da guia.|
+|[[[nome-botao]]|  'abrir-pdf'| Deve retornar com o nome do botão clicado. |
+
+---
+
+### Conte com a BP
+
+
+**Quando:Ao clicar nos links da página.**<br />
+
+- **Onde:** Na página Conte com a BP.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:conte-com-a-bp',
+    'eventAction': 'clique:link',
+    'eventLabel': '[[nome-link]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-link]] | 'agende-sua-consulta-telemedicina', 'programa-de-apoio-pessoal-da-bp-pap' e 'programa-bp-de-atendimento-a-segunda-vitiima'|Deve retornar com o nome do link clicado.|
+
+---
+
+### Agende sua consulta – Telemedicina
+
+**Quando:Ao clicar nos telefones da página.**<br />
+
+- **Onde:** Na página Agende sua consulta - telemedicina.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:agende-sua-consulta-telemedicina',
+    'eventAction': 'clique:link',
+    'eventLabel': '[[telefone]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[telefone]] | '1135051350' e '1135051386'|Deve retornar telefone clicado.|
+
+
+<br />
+
+**Quando:Ao clicar no botão da página.**<br />
+
+- **Onde:**  Na página Agende sua consulta - telemedicina.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:agende-sua-consulta-telemedicina',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-guia]]:[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-guia]]| 'fluxo-de-atendimentos-seguros'|Deve retornar o nome da guia clicada.|
+|[[nome-botao]]|'saber-mais'|Deve retornar o nome do botão clicado|
+
+
+<br />
+
+---
+
+### Programa de Apoio Pessoal da BP 
+
+**Quando:Ao clicar nos telefones e email da página.**<br />
+
+- **Onde:** Na página Programa de apoio pessoal da BP (PAP).
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:programa-de-apoio-pessoal-da-bp-pap',
+    'eventAction': 'clique:link',
+    'eventLabel': '[[telefone-ou-email]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[telefone-ou-email]]|  '08007722345', '11961839040' e 'fale@papuster.com.br'|Deve retornar o telefone ou email clicado|
+
+<br />
+
+---
+
+### Salas de Reunião e Auditórios
+
+**Quando: Ao clicar em qualquer link.**<br />
+
+- **Onde:** Na página de salas de reunião e auditórios.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:salas-de-reuniao-e-auditorios',
+    'eventAction': 'clique:link',
+    'eventLabel': '[[nome-link]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[telefone-ou-email]]|  'saladereuniaoadmediretoria@bp.org.br', '(11) 3505-6100' e etc.|Deve retornar o telefone ou email clicado|
+
+<br />
+
+---
+
+### Honorários Médicos
+
+**Quando: Ao clicar em qualquer boxe.**<br />
+
+- **Onde:** Na página de honorarios medicos.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:honorarios-medicos',
+    'eventAction': 'clique:boxe',
+    'eventLabel': '[[nome-boxe]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-boxe]]|  entenda-como-funciona', 'procedimentos-particulares' , 'lista-de-convenios'e etc.|Deve retornar o nome do boxe clicado.|
+
+<br />
+
+---
+
+### Entenda como funciona
+
+**Quando: Ao clicar em qualquer botao.**<br />
+
+- **Onde:** Na página de entenda como funciona.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:entenda-como-funciona',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]:[[nome-secao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-botao]]| 'assistir-video, 'abrir-passo-a-passo' e etc.|Deve retornar o nome do botao clicado.|
+|[[nome-secao]]|'entenda-como-funciona'.|Deve retornar o nome da secao.|
+
+<br />
+
+---
+
+### lista de convênios
+
+**Quando:Ao interagir com o checkbox.**<br />
+
+- **Onde:** Na página de lista de convênios.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:lista-de-convenios',
+    'eventAction': 'interacao:checkbox',
+    'eventLabel': '[[acao]]:ciente-e-de-acordo'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[acao]]| 'marcou' e 'desmarcou'.|Deve retornar com o tipo de ação realizada.|
+
+
+<br />
+
+**Quando: Ao clicar em qualquer botao**<br />
+
+- **Onde:** Na página de lista de convênios.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:lista-de-convenios',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-botao]]|'saiba-mais' e etc.|Deve retornar com o nome do botao clicado.|
+
+
+<br />
+
+---
+
+### Procedimentos particulares
+
+**Quando:Ao clicar em qualquer botao**<br />
+
+- **Onde:** Na página de procedimentos particulares.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:procedimentos-particulares',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-botao]]|'abrir-regras' e etc.|Deve retornar com o nome do botao clicado.|
+
+
+<br />
+
+---
+
+### Pagamento de honorários médicos
+
+
+**Quando:Ao clicar em qualquer botao dentro dos cards.**<br />
+
+- **Onde:** Na página de pagamento de honorarios medicos.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:pagamento-de-honorarios-medicos',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]:[[nome-card]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-botao]]| 'codigo-2205', 'codigo-1622' e etc.|Deve retornar com o nome do botao clicado.|
+|[[nome-card]]| 'emissao-de-notas-fiscais', 'previsao-de-repasse-a-terceiros' e etc| Deve retornar o titulo do card.|
+
+
+<br />
+
+**Quando:Ao clicar no link dentro dos cards.**<br />
+
+- **Onde:** Na página de pagamento de honorarios medicos.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:pagamento-de-honorarios-medicos',
+    'eventAction': 'clique:link',
+    'eventLabel': 'acesso-ao-tasy'
+  });
+</script>
+
+```
+
+<br />
+
+---
+
+### Telemedicina
+
+
+**Quando:Ao clicar em qualquer botao**<br />
+
+- **Onde:** Na página Telemedicina.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:telemedicina',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-guia]]:[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-guia]]|'como-posso-acessar-a-plataforma' e 'confira-as-principais-recomendacoes-para-realizacao-de-consultas-online'| Deve retornar o nome da guia clicada.|
+|[[nome-botao]]| 'acessar-plataforma' e 'ver-lista'| Deve retornar o nome do botão clicado|
+
+<br/>
+
+---
+
+### Projetos em andamento
+
+<b> Aguardando conteudo</b>
+
+<br/>
+
+---
+
+### Médicos envolvidos
+
+<b> Aguardando conteudo</b>
+
+<br/>
+
+---
+
+### Hospitais parceiros
+
+<b> Aguardando conteudo</b>
+
+<br/>
+
+---
+
+### Contato
+
+<b> Aguardando conteudo</b>
+
+<br/>
+
+---
+
+### Comunicação e Eventos
+
+**Quando: Ao clicar nos links da pagina**<br />
+
+- **Onde:** Na página Comunicação e eventos.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:comunicacao-e-eventos',
+    'eventAction': 'clique:link',
+    'eventLabel': '[[nome-guia]]:[[nome-link]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-guia]]| 'acompanhe-as-novidades'| Deve retornar o nome da guia clicada.|
+|[[nome-link]]|'ultimas-newsletters-medicos-bp', 'uso-da-marca-bp', 'eventos', 'abrir-formulario' e etc| Deve retornar o nome do link clicado|
+
+<br/>
+
+---
+
+### Últimas Newsletters Médicos BP
+
+**Quando: Ao clicar nos botões de filtro da pagina**<br />
+
+- **Onde:** Na página ùltimas newsletters medicos BP
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:ultimas-newsletters-medicos-bp',
+    'eventAction': 'clique:botao:filtro',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-botao]]|'ultimos-3-meses', 'ano-de-2021', 'periodo', 'proximo' e 'anterior'|  Deve retornar o nome do botão clicado.|
+
+<br/>
+
+**Quando:Ao clicar nos botões dos cards da pagina**<br />
+
+- **Onde:**  página ùltimas newsletters medicos BP
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:ultimas-newsletters-medicos-bp',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-card]]:[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-card]] | '23-de-setembro', '16-de-setembro', '9-de-setembro' e etc| Deve retornar o nome do card clicado|
+|[[nome-botao]] | 'ver-comunicado'|Deve retornar o nome do botão clicado|
+
+<br/>
+
+---
+
+### Envie uma Informação
+
+**Quando:Ao clicar no telefone ou email**<br />
+
+- **Onde:** Na página Envie uma informação.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:envie-uma-informacao',
+    'eventAction': 'clique:link',
+    'eventLabel': '[[telefone-ou-email]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[telefone-ou-email]] |  '11973622535' e 'comunicacao@bp.org'| Deve retornar o numero de telefone ou email|
+
+
+<br/>
+
+**Quando: Ao clicar no botão da pagina**<br />
+
+- **Onde:** Na página Envie uma informação.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:envie-uma-informacao',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-botao]]| 'abrir-formulario'|  Deve retornar o nome do botão clicado|
+
+
+<br/>
+
+**Quando:Ao preencher um dos campos do formulario**<br />
+
+- **Onde:** Na página Envie uma informação.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:envie-uma-informacao:formulario',
+    'eventAction': 'preencheu-campo',
+    'eventLabel': '[[nome-campo]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-campo]]| 'nome', 'uf', 'crm', 'telefone' e etc|Deve retornar o nome do campo preenchido|
+
+
+<br/>
+
+**Quando:Ao preencher o checkbox do formulario**<br />
+
+- **Onde:** Na página Envie uma informação.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:envie-uma-informacao:formulario',
+    'eventAction': 'checkbox:[[status]]',
+    'eventLabel': '[[nome-checkbox]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[status]]| 'li-e-aceito-os-termos-de-uso-e-politicas-de-privacidade|Deve retornar o nome do checkbox|
+|[[nome-checkbox]]|'check' e 'uncheck'|Deve retornar se o checkbox foi preenchido (check) ou não (uncheck)|
+
+
+<br/>
+
+
+**Quando:No callback de envio do formulario**<br />
+
+- **Onde:** Na página Envie uma informação.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'conversionEvent',
+    'eventCategory': 'area-logada:envie-uma-informacao:formulario',
+    'eventAction': 'callback',
+    'eventLabel': '[[nome-status]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-status]]|  'formulario-enviado-com-sucesso', 'campo-especialidade-nao-preenchido', 'checkbox-nao-aceito' e etc|Deve retornar o nome do status|
+
+
+
+---
+
+### Mídias Digitais
+
+**Quando:Ao clicar nos links da pagina**<br />
+
+- **Onde:** Na página Midias digitais.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:midias-digitais',
+    'eventAction': 'clique:link',
+    'eventLabel': '[[nome-guia]]:[[nome-card]]:[[nome-link]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-guia]]|  'webserie:comportamento-no-digital'|Deve retornar o nome da guia interagida|
+|[[nome-card]]|  'ep1', 'ep2', 'ep3', e etc|Deve retornar o nome do card interagido|
+|[[nome-link]]|   'assistir-agora'|Deve retornar o nome do link clicado|
+
+<br/>
+
+**Quando:Ao clicar nos botões da pagina**<br />
+
+- **Onde:** Na página Midias digitais
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:midias-digitais',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-guia]]:[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-guia]]|   'manual-bp-de-boas-praticas-de-seguranca-digital' e 'guia-de-midias-sociais'|Deve retornar o nome da guia interagida|
+|[[nome-botao]]| 'abrir-pdf'|Deve retornar o nome do botão clicado|
+
+<br/>
+
+---
+
+### Assessoria de Imprensa
+
+**Quando:Ao clicar no telefone ou email**<br />
+
+- **Onde:** Na página Assessoria de imprensa.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:assessoria-de-imprensa',
+    'eventAction': 'clique:link',
+    'eventLabel': '[[telefone-ou-email]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[telefone-ou-email]]|   '11973711721' e 'imprensa@bp.org.br'|Deve retornar o numero de telefone ou email.|
+
+
+<br/>
+
+**Quando:Ao clicar no botão da pagina**<br />
+
+- **Onde:** Na página Assessoria de imprensa.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:assessoria-de-imprensa',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-guia]]:[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-guia]]|  'guia-de-imprensa'|Deve retornar o nome da guia interagida|
+|[[nome-botao]]|'abrir-pdf'|Deve retornar o nome do botão clicado.|
+
+
+
+---
+
+### Uso da marca BP
+
+**Quando: Ao clicar nos botões da pagina**<br />
+
+- **Onde:**  Na página Uso da marca BP.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:uso-da-marca-bp',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-guia]]:[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-guia]]|  'manual-de-marca' e 'layouts-institucionais'|Deve retornar o nome da guia interagida|
+|[[nome-botao]]| 'abrir-pdf' e 'baixar-arquivos'|Deve retornar o nome do botão clicado.|
+
+---
+
+### Eventos
+
+**Quando: Ao clicar nos botões da pagina**<br />
+
+- **Onde:**  Na página de eventos.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:eventos',
+    'eventAction': 'clique:botao',
+    'eventLabel': '[[nome-guia]]:[[nome-botao]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-guia]]|   'eventos-cientificos',  'eventos-e-reunioes-cientificas-da-bp' e 'encontro-medico'|Deve retornar o nome da guia interagida|
+|[[nome-botao]]|  'acessar-politica-de-eventos-cientificos', 'acesse-o-formulario-de-solicitacao', 'saber-mais', 'ver-calendario' e 'assistir-video'|Deve retornar o nome do botão clicado.|
+
+
+<br/>
+
+**Quando: Ao clicar nos links da tabela "Reuniões cientificas BP"**<br />
+
+- **Onde:** Na página Eventos > Eventos e Reuniões científicas da BP > Saber mais.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:eventos:reunioes-cientificas-bp',
+    'eventAction': 'clique:link',
+    'eventLabel': '[[nome-guia]]:[[nome-link]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-guia]]| 'reunioes-multidisciplinares',  'reunioes-semanais', '9-de-novembro-de-2020', '11-de-novembro-de-2020' e etc|Deve retornar o nome da guia interagida|
+|[[nome-link]]|'oncologia-bp', 'hematologia-bp', 'aparelho-digestivo', e etc|Deve retornar o nome do link clicado|
+
+
+<br/>
+
+**Quando:Ao clicar nos links do calendario "Calendario de encontros medicos de 2021"**<br />
+
+- **Onde:** Na página Eventos > Encontro Médico > Ver calendário.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:eventos:encontro-medico',
+    'eventAction': 'clique:link',
+    'eventLabel': '[[data]]:[[nome-guia]]:[[nome-link]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[data]]|  'dia-25-de-marco-virtual', 'dia-29-de-abril-virtual', 'dia-27-de-maio-virtual' e etcc|Deve retornar a data da guia interagida|
+|[[nome-guia]]|'encontro-medico-i', 'encontro-medico-v', 'encontro-med|Deve retornar o nome da guia interagida|
+|[[nome-link]]|''saber-mais'|Deve retornar o nome do link clicado|
+
+---
+
+### SAM
+
+**Ao clicar no telefone ou email"**<br />
+
+- **Onde:** Na página SAM.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'area-logada:sam',
+    'eventAction': 'clique:link',
+    'eventLabel': '[[nome-hospital]]:[[telefone-ou-email]]'
+  });
+</script>
+
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+|[[nome-hospital]]|'hospital-bp-unidade-paulista' e 'bp-mirante'|Deve retornar o nome do hospital interagido|
+|[[telefone-ou-email]]|'1135053043', '1135053044', 'sam@bp.org.br' e etc|Deve retornar o numero de telefone ou email|
+
+
+  
+  
 <br />
 
 > Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
