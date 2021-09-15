@@ -73,9 +73,10 @@ Caso a informação solicitada não estiver disponível retornar tipagem ´undef
 
 ### Especificação de Micro-conversões:
 
-**Página - Home:**<br />
+**Home Clube Movida:**<br />
 
-- **Onde:** Ao clicar no botão "Eu Quero".
+- **Quando:** Ao clicar no botão "Compare e escolha o melhor plano".
+- **Onde:** Na página home de Clube Movida.
 
 ```html
 <script>
@@ -83,7 +84,7 @@ Caso a informação solicitada não estiver disponível retornar tipagem ´undef
 		'event': 'genericEvent',
 		'eventCategory': 'clube-movida:home',
 		'eventAction': 'clique:botao',
-		'eventLabel': '[[botao-assine]]'
+		'eventLabel': 'compare'
 	});
 </script>
 ```
@@ -91,9 +92,30 @@ Caso a informação solicitada não estiver disponível retornar tipagem ´undef
 
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------------	| :-------------------- | :-------------------------------------------	|
-| [[botao-assine]]			| 'eu-quero'				| Deve retornar o nome do botão.										|
+| 	    				| 						|	                                    		|
 
-- **Onde:** Ao clicar nos links "Ver todos".
+- **Quando:** Ao clicar nos botões "Quero assinar".
+- **Onde:** Na página home de Clube Movida.
+
+```html
+<script>
+	dataLayer.push({
+		'event': 'genericEvent',
+		'eventCategory': 'clube-movida:home',
+		'eventAction': 'clique:botao',
+		'eventLabel': [[plano]]:[[valor]]
+	});
+</script>
+```
+
+
+| Variável 				| Exemplo 				| Descrição 									|
+| :--------------------	| :-------------------- | :-------------------------------------------	|
+| [[plano]]			    | 'Plano 10000'			| Deve retornar o nome do plano selecionado. 	|
+| [[valor]]		    	| '299,00'				| Deve retornar o valor do plano selecionado.   |
+
+- **Quando:** Ao clicar no link "Ver todos".
+- **Onde:** Na página home de Clube Movida.
 
 ```html
 <script>
@@ -101,7 +123,7 @@ Caso a informação solicitada não estiver disponível retornar tipagem ´undef
 		'event': 'genericEvent',
 		'eventCategory': 'clube-movida:home',
 		'eventAction': 'clique:link',
-		'eventLabel': '[[ver-todos]]'
+		'eventLabel': 'ver-todos'
 	});
 </script>
 ```
@@ -109,21 +131,41 @@ Caso a informação solicitada não estiver disponível retornar tipagem ´undef
 
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------------	| :-------------------- | :-------------------------------------------	|
-| [[ver-todos]]			| 'produtos'				| Deve retornar o nome do bloco em que esse link se encontra. 										|
+| 	                	| 			        	| 								         		|
+
+- **Quando:**  Ao clicar no link "Termos e condições do Clube".
+- **Onde:** Na página home de Clube Movida.
+
+```html
+<script>
+	dataLayer.push({
+		'event': 'genericEvent',
+		'eventCategory': 'clube-movida:home',
+		'eventAction': 'clique:botao',
+		'eventLabel': 'termos-condicoes'
+	});
+</script>
+```
+
+
+| Variável 				| Exemplo 				| Descrição 									|
+| :--------------------	| :-------------------- | :-------------------------------------------	|
+| 	                	| 			        	| 								         		|
 
 ---
 
-**Página - Assine Já:**<br />
+**Assinar Clube:**<br />
 
-- **Onde:** Ao clicar no botão "Ver Mais".
+- **Quando:** Ao clicar no botão "Assinar clube".
+- **Onde:** Na página de Assinar clube de Clube Movida.
 
 ```html
 <script>
 	dataLayer.push({
 		'event': 'genericEvent',
-		'eventCategory': 'clube-movida:assine-ja',
-		'eventAction': 'clique:botao',
-		'eventLabel': '[[botao-mais]]'
+		'eventCategory': 'clube-movida:assinar',
+		'eventAction': 'clique:link',
+		'eventLabel': [[plano]]:[[valor]]
 	});
 </script>
 ```
@@ -131,39 +173,23 @@ Caso a informação solicitada não estiver disponível retornar tipagem ´undef
 
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------------	| :-------------------- | :-------------------------------------------	|
-| [[botao-mais]]			| 'ver-mais'				| Deve retornar o nome do botão.										|
-
-- **Onde:** Ao clicar nos planos de assinatura.
-
-```html
-<script>
-	dataLayer.push({
-		'event': 'genericEvent',
-		'eventCategory': 'clube-movida:assine-ja',
-		'eventAction': 'clique:botao',
-		'eventLabel': '[[plano]]'
-	});
-</script>
-```
-
-
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------------	| :-------------------- | :-------------------------------------------	|
-| [[plano]]			| 'basico'				| Deve retornar o nome do plano que o clinte escolheu. 										|
+| [[plano]]		    	| 'Plano 10000'			| Deve retornar o nome do plano selecionado. 	|
+| [[valor]]		    	| '299,00'				| Deve retornar o valor do plano selecionado.   |
 
 ---
 
-**Página - Ver Mais:**<br />
+**Parceiros:**<br />
 
-- **Onde:**  Ao escolher uma categoria no select.
+- **Quando:** Ao clicar nos botões "Eu quero".
+- **Onde:** Na página de parceiros de Clube Movida.
 
 ```html
 <script>
 	dataLayer.push({
 		'event': 'genericEvent',
-		'eventCategory': 'clube-movida:ver-mais',
-		'eventAction': 'interacao:filtro',
-		'eventLabel': '[[filtro-categoria]]'
+		'eventCategory': 'clube-movida:parceiros',
+		'eventAction': 'clique:botao',
+		'eventLabel': '[[parceiro]]'
 	});
 </script>
 ```
@@ -171,25 +197,7 @@ Caso a informação solicitada não estiver disponível retornar tipagem ´undef
 
 | Variável 				| Exemplo 				| Descrição 									|
 | :--------------------	| :-------------------- | :-------------------------------------------	|
-| [[filtro-categoria]]			| 'Locação'				| Deve retornar o nome da categoria escolhida.										|
-
-- **Onde:**  Ao escolher uma categoria no select.
-
-```html
-<script>
-	dataLayer.push({
-		'event': 'genericEvent',
-		'eventCategory': 'clube-movida:ver-mais',
-		'eventAction': 'interacao:filtro',
-		'eventLabel': '[[filtro-pontos]]'
-	});
-</script>
-```
-
-
-| Variável 				| Exemplo 				| Descrição 									|
-| :--------------------	| :-------------------- | :-------------------------------------------	|
-| [[filtro-pontos]]			| 'Locação'				| Deve retornar a quantidade de pontos escolhida.									|
+| [[parceiro]]		    | 'Disney'		    	| Deve retornar o nome do parceiro selecionado. |
 
 ---
 
