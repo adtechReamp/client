@@ -18,6 +18,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 - [Especificações Globais](#especifica%c3%a7%c3%b5es-globais)
 - [Dimensões Globais](#dimens&otilde;es-globais)
 - [Geral](#geral)
+- [Compartilhar resultado](#compartilhar-resultado)
 - [Login Médico](#login-medico)
 
 
@@ -664,6 +665,86 @@ Botão
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[status]] | 'sucesso', 'erro:usuario-ou-senha-invalidos', 'erro:pagina-fora-do-ar' e etc | Deve retornar a mensagem de sucesso ou o tipo de erro.   |
+
+
+### Compartilhar resultado
+
+
+**Quando: Ao clicar em gerar pdf para enviar para um médico de preferência ou encontrar um médico.**<br />
+
+- **Onde:** Na página simples de tratar (após preencher e enviar o questionário).
+    
+
+```html
+<!-- Use se os atributos no elemento a ser clicado -->
+<div
+     data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
+     data-gtm-event-action="clique:botao" 
+     data-gtm-event-label="[[nome-botao]]"
+>
+Botão
+</div>
+
+```
+
+| Variável 				| Exemplo 				| Descrição 									|
+| :--------------	| :-------------- | :--------------------------	|
+| [[nome-botao]]|  'gerar-pdf-para-enviar-ao-seu-medico-de-preferencia' e 'preciso-de-ajuda-para-encontrar-um-medico'. | Deve retornar o nome do botão clicado após preencher o formulário na seção de compartilhamento da pré avaliação  
+
+
+
+<br />
+
+
+
+**Quando: Ao selecionar alguma das opções de escolha no checkbox.**<br />
+
+- **Onde:** Na página simples de tratar (após preencher e enviar o questionário).
+    
+
+```html
+<!-- Use se os atributos no elemento a ser clicado -->
+<div
+     data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
+     data-gtm-event-action="interacao:checkbox" 
+     data-gtm-event-label="selecionou:[[nome-check]]"
+>
+Botão
+</div>
+
+```
+
+| Variável 				| Exemplo 				| Descrição 									|
+| :--------------	| :-------------- | :--------------------------	|
+|[[nome-check]]|  'aceito-contato-do-atendente-via-telefone-ou-whatsApp', 'quero-encontrar-um-medico-atraves-da-plataforma-conecta-consulta' e 'nao-preciso-de-ajuda'.
+| Deve retornar o nome do checkbox selecionado.
+
+
+
+<br />
+
+**Quando:Ao clicar no botao de conclusão de ajuda para encontrar médico.**<br />
+
+- **Onde:** Na página simples de tratar (após preencher e enviar o questionário).
+    
+
+```html
+<!-- Use se os atributos no elemento a ser clicado -->
+<div
+     data-gtm-event-category="sanofi-conecta-consulta:simples-tratar" 
+     data-gtm-event-action="clique:botao" 
+     data-gtm-event-label="concluir:ajuda-para-encontrar-um-medico"
+>
+Botão
+</div>
+
+```
+
+| Variável 				| Exemplo 				| Descrição 									|
+| :--------------	| :-------------- | :--------------------------	|
+|[[nome-check]]|  'aceito-contato-do-atendente-via-telefone-ou-whatsApp', 'quero-encontrar-um-medico-atraves-da-plataforma-conecta-consulta' e 'nao-preciso-de-ajuda'.
+| Deve retornar o nome do checkbox selecionado.
+
 
 
 <br />
