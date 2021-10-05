@@ -212,8 +212,8 @@ Em caso de dúvidas sobre a configuração do Enhanced Ecommerce, acesse o este 
 ```html
 <script>
 dataLayer.push({
-        'event': 'reservafinalizada',
-        'eventCategory': 'cargo:protecoes',
+        'event': 'purchase',
+        'eventCategory': 'cargo:purchase',
         'eventAction': 'clique:botao',
         'eventLabel': 'continuar',
 	'id_confirmacao': [[id_confirmacao]],
