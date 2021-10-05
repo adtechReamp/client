@@ -28,6 +28,7 @@ Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
 - [Sacola Modal](#sacola-modal)
 - [Checkout](#checkout)
 - [Enhanced E-commerce](#enhanced-e-commerce)
+- [Blog](#blog)
 
 
 
@@ -1515,3 +1516,53 @@ window.dataLayer.push({
 <br />
 
 <script> document.querySelector('h1').style.display = 'none' </script>
+
+<br />
+
+### Blog
+
+**Quando: Ao clicar em um dos cards.**<br />
+
+- **Onde:** Na Página Blog.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-parque-d-pedro:blog',
+    'eventAction': 'clique:card',
+    'eventLabel': '[[nome-card]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-card]] | 'mude-o-astral-da-sua-casa', 'semana-do-ciente', 'dia-das-criancas' e etc | Deve retornar o nome do card interagido.   |
+
+
+<br />
+
+**Quando: Ao clicar em um dos campos de filtro.**<br />
+
+- **Onde:** Na Página Blog.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-parque-d-pedro:blog',
+    'eventAction': 'clique:filtro',
+    'eventLabel': '[[nome-filtro]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-filtro]] | 'begreen', 'cultura', 'retirada' e etc | Deve retornar o nome do filtro clicado.   |
+
+
+<br />
