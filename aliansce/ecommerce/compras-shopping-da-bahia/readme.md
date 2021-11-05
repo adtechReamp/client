@@ -6,8 +6,8 @@
 <br />
 
 ## Implementação da Camada de dados - Compras Shopping da Bahia
-Última atualização: 23/02/2020 <br />
-Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
+Última atualização: 02/11/2021 <br />
+Em caso de dúvidas, entrar em contato com: [leandro.mori@jellyfish.com](leandro.mori@jellyfish.com)
 
 <br />
 
@@ -86,11 +86,11 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 		'dimension1': '[[User ID]]',
 		'dimension2': '[[GA ClientID]]',
 		'dimension3': '[[GTM-ID]]',
-	  	'dimension4': '[[Nome Loja]]',
-    		'dimension5': '[[Localização]]',
-    		'dimension6': '[[[Device ID]]',
-    		'dimension7': '[[CPF]]',
-    		'dimension8': '[[Email]]'
+        'dimension4': '[[Nome Loja]]',
+        'dimension5': '[[Localização]]',
+   		'dimension6': '[[[Device ID]]',
+    	'dimension7': '[[CPF]]',
+    	'dimension8': '[[Email]]'
 	
 	});
 </script>
@@ -113,78 +113,6 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 ### Geral
 
 
-**Quando: Ao clicar em um dos elementos do header.**<br />
-
-- **Onde:** Em todas as páginas do site em que estiver disponível.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'compras-shopping-da-bahia:geral',
-    'eventAction': 'clique:header',
-    'eventLabel': '[[nome-item]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-item]] | 'logo', 'favoritos', 'login', 'sdb-online', 'o-shopping' e etc | Retornar o nome do item clicado.   |
-
-
-<br />
-
-**Quando: No clique dos links do footer**<br />
-
-- **Onde:** Em todas as páginas do site em que estiver disponível.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'compras-shopping-da-bahia:geral',
-    'eventAction': 'clique:footer',
-    'eventLabel': '[[secao]]:[[nome-item]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[secao]] | 'o-shopping', 'atendimento' e etc | Deve retornar o nome da seção. |
-| [[nome-item]] | 'sobre-o-shopping', 'telefone' e etc | Retornar o nome do item clicado.   |
-
-
-<br />
-
-**Quando: No clique dos itens do menu superior.**<br />
-
-- **Onde:** Em todas as páginas do site em que estiver disponível.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'compras-shopping-da-bahia:geral',
-    'eventAction': 'clique:menu',
-    'eventLabel': '[[item-menu]]:[[secao]]:[[item-submenu]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[item-menu]] | 'departamentos', 'moda-feminina', 'moda-masculina' e etc | Deve retornar o nome do item clicado no menu.   |
-| [[secao]] |  'alimentos-e-bebidas' 'calcados' e etc | Deve retornar, se existente, a seção do menu clicada.    |
-| [[item-submenu]] | 'alimentos', 'bebidas', 'cuidados-pessoais' e etc | Deve retornar, se existente, o nome do item clicado no submenu.  |
-
-
-<br />
-
 **Quando: Ao realizar uma busca na barra de pesquisa.**<br />
 
 - **Onde:** Em todas as páginas do site em que estiver disponível.
@@ -204,52 +132,6 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[termo-buscado]] | 'toalha-de-banho', 'camiseta-polo', 'cama-mesa-e-banho' e etc. | Deve retornar o termo buscado na barra de pesquisa.    |
-
-
-<br />
-
-**Quando: Ao clicar em um dos termos sugeridos na busca.**<br />
-
-- **Onde:** Em todas as páginas do site em que estiver disponível.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'compras-shopping-da-bahia:geral',
-    'eventAction': 'clique:termos:busca',
-    'eventLabel': '[[termo-sugerido]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[termo-sugerido]] |  'toalha-de-banho', 'camiseta-polo', 'cama-mesa-e-banho' e etc. | Deve retornar o termo sugerido clicado.   |
-
-
-<br />
-
-**Quando: No clique para adicionar aos favoritos**<br />
-
-- **Onde:** Em todas as páginas do site em que estiver disponível.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'compras-shopping-da-bahia:geral',
-    'eventAction': 'clique:icone',
-    'eventLabel': 'favoritar:[[nome-produto]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto.  |
 
 
 <br />
@@ -281,55 +163,6 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 <br />
 
-**Quando: Na interação com o checkbox.**<br />
-
-- **Onde:** Na página de cadastro.
-
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'compras-shopping-da-bahia:cadastro',
-    'eventAction': 'interacao:checkbox',
-    'eventLabel': '[[acao]]:[[nome-checkbox]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[acao]] |  'check', 'uncheck' | Deve retornar a ação do usuário.  |
-| [[nome-checkbox]] |  'pessoa-fisica', 'recebimento-de-newsletter' | Deve retornar o nome do checkbox. |
-
-
-
-<br />
-
-**Quando: No clique dos botões**<br />
-
-- **Onde:** Na página de cadastro.
-
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'compras-shopping-da-bahia:cadastro',
-    'eventAction': 'clique:botao',
-    'eventLabel': '[[nome-botao]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-botao]] |   'cadastrar' e etc | Deve retornar o nome do botão clicado.   |
-
-
-<br />
 
 **Quando: Na tentativa de callback para efetuar o cadastro**<br />
 
@@ -384,30 +217,6 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 <br />
 
-**Quando: No clique dos botões**<br />
-
-- **Onde:** Na página de login.
-
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'compras-shopping-da-bahia:login',
-    'eventAction': 'clique:botao',
-    'eventLabel': '[[nome-botao]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-botao]] |  'entrar', 'facebook' e etc| Deve retornar o nome do botão clicado.   |
-
-
-<br />
-
 **Quando: Na tentativa de callback para efetuar o login**<br />
 
 - **Onde:** Na página de login.
@@ -458,30 +267,6 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 <br />
 
-**Quando: No clique dos botões**<br />
-
-- **Onde:** Na página "Esqueci minha senha"
-
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'compras-shopping-da-bahia:esqueci-minha-senha',
-    'eventAction': 'clique:botao',
-    'eventLabel': '[[nome-botao]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-botao]] |  'enviar' e etc | Deve retornar o nome do botão clicado.   |
-
-
-<br />
-
 **Quando: Na tentativa de callback para cadastrar a nova senha**<br />
 
 - **Onde:** Na página "Esqueci minha senha".
@@ -509,7 +294,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 ### Home
 
-**Quando: No clique dos icones na seção "Nossas lojas"**<br />
+**Quando: Ao preencher os campos de formulário de newsletter**<br />
 
 - **Onde:** Na página Home.
     
@@ -519,20 +304,20 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
   window.dataLayer.push({
     'event': 'genericEvent',
     'eventCategory': 'compras-shopping-da-bahia:home',
-    'eventAction': 'clique:icone',
-    'eventLabel': 'nossas-lojas:[[nome-loja]]'
+    'eventAction': 'interacao:campo:formulario',
+    'eventLabel': 'newsletter:[[nome-campo]]'
   });
 </script>
 ```
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-loja]] | 'anacapari', 'bambino' e etc | Deve retornar o nome da loja clicada.|
+| [[nome-campo]] | nome', 'email' e etc | Deve retornar o nome do campo preenchido.|
 
 
 <br />
 
-**Quando: No clique dos icones na seção "Navegue por categoria"**<br />
+**Quando: No callback do formulário de newsletters**<br />
 
 - **Onde:** Na página Home.
     
@@ -542,43 +327,15 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
   window.dataLayer.push({
     'event': 'genericEvent',
     'eventCategory': 'compras-shopping-da-bahia:home',
-    'eventAction': 'clique:icone',
-    'eventLabel': 'categoria:[[nome-categoria]]'
+    'eventAction': 'callback',
+    'eventLabel': '[[status]]'
   });
 </script>
 ```
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-categoria]] | 'chocolates', 'oculos-e-acessorios' e etc | Deve retornar o nome da categoria clicada.|
-
-
-<br />
-
-
-### Lista de Produtos
-
-**Quando: Ao selecionar um dos checkboxes de filtro.**<br />
-
-- **Onde:** Na página de lista de produtos.
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'compras-shopping-da-bahia:lista-de-produtos',
-    'eventAction': 'interacao:checkbox:filtro',
-    'eventLabel': '[[secao]]:[[nome-filtro]]:[[acao]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-produto]] | 'material', 'tamanho', 'cor' e etc | Deve retornar o nome da seção do filtro.  |
-| [[nome-filtro]] | 'couro, '42', 'branco' e etc. | Deve retornar o nome do checkbox de filtro clicado.  |
-| [[acao]] | 'check' ou 'uncheck' | Deve retornar se o usuário marcou ou desmarcou o checkbox.  |
+| [[status]] | 'sucesso', 'erro:campo-email-nao-preenchido' e etc | Deve retornar a mensagem de sucesso ou o tipo de erro.|
 
 
 <br />
@@ -607,118 +364,13 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
 
 
-
 <br />
-
-**Quando: No clique para selecionar o tamanho do produto**<br />
-
-- **Onde:** Na página do produto
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'compras-shopping-da-bahia:pdp',
-    'eventAction': 'clique:tamanho',
-    'eventLabel': '[[tamanho-selecionado]]:[[nome-produto]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[tamanho-selecionado]] | 'tamanho-unico', '35', '40', '41'  e etc | Deve retornar o tamanho selecionado. |
-| [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
-
-
-
-<br />
-
-**Quando: No clique para selecionar a quantidade do produto**<br />
-
-- **Onde:** Na página do produto
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'compras-shopping-da-bahia:pdp',
-    'eventAction': 'interacao:quantidade',
-    'eventLabel': '[[quantidade-escolhida]]:[[nome-produto]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[quantidade-escolhida]] | '1', '3', '4' e etc | Deve retornar a quantidade escolhida. |
-| [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
-
-
-
-<br />
-
-**Quando: No clique dos botões ou links**<br />
-
-- **Onde:** Na página do produto
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'compras-shopping-da-bahia:pdp',
-    'eventAction': 'clique:[[botao ou link]]',
-    'eventLabel': '[[nome-item]]:[[nome-produto]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[botao ou link]] | 'botao' ou 'link' | Deve retornar o tipo de elemento clicado. |
-| [[nome-item]] | 'adicionar-no-carrinho', 'adicionar-a-lista-de-desejos' e etc | Deve retornar o nome do botao ou link clicado. |
-| [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
-
-
-
-<br />
-
-### Meu carrinho modal
-
-**Quando: No clique dos botões ou links**<br />
-
-- **Onde:** Na página do modal do meu carrinho
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'ccompras-shopping-da-bahia:carrinho-modal',
-    'eventAction': 'clique:[[botao ou link]]',
-    'eventLabel': '[[nome-item]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[botao ou link]] | 'botao' ou 'link' | Deve retornar o tipo de elemento clicado. |
-| [[nome-item]] |  'finalizar-compra', 'continuar-compra' e etc | Deve retornar o nome do botao ou link clicado. |
-
-
-
-<br />
-
 
 ### Checkout
 
-**Quando: No clique dos botões das etapas do checkout**<br />
+**Quando: Na interação com os campos de cada etapa do checkout**<br />
 
-- **Onde:** Em todas as etapas do checkout que estiver disponível
+- **Onde:** Em todas as etapas do checkout em que estiver disponivel.
     
 ```html
 <script>
@@ -726,55 +378,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
   window.dataLayer.push({
     'event': 'genericEvent',
     'eventCategory': 'compras-shopping-da-bahia:checkout',
-    'eventAction': 'clique:botao',
-    'eventLabel': '[[nome-botao]]:[[step]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-botao]] |  'finalizar-compra', 'voltar-ao-carrinho' e etc | Deve retornar o nome do botão clicado. |
-| [[step]] |  'carrinho', 'entrega', 'pagamento' | Deve retornar o nome da etapa do checkout. |
-
-
-<br />
-
-**Quando: No clique para selecionar a quantidade do produto**<br />
-
-- **Onde:** Na etapa do carrinho
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'compras-shopping-da-bahia:checkout',
-    'eventAction': 'interacao:quantidade',
-    'eventLabel': '[[quantidade-escolhida]]:[[nome-produto]]:carrinho'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[quantidade-escolhida]] |   '1', '3', '4' e etc | Deve retornar a quantidade escolhida. |
-| [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
-
-
-<br />
-
-**Quando: Na interação com o campos de cada etapa do checkout**<br />
-
-- **Onde:** Em todas as etapas do checkout que estiver disponível
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': 'compras-shopping-da-bahia:checkout',
-    'eventAction': 'interacao:quantidade',
+    'eventAction': 'interacao:campo',
     'eventLabel': 'preencheu:[[nome-campo]]:[[step]]'
   });
 </script>
@@ -782,9 +386,31 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-campo]] |  'cupom-de-desconto', 'cep, 'cartao-de-credito' | Deve retornar o nome do campo preenchido. |
-| [[step]] | 'carrinho', 'entrega', 'pagamento' | Deve retornar o nome da etapa do checkout. |
+| [[nome-campo]] |   'cupom-de-desconto', 'cep', 'cartao-de-credito' e etc | Deve retornar o nome do campo preenchido. |
+| [[step]] | 'carrinho', 'entrega', 'pagamento' e etc | Deve retornar o nome da etapa do checkout. |
 
+
+<br />
+
+**Quando: No callback de finalização de compras**<br />
+
+- **Onde:** Em todas as etapas do checkout que estiver disponível
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras-shopping-da-bahia:checkout',
+    'eventAction': 'callback',
+    'eventLabel': '[[status]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[status]] |  'sucesso', 'erro:campo-cartao-nao-preenchido', 'erro:campo-cep-nao-preenchido' | Deve retornar com sucesso ou o tipo de erro. |
 
 <br />
 
@@ -927,7 +553,8 @@ window.dataLayer.push({
                'brand': '[[marca-produto]]',
                'list': '[[lista-produto]]',
                'position': '[[posicao-produto]]',
-               'coupon': '[[cupom-produto]]'
+               'coupon': '[[cupom-produto]]',
+               'dimension4': '[[nome-loja]]'
     }]
   }
 });
@@ -944,6 +571,7 @@ window.dataLayer.push({
 | [[lista-produto]] | 'moda-masculina' e etc' | Nome da lista que o produto aparece |
 | [[posicao-produto]] | '2' | Posição que o produto aparece em uma lista de produtos |
 | [[cupom-produto]] | '25%' e etc' | Desconto do produto |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 <br />
 
@@ -969,7 +597,8 @@ window.dataLayer.push({
         'category': '[[categoria-produto]]',
         'brand': '[[marca-produto]]',
         'variant': '[[tamanho-produto]]',
-        'coupon': '[[cupom-produto]]'
+        'coupon': '[[cupom-produto]]',
+        'dimension4': '[[nome-loja]]'
     }]
   }
 });
@@ -985,6 +614,7 @@ window.dataLayer.push({
 | [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
 | [[tamanho-produto]] | 'm' | Tamanho do produto |
 | [[cupom-produto]] | '25%' e etc' | Desconto do produto |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 <br />
 
@@ -1011,7 +641,8 @@ window.dataLayer.push({
         'variant': '[[tamanho-produto]]',
         'brand': '[[marca-produto]]',
         'quantity': '[[quantidade-produto]]',
-        'coupon': '[[cupom-produto]]'
+        'coupon': '[[cupom-produto]]',
+        'dimension4': '[[nome-loja]]'
     }]
   }
 });
@@ -1028,6 +659,7 @@ window.dataLayer.push({
 | [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
 | [[quantidade-produto]] | '1' | Quantidade do produto |
 | [[cupom-produto]] | '25%' e etc' | Desconto do produto |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 
 <br />
@@ -1054,7 +686,8 @@ window.dataLayer.push({
         'category': '[[categoria-produto]]',
         'variant': '[[tamanho-produto]]',
         'brand': '[[marca-produto]]',
-        'quantity': '[[quantidade-produto]]'
+        'quantity': '[[quantidade-produto]]',
+        'dimension4': '[[nome-loja]]'
     }]
   }
 });
@@ -1070,6 +703,7 @@ window.dataLayer.push({
 | [[tamanho-produto]] | 'm' | Tamanho do produto |
 | [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
 | [[quantidade-produto]] | '1' | Quantidade do produto |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 
 <br />
@@ -1098,7 +732,8 @@ window.dataLayer.push({
         'variant': '[[tamanho-produto]]',
         'brand': '[[marca-produto]]',
         'quantity': '[[quantidade-produto]]',
-        'coupon': '[[cupom-produto]]'
+        'coupon': '[[cupom-produto]]',
+        'dimension4': '[[nome-loja]]'
     }]
   }
 });
@@ -1116,6 +751,7 @@ window.dataLayer.push({
 | [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
 | [[quantidade-produto]] | '1' | Quantidade do produto |
 | [[cupom-produto]] | '25%' e etc' | Desconto do produto |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 
 <br />
@@ -1211,7 +847,8 @@ window.dataLayer.push({
         'variant': '[[tamanho-produto]]',
         'brand': '[[marca-produto]]',
         'quantity': '[[quantidade-produto]]',
-        'coupon': '[[cupom-produto]]'
+        'coupon': '[[cupom-produto]]',
+        'dimension4': '[[nome-loja]]'
       }]
     }
   }
@@ -1234,6 +871,7 @@ window.dataLayer.push({
 | [[marca-produto]] | 'marisa', 'rayban' e etc | Marca do produto |
 | [[quantidade-produto]] | '1' | Quantidade do produto |
 | [[cupom-produto]] | '25%' e etc' | Desconto do produto |
+| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
 
 
 <br />
