@@ -1,6 +1,6 @@
 ![Jellyfish](https://github.com/adtechReamp/client/blob/main/Jellyfish-Logo-Blue-01.jpg?raw=true)
 
-> Adtech<br />
+> Analytics & Optimization<br />
 > Documento de Especificação Técnica
 
 <br />
