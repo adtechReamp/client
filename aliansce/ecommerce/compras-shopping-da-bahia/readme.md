@@ -1,4 +1,4 @@
-![Reamp](https://github.com/adtechReamp/client/blob/main/logo.png?raw=true)
+![Jellyfish](https://github.com/adtechReamp/client/blob/main/Jellyfish-Logo-Blue-01.jpg?raw=true)
 
 > Adtech<br />
 > Documento de Especificação Técnica
