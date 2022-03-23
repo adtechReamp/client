@@ -19,9 +19,8 @@ Em caso de dúvidas, entrar em contato com: [ao.br@jellyfish.com](ao.br@jellyfis
 - [Dimensões Globais](#dimensoes-globais)
 - [Geral](#geral)
 - [Login e cadastro](#login-e-cadastro)
-- [Home](#home)
-- [Contato](#contato)
 - [Editar Perfil](#editar-perfil)
+- [Checkout](#checkout)
 - [Enhanced E-commerce](#enhanced-e-commerce)
 
 
