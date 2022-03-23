@@ -110,6 +110,74 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 ---
 
+### Geral
+
+**Quando: Ao preencher um dos campos do formulário de newsletter.**<br />
+
+- **Onde:** Em todas as páginas que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras:[[nome-ambiente]]:geral',
+    'eventAction': 'interacao:newsletter',
+    'eventLabel': 'preencheu-campo:[[nome-campo]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'carioca-shopping', 'caxias-shopping', 'bangu-shopping' e etc. | Deve retornar o nome do ambiente.  |
+| [[nome-campo]] | 'email' ou 'nome' | Deve retornar o nome do campo preenchido.  |
+
+**Quando: Na tentativa de callback para enviar o formulário de newsletter.**<br />
+
+- **Onde:** Em todas as páginas que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras:[[nome-ambiente]]:geral',
+    'eventAction': 'callback:newsletter',
+    'eventLabel': '[[status]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'carioca-shopping', 'caxias-shopping', 'bangu-shopping' e etc. | Deve retornar o nome do ambiente.  |
+| [[status]] | 'sucesso', 'erro:campo-nome-nao-preenchido', 'erro:campo-email-nao-preenchido' | Deve retornar se a ação foi realizada com sucesso ou então o tipo de erro.  |
+<br />
+
+### Login e Cadastro
+
+**Quando: No callback de cadastro ou login efetuados com sucesso**<br />
+
+- **Onde:** Em todas as páginas que estiver disponível.
+    
+```html
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'genericEvent',
+    'eventCategory': 'compras:[[nome-ambiente]]:area-logada',
+    'eventAction': '[[nome-acao]]'
+  });
+</script>
+```
+
+| Variável        | Exemplo                               | Descrição                         |
+| :-------------- | :------------------------------------ | :-------------------------------- |
+| [[nome-ambiente]] | 'carioca-shopping', 'caxias-shopping', 'bangu-shopping' e etc. | Deve retornar o nome do ambiente.  |
+| [[nome-acao]] | 'cadastrou' ou 'logou' | Deve retornar o nome da ação realizada pelo usuario.  |
+
+<br>
 ### Lista de Produtos
 
 **Quando: Ao selecionar um dos checkboxes de filtro.**<br />
@@ -121,7 +189,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:compras:lista-de-produtos',
+    'eventCategory': 'compras:[[nome-ambiente]]:compras:lista-de-produtos',
     'eventAction': 'interacao:checkbox:filtro',
     'eventLabel': '[[secao]]:[[nome-filtro]]:[[acao]]'
   });
@@ -138,18 +206,20 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 
 <br />
 
-**Quando: Ao clicar em uma das sugestões de consulta.**<br />
 
-- **Onde:** Na página de lista de produtos.
+### Editar Perfil
+**Quando: Ao preencher um dos campos dos formulários**<br />
+
+- **Onde:** Na página Editar Perfil.
     
 ```html
 <script>
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:compras:lista-de-produtos',
-    'eventAction': 'clique:sugestao',
-    'eventLabel': '[[consulta-sugerida]]'
+    'eventCategory': 'compras:[[nome-ambiente]]:area-logada:editar-perfil',
+    'eventAction': 'interacao:formulario:[[nome-formulario]]:campo',
+    'eventLabel': 'preencheu:[[nome-campo]]'
   });
 </script>
 ```
@@ -157,26 +227,23 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-ambiente]] | 'carioca-shopping', 'caxias-shopping', 'bangu-shopping' e etc. | Deve retornar o nome do ambiente.  |
-| [[consulta-sugerida]] | 'camisa-feminina', 'toalha-de-banho' e etc. | Deve retornar o nome do termo de consulta clicado.  |
-
+| [[nome-formulario]] | 'perfil', 'endereco', 'email' e 'cartao'. | Deve retornar o nome do formulario preenchido.  |
+| [[nome-campo]] | 'nome', 'email', 'cep' e etc. | Deve  retornar o nome do campo preenchido.  |
 
 <br />
 
-### PDP
+**Quando: Na tentativa de callback após envio do formulário**<br />
 
-**Quando: No clique para selecionar a cor do produto.**<br />
-
-- **Onde:** Na página do produto
+- **Onde:** Na página Editar Perfil.
     
 ```html
 <script>
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:compras:pdp',
-    'eventAction': 'clique:cor',
-    'eventLabel': '[[nome-cor]]:[[nome-produto]]',
-    'dimension4': '[[nome-loja]]'
+    'eventCategory': 'compras:[[nome-ambiente]]:area-logada:editar-perfil',
+    'eventAction': 'callback:[[nome-campo]]',
+    'eventLabel': '[[status]]'
   });
 </script>
 ```
@@ -184,200 +251,13 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | Variável        | Exemplo                               | Descrição                         |
 | :-------------- | :------------------------------------ | :-------------------------------- |
 | [[nome-ambiente]] | 'carioca-shopping', 'caxias-shopping', 'bangu-shopping' e etc. | Deve retornar o nome do ambiente.  |
-| [[nome-cor]] | 'branco', 'preto', 'azul' e etc | Deve retornar a cor selecionada. |
-| [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
-| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
-
-
+| [[nome-campo]] | 'dados-dwe-cadastro', 'email' ou 'meus-cartoes' | Deve  retornar o nome do campo ao qual o botão pertence.  |
+| [[status]] | 'sucesso', 'erro:campo-nome-nao-preenchido', 'erro:campo-email-nao-preenchido' e etc. | Deve retornar a mensagem de sucesso ou o tipo de erro.  |
 
 <br />
 
-**Quando: No clique para selecionar o tamanho do produto**<br />
-
-- **Onde:** Na página do produto
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:compras:pdp',
-    'eventAction': 'clique:tamanho',
-    'eventLabel': '[[tamanho-selecionado]]:[[nome-produto]]',
-    'dimension4': '[[nome-loja]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-ambiente]] | 'carioca-shopping', 'caxias-shopping', 'bangu-shopping' e etc. | Deve retornar o nome do ambiente.  |
-| [[tamanho-selecionado]] | '35', '40', '41'  e etc | Deve retornar o tamanho selecionado. |
-| [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
-| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
-
-
-<br />
-
-**Quando: No clique para selecionar a quantidade do produto**<br />
-
-- **Onde:** Na página do produto
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:compras:pdp',
-    'eventAction': 'interacao:quantidade',
-    'eventLabel': '[[quantidade-escolhida]]:[[nome-produto]]',
-    'dimension4': '[[nome-loja]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-ambiente]] | 'carioca-shopping', 'caxias-shopping', 'bangu-shopping' e etc. | Deve retornar o nome do ambiente.  |
-| [[quantidade-escolhida]] | '1', '3', '4' e etc | Deve retornar a quantidade escolhida. |
-| [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
-| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
-
-
-<br />
-
-**Quando: No clique dos botões ou links**<br />
-
-- **Onde:** Na página do produto
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:compras:pdp',
-    'eventAction': 'clique:[[botao ou link]]',
-    'eventLabel': '[[nome-item]]:[[nome-produto]]',
-    'dimension4': '[[nome-loja]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-ambiente]] | 'carioca-shopping', 'caxias-shopping', 'bangu-shopping' e etc. | Deve retornar o nome do ambiente.  |
-| [[botao-ou-link]] | 'botao' ou 'link' | Deve retornar o tipo de elemento clicado. |
-| [[nome-item]] | 'adicionar-a-sacola', 'favorita' e etc | Deve retornar o nome do botao ou link clicado. |
-| [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
-| [[nome-loja]] | '12kj3h', '3io5lk4' e etc | Deve retornar o nome(ID) da loja que vende o produto. |
-
-
-<br />
-
-### Sacola Modal
-
-**Quando: No clique dos botões ou links**<br />
-
-- **Onde:** Na página do modal da sacola
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:compras:sacola-modal',
-    'eventAction': 'clique:[[botao ou link]]',
-    'eventLabel': '[[nome-item]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-ambiente]] | 'carioca-shopping', 'caxias-shopping', 'bangu-shopping' e etc. | Deve retornar o nome do ambiente.  |
-| [[botao-ou-link]] | 'botao' ou 'link' | Deve retornar o tipo de elemento clicado. |
-| [[nome-item]] |  'continuar-comprando', 'finalizar-compra', 'fechar' e etc | Deve retornar o nome do botao ou link clicado. | |
-
-
-<br />
-
-**Quando: No clique para selecionar a quantidade do produto**<br />
-
-- **Onde:** Na página do modal da sacola
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:compras:sacola-modal',
-    'eventAction': 'interacao:quantidade',
-    'eventLabel': '[[quantidade-escolhida]]:[[nome-produto]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-ambiente]] | 'carioca-shopping', 'caxias-shopping', 'bangu-shopping' e etc. | Deve retornar o nome do ambiente.  |
-| [[quantidade-escolhida]] |  '1', '3', '4' e etc | Deve retornar a quantidade escolhida. |
-| [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
-
-
-
-<br />
 
 ### Checkout
-
-**Quando: No clique dos botões das etapas do checkout**<br />
-
-- **Onde:** Em todas as etapas do checkout que estiver disponível
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:compras:checkout',
-    'eventAction': 'clique:botao',
-    'eventLabel': '[[nome-botao]]:[[step]]'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-ambiente]] | 'carioca-shopping', 'caxias-shopping', 'bangu-shopping' e etc. | Deve retornar o nome do ambiente.  |
-| [[nome-botao]] |  'fechar-pedido', 'escolher-mais-produtos' e etc | Deve retornar o nome do botão clicado. |
-| [[step]] |  'carrinho', 'entrega', 'pagamento' | Deve retornar o nome da etapa do checkout. |
-
-
-<br />
-
-**Quando: No clique para selecionar a quantidade do produto**<br />
-
-- **Onde:** Na etapa do carrinho
-    
-```html
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:compras:checkout',
-    'eventAction': 'interacao:quantidade',
-    'eventLabel': '[[quantidade-escolhida]]:[[nome-produto]]:carrinho'
-  });
-</script>
-```
-
-| Variável        | Exemplo                               | Descrição                         |
-| :-------------- | :------------------------------------ | :-------------------------------- |
-| [[nome-ambiente]] | 'carioca-shopping', 'caxias-shopping', 'bangu-shopping' e etc. | Deve retornar o nome do ambiente.  |
-| [[quantidade-escolhida]] |   '1', '3', '4' e etc | Deve retornar a quantidade escolhida. |
-| [[nome-produto]] | 'tenis-era-save-our-planet-branco-e-preto' e etc | Deve retornar o nome do produto. |
-
-
-<br />
 
 **Quando: Na interação com o campos de cada etapa do checkout**<br />
 
@@ -388,7 +268,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'genericEvent',
-    'eventCategory': '[[nome-ambiente]]:compras:checkout',
+    'eventCategory': 'compras:[[nome-ambiente]]:checkout',
     'eventAction': 'interacao:campo',
     'eventLabel': 'preencheu:[[nome-campo]]:[[step]]'
   });
@@ -412,8 +292,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 <script>
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
-    'event': 'conversion',
-    'eventCategory': '[[nome-ambiente]]:compras:checkout',
+    'event': 'genericEvent',
+    'eventCategory': 'compras:[[nome-ambiente]]:checkout',
     'eventAction': 'callback',
     'eventLabel': 'erro:[[tipo-erro]]'
   });
@@ -440,7 +320,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     'event': 'promotionImpression',
-    'eventCategory': '[[nome-ambiente]]:compras:enhanced-ecommerce',
+    'eventCategory': 'compras:[[nome-ambiente]]:enhanced-ecommerce',
     'eventAction': 'promotionImpression',
 'noInteraction': '1',
 'ecommerce': {
@@ -478,7 +358,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   'event': 'promotionClick',
-  'eventCategory': '[[nome-ambiente]]:compras:enhanced-ecommerce',
+  'eventCategory': 'compras:[[nome-ambiente]]:enhanced-ecommerce',
   'eventAction': 'promotionClick',
     'ecommerce': {
     'promoClick': {
@@ -514,7 +394,7 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   'event': 'productImpression',
-  'eventCategory':'[[nome-ambiente]]:compras:enhanced-ecommerce',
+  'eventCategory':'compras:[[nome-ambiente]]:enhanced-ecommerce',
   'eventAction': 'productImpression',
   'noInteraction': '1',
   'ecommerce': {
@@ -558,7 +438,7 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
     'event': 'productClick',
-    'eventCategory': '[[nome-ambiente]]:compras:enhanced-ecommerce',
+    'eventCategory': 'compras:[[nome-ambiente]]:enhanced-ecommerce',
     'eventAction': 'productClick',
         'ecommerce': {
         'click': {
@@ -603,7 +483,7 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   'event': 'productDetail',
-  'eventCategory': '[[nome-ambiente]]:compras:enhanced-ecommerce',
+  'eventCategory': 'compras:[[nome-ambiente]]:enhanced-ecommerce',
   'eventAction': 'productDetail',
   'noInteraction': '1',
   'ecommerce': {
@@ -648,7 +528,7 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   'event': 'addToCart',
-  'eventCategory':'[[nome-ambiente]]:compras:enhanced-ecommerce',
+  'eventCategory':'compras:[[nome-ambiente]]:enhanced-ecommerce',
   'eventAction': 'addToCart',
     'ecommerce': {
     'add': {
@@ -695,7 +575,7 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   'event': 'removeFromCart',
-  'eventCategory': '[[nome-ambiente]]:compras:enhanced-ecommerce',
+  'eventCategory': 'compras:[[nome-ambiente]]:enhanced-ecommerce',
   'eventAction': 'removeFromCart',
     'ecommerce': {
     'remove': {
@@ -739,7 +619,7 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   'event': 'checkout',
-  'eventCategory': '[[nome-ambiente]]:compras:enhanced-ecommerce',
+  'eventCategory': 'compras:[[nome-ambiente]]:enhanced-ecommerce',
   'eventAction': 'checkout',
   'noInteraction': '1',
   'ecommerce': {
@@ -786,8 +666,8 @@ window.dataLayer.push({
 <script>
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
-  'event': 'checkoutOption'',
-  'eventCategory': '[[nome-ambiente]]:compras:enhanced-ecommerce',
+  'event': 'checkoutOption',
+  'eventCategory': 'compras:[[nome-ambiente]]:enhanced-ecommerce',
   'eventAction': 'checkoutOption',
   'ecommerce': {
     'checkout_option': {
@@ -818,8 +698,8 @@ window.dataLayer.push({
 <script>
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
-  'event': 'checkoutOption'',
-  'eventCategory': '[[nome-ambiente]]:compras:enhanced-ecommerce',
+  'event': 'checkoutOption',
+  'eventCategory': 'compras:[[nome-ambiente]]:enhanced-ecommerce',
   'eventAction': 'checkoutOption',
   'ecommerce': {
     'checkout_option': {
@@ -849,7 +729,7 @@ window.dataLayer.push({
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   'event': 'purchase',
-  'eventCategory': '[[nome-ambiente]]:compras:enhanced-ecommerce',
+  'eventCategory': 'compras:[[nome-ambiente]]:enhanced-ecommerce',
   'eventAction': 'purchase',
   'noInteraction': '1',
   'ecommerce': {
