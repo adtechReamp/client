@@ -6,7 +6,7 @@
 <br />
 
 ## Implementação da Camada de dados VTex - Leblon
-Última atualização: 11/03/2022 <br />
+Última atualização: 27/06/2022 <br />
 Em caso de dúvidas, entrar em contato com: [ao.br@jellyfish.com](ao.br@jellyfish.com)
 
 <br />
