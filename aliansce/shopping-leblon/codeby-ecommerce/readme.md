@@ -81,7 +81,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     	'dimension7': '[[Posição Banner]]',
     	'dimension8': '[[CPF]]',
         'dimension9': '[[SKU Produto]]',
-        'dimension10': '[[Email]]'
+        'dimension10': '[[Email]]',
+        'emailCriptografado': '[[emailCriptografado]]'
 	
 	});
 </script>
