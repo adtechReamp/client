@@ -90,7 +90,9 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
         'dimension5': '[[Localização]]',
    		'dimension6': '[[[Device ID]]',
     	'dimension7': '[[CPF]]',
-    	'dimension8': '[[Email]]'
+    	'dimension8': '[[Email]]',
+        'dimension9': '[[SKU Produto]]',
+        'emailAllIn': '[[emailAllIn]]',
 	
 	});
 </script>
@@ -107,6 +109,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | [[Device ID]]   | 'XXXXXXX' | Deve retornar o ID do dispositivo utilizado   |
 | [[CPF]]   | 'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad' | Deve retornar o CPF do usuário hasheado em SHA256   |
 | [[Email]]   | 'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad' | Deve retornar o email do usuário hasheado em SHA256   |
+| [[SKU Produto]]   | '546789' | Deve retornar o SKU do produto    |
+| [[emailAllIn]]   | 'jsdkjskdj' | Deve retornar o email do usuário criptografado em 2048, em todas as páginas apos ele logar ou se cadastrar    |
 
 ---
 

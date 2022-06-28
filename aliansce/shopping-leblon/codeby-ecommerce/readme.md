@@ -82,7 +82,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     	'dimension8': '[[CPF]]',
         'dimension9': '[[SKU Produto]]',
         'dimension10': '[[Email]]',
-        'emailCriptografado': '[[emailCriptografado]]'
+        'emailAllIn': '[[emailAllIn]]'
 	
 	});
 </script>
@@ -100,6 +100,7 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | [[CPF]]   | 'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad' | Deve retornar o CPF do usuário hasheado em SHA256   |
 | [[SKU Produto]] | '45632187', '45612302' etc. | Deve retornar o sku do produto  |
 | [[Email]]   | 'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad' | Deve retornar o email do usuário hasheado em SHA256   |
+| [[emailAllIn]]   | 'jsdkjskdj' | Deve retornar o email do usuário criptografado em 2048, em todas as páginas apos ele logar ou se cadastrar    |
 
 ---
 
