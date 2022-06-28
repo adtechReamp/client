@@ -82,8 +82,6 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
     'dimension3': '[[GTM-ID]]',
     'dimension4': '[[Nome Loja]]',
     'dimension5': '[[Nome Ambiente]]',
-    'dimension6': '[[Localização]]',
-    'dimension7': '[[Device ID]]',
     'dimension8': '[[CPF]]',
     'dimension9': '[[SKU Produto]]',
     'dimension10': '[[Email]]',
