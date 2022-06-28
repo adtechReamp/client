@@ -83,16 +83,15 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 <script>
 	window.dataLayer = window.dataLayer || [];
 	dataLayer.push({
-		'dimension1': '[[User ID]]',
-		'dimension2': '[[GA ClientID]]',
-		'dimension3': '[[GTM-ID]]',
-        'dimension4': '[[Nome Loja]]',
-        'dimension5': '[[Localização]]',
-   		'dimension6': '[[[Device ID]]',
-    	'dimension7': '[[CPF]]',
-    	'dimension8': '[[Email]]',
-        'dimension9': '[[SKU Produto]]',
-        'emailAllIn': '[[emailAllIn]]',
+    'dimension1': '[[User ID]]',
+    'dimension3': '[[GTM-ID]]',
+    'dimension4': '[[Nome Loja]]',
+    'dimension5': '[[Localização]]',
+    'dimension6': '[[[Device ID]]',
+    'dimension7': '[[CPF]]',
+    'dimension8': '[[Email]]',
+    'dimension9': '[[SKU Produto]]',
+    'emailAllIn': '[[emailAllIn]]',
 	
 	});
 </script>
