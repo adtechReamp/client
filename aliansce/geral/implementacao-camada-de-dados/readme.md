@@ -1,13 +1,13 @@
-![Reamp](https://github.com/adtechReamp/client/blob/main/logo.png?raw=true)
+![Jellyfish](https://github.com/adtechReamp/client/blob/main/Jellyfish-Logo-Blue-01.jpg?raw=true)
 
-> Adtech<br />
+> Analytics & Optimization<br />
 > Documento de Especificação Técnica
 
 <br />
 
 ## Implementação da Camada de dados - Geral
-Última atualização: 22/06/2020 <br />
-Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
+Última atualização: 29/06/2022 <br />
+Em caso de dúvidas, entrar em contato com: [ao.br@jellyfish.com](ao.br@jellyfish.com)
 
 <br />
 
@@ -72,11 +72,6 @@ Este documento tem como objetivo instruir a implementação da camada de dados p
 
 <br />
 
-## Observações
-> Os valores especificados entre colchetes `[[ ]]` são variáveis dinâmicas e devem ser substituídas por seus respectivos valores.<br />
-
-> Todos os valores enviados ao Google Analytics devem estar sanitizados, ou seja, sem espaços, acentuação ou caracteres especiais. <br />
-
 ---
 
 ## Implementação
@@ -102,7 +97,8 @@ Inserir a camada de dados antes do snippet de instalação do Google Tag Manager
 
 ### Especificações Globais:
 
-**Itens Gerais:**<br />
+**Itens Gerais:** 
+<br />
 Todas as informações entre colchetes `[[  ]]` são variáveis dinâmicas que devem ser preenchidas com seus respectivos valores; <br />
 Todos os valores enviados ao Google Analytics devem estar sanitizados, ou seja, sem espaços, acentuação ou caracteres especiais; <br />
 Caso a informação solicitada não estiver disponível retornar tipagem ´undefined´.
@@ -119,15 +115,17 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 <script>
 	window.dataLayer = window.dataLayer || [];
 	dataLayer.push({
-	  'dimension1': '[[User ID]]',
-	  'dimension2': '[[GA ClientID]]',
-	  'dimension3': '[[GTM-ID]]',
-	  'dimension4': '[[Nome Ambiente]]',
-          'dimension5': '[[Nome Loja]]',
-          'dimension6': '[[Localização]]',
-          'dimension7': '[[Device ID]]',
-          'dimension8': '[[[cpf]]',
-          'dimension9': '[[email]]'
+    'dimension1': '[[User ID]]',
+    'dimension2': '[[GA ClientID]]',
+    `dimension3': '[[GTM-ID]]',
+    'dimension4': '[[Nome Ambiente]]',
+    'dimension5': '[[Nome Loja]]',
+    'dimension6': '[[Localização]]',
+    'dimension7': '[[Device ID]]',
+    'dimension8': '[[[cpf]]',
+    'dimension9': '[[email]]',
+    'dimension10': '[[Genero do Filme]]',
+    'emailAllIn': '[[emailAllIn]]'
 
 	
 	});
@@ -146,6 +144,8 @@ Deve ser disparado um push de dataLayer no momento de carregamento de todas as p
 | [[Device ID]]   | 'XXXXXXX' | Deve retornar o ID do dispositivo utilizado   |
 | [[cpf]]   | 'jsdjs46454sds5dsd' | Deve retornar o cpf hasheado do usuário, em todas as páginas apos ele logar ou se cadastrar   |
 | [[email]]   | 'jsdkjskdj' | Deve retornar o email hasheado do usuário, em todas as páginas apos ele logar ou se cadastrar    |
+| [[Genero do Filme]]   | 'acao', 'comedia', 'romance' e etc | Deve retornar o genero do filme clicado    |
+| [[emailAllIn]]   | 'jsdkjskdj' | Deve retornar o email do usuário criptografado em 2048, em todas as páginas apos ele logar ou se cadastrar    |
 
 ---
 

@@ -7,7 +7,7 @@
 
 ## Implementação da Camada de dados - Compras Shopping da Bahia
 Última atualização: 02/11/2021 <br />
-Em caso de dúvidas, entrar em contato com: [leandro.mori@jellyfish.com](leandro.mori@jellyfish.com)
+Em caso de dúvidas, entrar em contato com: [ao.br@jellyfish.com](ao.br@jellyfish.com)
 
 <br />
 

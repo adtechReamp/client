@@ -1,13 +1,13 @@
-![Reamp](https://github.com/adtechReamp/client/blob/main/logo.png?raw=true)
+![Jellyfish](https://github.com/adtechReamp/client/blob/main/Jellyfish-Logo-Blue-01.jpg?raw=true)
 
-> Adtech<br />
+> Analytics & Optimization<br />
 > Documento de Especificação Técnica
 
 <br />
 
 ## Implementação da Camada de dados - Compras Parque D Pedro
-Última atualização: 19/07/2020 <br />
-Em caso de dúvidas, entrar em contato com: [tag@reamp.com.br](tag@reamp.com.br)
+Última atualização: 29/06/2022 <br />
+Em caso de dúvidas, entrar em contato com: [ao.br@jellyfish.com](ao.br@jellyfish.com)
 
 <br />
 
